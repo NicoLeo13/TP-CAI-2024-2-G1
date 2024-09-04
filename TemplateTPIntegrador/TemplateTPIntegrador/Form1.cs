@@ -26,17 +26,23 @@ namespace TemplateTPIntegrador
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string txt1 = textBox1.Text;
-            string txt2 = textBox2.Text;
+            string usuario = txtBoxUser.Text;
+            string clave = txtBoxPass.Text;
             PresentacionValidaciones validaciones = new PresentacionValidaciones();
 
-            if(validaciones.ValidarStringVacio(txt1) == true || validaciones.ValidarStringVacio(txt2) == true)
+            if(validaciones.ValidarStringVacio(usuario) == true || validaciones.ValidarStringVacio(clave) == true)
+            {
                 MessageBox.Show("Ingrese todos los datos necesarios!");
+                return;
+            }
 
-            Validaciones loginNegocio = new Validaciones();
+            NegocioValidaciones loginNegocio = new NegocioValidaciones();
 
-            if(loginNegocio.Login(txt1) == true)
+            if(loginNegocio.Login(usuario) == true)
+            {
                 MessageBox.Show("El nombre de usuario debe ser mayor a 8 caracteres");
+                return;
+            }
         }
     }
 }

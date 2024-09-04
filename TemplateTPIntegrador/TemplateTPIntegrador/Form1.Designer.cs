@@ -29,41 +29,63 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBoxUser = new System.Windows.Forms.TextBox();
+            this.txtBoxPass = new System.Windows.Forms.TextBox();
+            this.labelUsuario = new System.Windows.Forms.Label();
+            this.labelContra = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(353, 262);
+            this.button1.Location = new System.Drawing.Point(341, 256);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Iniciar Sesion";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
+            // txtBoxUser
             // 
-            this.textBox1.Location = new System.Drawing.Point(341, 145);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtBoxUser.Location = new System.Drawing.Point(341, 145);
+            this.txtBoxUser.Name = "txtBoxUser";
+            this.txtBoxUser.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxUser.TabIndex = 1;
             // 
-            // textBox2
+            // txtBoxPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(341, 206);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.txtBoxPass.Location = new System.Drawing.Point(341, 206);
+            this.txtBoxPass.Name = "txtBoxPass";
+            this.txtBoxPass.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxPass.TabIndex = 2;
+            // 
+            // labelUsuario
+            // 
+            this.labelUsuario.AutoSize = true;
+            this.labelUsuario.Location = new System.Drawing.Point(338, 129);
+            this.labelUsuario.Name = "labelUsuario";
+            this.labelUsuario.Size = new System.Drawing.Size(43, 13);
+            this.labelUsuario.TabIndex = 3;
+            this.labelUsuario.Text = "Usuario";
+            // 
+            // labelContra
+            // 
+            this.labelContra.AutoSize = true;
+            this.labelContra.Location = new System.Drawing.Point(338, 190);
+            this.labelContra.Name = "labelContra";
+            this.labelContra.Size = new System.Drawing.Size(61, 13);
+            this.labelContra.TabIndex = 4;
+            this.labelContra.Text = "Contraseña";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.labelContra);
+            this.Controls.Add(this.labelUsuario);
+            this.Controls.Add(this.txtBoxPass);
+            this.Controls.Add(this.txtBoxUser);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -76,8 +98,10 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBoxUser;
+        private System.Windows.Forms.TextBox txtBoxPass;
+        private System.Windows.Forms.Label labelUsuario;
+        private System.Windows.Forms.Label labelContra;
     }
 }
 

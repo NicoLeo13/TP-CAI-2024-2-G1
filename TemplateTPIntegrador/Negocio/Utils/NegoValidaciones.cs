@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Negocio.Utils
 {
-    public class Validaciones
+    public class NegocioValidaciones
     {
         public bool Login(string usuario)
         {
