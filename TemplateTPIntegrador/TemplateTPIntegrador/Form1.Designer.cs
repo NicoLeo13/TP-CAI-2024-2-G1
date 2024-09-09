@@ -37,7 +37,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(341, 256);
+            this.button1.Location = new System.Drawing.Point(23, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 23);
             this.button1.TabIndex = 0;
@@ -47,14 +47,14 @@
             // 
             // txtBoxUser
             // 
-            this.txtBoxUser.Location = new System.Drawing.Point(341, 145);
+            this.txtBoxUser.Location = new System.Drawing.Point(23, 29);
             this.txtBoxUser.Name = "txtBoxUser";
             this.txtBoxUser.Size = new System.Drawing.Size(100, 20);
             this.txtBoxUser.TabIndex = 1;
             // 
             // txtBoxPass
             // 
-            this.txtBoxPass.Location = new System.Drawing.Point(341, 206);
+            this.txtBoxPass.Location = new System.Drawing.Point(23, 90);
             this.txtBoxPass.Name = "txtBoxPass";
             this.txtBoxPass.Size = new System.Drawing.Size(100, 20);
             this.txtBoxPass.TabIndex = 2;
@@ -62,7 +62,7 @@
             // labelUsuario
             // 
             this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Location = new System.Drawing.Point(338, 129);
+            this.labelUsuario.Location = new System.Drawing.Point(20, 13);
             this.labelUsuario.Name = "labelUsuario";
             this.labelUsuario.Size = new System.Drawing.Size(43, 13);
             this.labelUsuario.TabIndex = 3;
@@ -71,7 +71,7 @@
             // labelContra
             // 
             this.labelContra.AutoSize = true;
-            this.labelContra.Location = new System.Drawing.Point(338, 190);
+            this.labelContra.Location = new System.Drawing.Point(20, 74);
             this.labelContra.Name = "labelContra";
             this.labelContra.Size = new System.Drawing.Size(61, 13);
             this.labelContra.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(167, 185);
             this.Controls.Add(this.labelContra);
             this.Controls.Add(this.labelUsuario);
             this.Controls.Add(this.txtBoxPass);
