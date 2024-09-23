@@ -16,7 +16,9 @@ namespace TemplateTPIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Application.Run(new AltaDeUsuario()); 
             Application.Run(new Form1());
+            
         }
     }
 }
