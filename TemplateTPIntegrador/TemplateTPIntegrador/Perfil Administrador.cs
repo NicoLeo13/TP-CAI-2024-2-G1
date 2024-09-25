@@ -16,5 +16,16 @@ namespace TemplateTPIntegrador
         {
             InitializeComponent();
         }
+
+        private void btnAdmSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAdmVend_Click(object sender, EventArgs e)
+        {
+            ABM_Administrador ABM_Administrador = new ABM_Administrador
+            ABM_Administrador.Show();
+        }
     }
 }

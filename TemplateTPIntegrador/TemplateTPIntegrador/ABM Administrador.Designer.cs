@@ -54,6 +54,7 @@
             this.btnAlta.TabIndex = 3;
             this.btnAlta.Text = "Alta de usuario";
             this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // btnMod
             // 
@@ -64,6 +65,7 @@
             this.btnMod.TabIndex = 4;
             this.btnMod.Text = "Modificacion de usuario";
             this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
             // 
             // btnBaja
             // 
@@ -74,6 +76,7 @@
             this.btnBaja.TabIndex = 5;
             this.btnBaja.Text = "Baja de usuario";
             this.btnBaja.UseVisualStyleBackColor = true;
+            this.btnBaja.Click += new System.EventHandler(this.btnBaja_Click);
             // 
             // btnvolver1
             // 

@@ -16,5 +16,23 @@ namespace TemplateTPIntegrador
         {
             InitializeComponent();
         }
+
+        private void btnAlta_Click(object sender, EventArgs e)
+        {
+            Alta_de_Usuario altausuario = new Alta_de_Usuario();
+            altausuario.Show();
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            Modificacion_de_Usuario modusuario = new Modificacion_de_Usuario();
+            modusuario.Show();
+        }
+
+        private void btnBaja_Click(object sender, EventArgs e)
+        {
+            BajaUsuario bajaUsuario = new BajaUsuario();
+            bajaUsuario.Show();
+        }
     }
 }

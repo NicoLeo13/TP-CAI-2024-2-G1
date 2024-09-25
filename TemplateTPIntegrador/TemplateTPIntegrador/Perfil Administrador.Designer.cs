@@ -56,6 +56,7 @@
             this.btnAdmVend.TabIndex = 6;
             this.btnAdmVend.Text = "Vendedores";
             this.btnAdmVend.UseVisualStyleBackColor = true;
+            this.btnAdmVend.Click += new System.EventHandler(this.btnAdmVend_Click);
             // 
             // btnAdmProv
             // 
@@ -106,6 +107,7 @@
             this.btnAdmSalir.TabIndex = 11;
             this.btnAdmSalir.Text = "Salir";
             this.btnAdmSalir.UseVisualStyleBackColor = true;
+            this.btnAdmSalir.Click += new System.EventHandler(this.btnAdmSalir_Click);
             // 
             // Perfil_Administrador
             // 
