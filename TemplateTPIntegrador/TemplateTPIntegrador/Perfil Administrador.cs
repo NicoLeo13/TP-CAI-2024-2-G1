@@ -24,7 +24,7 @@ namespace TemplateTPIntegrador
 
         private void btnAdmVend_Click(object sender, EventArgs e)
         {
-            ABM_Administrador ABM_Administrador = new ABM_Administrador
+            ABM_Administrador ABM_Administrador = new ABM_Administrador();
             ABM_Administrador.Show();
         }
     }
