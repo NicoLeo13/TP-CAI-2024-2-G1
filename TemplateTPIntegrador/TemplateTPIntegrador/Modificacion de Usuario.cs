@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TemplateTPIntegrador
 {
-    public partial class Modificaion_de_Usuario : Form
+    public partial class Modificacion_de_Usuario : Form
     {
-        public Modificaion_de_Usuario()
+        public Modificacion_de_Usuario()
         {
             InitializeComponent();
         }

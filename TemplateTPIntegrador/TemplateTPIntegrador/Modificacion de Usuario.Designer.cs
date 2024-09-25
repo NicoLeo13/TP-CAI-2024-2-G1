@@ -1,6 +1,6 @@
 ﻿namespace TemplateTPIntegrador
 {
-    partial class Modificaion_de_Usuario
+    partial class Modificacion_de_Usuario
     {
         /// <summary>
         /// Required designer variable.
@@ -206,7 +206,7 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Nombre";
             // 
-            // Modificaion_de_Usuario
+            // Modificacion_de_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -215,7 +215,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Modificaion_de_Usuario";
+            this.Name = "Modificacion_de_Usuario";
             this.Text = "Modificaion_de_Usuario";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
