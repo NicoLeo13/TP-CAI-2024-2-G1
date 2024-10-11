@@ -46,6 +46,13 @@ namespace TemplateTPIntegrador
 
             LoginNegocio login = new LoginNegocio();
             string idUser = login.Login(usuario, clave);
+
+            Perfil_Administrador perfilAdmin = new Perfil_Administrador();
+            {
+                perfilAdmin.Show();
+                this.Hide();
+            }
+
             MessageBox.Show(idUser);
         }
     }
