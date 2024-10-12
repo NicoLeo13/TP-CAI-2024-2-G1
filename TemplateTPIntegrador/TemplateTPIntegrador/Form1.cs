@@ -37,6 +37,7 @@ namespace TemplateTPIntegrador
             }
 
             NegocioValidaciones loginValidacion = new NegocioValidaciones();
+      
 
             if(loginValidacion.Login(usuario) == true)
             {

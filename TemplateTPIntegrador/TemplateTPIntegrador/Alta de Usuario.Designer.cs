@@ -293,6 +293,7 @@
             this.btnCrear.TabIndex = 9;
             this.btnCrear.Text = "Crear Usuario";
             this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // btnLimpiar
             // 
@@ -302,6 +303,7 @@
             this.btnLimpiar.TabIndex = 10;
             this.btnLimpiar.Text = "Limpiar Datos";
             this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnVolver
             // 
