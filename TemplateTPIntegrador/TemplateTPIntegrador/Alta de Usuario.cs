@@ -37,46 +37,22 @@ namespace TemplateTPIntegrador
             string contraseña = txtpass.Text;
 
             NegocioValidaciones validarusuario= new NegocioValidaciones();
-            //NegocioValidaciones validarpass=new NegocioValidaciones();
-
-            //bool usuariovalido; para el do
-            //bool contraseñavalida; para el do
-
+            NegocioValidaciones validarpass = new NegocioValidaciones();
+            
             if (validarusuario.ValidarUsuario(usuario, nombre, apellido) == true)
             {
                 MessageBox.Show("El usuario creado no debe contener el nombre y apellido de la persona");
             }
-            else
+            else if (validarusuario.ValidarTexto (usuario)== true)
             {
-                MessageBox.Show("Usuario Ok");
+                MessageBox.Show("El usuario debe tener entre 8 y 15 caracteres");
+            }
+            else if (validarpass.ValidarTexto (contraseña) == true)
+            {
+                MessageBox.Show("La Contraseña debe tener entre 8 y 15 caracteres");
             }
 
-            //if (validarpass.ValidarContraseña(contraseña) == true)
-            //{
-            //    MessageBox.Show("Ok");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("La contraseña debe tener entre 8 y 15 caracteres");
-            //}
-
-            //if (validarusuario.ValidarUsuario(usuario, nombre, apellido) == true)
-            //{
-            //    MessageBox.Show("El usuario creado no debe contener el nombre y el apellido de la persona");
-            //}
-            //else if (validarpass.ValidarContraseña(contraseña) == true)
-            //{
-            //    MessageBox.Show("La contraseña debe tener entre 8 y 15 caracteres");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Ok");
-            //}
-
-
-
-
-
+            
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -85,6 +61,11 @@ namespace TemplateTPIntegrador
         }
 
         private void txtpass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }
