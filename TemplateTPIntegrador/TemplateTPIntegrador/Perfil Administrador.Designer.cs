@@ -67,6 +67,7 @@
             this.btnAdmProv.TabIndex = 7;
             this.btnAdmProv.Text = "Proveedores";
             this.btnAdmProv.UseVisualStyleBackColor = true;
+            this.btnAdmProv.Click += new System.EventHandler(this.btnAdmProv_Click);
             // 
             // btnAdmProd
             // 
@@ -97,6 +98,7 @@
             this.btnAdmSup.TabIndex = 10;
             this.btnAdmSup.Text = "Supervisores";
             this.btnAdmSup.UseVisualStyleBackColor = true;
+            this.btnAdmSup.Click += new System.EventHandler(this.btnAdmSup_Click);
             // 
             // btnAdmSalir
             // 

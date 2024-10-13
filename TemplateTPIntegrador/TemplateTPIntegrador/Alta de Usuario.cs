@@ -33,20 +33,37 @@ namespace TemplateTPIntegrador
             string nombre = txtnombre.Text;
             string apellido = txtapellido.Text;
             string usuario = txtuser.Text;
+            string contraseña = txtpass.Text;
 
             NegocioValidaciones validarusuario = new NegocioValidaciones(); //valida que el usuario no contenga el nombre ni el apellido del usuario
+            NegocioValidaciones validarpass = new NegocioValidaciones(); //Valida que la contraseña tenga entre 8 y 15 caracteres
 
-            if (validarusuario.ValidarUsuario(usuario, nombre, apellido) == true)
+
+            //if (validarusuario.ValidarUsuario(usuario, nombre, apellido) == true)
+            //{
+               // MessageBox.Show("El usuario creado no debe contener el nombre y apellido de la persona");
+            //}
+            //else 
+            //{
+               // MessageBox.Show("Usuario Ok");
+           // }
+
+            if (validarpass.ValidarContraseña(contraseña) == true)
             {
-                MessageBox.Show("El usuario creado no debe contener el nombre y apellido de la persona");
+                MessageBox.Show("Ok");
             }
             else
             {
-                MessageBox.Show("Usuario Ok"); //Esto era para prueba, se tiene que cambiar a que se guarde el usuario creado 
+                MessageBox.Show("La contraseña debe tener entre 8 y 15 caracteres");
             }
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtpass_TextChanged(object sender, EventArgs e)
         {
 
         }

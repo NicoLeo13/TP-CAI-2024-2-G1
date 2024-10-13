@@ -27,5 +27,17 @@ namespace TemplateTPIntegrador
             ABM_Administrador ABM_Administrador = new ABM_Administrador();
             ABM_Administrador.Show();
         }
+
+        private void btnAdmSup_Click(object sender, EventArgs e)
+        {
+            ABM_Administrador ABM_Administrador = new ABM_Administrador();
+            ABM_Administrador.Show();
+        }
+
+        private void btnAdmProv_Click(object sender, EventArgs e)
+        {
+            ABM_Administrador ABM_Administrador = new ABM_Administrador();
+            ABM_Administrador.Show();
+        }
     }
 }

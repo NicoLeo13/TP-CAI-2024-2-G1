@@ -268,6 +268,7 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(125, 20);
             this.txtpass.TabIndex = 12;
+            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             // 
             // txtuser
             // 

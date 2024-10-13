@@ -11,6 +11,7 @@ namespace Negocio.Utils
         string usuario;
         string nombre;
         string apellido;
+        string contraseña;
 
         public bool Login(string usuario) 
         {
@@ -24,6 +25,13 @@ namespace Negocio.Utils
         {
             if (usuario.Contains(nombre, StringComparison.OrdinalIgnoreCase) ||
                      usuario.Contains(apellido, StringComparison.OrdinalIgnoreCase))
+            return true;
+            return false;
+        }
+
+        public bool ValidarContraseña(string contraseña)
+        {
+            if (contraseña.Length >= 8 && contraseña.Length <=15 )
             return true;
             return false;
         }
