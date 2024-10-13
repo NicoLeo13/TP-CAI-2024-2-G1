@@ -29,7 +29,7 @@ namespace Negocio.Utils
             return false;
         }
 
-        public bool ValidarContraseña(string contraseña)
+        public bool ValidarContraseña(string contraseña) //Validacion de que la pass tenga entre 8 y 15 caracteres
         {
             if (contraseña.Length >= 8 && contraseña.Length <=15 )
             return true;

@@ -25,7 +25,8 @@ namespace TemplateTPIntegrador
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-
+            ABM_Administrador aBM_Administrador = new ABM_Administrador();
+            aBM_Administrador.Show();
         }
 
         private void btnCrear_Click(object sender, EventArgs e)
@@ -35,27 +36,47 @@ namespace TemplateTPIntegrador
             string usuario = txtuser.Text;
             string contraseña = txtpass.Text;
 
-            NegocioValidaciones validarusuario = new NegocioValidaciones(); //valida que el usuario no contenga el nombre ni el apellido del usuario
-            NegocioValidaciones validarpass = new NegocioValidaciones(); //Valida que la contraseña tenga entre 8 y 15 caracteres
+            NegocioValidaciones validarusuario= new NegocioValidaciones();
+            //NegocioValidaciones validarpass=new NegocioValidaciones();
 
+            //bool usuariovalido; para el do
+            //bool contraseñavalida; para el do
 
-            //if (validarusuario.ValidarUsuario(usuario, nombre, apellido) == true)
-            //{
-               // MessageBox.Show("El usuario creado no debe contener el nombre y apellido de la persona");
-            //}
-            //else 
-            //{
-               // MessageBox.Show("Usuario Ok");
-           // }
-
-            if (validarpass.ValidarContraseña(contraseña) == true)
+            if (validarusuario.ValidarUsuario(usuario, nombre, apellido) == true)
             {
-                MessageBox.Show("Ok");
+                MessageBox.Show("El usuario creado no debe contener el nombre y apellido de la persona");
             }
             else
             {
-                MessageBox.Show("La contraseña debe tener entre 8 y 15 caracteres");
+                MessageBox.Show("Usuario Ok");
             }
+
+            //if (validarpass.ValidarContraseña(contraseña) == true)
+            //{
+            //    MessageBox.Show("Ok");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("La contraseña debe tener entre 8 y 15 caracteres");
+            //}
+
+            //if (validarusuario.ValidarUsuario(usuario, nombre, apellido) == true)
+            //{
+            //    MessageBox.Show("El usuario creado no debe contener el nombre y el apellido de la persona");
+            //}
+            //else if (validarpass.ValidarContraseña(contraseña) == true)
+            //{
+            //    MessageBox.Show("La contraseña debe tener entre 8 y 15 caracteres");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Ok");
+            //}
+
+
+
+
+
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)

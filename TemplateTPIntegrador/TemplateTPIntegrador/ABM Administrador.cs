@@ -34,5 +34,11 @@ namespace TemplateTPIntegrador
             BajaUsuario bajaUsuario = new BajaUsuario();
             bajaUsuario.Show();
         }
+
+        private void btnvolver1_Click(object sender, EventArgs e)
+        {
+            Perfil_Administrador perfil_Administrador = new Perfil_Administrador();
+            perfil_Administrador.Show();
+        }
     }
 }

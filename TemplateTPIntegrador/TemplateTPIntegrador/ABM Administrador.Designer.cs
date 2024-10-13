@@ -87,6 +87,7 @@
             this.btnvolver1.TabIndex = 6;
             this.btnvolver1.Text = "Volver al Menú";
             this.btnvolver1.UseVisualStyleBackColor = true;
+            this.btnvolver1.Click += new System.EventHandler(this.btnvolver1_Click);
             // 
             // ABM_Administrador
             // 
