@@ -34,6 +34,25 @@ namespace Negocio
             return user;
         }
 
+        public Guid TraerUsuario(string usuario)
+        {
+            LoginWS loginWs = new LoginWS();
+
+            // Llama al método que trae los usuarios activos
+            List<UsuarioWS> usuariosActivos = loginWs.traerUsuariosActivos();
+
+            // Busca el usuario que coincide con el usuario proporcionado
+            foreach (var usuarioActivo in usuariosActivos)
+            {
+                if (usuarioActivo.NombreUsuario == usuario)
+                {
+                    Console.WriteLine($"Usuario encontrado: {usuarioActivo.Nombre} {usuarioActivo.Apellido} - {usuarioActivo.Id}");
+                    return usuarioActivo.Id;
+                }
+            }
+
+            throw new Exception("Usuario no encontrado");
+        }
 
     }
 }

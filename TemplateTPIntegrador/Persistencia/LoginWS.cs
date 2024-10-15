@@ -166,7 +166,7 @@ namespace Persistencia
             return result;
         }
 
-        private List<UsuarioWS> buscarDatosUsuario(String idUsuario)
+        public List<UsuarioWS> traerUsuariosActivos()
         {
             List<UsuarioWS> clientes = new List<UsuarioWS>();
 
@@ -175,8 +175,8 @@ namespace Persistencia
             if (response.IsSuccessStatusCode)
             {
                 var contentStream = response.Content.ReadAsStringAsync().Result;
-                List<UsuarioWS> listadoClientes = JsonConvert.DeserializeObject<List<UsuarioWS>>(contentStream);
-                return listadoClientes;
+                List<UsuarioWS> listadoUsuariosActivos = JsonConvert.DeserializeObject<List<UsuarioWS>>(contentStream);
+                return listadoUsuariosActivos;
             }
             else
             {
