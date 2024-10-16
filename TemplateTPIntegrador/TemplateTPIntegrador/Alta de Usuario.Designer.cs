@@ -31,7 +31,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtdni = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.txtfnac = new System.Windows.Forms.TextBox();
             this.txtemail = new System.Windows.Forms.TextBox();
             this.txttel = new System.Windows.Forms.TextBox();
             this.txtdireccion = new System.Windows.Forms.TextBox();
@@ -44,9 +43,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.btnRadioVendedor = new System.Windows.Forms.RadioButton();
+            this.btnRadioSupervisor = new System.Windows.Forms.RadioButton();
+            this.btnRadioAdmin = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtpass = new System.Windows.Forms.TextBox();
@@ -55,15 +54,16 @@
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.fnacDatePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.fnacDatePicker);
             this.groupBox1.Controls.Add(this.txtdni);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtfnac);
             this.groupBox1.Controls.Add(this.txtemail);
             this.groupBox1.Controls.Add(this.txttel);
             this.groupBox1.Controls.Add(this.txtdireccion);
@@ -98,13 +98,6 @@
             this.label9.Size = new System.Drawing.Size(26, 13);
             this.label9.TabIndex = 12;
             this.label9.Text = "DNI";
-            // 
-            // txtfnac
-            // 
-            this.txtfnac.Location = new System.Drawing.Point(114, 189);
-            this.txtfnac.Name = "txtfnac";
-            this.txtfnac.Size = new System.Drawing.Size(253, 20);
-            this.txtfnac.TabIndex = 11;
             // 
             // txtemail
             // 
@@ -197,9 +190,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.radioButton3);
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.btnRadioVendedor);
+            this.groupBox2.Controls.Add(this.btnRadioSupervisor);
+            this.groupBox2.Controls.Add(this.btnRadioAdmin);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.txtpass);
@@ -212,38 +205,38 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Creacion de Usuario";
             // 
-            // radioButton3
+            // btnRadioVendedor
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(108, 155);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(71, 17);
-            this.radioButton3.TabIndex = 17;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Vendedor";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.btnRadioVendedor.AutoSize = true;
+            this.btnRadioVendedor.Location = new System.Drawing.Point(108, 155);
+            this.btnRadioVendedor.Name = "btnRadioVendedor";
+            this.btnRadioVendedor.Size = new System.Drawing.Size(71, 17);
+            this.btnRadioVendedor.TabIndex = 17;
+            this.btnRadioVendedor.TabStop = true;
+            this.btnRadioVendedor.Text = "Vendedor";
+            this.btnRadioVendedor.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // btnRadioSupervisor
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(108, 132);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 17);
-            this.radioButton2.TabIndex = 16;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Supervisor";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.btnRadioSupervisor.AutoSize = true;
+            this.btnRadioSupervisor.Location = new System.Drawing.Point(108, 132);
+            this.btnRadioSupervisor.Name = "btnRadioSupervisor";
+            this.btnRadioSupervisor.Size = new System.Drawing.Size(75, 17);
+            this.btnRadioSupervisor.TabIndex = 16;
+            this.btnRadioSupervisor.TabStop = true;
+            this.btnRadioSupervisor.Text = "Supervisor";
+            this.btnRadioSupervisor.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // btnRadioAdmin
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(108, 109);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(88, 17);
-            this.radioButton1.TabIndex = 15;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Administrador";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.btnRadioAdmin.AutoSize = true;
+            this.btnRadioAdmin.Location = new System.Drawing.Point(108, 109);
+            this.btnRadioAdmin.Name = "btnRadioAdmin";
+            this.btnRadioAdmin.Size = new System.Drawing.Size(88, 17);
+            this.btnRadioAdmin.TabIndex = 15;
+            this.btnRadioAdmin.TabStop = true;
+            this.btnRadioAdmin.Text = "Administrador";
+            this.btnRadioAdmin.UseVisualStyleBackColor = true;
             // 
             // label10
             // 
@@ -317,6 +310,13 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // fnacDatePicker
+            // 
+            this.fnacDatePicker.Location = new System.Drawing.Point(121, 192);
+            this.fnacDatePicker.Name = "fnacDatePicker";
+            this.fnacDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.fnacDatePicker.TabIndex = 14;
+            // 
             // Alta_de_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,6 +330,7 @@
             this.Name = "Alta_de_Usuario";
             this.Text = "Alta_de_Usuario";
             this.Load += new System.EventHandler(this.Alta_de_Usuario_Load);
+            this.Click += new System.EventHandler(this.btnCrear_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -343,7 +344,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtdni;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtfnac;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TextBox txttel;
         private System.Windows.Forms.TextBox txtdireccion;
@@ -356,9 +356,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton btnRadioVendedor;
+        private System.Windows.Forms.RadioButton btnRadioSupervisor;
+        private System.Windows.Forms.RadioButton btnRadioAdmin;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtpass;
@@ -367,5 +367,6 @@
         private System.Windows.Forms.Button btnCrear;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.DateTimePicker fnacDatePicker;
     }
 }
