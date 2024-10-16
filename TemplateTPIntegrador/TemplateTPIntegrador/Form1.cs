@@ -28,6 +28,8 @@ namespace TemplateTPIntegrador
         {
             string usuario = txtBoxUser.Text;
             string clave = txtBoxPass.Text;
+            string nombre = txtBoxNombre.Text;   
+            string apellido = txtBoxApellido.Text;
             PresentacionValidaciones validaciones = new PresentacionValidaciones();
 
             if(validaciones.ValidarStringVacio(usuario) == true || validaciones.ValidarStringVacio(clave) == true)
@@ -50,6 +52,11 @@ namespace TemplateTPIntegrador
                 MessageBox.Show("El nombre de usuario debe tener entre 8 y 15 caracteres.");
                 return;
             }
+            if (usuario.Contains(nombre, StringComparison.OrdinalIgnoreCase) || usuario.Contains(apellido, StringComparison.OrdinalIgnoreCase))
+            {
+                MessageBox.Show("El nombre de usuario no puede contener su nombre o apellido.");
+                return;
+            }
 
             if (loginNegocio.Login(usuario) == true)
             {
@@ -59,6 +66,8 @@ namespace TemplateTPIntegrador
             {
                 MessageBox.Show("Error en el login.");
             }
+
+
 
             NegocioValidaciones claveNegocio = new NegocioValidaciones();
             if (!clave.Any(char.IsUpper) || !clave.Any(char.IsDigit))
