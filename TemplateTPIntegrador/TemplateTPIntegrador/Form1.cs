@@ -43,6 +43,22 @@ namespace TemplateTPIntegrador
                 MessageBox.Show("El nombre de usuario debe ser mayor a 8 caracteres");
                 return;
             }
+            NegocioValidaciones loginNegocio = new NegocioValidaciones();
+                        
+            if (usuario.Length < 8 || usuario.Length > 15)
+            {
+                MessageBox.Show("El nombre de usuario debe tener entre 8 y 15 caracteres.");
+                return;
+            }
+
+            if (loginNegocio.Login(usuario) == true)
+            {
+                MessageBox.Show("Login exitoso.");
+            }
+            else
+            {
+                MessageBox.Show("Error en el login.");
+            }
 
             NegocioValidaciones claveNegocio = new NegocioValidaciones();
             if (!clave.Any(char.IsUpper) || !clave.Any(char.IsDigit))
