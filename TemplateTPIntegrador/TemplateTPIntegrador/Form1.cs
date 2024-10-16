@@ -37,42 +37,46 @@ namespace TemplateTPIntegrador
                 MessageBox.Show("Ingrese todos los datos necesarios!");
                 return;
             }
-
-            NegocioValidaciones loginNegocio = new NegocioValidaciones();
-
-            if(loginNegocio.Login(usuario) == true)
-            {
-                MessageBox.Show("El nombre de usuario debe ser mayor a 8 caracteres");
-                return;
-            }
-            NegocioValidaciones loginNegocio = new NegocioValidaciones();
                         
             if (usuario.Length < 8 || usuario.Length > 15)
             {
                 MessageBox.Show("El nombre de usuario debe tener entre 8 y 15 caracteres.");
                 return;
             }
+
             if (usuario.Contains(nombre, StringComparison.OrdinalIgnoreCase) || usuario.Contains(apellido, StringComparison.OrdinalIgnoreCase))
             {
                 MessageBox.Show("El nombre de usuario no puede contener su nombre o apellido.");
                 return;
             }
 
-            if (loginNegocio.Login(usuario) == true)
+            NegocioValidaciones loginNegocio = new NegocioValidaciones();
+                        
+            if (!loginNegocio.ExisteUsuario(usuario))
             {
-                MessageBox.Show("Login exitoso.");
+                MessageBox.Show("El nombre de usuario no existe.");
+                return;
             }
-            else
+
+            try
             {
-                MessageBox.Show("Error en el login.");
+                if (loginNegocio.Login(usuario, clave))
+                {
+                    MessageBox.Show("Login exitoso.");
+                }
+                else
+                {
+                    MessageBox.Show("Error en el login. Usuario o contraseña incorrectos.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un error al intentar iniciar sesión: " + ex.Message);
             }
 
-
-
-            NegocioValidaciones claveNegocio = new NegocioValidaciones();
             if (!clave.Any(char.IsUpper) || !clave.Any(char.IsDigit))
             {
-                MessageBox.Show("La contraseña debe tener al menos una letra mayscula y al menos un número");
+                MessageBox.Show("La contraseña debe tener al menos una letra mayúscula y al menos un número.");
                 return;
             }
 
