@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -37,12 +38,20 @@ namespace TemplateTPIntegrador
                 MessageBox.Show("Ingrese todos los datos necesarios!");
                 return;
             }
+<<<<<<< Updated upstream
                         
             if (usuario.Length < 8 || usuario.Length > 15)
+=======
+
+            NegocioValidaciones loginNegocio = new NegocioValidaciones();
+
+            if (loginNegocio.Login(usuario) == true)
+>>>>>>> Stashed changes
             {
                 MessageBox.Show("El nombre de usuario debe tener entre 8 y 15 caracteres.");
                 return;
             }
+<<<<<<< Updated upstream
 
             if (usuario.Contains(nombre, StringComparison.OrdinalIgnoreCase) || usuario.Contains(apellido, StringComparison.OrdinalIgnoreCase))
             {
@@ -81,6 +90,15 @@ namespace TemplateTPIntegrador
             }
 
 
+=======
+            
+            NegocioValidaciones claveNegocio = new NegocioValidaciones();
+            if(!clave.Any(char.IsUpper) || !clave.Any(char.IsDigit))
+            {
+                MessageBox.Show("La contraseña debe tener al menos una letra mayscula y al menos un número");
+                return;
+            }
+>>>>>>> Stashed changes
         }
     }
 }
