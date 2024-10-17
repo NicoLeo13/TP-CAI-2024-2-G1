@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TemplateTPIntegrador
+namespace Presentacion
 {
     internal static class Program
     {
@@ -16,7 +16,8 @@ namespace TemplateTPIntegrador
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run (new Perfil_Administrador ());
+            //Application.Run (new Perfil_Administrador ());
+            Application.Run (new FormLogin());
         }
     }
 }

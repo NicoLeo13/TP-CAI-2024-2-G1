@@ -1,4 +1,4 @@
-﻿namespace TemplateTPIntegrador
+﻿namespace Presentacion
 {
     partial class Alta_de_Usuario
     {

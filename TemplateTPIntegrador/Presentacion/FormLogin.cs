@@ -1,6 +1,4 @@
-﻿using Negocio;
-using Negocio.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio.Utils;
+using Datos;
+using Negocio;
 
-namespace TemplateTPIntegrador
+namespace Presentacion
 {
-    public partial class Form1 : Form
+    public partial class FormLogin : Form
     {
-        public Form1()
+        public FormLogin()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            // Crea el ToolTip y asigna al linkLabelForgotPass
+            ToolTip toolTip = new ToolTip();
+            toolTip.SetToolTip(linkLabelForgotPass, "Haz clic aquí si olvidaste tu contraseña.");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,7 +35,7 @@ namespace TemplateTPIntegrador
 
             if(validaciones.ValidarStringVacio(usuario) == true || validaciones.ValidarStringVacio(clave) == true)
             {
-                MessageBox.Show("Ingrese todos los datos necesarios!");
+                MessageBox.Show("Complete todos los campos", "Campos Vacios");
                 return;
             }
 
@@ -55,6 +58,11 @@ namespace TemplateTPIntegrador
             }
 
             MessageBox.Show(idUser);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }
