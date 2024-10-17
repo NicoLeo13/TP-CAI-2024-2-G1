@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Persistencia
 {
@@ -15,8 +16,11 @@ namespace Persistencia
     {
         private String adminId = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
 
-        public String login(String username, String password)
+        public (String idUsuario, string responseBody) login(String username, String password)
         {
+            string idUsuario = "";
+            string responseBody = "";
+
             Dictionary<String, String> datos = new Dictionary<String, String>();
 
             datos.Add("nombreUsuario", username);
@@ -25,13 +29,11 @@ namespace Persistencia
             // Convert the data to a JSON string
             var jsonData = JsonConvert.SerializeObject(datos);
 
-            Console.WriteLine("jsonData para Usuario/Login: " + jsonData);
+            Debug.WriteLine("\njsonData para Usuario/Login: " + jsonData);
 
             HttpResponseMessage response = WebHelper.Post("Usuario/Login", jsonData);
 
-            Console.WriteLine("response Usuario/Login: " + response);
-
-            String idUsuario = "";
+            Debug.WriteLine("\nresponse Usuario/Login: " + response);
 
             if (response.IsSuccessStatusCode)
             {
@@ -40,11 +42,13 @@ namespace Persistencia
             }
             else
             {
-                Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                throw new Exception("Error al momento del Login");
+                responseBody = response.Content.ReadAsStringAsync().Result;
+                Debug.WriteLine($"\nError: {response.StatusCode} - {response.ReasonPhrase}");
+                Debug.WriteLine($"\nBody de la respuesta: {responseBody}");
+                //throw new Exception("Error al momento del Login");
             }
 
-            return idUsuario;
+            return (idUsuario, responseBody);
         }
 
 
@@ -105,7 +109,7 @@ namespace Persistencia
 
             var jsonData = JsonConvert.SerializeObject(datos);
 
-            Console.WriteLine("jsonData Usuario/AgregarUsuario: " + jsonData);
+            Debug.WriteLine("jsonData Usuario/AgregarUsuario: " + jsonData);
 
             // Ejemplo Swagger:
 
@@ -147,7 +151,7 @@ namespace Persistencia
 
             HttpResponseMessage response = WebHelper.Post("Usuario/AgregarUsuario", jsonData);
 
-            Console.WriteLine("response Usuario/AgregarUsuario: " + response);
+            Debug.WriteLine("response Usuario/AgregarUsuario: " + response);
 
             String result = "";
 
@@ -159,14 +163,14 @@ namespace Persistencia
             else
             {
                 var errorContent = response.Content.ReadAsStringAsync().Result;
-                Console.WriteLine($"Error: {errorContent}");
+                Debug.WriteLine($"Error: {errorContent}");
                 throw new Exception("Error al crear el nuevo usuario.");
             }
 
             return result;
         }
 
-        public List<UsuarioWS> traerUsuariosActivos()
+        public List<UsuarioWS> TraerUsuariosActivos()
         {
             List<UsuarioWS> clientes = new List<UsuarioWS>();
 
@@ -180,7 +184,7 @@ namespace Persistencia
             }
             else
             {
-                Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                Debug.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
                 throw new Exception("Error al momento de buscar los usuarios");
             }
 

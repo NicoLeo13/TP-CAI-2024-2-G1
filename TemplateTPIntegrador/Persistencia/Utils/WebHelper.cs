@@ -16,6 +16,7 @@ namespace Persistencia.Utils
             var uri = rutaBase + url;
 
             HttpResponseMessage response = httpClient.GetAsync(uri).Result;  // Blocking call!
+            string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
         }
@@ -27,6 +28,7 @@ namespace Persistencia.Utils
             var data = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = httpClient.PostAsync(uri, data).Result;
+            string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
 
@@ -38,6 +40,7 @@ namespace Persistencia.Utils
             var data = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = httpClient.PutAsync(uri, data).Result;
+            string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
 
@@ -55,6 +58,7 @@ namespace Persistencia.Utils
                 };
 
             HttpResponseMessage response = httpClient.SendAsync(request).Result;
+            string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
         }
@@ -64,6 +68,7 @@ namespace Persistencia.Utils
             var uri = rutaBase + url;
 
             HttpResponseMessage response = httpClient.DeleteAsync(uri).Result;
+            string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
         }
@@ -78,6 +83,7 @@ namespace Persistencia.Utils
                 Content = new StringContent(jsonRequest, Encoding.UTF8, "application/json")
             };
             HttpResponseMessage response = httpClient.SendAsync(request).Result;
+            string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
         }

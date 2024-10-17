@@ -15,6 +15,10 @@ namespace Presentacion
 {
     public partial class FormLogin : Form
     {
+        public const string TOOLTIP_OLVIDAR_CONTRASEÑA = "Haz clic aquí si olvidaste tu contraseña.";
+        public const string ERROR_SHOW = "Error";
+
+
         public FormLogin()
         {
             InitializeComponent();
@@ -24,45 +28,47 @@ namespace Presentacion
         {
             // Crea el ToolTip y asigna al linkLabelForgotPass
             ToolTip toolTip = new ToolTip();
-            toolTip.SetToolTip(linkLabelForgotPass, "Haz clic aquí si olvidaste tu contraseña.");
+            toolTip.SetToolTip(linkLabelForgotPass, TOOLTIP_OLVIDAR_CONTRASEÑA);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             string usuario = txtBoxUser.Text;
             string clave = txtBoxPass.Text;
-            PresentacionValidaciones validaciones = new PresentacionValidaciones();
+            PresentacionValidaciones presentacionValidaciones = new PresentacionValidaciones();
 
-            if(validaciones.ValidarStringVacio(usuario) == true || validaciones.ValidarStringVacio(clave) == true)
+            if (presentacionValidaciones.CamposValidos(usuario, clave, out string mensajeError) == false)
             {
-                MessageBox.Show("Complete todos los campos", "Campos Vacios");
+                MessageBox.Show(mensajeError, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            NegocioValidaciones loginValidacion = new NegocioValidaciones();
-      
+            LoginUsuario loginUsuario = new LoginUsuario();
 
-            if(loginValidacion.Login(usuario) == true)
+            Guid userGuid = loginUsuario.TraerUsuario(usuario);
+            if (userGuid == Guid.Empty)
             {
-                MessageBox.Show("El nombre de usuario debe ser mayor a 8 caracteres");
+                MessageBox.Show("Usuario no encontrado", ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            LoginNegocio login = new LoginNegocio();
-            string idUser = login.Login(usuario, clave);
+            (string idUsuario, string responseBody) = loginUsuario.Login(usuario, clave);
 
-            Perfil_Administrador perfilAdmin = new Perfil_Administrador();
-            {
-                perfilAdmin.Show();
-                this.Hide();
-            }
+            if (!string.IsNullOrEmpty(idUsuario))
+                MessageBox.Show(idUsuario, "Usuario Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else
+                MessageBox.Show(responseBody, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            MessageBox.Show(idUser);
+            //Perfil_Administrador perfilAdmin = new Perfil_Administrador();
+            //{
+            //    perfilAdmin.Show();
+            //    this.Hide();
+            //}
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            MessageBox.Show("Implementar logica");
         }
     }
 }

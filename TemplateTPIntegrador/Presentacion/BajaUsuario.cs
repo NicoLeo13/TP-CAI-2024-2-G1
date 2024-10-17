@@ -26,7 +26,7 @@ namespace Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            LoginNegocio login = new LoginNegocio();
+            LoginUsuario login = new LoginUsuario();
 
             string usuarioBaja = txtUsuario.Text;
 
