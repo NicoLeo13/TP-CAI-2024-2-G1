@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.fnacDatePicker = new System.Windows.Forms.DateTimePicker();
             this.txtdni = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
@@ -54,7 +55,6 @@
             this.btnCrear = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.fnacDatePicker = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -82,6 +82,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Personales";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // fnacDatePicker
+            // 
+            this.fnacDatePicker.Location = new System.Drawing.Point(121, 192);
+            this.fnacDatePicker.Name = "fnacDatePicker";
+            this.fnacDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.fnacDatePicker.TabIndex = 14;
             // 
             // txtdni
             // 
@@ -288,7 +295,7 @@
             this.btnCrear.TabIndex = 9;
             this.btnCrear.Text = "Crear Usuario";
             this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
+            this.btnCrear.Click += new System.EventHandler(this.btnCrearUser_Click);
             // 
             // btnLimpiar
             // 
@@ -310,13 +317,6 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // fnacDatePicker
-            // 
-            this.fnacDatePicker.Location = new System.Drawing.Point(121, 192);
-            this.fnacDatePicker.Name = "fnacDatePicker";
-            this.fnacDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.fnacDatePicker.TabIndex = 14;
-            // 
             // Alta_de_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,7 +330,6 @@
             this.Name = "Alta_de_Usuario";
             this.Text = "Alta_de_Usuario";
             this.Load += new System.EventHandler(this.Alta_de_Usuario_Load);
-            this.Click += new System.EventHandler(this.btnCrear_Click);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
