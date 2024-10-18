@@ -12,29 +12,25 @@ namespace Persistencia.Utils
         private string filePath;
 
         // Static constructor to set the default file path
-        public DBHelper()
+        public DBHelper(String dataBaseName)
         {
             string solutionDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            filePath = Path.Combine(solutionDirectory, "data.txt");
+            filePath = Path.Combine(solutionDirectory, dataBaseName + ".txt");
 
             // Create the file if it doesn't exist
             if (!File.Exists(filePath))
-            {
                 File.Create(filePath).Close();
-            }
         }
 
-        // Method to insert a key-value pair
-        public void Insertar(string key, string value)
+        // Method to insert a key-value-value combo
+        public void Insertar(string user, string intentos, DateTime tmsTmp)
         {
             using (StreamWriter writer = new StreamWriter(filePath, true))
-            {
-                writer.WriteLine($"{key}|{value}");
-            }
+                writer.WriteLine($"{user}|{intentos}|{tmsTmp}");
         }
 
         // Method to modify the value of an existing key
-        public void Modificar(string key, string newValue)
+        public void Modificar(string user, string newIntento)
         {
             List<string> lines = File.ReadAllLines(filePath).ToList();
             bool modified = false;
@@ -42,19 +38,17 @@ namespace Persistencia.Utils
             // Modify the line with the matching key
             for (int i = 0; i < lines.Count; i++)
             {
-                string[] keyValue = lines[i].Split('|');
-                if (keyValue[0] == key)
+                string[] arrKeys = lines[i].Split('|');
+                if (arrKeys[0] == user)
                 {
-                    lines[i] = $"{key}|{newValue}";
+                    lines[i] = $"{user}|{newIntento}|{DateTime.Now}";
                     modified = true;
                     break;
                 }
             }
 
             if (modified)
-            {
                 File.WriteAllLines(filePath, lines);
-            }
         }
 
         // Method to delete a key-value pair by key
@@ -69,20 +63,18 @@ namespace Persistencia.Utils
         }
 
         // Method to search for a value by key
-        public string Buscar(string key)
+        public (string intento, DateTime tmsTmp) Buscar(string user)
         {
             string[] lines = File.ReadAllLines(filePath);
 
             foreach (var line in lines)
             {
-                string[] keyValue = line.Split('|');
-                if (keyValue[0] == key)
-                {
-                    return keyValue[1];
-                }
+                string[] arrKeys = line.Split('|');
+                if (arrKeys[0] == user)
+                    return (arrKeys[1], DateTime.Parse(arrKeys[2]));  // Return current try if found
             }
 
-            return null; // Return null if not found
+            return (null, DateTime.MinValue); // Return null if not found
         }
 
         // Method to list all key-value pairs

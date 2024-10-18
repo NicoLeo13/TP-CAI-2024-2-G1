@@ -16,6 +16,7 @@ namespace Persistencia.Utils
             var uri = rutaBase + url;
 
             HttpResponseMessage response = httpClient.GetAsync(uri).Result;  // Blocking call!
+            // Eliminar despues
             string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
@@ -28,6 +29,7 @@ namespace Persistencia.Utils
             var data = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = httpClient.PostAsync(uri, data).Result;
+            // Eliminar despues
             string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
@@ -40,6 +42,7 @@ namespace Persistencia.Utils
             var data = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = httpClient.PutAsync(uri, data).Result;
+            // Eliminar despues
             string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
@@ -58,6 +61,7 @@ namespace Persistencia.Utils
                 };
 
             HttpResponseMessage response = httpClient.SendAsync(request).Result;
+            // Eliminar despues
             string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
@@ -68,6 +72,7 @@ namespace Persistencia.Utils
             var uri = rutaBase + url;
 
             HttpResponseMessage response = httpClient.DeleteAsync(uri).Result;
+            // Eliminar despues
             string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;
@@ -83,6 +88,7 @@ namespace Persistencia.Utils
                 Content = new StringContent(jsonRequest, Encoding.UTF8, "application/json")
             };
             HttpResponseMessage response = httpClient.SendAsync(request).Result;
+            // Eliminar despues
             string responseBody = response.Content.ReadAsStringAsync().Result;
 
             return response;

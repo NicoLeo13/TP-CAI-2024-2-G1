@@ -17,6 +17,7 @@ namespace Presentacion
     {
         public const string TOOLTIP_OLVIDAR_CONTRASEÑA = "Haz clic aquí si olvidaste tu contraseña.";
         public const string ERROR_SHOW = "Error";
+        public const string USER_NOT_FOUND = "Usuario no encontrado";
 
 
         public FormLogin()
@@ -52,12 +53,20 @@ namespace Presentacion
                 return;
             }
 
-            (string idUsuario, string responseBody) = loginUsuario.Login(usuario, clave);
+            // Bloque try-catch para manejar excepciones en login
+            try
+            {
+                (string idUsuario, string responseBody) = loginUsuario.Login(usuario, clave);
 
-            if (!string.IsNullOrEmpty(idUsuario))
-                MessageBox.Show(idUsuario, "Usuario Encontrado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            else
-                MessageBox.Show(responseBody, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (!string.IsNullOrEmpty(idUsuario))
+                    MessageBox.Show(idUsuario, USER_NOT_FOUND, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                else
+                    MessageBox.Show(responseBody, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);  //Para mostrar error en caso de que no se haya encontrado el usuario
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
             //Perfil_Administrador perfilAdmin = new Perfil_Administrador();
             //{
