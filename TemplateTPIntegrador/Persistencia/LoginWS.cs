@@ -43,9 +43,9 @@ namespace Persistencia
             else
             {
                 responseBody = response.Content.ReadAsStringAsync().Result;
-                Debug.WriteLine($"\nError: {response.StatusCode} - {response.ReasonPhrase}");
+                //Debug.WriteLine($"\nError: {response.StatusCode} - {response.ReasonPhrase}");
                 Debug.WriteLine($"\nBody de la respuesta: {responseBody}");
-                throw new Exception("Error al momento del Login");
+                throw new Exception($"Error: {responseBody}");
             }
 
             return (idUsuario, responseBody, response.StatusCode.ToString());

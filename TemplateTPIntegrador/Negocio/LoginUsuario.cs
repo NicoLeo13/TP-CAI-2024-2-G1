@@ -11,6 +11,8 @@ namespace Negocio
 {
     public class LoginUsuario
     {
+        private const int LOCK_TIME = 5;
+        
         public (String idUsuario, string responseBody) Login(string username, string password)
         {
             string idUsuario;
@@ -24,11 +26,11 @@ namespace Negocio
             (int intentos, DateTime tmsTmp) = loginDB.obtenerIntentos(username);
             if (intentos >= 3)
             {
-                TimeSpan diff = DateTime.Now - tmsTmp;
-                if (diff.TotalMinutes < 5)
+                DateTime lockedUntil = tmsTmp.AddMinutes(LOCK_TIME);
+                if (DateTime.Now < lockedUntil)
                 {
-                    Debug.WriteLine($"Usuario bloqueado por: {diff.TotalMinutes} minutos y {diff.Seconds} segundos");
-                    return (null, $"Usuario bloqueado por: {diff.TotalMinutes} minutos y {diff.Seconds} segundos");
+                    Debug.WriteLine($"Usuario bloqueado por: {LOCK_TIME} minutos");
+                    return (null, $"Usuario bloqueado por: {LOCK_TIME} minutos.\nVuelva a intentar en el siguiente horario: {lockedUntil.ToShortTimeString()}hs");
                 }
                 else
                 {
