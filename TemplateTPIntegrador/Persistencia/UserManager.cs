@@ -117,7 +117,7 @@ namespace Persistencia
 
             Debug.WriteLine("response Usuario/AgregarUsuario: " + response);
 
-            String result = "";
+            String result;
 
             if (response.IsSuccessStatusCode)
             {

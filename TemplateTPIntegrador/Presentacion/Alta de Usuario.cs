@@ -50,18 +50,18 @@ namespace Presentacion
         {
             // Datos personales
 
-            string nombre = txtnombre.Text;
-            string apellido = txtapellido.Text;
-            string direccion = txtdireccion.Text;
-            string telefono = txttel.Text;
-            string email = txtemail.Text;
-            string dni = txtdni.Text;
-            DateTime fechaNacimiento = fnacDatePicker.Value;
+            string nombre = txtNombre.Text;
+            string apellido = txtApellido.Text;
+            string direccion = txtDireccion.Text;
+            string telefono = txtTelefono.Text;
+            string email = txtEmail.Text;
+            string dni = txtDni.Text;
+            DateTime fechaNacimiento = datepickerFechaNacimiento.Value;
 
             // Creación de usuario
 
-            string usuario = txtuser.Text;
-            string clave = txtpass.Text;
+            string usuario = txtUsuario.Text;
+            string clave = txtContraseña.Text;
             int host = 0;
 
             NegocioValidaciones validarusuario = new NegocioValidaciones();
@@ -82,17 +82,17 @@ namespace Presentacion
 
             // Validación y asignación de tipo de usuario
 
-            if (btnRadioAdmin.Checked)
+            if (btnradioAdministrador.Checked)
             {
                 host = 3;
             }
             else
-            if (btnRadioSupervisor.Checked)
+            if (btnradioSupervisor.Checked)
             {
                 host = 2;
             }
             else
-            if (btnRadioVendedor.Checked)
+            if (btnradioVendedor.Checked)
             {
                 host = 1;
             };

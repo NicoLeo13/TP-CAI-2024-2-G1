@@ -28,284 +28,284 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.fnacDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.txtdni = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtemail = new System.Windows.Forms.TextBox();
-            this.txttel = new System.Windows.Forms.TextBox();
-            this.txtdireccion = new System.Windows.Forms.TextBox();
-            this.txtapellido = new System.Windows.Forms.TextBox();
-            this.txtnombre = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnRadioVendedor = new System.Windows.Forms.RadioButton();
-            this.btnRadioSupervisor = new System.Windows.Forms.RadioButton();
-            this.btnRadioAdmin = new System.Windows.Forms.RadioButton();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtpass = new System.Windows.Forms.TextBox();
-            this.txtuser = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnCrear = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.groupBoxDatosPersonales = new System.Windows.Forms.GroupBox();
+            this.datepickerFechaNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.txtDni = new System.Windows.Forms.TextBox();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.lblApellido = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.groupBoxCreacionUsuario = new System.Windows.Forms.GroupBox();
+            this.btnradioVendedor = new System.Windows.Forms.RadioButton();
+            this.btnradioSupervisor = new System.Windows.Forms.RadioButton();
+            this.btnradioAdministrador = new System.Windows.Forms.RadioButton();
+            this.lblHost = new System.Windows.Forms.Label();
+            this.lblContraseña = new System.Windows.Forms.Label();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.lblUsuario = new System.Windows.Forms.Label();
+            this.btnCrearUsuario = new System.Windows.Forms.Button();
+            this.btnLimpiarDatos = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBoxDatosPersonales.SuspendLayout();
+            this.groupBoxCreacionUsuario.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBoxDatosPersonales
             // 
-            this.groupBox1.Controls.Add(this.fnacDatePicker);
-            this.groupBox1.Controls.Add(this.txtdni);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.txtemail);
-            this.groupBox1.Controls.Add(this.txttel);
-            this.groupBox1.Controls.Add(this.txtdireccion);
-            this.groupBox1.Controls.Add(this.txtapellido);
-            this.groupBox1.Controls.Add(this.txtnombre);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(425, 242);
-            this.groupBox1.TabIndex = 7;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos Personales";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            this.groupBoxDatosPersonales.Controls.Add(this.datepickerFechaNacimiento);
+            this.groupBoxDatosPersonales.Controls.Add(this.txtDni);
+            this.groupBoxDatosPersonales.Controls.Add(this.lblDni);
+            this.groupBoxDatosPersonales.Controls.Add(this.txtEmail);
+            this.groupBoxDatosPersonales.Controls.Add(this.txtTelefono);
+            this.groupBoxDatosPersonales.Controls.Add(this.txtDireccion);
+            this.groupBoxDatosPersonales.Controls.Add(this.txtApellido);
+            this.groupBoxDatosPersonales.Controls.Add(this.txtNombre);
+            this.groupBoxDatosPersonales.Controls.Add(this.lblNombre);
+            this.groupBoxDatosPersonales.Controls.Add(this.lblFechaNacimiento);
+            this.groupBoxDatosPersonales.Controls.Add(this.lblApellido);
+            this.groupBoxDatosPersonales.Controls.Add(this.lblEmail);
+            this.groupBoxDatosPersonales.Controls.Add(this.lblDireccion);
+            this.groupBoxDatosPersonales.Controls.Add(this.lblTelefono);
+            this.groupBoxDatosPersonales.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxDatosPersonales.Name = "groupBoxDatosPersonales";
+            this.groupBoxDatosPersonales.Size = new System.Drawing.Size(425, 242);
+            this.groupBoxDatosPersonales.TabIndex = 7;
+            this.groupBoxDatosPersonales.TabStop = false;
+            this.groupBoxDatosPersonales.Text = "Datos Personales";
+            this.groupBoxDatosPersonales.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // fnacDatePicker
+            // datepickerFechaNacimiento
             // 
-            this.fnacDatePicker.Location = new System.Drawing.Point(121, 192);
-            this.fnacDatePicker.Name = "fnacDatePicker";
-            this.fnacDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.fnacDatePicker.TabIndex = 14;
+            this.datepickerFechaNacimiento.Location = new System.Drawing.Point(121, 192);
+            this.datepickerFechaNacimiento.Name = "datepickerFechaNacimiento";
+            this.datepickerFechaNacimiento.Size = new System.Drawing.Size(200, 20);
+            this.datepickerFechaNacimiento.TabIndex = 14;
             // 
-            // txtdni
+            // txtDni
             // 
-            this.txtdni.Location = new System.Drawing.Point(115, 159);
-            this.txtdni.Name = "txtdni";
-            this.txtdni.Size = new System.Drawing.Size(253, 20);
-            this.txtdni.TabIndex = 13;
+            this.txtDni.Location = new System.Drawing.Point(115, 159);
+            this.txtDni.Name = "txtDni";
+            this.txtDni.Size = new System.Drawing.Size(253, 20);
+            this.txtDni.TabIndex = 13;
             // 
-            // label9
+            // lblDni
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 165);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 13);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "DNI";
+            this.lblDni.AutoSize = true;
+            this.lblDni.Location = new System.Drawing.Point(6, 165);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(26, 13);
+            this.lblDni.TabIndex = 12;
+            this.lblDni.Text = "DNI";
             // 
-            // txtemail
+            // txtEmail
             // 
-            this.txtemail.Location = new System.Drawing.Point(114, 133);
-            this.txtemail.Name = "txtemail";
-            this.txtemail.Size = new System.Drawing.Size(253, 20);
-            this.txtemail.TabIndex = 10;
+            this.txtEmail.Location = new System.Drawing.Point(114, 133);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(253, 20);
+            this.txtEmail.TabIndex = 10;
             // 
-            // txttel
+            // txtTelefono
             // 
-            this.txttel.Location = new System.Drawing.Point(114, 107);
-            this.txttel.Name = "txttel";
-            this.txttel.Size = new System.Drawing.Size(253, 20);
-            this.txttel.TabIndex = 9;
+            this.txtTelefono.Location = new System.Drawing.Point(114, 107);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(253, 20);
+            this.txtTelefono.TabIndex = 9;
             // 
-            // txtdireccion
+            // txtDireccion
             // 
-            this.txtdireccion.Location = new System.Drawing.Point(114, 78);
-            this.txtdireccion.Name = "txtdireccion";
-            this.txtdireccion.Size = new System.Drawing.Size(253, 20);
-            this.txtdireccion.TabIndex = 8;
+            this.txtDireccion.Location = new System.Drawing.Point(114, 78);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(253, 20);
+            this.txtDireccion.TabIndex = 8;
             // 
-            // txtapellido
+            // txtApellido
             // 
-            this.txtapellido.Location = new System.Drawing.Point(114, 53);
-            this.txtapellido.Name = "txtapellido";
-            this.txtapellido.Size = new System.Drawing.Size(253, 20);
-            this.txtapellido.TabIndex = 7;
+            this.txtApellido.Location = new System.Drawing.Point(114, 53);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(253, 20);
+            this.txtApellido.TabIndex = 7;
             // 
-            // txtnombre
+            // txtNombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(114, 27);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(253, 20);
-            this.txtnombre.TabIndex = 6;
+            this.txtNombre.Location = new System.Drawing.Point(114, 27);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(253, 20);
+            this.txtNombre.TabIndex = 6;
             // 
-            // label1
+            // lblNombre
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(6, 26);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre";
             // 
-            // label6
+            // lblFechaNacimiento
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 192);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(108, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Fecha de Nacimiento";
+            this.lblFechaNacimiento.AutoSize = true;
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(6, 192);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(108, 13);
+            this.lblFechaNacimiento.TabIndex = 5;
+            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             // 
-            // label2
+            // lblApellido
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 53);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Apellido";
+            this.lblApellido.AutoSize = true;
+            this.lblApellido.Location = new System.Drawing.Point(6, 53);
+            this.lblApellido.Name = "lblApellido";
+            this.lblApellido.Size = new System.Drawing.Size(44, 13);
+            this.lblApellido.TabIndex = 1;
+            this.lblApellido.Text = "Apellido";
             // 
-            // label5
+            // lblEmail
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 136);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Email";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(6, 136);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 4;
+            this.lblEmail.Text = "Email";
             // 
-            // label3
+            // lblDireccion
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Direccion";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(6, 78);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(52, 13);
+            this.lblDireccion.TabIndex = 2;
+            this.lblDireccion.Text = "Dirección";
             // 
-            // label4
+            // lblTelefono
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 105);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Telefono";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Location = new System.Drawing.Point(6, 105);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(49, 13);
+            this.lblTelefono.TabIndex = 3;
+            this.lblTelefono.Text = "Teléfono";
             // 
-            // groupBox2
+            // groupBoxCreacionUsuario
             // 
-            this.groupBox2.Controls.Add(this.btnRadioVendedor);
-            this.groupBox2.Controls.Add(this.btnRadioSupervisor);
-            this.groupBox2.Controls.Add(this.btnRadioAdmin);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.txtpass);
-            this.groupBox2.Controls.Add(this.txtuser);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Location = new System.Drawing.Point(12, 260);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(264, 187);
-            this.groupBox2.TabIndex = 8;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Creacion de Usuario";
+            this.groupBoxCreacionUsuario.Controls.Add(this.btnradioVendedor);
+            this.groupBoxCreacionUsuario.Controls.Add(this.btnradioSupervisor);
+            this.groupBoxCreacionUsuario.Controls.Add(this.btnradioAdministrador);
+            this.groupBoxCreacionUsuario.Controls.Add(this.lblHost);
+            this.groupBoxCreacionUsuario.Controls.Add(this.lblContraseña);
+            this.groupBoxCreacionUsuario.Controls.Add(this.txtContraseña);
+            this.groupBoxCreacionUsuario.Controls.Add(this.txtUsuario);
+            this.groupBoxCreacionUsuario.Controls.Add(this.lblUsuario);
+            this.groupBoxCreacionUsuario.Location = new System.Drawing.Point(12, 260);
+            this.groupBoxCreacionUsuario.Name = "groupBoxCreacionUsuario";
+            this.groupBoxCreacionUsuario.Size = new System.Drawing.Size(264, 187);
+            this.groupBoxCreacionUsuario.TabIndex = 8;
+            this.groupBoxCreacionUsuario.TabStop = false;
+            this.groupBoxCreacionUsuario.Text = "Creacion de Usuario";
             // 
-            // btnRadioVendedor
+            // btnradioVendedor
             // 
-            this.btnRadioVendedor.AutoSize = true;
-            this.btnRadioVendedor.Location = new System.Drawing.Point(108, 155);
-            this.btnRadioVendedor.Name = "btnRadioVendedor";
-            this.btnRadioVendedor.Size = new System.Drawing.Size(71, 17);
-            this.btnRadioVendedor.TabIndex = 17;
-            this.btnRadioVendedor.TabStop = true;
-            this.btnRadioVendedor.Text = "Vendedor";
-            this.btnRadioVendedor.UseVisualStyleBackColor = true;
+            this.btnradioVendedor.AutoSize = true;
+            this.btnradioVendedor.Location = new System.Drawing.Point(108, 155);
+            this.btnradioVendedor.Name = "btnradioVendedor";
+            this.btnradioVendedor.Size = new System.Drawing.Size(71, 17);
+            this.btnradioVendedor.TabIndex = 17;
+            this.btnradioVendedor.TabStop = true;
+            this.btnradioVendedor.Text = "Vendedor";
+            this.btnradioVendedor.UseVisualStyleBackColor = true;
             // 
-            // btnRadioSupervisor
+            // btnradioSupervisor
             // 
-            this.btnRadioSupervisor.AutoSize = true;
-            this.btnRadioSupervisor.Location = new System.Drawing.Point(108, 132);
-            this.btnRadioSupervisor.Name = "btnRadioSupervisor";
-            this.btnRadioSupervisor.Size = new System.Drawing.Size(75, 17);
-            this.btnRadioSupervisor.TabIndex = 16;
-            this.btnRadioSupervisor.TabStop = true;
-            this.btnRadioSupervisor.Text = "Supervisor";
-            this.btnRadioSupervisor.UseVisualStyleBackColor = true;
+            this.btnradioSupervisor.AutoSize = true;
+            this.btnradioSupervisor.Location = new System.Drawing.Point(108, 132);
+            this.btnradioSupervisor.Name = "btnradioSupervisor";
+            this.btnradioSupervisor.Size = new System.Drawing.Size(75, 17);
+            this.btnradioSupervisor.TabIndex = 16;
+            this.btnradioSupervisor.TabStop = true;
+            this.btnradioSupervisor.Text = "Supervisor";
+            this.btnradioSupervisor.UseVisualStyleBackColor = true;
             // 
-            // btnRadioAdmin
+            // btnradioAdministrador
             // 
-            this.btnRadioAdmin.AutoSize = true;
-            this.btnRadioAdmin.Location = new System.Drawing.Point(108, 109);
-            this.btnRadioAdmin.Name = "btnRadioAdmin";
-            this.btnRadioAdmin.Size = new System.Drawing.Size(88, 17);
-            this.btnRadioAdmin.TabIndex = 15;
-            this.btnRadioAdmin.TabStop = true;
-            this.btnRadioAdmin.Text = "Administrador";
-            this.btnRadioAdmin.UseVisualStyleBackColor = true;
+            this.btnradioAdministrador.AutoSize = true;
+            this.btnradioAdministrador.Location = new System.Drawing.Point(108, 109);
+            this.btnradioAdministrador.Name = "btnradioAdministrador";
+            this.btnradioAdministrador.Size = new System.Drawing.Size(88, 17);
+            this.btnradioAdministrador.TabIndex = 15;
+            this.btnradioAdministrador.TabStop = true;
+            this.btnradioAdministrador.Text = "Administrador";
+            this.btnradioAdministrador.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // lblHost
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 111);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(29, 13);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Host";
+            this.lblHost.AutoSize = true;
+            this.lblHost.Location = new System.Drawing.Point(9, 111);
+            this.lblHost.Name = "lblHost";
+            this.lblHost.Size = new System.Drawing.Size(29, 13);
+            this.lblHost.TabIndex = 14;
+            this.lblHost.Text = "Host";
             // 
-            // label8
+            // lblContraseña
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(9, 73);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Contraseña";
+            this.lblContraseña.AutoSize = true;
+            this.lblContraseña.Location = new System.Drawing.Point(9, 73);
+            this.lblContraseña.Name = "lblContraseña";
+            this.lblContraseña.Size = new System.Drawing.Size(61, 13);
+            this.lblContraseña.TabIndex = 13;
+            this.lblContraseña.Text = "Contraseña";
             // 
-            // txtpass
+            // txtContraseña
             // 
-            this.txtpass.Location = new System.Drawing.Point(107, 73);
-            this.txtpass.Name = "txtpass";
-            this.txtpass.Size = new System.Drawing.Size(125, 20);
-            this.txtpass.TabIndex = 12;
-            this.txtpass.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
+            this.txtContraseña.Location = new System.Drawing.Point(107, 73);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Size = new System.Drawing.Size(125, 20);
+            this.txtContraseña.TabIndex = 12;
+            this.txtContraseña.TextChanged += new System.EventHandler(this.txtpass_TextChanged);
             // 
-            // txtuser
+            // txtUsuario
             // 
-            this.txtuser.Location = new System.Drawing.Point(108, 34);
-            this.txtuser.Name = "txtuser";
-            this.txtuser.Size = new System.Drawing.Size(125, 20);
-            this.txtuser.TabIndex = 11;
+            this.txtUsuario.Location = new System.Drawing.Point(108, 34);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(125, 20);
+            this.txtUsuario.TabIndex = 11;
             // 
-            // label7
+            // lblUsuario
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 37);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(43, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Usuario";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Location = new System.Drawing.Point(9, 37);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(43, 13);
+            this.lblUsuario.TabIndex = 0;
+            this.lblUsuario.Text = "Usuario";
             // 
-            // btnCrear
+            // btnCrearUsuario
             // 
-            this.btnCrear.Location = new System.Drawing.Point(336, 276);
-            this.btnCrear.Name = "btnCrear";
-            this.btnCrear.Size = new System.Drawing.Size(101, 38);
-            this.btnCrear.TabIndex = 9;
-            this.btnCrear.Text = "Crear Usuario";
-            this.btnCrear.UseVisualStyleBackColor = true;
-            this.btnCrear.Click += new System.EventHandler(this.btnCrearUser_Click);
+            this.btnCrearUsuario.Location = new System.Drawing.Point(336, 276);
+            this.btnCrearUsuario.Name = "btnCrearUsuario";
+            this.btnCrearUsuario.Size = new System.Drawing.Size(101, 38);
+            this.btnCrearUsuario.TabIndex = 9;
+            this.btnCrearUsuario.Text = "Crear Usuario";
+            this.btnCrearUsuario.UseVisualStyleBackColor = true;
+            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUser_Click);
             // 
-            // btnLimpiar
+            // btnLimpiarDatos
             // 
-            this.btnLimpiar.Location = new System.Drawing.Point(336, 333);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(101, 38);
-            this.btnLimpiar.TabIndex = 10;
-            this.btnLimpiar.Text = "Limpiar Datos";
-            this.btnLimpiar.UseVisualStyleBackColor = true;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            this.btnLimpiarDatos.Location = new System.Drawing.Point(336, 333);
+            this.btnLimpiarDatos.Name = "btnLimpiarDatos";
+            this.btnLimpiarDatos.Size = new System.Drawing.Size(101, 38);
+            this.btnLimpiarDatos.TabIndex = 10;
+            this.btnLimpiarDatos.Text = "Limpiar Datos";
+            this.btnLimpiarDatos.UseVisualStyleBackColor = true;
+            this.btnLimpiarDatos.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
             // btnVolver
             // 
@@ -323,49 +323,49 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 460);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnLimpiar);
-            this.Controls.Add(this.btnCrear);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.btnLimpiarDatos);
+            this.Controls.Add(this.btnCrearUsuario);
+            this.Controls.Add(this.groupBoxCreacionUsuario);
+            this.Controls.Add(this.groupBoxDatosPersonales);
             this.Name = "Alta_de_Usuario";
             this.Text = "Alta_de_Usuario";
             this.Load += new System.EventHandler(this.Alta_de_Usuario_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBoxDatosPersonales.ResumeLayout(false);
+            this.groupBoxDatosPersonales.PerformLayout();
+            this.groupBoxCreacionUsuario.ResumeLayout(false);
+            this.groupBoxCreacionUsuario.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtdni;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtemail;
-        private System.Windows.Forms.TextBox txttel;
-        private System.Windows.Forms.TextBox txtdireccion;
-        private System.Windows.Forms.TextBox txtapellido;
-        private System.Windows.Forms.TextBox txtnombre;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton btnRadioVendedor;
-        private System.Windows.Forms.RadioButton btnRadioSupervisor;
-        private System.Windows.Forms.RadioButton btnRadioAdmin;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.TextBox txtuser;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btnCrear;
-        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.GroupBox groupBoxDatosPersonales;
+        private System.Windows.Forms.TextBox txtDni;
+        private System.Windows.Forms.Label lblDni;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtTelefono;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.GroupBox groupBoxCreacionUsuario;
+        private System.Windows.Forms.RadioButton btnradioVendedor;
+        private System.Windows.Forms.RadioButton btnradioSupervisor;
+        private System.Windows.Forms.RadioButton btnradioAdministrador;
+        private System.Windows.Forms.Label lblHost;
+        private System.Windows.Forms.Label lblContraseña;
+        private System.Windows.Forms.TextBox txtContraseña;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.Label lblUsuario;
+        private System.Windows.Forms.Button btnCrearUsuario;
+        private System.Windows.Forms.Button btnLimpiarDatos;
         private System.Windows.Forms.Button btnVolver;
-        private System.Windows.Forms.DateTimePicker fnacDatePicker;
+        private System.Windows.Forms.DateTimePicker datepickerFechaNacimiento;
     }
 }
