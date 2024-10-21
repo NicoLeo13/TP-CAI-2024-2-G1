@@ -9,6 +9,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.Net;
 
 namespace Persistencia
 {
@@ -48,7 +49,7 @@ namespace Persistencia
                 throw new Exception($"Error: {responseBody}");
             }
 
-            return (idUsuario, responseBody, response.StatusCode.ToString());
+            return (idUsuario, responseBody, ((int)response.StatusCode).ToString());
         }
 
     }

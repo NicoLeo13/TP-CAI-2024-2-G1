@@ -28,7 +28,7 @@ namespace Persistencia
             //(String intento, DateTime tmsTmp) = dbHelper.Buscar(username);
             (string intentos, DateTime tmsTmp) = dbHelper.Buscar(username);     //Trabajo con string ya que puede estar vacio ""
             
-            if(intentos == null)
+            if(intentos == null || intentos == "")
                 intentos = "0";
 
             return (int.Parse(intentos), tmsTmp);
@@ -51,7 +51,8 @@ namespace Persistencia
         public void reiniciarIntentos(String key)
         {
             DBHelper dbHelper = new DBHelper("intentos_login");
-            dbHelper.Modificar(key, null);
+            //dbHelper.Modificar(key, null);
+            dbHelper.Borrar(key);
         }
 
         /*        public void guardarArray(List<String> datos)

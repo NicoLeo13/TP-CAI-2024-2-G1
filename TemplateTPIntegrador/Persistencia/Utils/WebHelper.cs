@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,7 @@ namespace Persistencia.Utils
             var data = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
 
             HttpResponseMessage response = httpClient.PostAsync(uri, data).Result;
+            string statusCode = ((int)response.StatusCode).ToString();
             // Eliminar despues
             string responseBody = response.Content.ReadAsStringAsync().Result;
 

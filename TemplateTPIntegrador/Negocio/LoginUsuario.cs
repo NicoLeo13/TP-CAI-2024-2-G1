@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 using Datos;
 using Persistencia;
+using System.Net.Http;
 
 namespace Negocio
 {
@@ -51,32 +52,38 @@ namespace Negocio
             return (idUsuario, responseBody);
         }
 
-        public Guid TraerUsuario(string usuario)
+        public UsuarioWS TraerUsuario(string usuario)
         {
             UserManager userManager = new UserManager();
 
-            //Bloque try-catch para manejar excepciones en TraerUsuariosActivos
             try
             {
+                // Llama al método que trae los usuarios activos
                 List<UsuarioWS> usuariosActivos = userManager.TraerUsuariosActivos();
 
-                // Busca el usuario que coincide con el usuario proporcionado
-                foreach (var usuarioActivo in usuariosActivos)
+                // Busca el usuario con LINQ
+                var usuarioEncontrado = usuariosActivos.FirstOrDefault(u => u.NombreUsuario == usuario);
+
+                if (usuarioEncontrado != null)
                 {
-                    if (usuarioActivo.NombreUsuario == usuario)
-                    {
-                        Debug.WriteLine($"\nUsuario encontrado: {usuarioActivo.Nombre} {usuarioActivo.Apellido} - {usuarioActivo.Id}");
-                        return usuarioActivo.Id;
-                    }
+                    Debug.WriteLine($"\nUsuario encontrado: {usuarioEncontrado.Nombre} {usuarioEncontrado.Apellido} - {usuarioEncontrado.Id}");
+                    return usuarioEncontrado;
                 }
+            }
+            catch (HttpRequestException ex)
+            {
+                Debug.WriteLine($"\nError de red: {ex.Message}");
+            }
+            catch (ArgumentNullException ex)
+            {
+                Debug.WriteLine($"\nArgumento nulo: {ex.Message}");
             }
             catch (Exception ex)
             {
                 Debug.WriteLine($"\nError al traer usuarios activos: {ex.Message}");
             }
 
-            Guid id = new Guid();
-            return id;
+            return null;
         }
 
         //public string AltaUsuario(UsuarioLocal usuarioLocal)

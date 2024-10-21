@@ -37,7 +37,7 @@ namespace Presentacion
 
         private void btnvolver1_Click(object sender, EventArgs e)
         {
-            Perfil_Administrador perfil_Administrador = new Perfil_Administrador();
+            PerfilAdministrador perfil_Administrador = new PerfilAdministrador();
             perfil_Administrador.Show();
         }
     }

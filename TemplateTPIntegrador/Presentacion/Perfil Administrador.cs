@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Perfil_Administrador : Form
+    public partial class PerfilAdministrador : Form
     {
-        public Perfil_Administrador()
+        public PerfilAdministrador()
         {
             InitializeComponent();
-        }
-
-        private void btnAdmSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
 
         private void btnAdmVend_Click(object sender, EventArgs e)
@@ -38,6 +33,11 @@ namespace Presentacion
         {
             ABM_Administrador ABM_Administrador = new ABM_Administrador();
             ABM_Administrador.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

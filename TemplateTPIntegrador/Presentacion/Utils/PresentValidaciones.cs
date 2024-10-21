@@ -52,17 +52,5 @@ namespace Presentacion
             mensaje = string.Empty;
             return false;
         }
-
-        // Contador de intentos de login
-/*        public void ContadorIntentosLogin(int intentos, out string mensaje)
-        {
-            if (intentos == 3)
-            {
-                mensaje = "Se ha superado el límite de intentos";
-                MessageBox.Show(mensaje);
-            }
-            mensaje = string.Empty;
-        }*/
-
     }
 }
