@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class BajaUsuario : Form
+    public partial class frmAdmUsuariosBaja : Form
     {
-        public BajaUsuario()
+        public frmAdmUsuariosBaja()
         {
             InitializeComponent();
         }

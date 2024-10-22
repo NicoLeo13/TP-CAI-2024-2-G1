@@ -6,12 +6,20 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using Persistencia.Utils;
+using Datos;
+using FontAwesome.Sharp;
 
 
 namespace Presentacion.Utils
 {
     internal class PresentacionUtils
     {
+        private static bool formClosing = false;
+        private static Form formActivo = null;
+        private static IconButton menuActivo = null;
+
+        public static bool isFormClosing { get; set; }
+
         // Método para configurar el autocompletado en un TextBox
         public static void ConfigurarAutoComplete(TextBox textBox, string nombreArchivo)
         {
@@ -61,20 +69,39 @@ namespace Presentacion.Utils
         }
 
         //Metodo para devolver a que pantalla redirigir segun el perfil del usuario, devolviendo el objeto de la pantalla
-        public static Form PantallaInicialUsuario(int perfilUsuario)
+        public static Form PantallaInicialUsuario(UsuarioWS usuario)
         {
-            switch (perfilUsuario)
+            switch (usuario.Host)
             {
                 case 1: // Vendedor
                     //return new Perfil_Vendedor();
                 case 2: // Supervisor
                     //return new Perfil_Supervisor();
                 case 3: // Administrador
-                    return new PerfilAdministrador();
+                    return new frmPerfilAdministrador(usuario);
                 default:
                     throw new ArgumentException("Inicio de sesión correcto.\nPerfil de usuario no reconocido.");
             }
         }
 
+        public static void AbrirForm(IconButton boton, Form form, Panel contenedor)
+        {
+            if (formActivo != null)
+            {
+                if (formActivo.Text == form.Text)
+                {
+                    //formActivo.Close();
+                    return;
+                }
+                formActivo.Close();
+            }
+
+            formActivo = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            contenedor.Controls.Add(form);
+            form.Show();
+        }
     }
 }

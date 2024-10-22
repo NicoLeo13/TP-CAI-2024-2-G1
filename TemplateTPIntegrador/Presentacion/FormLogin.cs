@@ -20,7 +20,6 @@ namespace Presentacion
         private const string ERROR_SHOW = "Error";
         private const string USER_NOT_FOUND = "Usuario no encontrado";
 
-
         public FormLogin()
         {
             InitializeComponent();
@@ -34,11 +33,29 @@ namespace Presentacion
             toolTip.SetToolTip(linkLabelForgotPass, TOOLTIP_OLVIDAR_CONTRASEÑA);
         }
 
+        private void SkipLogin()
+        {
+            //Datos de un usuario para probar la pantalla de administrador
+            UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "adminTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: 3);
+            Form pantallaInicial = new frmPerfilAdministrador(usuario);
+            pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
+            pantallaInicial.Show();
+            this.Hide();
+        }
+
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
+            bool skipLogin = true;
             bool loginExitoso = false;
             string nombreUsuario = txtBoxUser.Text;
             string claveUsuario = txtBoxPass.Text;
+
+            //Saltea login para probar pantallas directamente
+            if (skipLogin)
+            {
+                SkipLogin();
+                return;
+            }
 
             PresentacionValidaciones presentacionValidaciones = new PresentacionValidaciones();
 
@@ -80,8 +97,8 @@ namespace Presentacion
             {
                 try
                 {
-                    Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario.Host);
-                    pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
+                    Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
+                    //pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
                     pantallaInicial.Show();
                     this.Hide();
                 }
@@ -99,14 +116,24 @@ namespace Presentacion
 
         private void frm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.No)
-                e.Cancel = true;  // Cancela el evento de cierre, revisar logica
-            else
+            // Cierra la aplicación si el usuario cierra la ventan
+            if (this.DialogResult == DialogResult.Cancel || e.CloseReason == CloseReason.UserClosing && !PresentacionUtils.isFormClosing)
             {
-                txtBoxUser.Clear();
-                txtBoxPass.Clear();
+                DialogResult result = MessageBox.Show("¿Está seguro que desea salir?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                
+                if (result == DialogResult.No)
+                    e.Cancel = true;  // Cancela el evento de cierre
+                else
+                {
+                    Application.Exit();
+                    //PresentacionUtils.isFormClosing = true;
+                }
+            }
+            //  Muestra el formulario de login si el usuario cierra la sesion con boton
+            else if (e.CloseReason != CloseReason.ApplicationExitCall)
+            {
+                this.txtBoxUser.Clear();
+                this.txtBoxPass.Clear();
                 this.Show();
             }
         }
