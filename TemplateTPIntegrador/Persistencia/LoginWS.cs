@@ -15,8 +15,6 @@ namespace Persistencia
 {
     public class LoginWS
     {
-        private String adminId = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
-
         public (String idUsuario, string responseBody, string statusCode) login(String username, String password)
         {
             string idUsuario = "";
@@ -30,11 +28,11 @@ namespace Persistencia
             // Convert the data to a JSON string
             var jsonData = JsonConvert.SerializeObject(datos);
 
-            Debug.WriteLine("\njsonData para Usuario/Login: " + jsonData);
+            Console.WriteLine("\njsonData para Usuario/Login: " + jsonData);
 
             HttpResponseMessage response = WebHelper.Post("Usuario/Login", jsonData);
 
-            Debug.WriteLine("\nresponse Usuario/Login: " + response);
+            Console.WriteLine("\nresponse Usuario/Login: " + response);
 
             if (response.IsSuccessStatusCode)
             {
@@ -44,8 +42,7 @@ namespace Persistencia
             else
             {
                 responseBody = response.Content.ReadAsStringAsync().Result;
-                //Debug.WriteLine($"\nError: {response.StatusCode} - {response.ReasonPhrase}");
-                Debug.WriteLine($"\nBody de la respuesta: {responseBody}");
+                Console.WriteLine($"\nBody de la respuesta: {responseBody}");
                 throw new Exception($"Error: {responseBody}");
             }
 

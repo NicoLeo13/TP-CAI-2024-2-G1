@@ -55,6 +55,8 @@
             this.btnLimpiarCampos = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.lblFechaNacimiento = new System.Windows.Forms.Label();
+            this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.panelSide = new System.Windows.Forms.Panel();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
@@ -81,7 +83,7 @@
             // lblNombre
             // 
             this.lblNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNombre.Location = new System.Drawing.Point(21, 30);
+            this.lblNombre.Location = new System.Drawing.Point(22, 30);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(105, 25);
             this.lblNombre.TabIndex = 9;
@@ -90,7 +92,7 @@
             // 
             // txtBoxNombre
             // 
-            this.txtBoxNombre.Location = new System.Drawing.Point(132, 31);
+            this.txtBoxNombre.Location = new System.Drawing.Point(131, 30);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(257, 25);
             this.txtBoxNombre.TabIndex = 10;
@@ -100,7 +102,7 @@
             this.lblInfoDatosPers.AutoSize = true;
             this.lblInfoDatosPers.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblInfoDatosPers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosPers.Location = new System.Drawing.Point(12, 7);
+            this.lblInfoDatosPers.Location = new System.Drawing.Point(0, 0);
             this.lblInfoDatosPers.Name = "lblInfoDatosPers";
             this.lblInfoDatosPers.Size = new System.Drawing.Size(133, 21);
             this.lblInfoDatosPers.TabIndex = 11;
@@ -143,9 +145,9 @@
             // 
             // txtBoxDni
             // 
-            this.txtBoxDni.Location = new System.Drawing.Point(132, 186);
+            this.txtBoxDni.Location = new System.Drawing.Point(131, 186);
             this.txtBoxDni.Name = "txtBoxDni";
-            this.txtBoxDni.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxDni.Size = new System.Drawing.Size(258, 25);
             this.txtBoxDni.TabIndex = 17;
             // 
             // lblDni
@@ -197,7 +199,7 @@
             this.lblInfoDatosUser.AutoSize = true;
             this.lblInfoDatosUser.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblInfoDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosUser.Location = new System.Drawing.Point(21, 233);
+            this.lblInfoDatosUser.Location = new System.Drawing.Point(12, 265);
             this.lblInfoDatosUser.Name = "lblInfoDatosUser";
             this.lblInfoDatosUser.Size = new System.Drawing.Size(134, 21);
             this.lblInfoDatosUser.TabIndex = 22;
@@ -206,7 +208,7 @@
             // 
             // txtBoxUsuario
             // 
-            this.txtBoxUsuario.Location = new System.Drawing.Point(132, 268);
+            this.txtBoxUsuario.Location = new System.Drawing.Point(131, 289);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
             this.txtBoxUsuario.Size = new System.Drawing.Size(257, 25);
             this.txtBoxUsuario.TabIndex = 24;
@@ -214,7 +216,7 @@
             // lblUsuario
             // 
             this.lblUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblUsuario.Location = new System.Drawing.Point(21, 268);
+            this.lblUsuario.Location = new System.Drawing.Point(20, 289);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(90, 25);
             this.lblUsuario.TabIndex = 23;
@@ -223,7 +225,7 @@
             // 
             // txtBoxContraseña
             // 
-            this.txtBoxContraseña.Location = new System.Drawing.Point(132, 300);
+            this.txtBoxContraseña.Location = new System.Drawing.Point(131, 321);
             this.txtBoxContraseña.Name = "txtBoxContraseña";
             this.txtBoxContraseña.Size = new System.Drawing.Size(257, 25);
             this.txtBoxContraseña.TabIndex = 26;
@@ -231,7 +233,7 @@
             // lblContraseña
             // 
             this.lblContraseña.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblContraseña.Location = new System.Drawing.Point(21, 299);
+            this.lblContraseña.Location = new System.Drawing.Point(20, 320);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(90, 25);
             this.lblContraseña.TabIndex = 25;
@@ -241,7 +243,7 @@
             // lblHost
             // 
             this.lblHost.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblHost.Location = new System.Drawing.Point(22, 332);
+            this.lblHost.Location = new System.Drawing.Point(21, 353);
             this.lblHost.Name = "lblHost";
             this.lblHost.Size = new System.Drawing.Size(90, 25);
             this.lblHost.TabIndex = 27;
@@ -251,7 +253,7 @@
             // comboBoxHost
             // 
             this.comboBoxHost.FormattingEnabled = true;
-            this.comboBoxHost.Location = new System.Drawing.Point(132, 332);
+            this.comboBoxHost.Location = new System.Drawing.Point(131, 353);
             this.comboBoxHost.Name = "comboBoxHost";
             this.comboBoxHost.Size = new System.Drawing.Size(257, 25);
             this.comboBoxHost.TabIndex = 28;
@@ -261,8 +263,8 @@
             this.btnGuardarUsuario.BackColor = System.Drawing.Color.ForestGreen;
             this.btnGuardarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardarUsuario.FlatAppearance.BorderSize = 0;
-            this.btnGuardarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnGuardarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnGuardarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.btnGuardarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
             this.btnGuardarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarUsuario.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -271,7 +273,7 @@
             this.btnGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarUsuario.IconSize = 30;
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(194, 387);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(194, 400);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(195, 41);
             this.btnGuardarUsuario.TabIndex = 29;
@@ -284,8 +286,8 @@
             this.btnLimpiarCampos.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnLimpiarCampos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiarCampos.FlatAppearance.BorderSize = 0;
-            this.btnLimpiarCampos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnLimpiarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnLimpiarCampos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.MidnightBlue;
+            this.btnLimpiarCampos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnLimpiarCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarCampos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiarCampos.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -294,7 +296,7 @@
             this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCampos.IconSize = 30;
             this.btnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(194, 453);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(194, 457);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(195, 41);
             this.btnLimpiarCampos.TabIndex = 30;
@@ -307,8 +309,8 @@
             this.btnVolver.BackColor = System.Drawing.Color.Firebrick;
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -317,7 +319,7 @@
             this.btnVolver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVolver.IconSize = 30;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolver.Location = new System.Drawing.Point(25, 453);
+            this.btnVolver.Location = new System.Drawing.Point(25, 457);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 41);
             this.btnVolver.TabIndex = 31;
@@ -328,34 +330,53 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelContenedor.Controls.Add(this.lblInfoDatosPers);
             this.panelContenedor.Controls.Add(this.btnVolver);
-            this.panelContenedor.Controls.Add(this.lblNombre);
             this.panelContenedor.Controls.Add(this.btnLimpiarCampos);
-            this.panelContenedor.Controls.Add(this.txtBoxNombre);
             this.panelContenedor.Controls.Add(this.btnGuardarUsuario);
-            this.panelContenedor.Controls.Add(this.lblApellido);
-            this.panelContenedor.Controls.Add(this.comboBoxHost);
-            this.panelContenedor.Controls.Add(this.txtBoxApellido);
             this.panelContenedor.Controls.Add(this.lblHost);
-            this.panelContenedor.Controls.Add(this.lblDireccion);
-            this.panelContenedor.Controls.Add(this.txtBoxContraseña);
-            this.panelContenedor.Controls.Add(this.txtBoxDireccion);
             this.panelContenedor.Controls.Add(this.lblContraseña);
-            this.panelContenedor.Controls.Add(this.lblDni);
-            this.panelContenedor.Controls.Add(this.txtBoxUsuario);
-            this.panelContenedor.Controls.Add(this.txtBoxDni);
             this.panelContenedor.Controls.Add(this.lblUsuario);
-            this.panelContenedor.Controls.Add(this.lblEmail);
             this.panelContenedor.Controls.Add(this.lblInfoDatosUser);
+            this.panelContenedor.Controls.Add(this.lblFechaNacimiento);
+            this.panelContenedor.Controls.Add(this.lblDni);
+            this.panelContenedor.Controls.Add(this.lblEmail);
+            this.panelContenedor.Controls.Add(this.lblTelefono);
+            this.panelContenedor.Controls.Add(this.lblDireccion);
+            this.panelContenedor.Controls.Add(this.lblApellido);
+            this.panelContenedor.Controls.Add(this.lblNombre);
+            this.panelContenedor.Controls.Add(this.lblInfoDatosPers);
+            this.panelContenedor.Controls.Add(this.comboBoxHost);
+            this.panelContenedor.Controls.Add(this.txtBoxContraseña);
+            this.panelContenedor.Controls.Add(this.txtBoxUsuario);
+            this.panelContenedor.Controls.Add(this.dtpFechaNac);
+            this.panelContenedor.Controls.Add(this.txtBoxDni);
             this.panelContenedor.Controls.Add(this.txtBoxEmail);
             this.panelContenedor.Controls.Add(this.txtBoxTelefono);
-            this.panelContenedor.Controls.Add(this.lblTelefono);
+            this.panelContenedor.Controls.Add(this.txtBoxDireccion);
+            this.panelContenedor.Controls.Add(this.txtBoxApellido);
+            this.panelContenedor.Controls.Add(this.txtBoxNombre);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(412, 510);
             this.panelContenedor.TabIndex = 33;
+            // 
+            // lblFechaNacimiento
+            // 
+            this.lblFechaNacimiento.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(20, 214);
+            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(106, 34);
+            this.lblFechaNacimiento.TabIndex = 32;
+            this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
+            this.lblFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // dtpFechaNac
+            // 
+            this.dtpFechaNac.Location = new System.Drawing.Point(132, 223);
+            this.dtpFechaNac.Name = "dtpFechaNac";
+            this.dtpFechaNac.Size = new System.Drawing.Size(256, 25);
+            this.dtpFechaNac.TabIndex = 33;
             // 
             // panelSide
             // 
@@ -381,6 +402,7 @@
             this.Name = "frmAdmUsuariosAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosAlta";
+            this.Load += new System.EventHandler(this.frmAdmUsuariosAlta_Load);
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
@@ -416,5 +438,7 @@
         private FontAwesome.Sharp.IconButton btnVolver;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelSide;
+        private System.Windows.Forms.DateTimePicker dtpFechaNac;
+        private System.Windows.Forms.Label lblFechaNacimiento;
     }
 }

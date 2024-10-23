@@ -1,38 +1,80 @@
 ﻿using Datos;
 using Newtonsoft.Json;
 using Persistencia.Utils;
+using Persistencia.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Routing;
+using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace Persistencia
 {
     public class UserManager
     {
-        private String adminId = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+        private const String adminId = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+        private const String rutaBase = "https://cai-tp.azurewebsites.net/api/";
 
-        //{
-        //  "idUsuario": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-        //  "host": 1,
-        //  "nombre": "string",
-        //  "apellido": "string",
-        //  "dni": 0,
-        //  "direccion": "string",
-        //  "telefono": "string",
-        //  "email": "string",
-        //  "fechaNacimiento": "2024-10-11T23:03:44.576Z",
-        //  "nombreUsuario": "string",
-        //  "contraseña": "string"
-        //}
+        public List<UsuarioWS> TraerUsuariosActivos()
+        {
+            List<UsuarioWS> clientes = new List<UsuarioWS>();
 
+            HttpResponseMessage response = WebHelper.Get("Usuario/TraerUsuariosActivos?id=");
 
+            if (response.IsSuccessStatusCode)
+            {
+                var contentStream = response.Content.ReadAsStringAsync().Result;
+                List<UsuarioWS> listadoUsuariosActivos = JsonConvert.DeserializeObject<List<UsuarioWS>>(contentStream);
+                return listadoUsuariosActivos;
+            }
+            else
+            {
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                throw new HttpRequestException($"Error al momento de buscar los usuarios: {(int)response.StatusCode} - {response.ReasonPhrase}");
+            }
+        }
 
-        public String AgregarUsuario(UsuarioLocal usuarioLocal)
+        public async Task<(List<UsuarioWS>, string)> TraerUsuariosActivosAsync()
+        {
+            const string url = "Usuario/TraerUsuariosActivos?id=";
+
+            try
+            {
+                HttpResponseMessage response = await WebHelper.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+
+                string jsonResponse = await response.Content.ReadAsStringAsync();
+                List<UsuarioWS> usuariosActivos = JsonConvert.DeserializeObject<List<UsuarioWS>>(jsonResponse);
+
+                return (usuariosActivos, null);
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return (null, $"Error al momento de buscar los usuarios activos: {ex.Message}");
+            }
+            catch (HttpResponseMessageException ex)
+            {
+                var errorContent = await ex.Response.Content.ReadAsStringAsync();
+                Console.WriteLine($"Error: {(int)ex.Response.StatusCode} - {ex.Response.ReasonPhrase}");
+                return (null, $"Error al momento de buscar los usuarios activos: {(int)ex.Response.StatusCode} - {ex.Response.ReasonPhrase}.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error insesperado al obtener usuarios activos:\n" + ex.Message);
+                return (null, $"Error insesperado al obtener usuarios activos: - {ex.Message}");
+            }
+        }
+
+        public String AgregarUsuarioOld(UsuarioLocal usuarioLocal)
         {
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
@@ -54,68 +96,13 @@ namespace Persistencia
             datos.Add("contraseña", usuarioLocal.Contraseña);
 
 
-            // Otra forma de agregar data que no era con datos.Add
-
-            //{
-            //    { "idUsuario", usuarioLocal.IdUsuario },
-            //    { "host", usuarioLocal.Host },
-            //    { "nombre", usuarioLocal.Nombre },
-            //    { "apellido", usuarioLocal.Apellido },
-            //    { "dni", usuarioLocal.Dni },
-            //    { "direccion", usuarioLocal.Direccion },
-            //    { "telefono", usuarioLocal.Telefono },
-            //    { "email", usuarioLocal.Email },
-            //    { "fechaNacimiento", usuarioLocal.FechaNacimiento },
-            //    { "nombreUsuario", usuarioLocal.NombreUsuario },
-            //    { "contraseña", usuarioLocal.Contraseña }
-            //};
-
-
             var jsonData = JsonConvert.SerializeObject(datos);
 
-            Debug.WriteLine("jsonData Usuario/AgregarUsuario: " + jsonData);
-
-            // Ejemplo Swagger:
-
-            // curl -X POST "https://cai-tp.azurewebsites.net/api/Usuario/AgregarUsuario" -H  "accept: */*" -H  "Content-Type: application/json" -d
-            // "{\"idUsuario\":\"70b37dc1-8fde-4840-be47-9ababd0ee7e5\",\"host\":3,\"nombre\":\"JohnS\",\"apellido\":\"DoeS\",
-            // \"dni\":11222333,\"direccion\":\"test S 123\",\"telefono\":\"11 22443355\",\"email\":\"testS@test.com\",
-            // \"fechaNacimiento\":\"2024-10-12T00:12:17.080Z\",\"nombreUsuario\":\"johndoe9\",\"contraseña\":\"UbaFce2024!\"}"
-
-            //{
-            //      "idUsuario": "70b37dc1-8fde-4840-be47-9ababd0ee7e5",
-            //      "host": 3,
-            //      "nombre": "JohnS",
-            //      "apellido": "DoeS",
-            //      "dni": 11222333,
-            //      "direccion": "test S 123",
-            //      "telefono": "11 22443355",
-            //      "email": "testS@test.com",
-            //      "fechaNacimiento": "2024-10-12T00:12:17.080Z",
-            //      "nombreUsuario": "johndoe9",
-            //      "contraseña": "UbaFce2024!"
-            //}
-
-
-            // Lo que estoy enviando:
-
-            //{
-            //    "idUsuario": "70b37dc1-8fde-4840-be47-9ababd0ee7e5",
-            //    "host": 3,
-            //    "nombre": "John",     // Capaz era muy corto
-            //    "apellido": "Doe",    // Capaz era muy corto v2
-            //    "dni": 13222548,
-            //    "direccion": "test 123",
-            //    "telefono": "11 22334445",
-            //    "email": "tes45t@test.com",
-            //    "fechaNacimiento": "2024-10-02T21:57:30",     // la fecha tenía el quilombo
-            //    "nombreUsuario": "johndoe1",
-            //    "contraseña": "UbaFce2024!"
-            //}
+            Console.WriteLine("jsonData Usuario/AgregarUsuario: " + jsonData);
 
             HttpResponseMessage response = WebHelper.Post("Usuario/AgregarUsuario", jsonData);
 
-            Debug.WriteLine("response Usuario/AgregarUsuario: " + response);
+            Console.WriteLine("response Usuario/AgregarUsuario: " + response);
 
             String result;
 
@@ -127,31 +114,33 @@ namespace Persistencia
             else
             {
                 var errorContent = response.Content.ReadAsStringAsync().Result;
-                Debug.WriteLine($"Error: {errorContent}");
+                Console.WriteLine($"Error: {errorContent}");
                 throw new Exception("Error al crear el nuevo usuario.");
             }
 
             return result;
         }
 
-        public List<UsuarioWS> TraerUsuariosActivos()
+        //Metodo para agregar un usuario al web service, sin usar dictionary
+        public void AgregarUsuario(UsuarioLocal usuarioLocal)
         {
-            List<UsuarioWS> clientes = new List<UsuarioWS>();
+            var jsonData = JsonConvert.SerializeObject(usuarioLocal);
 
-            HttpResponseMessage response = WebHelper.Get("Usuario/TraerUsuariosActivos?id=" + adminId);
+            HttpResponseMessage response = WebHelper.Post("Usuario/AgregarUsuario", jsonData);
+            //String result;
 
             if (response.IsSuccessStatusCode)
             {
-                var contentStream = response.Content.ReadAsStringAsync().Result;
-                List<UsuarioWS> listadoUsuariosActivos = JsonConvert.DeserializeObject<List<UsuarioWS>>(contentStream);
-                return listadoUsuariosActivos;
+                var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                //result = JsonConvert.DeserializeObject<String>(reader.ReadToEnd());
             }
             else
             {
-                Debug.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                throw new Exception("Error al momento de buscar los usuarios");
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {errorContent}");
+                throw new HttpRequestException($"Error al crear el nuevo usuario:\n{errorContent}");
             }
-
         }
+
     }
 }

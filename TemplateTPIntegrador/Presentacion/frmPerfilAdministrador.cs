@@ -17,13 +17,14 @@ namespace Presentacion
     {
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
+        private frmAdmUsuarios frmAdmUsuariosInstance;
 
         public frmPerfilAdministrador(UsuarioWS objUsuario)
         {
             InitializeComponent();
             usuarioActual = objUsuario;
 
-            this.IsMdiContainer = true;
+            this.lblAdmUser.Text = usuarioActual.NombreUsuario;
         }
 
         // Método para manejar el evento Hover de los botones
@@ -81,8 +82,15 @@ namespace Presentacion
 
         private void btnAdmUsuarios_Click(object sender, EventArgs e)
         {
-            //AbrirForm((IconButton)sender, new ABM_Administrador());
-            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuarios(), panelContenedor);
+            // Verificar si la instancia ya existe
+            if (frmAdmUsuariosInstance == null || frmAdmUsuariosInstance.IsDisposed)
+            {
+                frmAdmUsuariosInstance = new frmAdmUsuarios();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmUsuariosInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmUsuariosInstance, panelContenedor);
+            //frmAdmUsuariosInstance.BringToFront();
         }
     }
 }

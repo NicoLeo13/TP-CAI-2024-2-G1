@@ -10,24 +10,39 @@ using System.Windows.Forms;
 using Datos;
 using FontAwesome.Sharp;
 using Presentacion.Utils;
+using Persistencia;
+using Negocio;
 
 namespace Presentacion
 {
     public partial class frmAdmUsuarios : Form
     {
+        private readonly UsuarioService _usuarioService;
         private frmPerfilAdministrador mainForm;
 
         public frmAdmUsuarios()
         {
             InitializeComponent();
+            _usuarioService = new UsuarioService();
+        }
+
+        private async void frmAdmUsuarios_Load(object sender, EventArgs e)
+        {
+            var (usuariosActivos, msg) = await _usuarioService.CargarUsuariosActivosAsync();
+            if (msg == null)
+                ActualizarUI(usuariosActivos);
+            else
+                MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        }
+
+        private void ActualizarUI(List<UsuarioWS> usuariosActivos)
+        {
+            lblActivos.Text = usuariosActivos.Count.ToString();
         }
 
         private void btnAltaUsuario_Click(object sender, EventArgs e)
         {
             PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuariosAlta(), PresentacionUtils.PanelContenedor);
-
-            //frmAdmAltaUsuarios altausuario = new frmAdmAltaUsuarios();
-            //altausuario.Show();
         }
 
         private void btnModUsuario_Click(object sender, EventArgs e)
@@ -41,6 +56,5 @@ namespace Presentacion
             //BajaUsuario bajaUsuario = new BajaUsuario();
             //bajaUsuario.Show();
         }
-
     }
 }

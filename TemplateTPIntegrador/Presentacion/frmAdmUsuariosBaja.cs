@@ -30,9 +30,9 @@ namespace Presentacion
 
             string usuarioBaja = txtUsuario.Text;
 
-            UsuarioWS usuario = login.TraerUsuario(usuarioBaja);
+            //UsuarioWS usuario = login.TraerUsuario(usuarioBaja);
 
-            MessageBox.Show("ID del usuario a dar de baja: " + usuario.Id);
+            //MessageBox.Show("ID del usuario a dar de baja: " + usuario.Id);
         }
     }
 }

@@ -19,11 +19,12 @@ namespace Presentacion
         private const string TOOLTIP_OLVIDAR_CONTRASEÑA = "Haz clic aquí si olvidaste tu contraseña.";
         private const string ERROR_SHOW = "Error";
         private const string USER_NOT_FOUND = "Usuario no encontrado";
+        private const bool skipLogin = true;
 
         public FormLogin()
         {
             InitializeComponent();
-            PresentacionUtils.ConfigurarAutoComplete(txtBoxUser, "usuarios_sugerencias");
+            SugerenciaService.ConfigurarAutoComplete(txtBoxUser, "usuarios_sugerencias");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -45,7 +46,6 @@ namespace Presentacion
 
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
         {
-            bool skipLogin = true;
             bool loginExitoso = false;
             string nombreUsuario = txtBoxUser.Text;
             string claveUsuario = txtBoxPass.Text;
@@ -66,9 +66,19 @@ namespace Presentacion
             }
 
             LoginUsuario loginUsuario = new LoginUsuario();
-            UsuarioWS usuario = loginUsuario.TraerUsuario(nombreUsuario);
+            UsuarioWS usuario = null;
 
-            if (usuario.Id == Guid.Empty)
+            try
+            {
+                usuario = loginUsuario.TraerUsuario(nombreUsuario);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (usuario == null)
             {
                 MessageBox.Show(USER_NOT_FOUND, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -83,10 +93,12 @@ namespace Presentacion
                 {
                     //MessageBox.Show(idUsuario, "Login Exitoso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     loginExitoso = true;
-                    PresentacionUtils.GuardarSugerencia(nombreUsuario, "usuarios_sugerencias");
+                    SugerenciaService.GuardarSugerencia(nombreUsuario, "usuarios_sugerencias");
                 }
                 else
+                {
                     MessageBox.Show(responseBody, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);  //Muestra error en caso de que no se haya encontrado el usuario
+                }
             }
             catch (Exception ex)
             {
@@ -104,7 +116,6 @@ namespace Presentacion
                 }
                 catch (ArgumentException ex)
                 {
-
                     MessageBox.Show(ex.Message, ERROR_SHOW, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
