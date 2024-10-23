@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmUsuariosAlta));
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
-            this.labelContenedor = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtBoxNombre = new System.Windows.Forms.TextBox();
             this.lblInfoDatosPers = new System.Windows.Forms.Label();
@@ -55,16 +54,19 @@
             this.btnGuardarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnLimpiarCampos = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
+            this.panelContenedor = new System.Windows.Forms.Panel();
+            this.panelSide = new System.Windows.Forms.Panel();
             this.panelAdmUsersAlta.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
             // 
             this.panelAdmUsersAlta.Controls.Add(this.lblTop);
             this.panelAdmUsersAlta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAdmUsersAlta.Location = new System.Drawing.Point(0, 0);
+            this.panelAdmUsersAlta.Location = new System.Drawing.Point(18, 0);
             this.panelAdmUsersAlta.Name = "panelAdmUsersAlta";
-            this.panelAdmUsersAlta.Size = new System.Drawing.Size(994, 56);
+            this.panelAdmUsersAlta.Size = new System.Drawing.Size(976, 56);
             this.panelAdmUsersAlta.TabIndex = 7;
             // 
             // lblTop
@@ -76,19 +78,10 @@
             this.lblTop.TabIndex = 7;
             this.lblTop.Text = "Panel de Usuarios - Agregar Usuario";
             // 
-            // labelContenedor
-            // 
-            this.labelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.labelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
-            this.labelContenedor.Location = new System.Drawing.Point(0, 56);
-            this.labelContenedor.Name = "labelContenedor";
-            this.labelContenedor.Size = new System.Drawing.Size(412, 510);
-            this.labelContenedor.TabIndex = 8;
-            // 
             // lblNombre
             // 
             this.lblNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNombre.Location = new System.Drawing.Point(12, 89);
+            this.lblNombre.Location = new System.Drawing.Point(21, 30);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(105, 25);
             this.lblNombre.TabIndex = 9;
@@ -97,7 +90,7 @@
             // 
             // txtBoxNombre
             // 
-            this.txtBoxNombre.Location = new System.Drawing.Point(123, 90);
+            this.txtBoxNombre.Location = new System.Drawing.Point(132, 31);
             this.txtBoxNombre.Name = "txtBoxNombre";
             this.txtBoxNombre.Size = new System.Drawing.Size(257, 25);
             this.txtBoxNombre.TabIndex = 10;
@@ -107,7 +100,7 @@
             this.lblInfoDatosPers.AutoSize = true;
             this.lblInfoDatosPers.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblInfoDatosPers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosPers.Location = new System.Drawing.Point(4, 59);
+            this.lblInfoDatosPers.Location = new System.Drawing.Point(12, 7);
             this.lblInfoDatosPers.Name = "lblInfoDatosPers";
             this.lblInfoDatosPers.Size = new System.Drawing.Size(133, 21);
             this.lblInfoDatosPers.TabIndex = 11;
@@ -116,7 +109,7 @@
             // 
             // txtBoxApellido
             // 
-            this.txtBoxApellido.Location = new System.Drawing.Point(123, 121);
+            this.txtBoxApellido.Location = new System.Drawing.Point(132, 62);
             this.txtBoxApellido.Name = "txtBoxApellido";
             this.txtBoxApellido.Size = new System.Drawing.Size(257, 25);
             this.txtBoxApellido.TabIndex = 13;
@@ -124,7 +117,7 @@
             // lblApellido
             // 
             this.lblApellido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblApellido.Location = new System.Drawing.Point(12, 120);
+            this.lblApellido.Location = new System.Drawing.Point(21, 61);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(105, 25);
             this.lblApellido.TabIndex = 12;
@@ -133,7 +126,7 @@
             // 
             // txtBoxDireccion
             // 
-            this.txtBoxDireccion.Location = new System.Drawing.Point(123, 152);
+            this.txtBoxDireccion.Location = new System.Drawing.Point(132, 93);
             this.txtBoxDireccion.Name = "txtBoxDireccion";
             this.txtBoxDireccion.Size = new System.Drawing.Size(257, 25);
             this.txtBoxDireccion.TabIndex = 15;
@@ -141,7 +134,7 @@
             // lblDireccion
             // 
             this.lblDireccion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDireccion.Location = new System.Drawing.Point(12, 151);
+            this.lblDireccion.Location = new System.Drawing.Point(21, 92);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(105, 25);
             this.lblDireccion.TabIndex = 14;
@@ -150,7 +143,7 @@
             // 
             // txtBoxDni
             // 
-            this.txtBoxDni.Location = new System.Drawing.Point(123, 245);
+            this.txtBoxDni.Location = new System.Drawing.Point(132, 186);
             this.txtBoxDni.Name = "txtBoxDni";
             this.txtBoxDni.Size = new System.Drawing.Size(257, 25);
             this.txtBoxDni.TabIndex = 17;
@@ -158,7 +151,7 @@
             // lblDni
             // 
             this.lblDni.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDni.Location = new System.Drawing.Point(12, 244);
+            this.lblDni.Location = new System.Drawing.Point(21, 185);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(105, 25);
             this.lblDni.TabIndex = 16;
@@ -167,7 +160,7 @@
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(123, 214);
+            this.txtBoxEmail.Location = new System.Drawing.Point(132, 155);
             this.txtBoxEmail.Name = "txtBoxEmail";
             this.txtBoxEmail.Size = new System.Drawing.Size(257, 25);
             this.txtBoxEmail.TabIndex = 19;
@@ -175,7 +168,7 @@
             // lblEmail
             // 
             this.lblEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Location = new System.Drawing.Point(12, 213);
+            this.lblEmail.Location = new System.Drawing.Point(21, 154);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(105, 25);
             this.lblEmail.TabIndex = 18;
@@ -184,7 +177,7 @@
             // 
             // txtBoxTelefono
             // 
-            this.txtBoxTelefono.Location = new System.Drawing.Point(123, 183);
+            this.txtBoxTelefono.Location = new System.Drawing.Point(132, 124);
             this.txtBoxTelefono.Name = "txtBoxTelefono";
             this.txtBoxTelefono.Size = new System.Drawing.Size(257, 25);
             this.txtBoxTelefono.TabIndex = 21;
@@ -192,7 +185,7 @@
             // lblTelefono
             // 
             this.lblTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTelefono.Location = new System.Drawing.Point(12, 182);
+            this.lblTelefono.Location = new System.Drawing.Point(21, 123);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(105, 25);
             this.lblTelefono.TabIndex = 20;
@@ -204,7 +197,7 @@
             this.lblInfoDatosUser.AutoSize = true;
             this.lblInfoDatosUser.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblInfoDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosUser.Location = new System.Drawing.Point(12, 292);
+            this.lblInfoDatosUser.Location = new System.Drawing.Point(21, 233);
             this.lblInfoDatosUser.Name = "lblInfoDatosUser";
             this.lblInfoDatosUser.Size = new System.Drawing.Size(134, 21);
             this.lblInfoDatosUser.TabIndex = 22;
@@ -213,7 +206,7 @@
             // 
             // txtBoxUsuario
             // 
-            this.txtBoxUsuario.Location = new System.Drawing.Point(123, 327);
+            this.txtBoxUsuario.Location = new System.Drawing.Point(132, 268);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
             this.txtBoxUsuario.Size = new System.Drawing.Size(257, 25);
             this.txtBoxUsuario.TabIndex = 24;
@@ -221,7 +214,7 @@
             // lblUsuario
             // 
             this.lblUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblUsuario.Location = new System.Drawing.Point(12, 327);
+            this.lblUsuario.Location = new System.Drawing.Point(21, 268);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(90, 25);
             this.lblUsuario.TabIndex = 23;
@@ -230,7 +223,7 @@
             // 
             // txtBoxContraseña
             // 
-            this.txtBoxContraseña.Location = new System.Drawing.Point(123, 359);
+            this.txtBoxContraseña.Location = new System.Drawing.Point(132, 300);
             this.txtBoxContraseña.Name = "txtBoxContraseña";
             this.txtBoxContraseña.Size = new System.Drawing.Size(257, 25);
             this.txtBoxContraseña.TabIndex = 26;
@@ -238,7 +231,7 @@
             // lblContraseña
             // 
             this.lblContraseña.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblContraseña.Location = new System.Drawing.Point(12, 358);
+            this.lblContraseña.Location = new System.Drawing.Point(21, 299);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(90, 25);
             this.lblContraseña.TabIndex = 25;
@@ -248,7 +241,7 @@
             // lblHost
             // 
             this.lblHost.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblHost.Location = new System.Drawing.Point(13, 391);
+            this.lblHost.Location = new System.Drawing.Point(22, 332);
             this.lblHost.Name = "lblHost";
             this.lblHost.Size = new System.Drawing.Size(90, 25);
             this.lblHost.TabIndex = 27;
@@ -258,7 +251,7 @@
             // comboBoxHost
             // 
             this.comboBoxHost.FormattingEnabled = true;
-            this.comboBoxHost.Location = new System.Drawing.Point(123, 391);
+            this.comboBoxHost.Location = new System.Drawing.Point(132, 332);
             this.comboBoxHost.Name = "comboBoxHost";
             this.comboBoxHost.Size = new System.Drawing.Size(257, 25);
             this.comboBoxHost.TabIndex = 28;
@@ -278,7 +271,7 @@
             this.btnGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarUsuario.IconSize = 30;
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(185, 446);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(194, 387);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(195, 41);
             this.btnGuardarUsuario.TabIndex = 29;
@@ -301,7 +294,7 @@
             this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCampos.IconSize = 30;
             this.btnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(185, 512);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(194, 453);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(195, 41);
             this.btnLimpiarCampos.TabIndex = 30;
@@ -324,7 +317,7 @@
             this.btnVolver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVolver.IconSize = 30;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolver.Location = new System.Drawing.Point(16, 512);
+            this.btnVolver.Location = new System.Drawing.Point(25, 453);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 41);
             this.btnVolver.TabIndex = 31;
@@ -332,36 +325,55 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // panelContenedor
+            // 
+            this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelContenedor.Controls.Add(this.lblInfoDatosPers);
+            this.panelContenedor.Controls.Add(this.btnVolver);
+            this.panelContenedor.Controls.Add(this.lblNombre);
+            this.panelContenedor.Controls.Add(this.btnLimpiarCampos);
+            this.panelContenedor.Controls.Add(this.txtBoxNombre);
+            this.panelContenedor.Controls.Add(this.btnGuardarUsuario);
+            this.panelContenedor.Controls.Add(this.lblApellido);
+            this.panelContenedor.Controls.Add(this.comboBoxHost);
+            this.panelContenedor.Controls.Add(this.txtBoxApellido);
+            this.panelContenedor.Controls.Add(this.lblHost);
+            this.panelContenedor.Controls.Add(this.lblDireccion);
+            this.panelContenedor.Controls.Add(this.txtBoxContraseña);
+            this.panelContenedor.Controls.Add(this.txtBoxDireccion);
+            this.panelContenedor.Controls.Add(this.lblContraseña);
+            this.panelContenedor.Controls.Add(this.lblDni);
+            this.panelContenedor.Controls.Add(this.txtBoxUsuario);
+            this.panelContenedor.Controls.Add(this.txtBoxDni);
+            this.panelContenedor.Controls.Add(this.lblUsuario);
+            this.panelContenedor.Controls.Add(this.lblEmail);
+            this.panelContenedor.Controls.Add(this.lblInfoDatosUser);
+            this.panelContenedor.Controls.Add(this.txtBoxEmail);
+            this.panelContenedor.Controls.Add(this.txtBoxTelefono);
+            this.panelContenedor.Controls.Add(this.lblTelefono);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelContenedor.Location = new System.Drawing.Point(18, 56);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(412, 510);
+            this.panelContenedor.TabIndex = 33;
+            // 
+            // panelSide
+            // 
+            this.panelSide.BackColor = System.Drawing.Color.Teal;
+            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSide.Location = new System.Drawing.Point(0, 0);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(18, 566);
+            this.panelSide.TabIndex = 34;
+            // 
             // frmAdmUsuariosAlta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
-            this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnLimpiarCampos);
-            this.Controls.Add(this.btnGuardarUsuario);
-            this.Controls.Add(this.comboBoxHost);
-            this.Controls.Add(this.lblHost);
-            this.Controls.Add(this.txtBoxContraseña);
-            this.Controls.Add(this.lblContraseña);
-            this.Controls.Add(this.txtBoxUsuario);
-            this.Controls.Add(this.lblUsuario);
-            this.Controls.Add(this.lblInfoDatosUser);
-            this.Controls.Add(this.txtBoxTelefono);
-            this.Controls.Add(this.lblTelefono);
-            this.Controls.Add(this.txtBoxEmail);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtBoxDni);
-            this.Controls.Add(this.lblDni);
-            this.Controls.Add(this.txtBoxDireccion);
-            this.Controls.Add(this.lblDireccion);
-            this.Controls.Add(this.txtBoxApellido);
-            this.Controls.Add(this.lblApellido);
-            this.Controls.Add(this.lblInfoDatosPers);
-            this.Controls.Add(this.txtBoxNombre);
-            this.Controls.Add(this.lblNombre);
-            this.Controls.Add(this.labelContenedor);
+            this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panelAdmUsersAlta);
+            this.Controls.Add(this.panelSide);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -370,15 +382,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosAlta";
             this.panelAdmUsersAlta.ResumeLayout(false);
+            this.panelContenedor.ResumeLayout(false);
+            this.panelContenedor.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
-        private System.Windows.Forms.Label labelContenedor;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtBoxNombre;
         private System.Windows.Forms.Label lblInfoDatosPers;
@@ -402,5 +414,7 @@
         private FontAwesome.Sharp.IconButton btnGuardarUsuario;
         private FontAwesome.Sharp.IconButton btnLimpiarCampos;
         private FontAwesome.Sharp.IconButton btnVolver;
+        private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Panel panelSide;
     }
 }
