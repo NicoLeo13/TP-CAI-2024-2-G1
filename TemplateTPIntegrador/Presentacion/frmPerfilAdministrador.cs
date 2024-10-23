@@ -21,10 +21,9 @@ namespace Presentacion
         public frmPerfilAdministrador(UsuarioWS objUsuario)
         {
             InitializeComponent();
-
             usuarioActual = objUsuario;
-            this.lblAdmUser.Text = usuarioActual.NombreUsuario;
 
+            this.IsMdiContainer = true;
         }
 
         // Método para manejar el evento Hover de los botones

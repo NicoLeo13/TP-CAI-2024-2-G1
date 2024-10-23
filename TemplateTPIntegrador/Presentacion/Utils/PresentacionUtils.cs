@@ -16,9 +16,13 @@ namespace Presentacion.Utils
     {
         private static bool formClosing = false;
         private static Form formActivo = null;
+        private static Form formPrevio = null;
         private static IconButton menuActivo = null;
+        private static Panel panelContenedor = null;
 
         public static bool isFormClosing { get; set; }
+        public static Panel PanelContenedor { get; set; }
+        public static Form FormPrevio { get; set; }
 
         // Método para configurar el autocompletado en un TextBox
         public static void ConfigurarAutoComplete(TextBox textBox, string nombreArchivo)
@@ -90,17 +94,42 @@ namespace Presentacion.Utils
             {
                 if (formActivo.Text == form.Text)
                 {
-                    //formActivo.Close();
+                    //formActivo.Hide();
                     return;
                 }
-                formActivo.Close();
+                formActivo.Hide();
             }
 
+            FormPrevio = formActivo;
             formActivo = form;
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
             form.Dock = DockStyle.Fill;
             contenedor.Controls.Add(form);
+            PanelContenedor = contenedor;
+            PanelContenedor.Controls.Add(form);
+            form.Show();
+        }
+
+        public static void VolverFormPrevio(IconButton boton, Form form, Panel contenedor)
+        {
+            if (formActivo != null)
+            {
+                if (formActivo.Text == form.Text)
+                {
+                    //formActivo.Hide();
+                    return;
+                }
+                formActivo.Hide();
+            }
+
+            formActivo = FormPrevio;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            contenedor.Controls.Add(form);
+            PanelContenedor = contenedor;
+            PanelContenedor.Controls.Add(form);
             form.Show();
         }
     }

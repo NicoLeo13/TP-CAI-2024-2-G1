@@ -20,12 +20,11 @@ namespace Presentacion
         public frmAdmUsuarios()
         {
             InitializeComponent();
-            this.mainForm = (frmPerfilAdministrador)Application.OpenForms["frmPerfilAdministrador"];
         }
 
         private void btnAltaUsuario_Click(object sender, EventArgs e)
         {
-            //PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuarios(), this.mai);
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuariosAlta(), PresentacionUtils.PanelContenedor);
 
             //frmAdmAltaUsuarios altausuario = new frmAdmAltaUsuarios();
             //altausuario.Show();
