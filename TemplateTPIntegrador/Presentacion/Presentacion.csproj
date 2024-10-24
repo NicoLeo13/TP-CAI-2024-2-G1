@@ -95,6 +95,18 @@
     <Compile Include="frmAdmUsuariosModif.Designer.cs">
       <DependentUpon>frmAdmUsuariosModif.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPerfilVendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfilVendedor.Designer.cs">
+      <DependentUpon>frmPerfilVendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendNuevaVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendNuevaVenta.Designer.cs">
+      <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPerfilAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +131,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdmUsuariosModif.resx">
       <DependentUpon>frmAdmUsuariosModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfilVendedor.resx">
+      <DependentUpon>frmPerfilVendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendNuevaVenta.resx">
+      <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPerfilAdministrador.resx">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
