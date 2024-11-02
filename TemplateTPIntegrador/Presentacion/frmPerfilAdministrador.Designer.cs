@@ -68,18 +68,18 @@
             // lblDescSistema
             // 
             this.lblDescSistema.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSistema.Location = new System.Drawing.Point(1004, 39);
+            this.lblDescSistema.Location = new System.Drawing.Point(979, 39);
             this.lblDescSistema.Name = "lblDescSistema";
-            this.lblDescSistema.Size = new System.Drawing.Size(167, 27);
+            this.lblDescSistema.Size = new System.Drawing.Size(192, 27);
             this.lblDescSistema.TabIndex = 16;
-            this.lblDescSistema.Text = "Sistema de Gestion";
+            this.lblDescSistema.Text = "Sistema de Gestión";
             // 
             // lblTopTitulo
             // 
             this.lblTopTitulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTopTitulo.Location = new System.Drawing.Point(80, 9);
             this.lblTopTitulo.Name = "lblTopTitulo";
-            this.lblTopTitulo.Size = new System.Drawing.Size(263, 27);
+            this.lblTopTitulo.Size = new System.Drawing.Size(263, 44);
             this.lblTopTitulo.TabIndex = 15;
             this.lblTopTitulo.Text = "ElectroHogar SA";
             // 
@@ -286,9 +286,9 @@
             // lblAdmRol
             // 
             this.lblAdmRol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmRol.Location = new System.Drawing.Point(35, 117);
+            this.lblAdmRol.Location = new System.Drawing.Point(22, 117);
             this.lblAdmRol.Name = "lblAdmRol";
-            this.lblAdmRol.Size = new System.Drawing.Size(110, 21);
+            this.lblAdmRol.Size = new System.Drawing.Size(129, 26);
             this.lblAdmRol.TabIndex = 15;
             this.lblAdmRol.Text = "Administrador";
             this.lblAdmRol.TextAlign = System.Drawing.ContentAlignment.TopCenter;

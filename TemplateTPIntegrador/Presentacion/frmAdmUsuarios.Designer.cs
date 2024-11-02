@@ -69,9 +69,9 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(377, 39);
+            this.label2.Size = new System.Drawing.Size(589, 39);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Panel de Usuarios - Seleccione una Accion";
+            this.label2.Text = "Panel de Usuarios - Seleccione una Acción";
             // 
             // panel1
             // 
@@ -89,7 +89,7 @@
             this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(127, 49);
             this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(32, 15);
+            this.lblTotal.Size = new System.Drawing.Size(42, 20);
             this.lblTotal.TabIndex = 11;
             this.lblTotal.Text = "Total";
             this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -133,7 +133,7 @@
             this.lblActivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblActivos.Location = new System.Drawing.Point(127, 49);
             this.lblActivos.Name = "lblActivos";
-            this.lblActivos.Size = new System.Drawing.Size(32, 15);
+            this.lblActivos.Size = new System.Drawing.Size(42, 20);
             this.lblActivos.TabIndex = 14;
             this.lblActivos.Text = "Total";
             this.lblActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -177,7 +177,7 @@
             this.lblInactivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInactivos.Location = new System.Drawing.Point(127, 49);
             this.lblInactivos.Name = "lblInactivos";
-            this.lblInactivos.Size = new System.Drawing.Size(32, 15);
+            this.lblInactivos.Size = new System.Drawing.Size(42, 20);
             this.lblInactivos.TabIndex = 17;
             this.lblInactivos.Text = "Total";
             this.lblInactivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

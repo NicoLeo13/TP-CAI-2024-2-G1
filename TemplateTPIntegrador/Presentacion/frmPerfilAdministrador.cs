@@ -70,6 +70,15 @@ namespace Presentacion
 
         private void btnAdmVendedor_Click(object sender, EventArgs e)
         {
+            // Verificar si la instancia ya existe
+            if (frmAdmUsuariosInstance == null || frmAdmUsuariosInstance.IsDisposed)
+            {
+                frmAdmUsuariosInstance = new frmAdmUsuarios();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmUsuariosInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmUsuariosInstance, panelContenedor);
+            //frmAdmUsuariosInstance.BringToFront();
         }
 
         private void btnAdmProveed_Click(object sender, EventArgs e)
