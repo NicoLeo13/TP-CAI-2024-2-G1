@@ -42,6 +42,7 @@
             this.btnNuevaVenta.TabIndex = 0;
             this.btnNuevaVenta.Text = "Nueva Venta";
             this.btnNuevaVenta.UseVisualStyleBackColor = true;
+            this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
             // 
             // btnReporteVenta
             // 
@@ -80,7 +81,7 @@
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(15, 25);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(490, 40);
+            this.label2.Size = new System.Drawing.Size(633, 39);
             this.label2.TabIndex = 35;
             this.label2.Text = "Panel de Vendedor - Seleccione una Acción";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -89,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 450);
+            this.ClientSize = new System.Drawing.Size(697, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnReporteVenta);
@@ -106,5 +107,6 @@
         private System.Windows.Forms.Button btnReporteVenta;
         private FontAwesome.Sharp.IconButton btnVolver;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panelContenedorVentas;
     }
 }

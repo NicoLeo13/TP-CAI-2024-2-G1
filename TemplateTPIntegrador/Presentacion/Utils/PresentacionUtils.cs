@@ -74,6 +74,7 @@ namespace Presentacion.Utils
                 }
                 formActivo.Hide();
             }
+            contenedor.Controls.Clear();
 
             formActivo = form;
             form.TopLevel = false;
@@ -82,6 +83,10 @@ namespace Presentacion.Utils
             contenedor.Controls.Add(form);
             PanelContenedor = contenedor;
             PanelContenedor.Controls.Add(form);
+            if (!PanelContenedor.Controls.Contains(form))
+            {
+                PanelContenedor.Controls.Add(form);
+            }
             form.Show();
         }
     }

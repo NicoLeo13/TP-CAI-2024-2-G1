@@ -102,7 +102,7 @@
             this.lblInfoDatosPers.AutoSize = true;
             this.lblInfoDatosPers.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblInfoDatosPers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosPers.Location = new System.Drawing.Point(0, 0);
+            this.lblInfoDatosPers.Location = new System.Drawing.Point(0, -1);
             this.lblInfoDatosPers.Name = "lblInfoDatosPers";
             this.lblInfoDatosPers.Size = new System.Drawing.Size(167, 28);
             this.lblInfoDatosPers.TabIndex = 11;
@@ -140,7 +140,7 @@
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(105, 25);
             this.lblDireccion.TabIndex = 14;
-            this.lblDireccion.Text = "Direccion";
+            this.lblDireccion.Text = "Dirección";
             this.lblDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtBoxDni
@@ -191,7 +191,7 @@
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(105, 25);
             this.lblTelefono.TabIndex = 20;
-            this.lblTelefono.Text = "Telefono";
+            this.lblTelefono.Text = "Teléfono";
             this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblInfoDatosUser

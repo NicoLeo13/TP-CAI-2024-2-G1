@@ -18,6 +18,7 @@ namespace Presentacion
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
         private frmAdmUsuarios frmAdmUsuariosInstance;
+        private PerfilVendedor frmPerfilVendedorInstance;
 
         public frmPerfilAdministrador(UsuarioWS objUsuario)
         {
@@ -70,15 +71,15 @@ namespace Presentacion
 
         private void btnAdmVendedor_Click(object sender, EventArgs e)
         {
-            // Verificar si la instancia ya existe
-            if (frmAdmUsuariosInstance == null || frmAdmUsuariosInstance.IsDisposed)
+            if (frmPerfilVendedorInstance == null || frmPerfilVendedorInstance.IsDisposed)
             {
-                frmAdmUsuariosInstance = new frmAdmUsuarios();
-                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmUsuariosInstance, panelContenedor);
+                frmPerfilVendedorInstance = new PerfilVendedor();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmPerfilVendedorInstance, panelContenedor);
             }
             else
-                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmUsuariosInstance, panelContenedor);
-            //frmAdmUsuariosInstance.BringToFront();
+            {
+                frmPerfilVendedorInstance.BringToFront();
+            }
         }
 
         private void btnAdmProveed_Click(object sender, EventArgs e)
