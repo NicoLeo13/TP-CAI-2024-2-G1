@@ -58,13 +58,13 @@ namespace Presentacion
                 }
                 else if (host == 2)
                 {
-                    MessageBox.Show("Supervisor no implementado aun.", "Modo Prueba Activo - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                    //UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "supervTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: host);
-                    //Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
-                    //pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
-                    //pantallaInicial.Show();
-                    //this.Hide();
+                    //MessageBox.Show("Supervisor no implementado aun.", "Modo Prueba Activo - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //return;
+                    UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "supervTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: host);
+                    Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
+                    pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
+                    pantallaInicial.Show();
+                    this.Hide();
                 }
                 else if (host == 1)
                 {

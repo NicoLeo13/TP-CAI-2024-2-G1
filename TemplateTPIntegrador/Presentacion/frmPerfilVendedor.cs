@@ -91,5 +91,10 @@ namespace Presentacion
                 PresentacionUtils.isFormClosing = false;
             }
         }
+
+        private void frmPerfilVendedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

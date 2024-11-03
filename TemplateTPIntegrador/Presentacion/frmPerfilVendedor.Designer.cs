@@ -266,6 +266,7 @@
             this.Name = "frmPerfilVendedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ElectroHogar SA - Panel Vendedor";
+            this.Load += new System.EventHandler(this.frmPerfilVendedor_Load);
             this.panelTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.panelOpciones.ResumeLayout(false);

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Datos;
+using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,14 +9,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Presentacion.Utils;
 
 namespace Presentacion
 {
     public partial class frmPerfliSupervisor : Form
     {
-        public frmPerfliSupervisor()
+        private static IconButton botonSeleccionado;
+        private static UsuarioWS usuarioActual;
+        private frmVendNuevaVenta frmVendVentaInstance;
+
+        public frmPerfliSupervisor(UsuarioWS objUsuario)
         {
             InitializeComponent();
+            usuarioActual = objUsuario;
+
+            this.lblSupUser.Text = usuarioActual.NombreUsuario;
+        }
+
+        private void lblVendRol_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmPerfliSupervisor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
