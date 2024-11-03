@@ -186,7 +186,6 @@
             this.lblEstado.TabIndex = 47;
             this.lblEstado.Text = "Estado";
             this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEstado.Click += new System.EventHandler(this.lblDni_Click);
             // 
             // lblCantidad
             // 
@@ -197,7 +196,6 @@
             this.lblCantidad.TabIndex = 49;
             this.lblCantidad.Text = "Cantidad";
             this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblCantidad.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // lblClienteID
             // 
@@ -208,7 +206,6 @@
             this.lblClienteID.TabIndex = 51;
             this.lblClienteID.Text = "ID Cliente";
             this.lblClienteID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblClienteID.Click += new System.EventHandler(this.lblTelefono_Click);
             // 
             // lblDescripcion
             // 
@@ -219,7 +216,6 @@
             this.lblDescripcion.TabIndex = 45;
             this.lblDescripcion.Text = "Descripción";
             this.lblDescripcion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblDescripcion.Click += new System.EventHandler(this.lblDireccion_Click);
             // 
             // lblProductoID
             // 
@@ -230,7 +226,6 @@
             this.lblProductoID.TabIndex = 43;
             this.lblProductoID.Text = "ID Producto";
             this.lblProductoID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblProductoID.Click += new System.EventHandler(this.lblApellido_Click);
             // 
             // lblVentaID
             // 
@@ -241,7 +236,6 @@
             this.lblVentaID.TabIndex = 40;
             this.lblVentaID.Text = "ID Venta";
             this.lblVentaID.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblVentaID.Click += new System.EventHandler(this.lblNombre_Click);
             // 
             // lblInfoDatosPers
             // 
@@ -254,7 +248,6 @@
             this.lblInfoDatosPers.TabIndex = 42;
             this.lblInfoDatosPers.Text = "Datos Personales";
             this.lblInfoDatosPers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblInfoDatosPers.Click += new System.EventHandler(this.lblInfoDatosPers_Click);
             // 
             // comboBoxHost
             // 
@@ -288,7 +281,6 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(257, 22);
             this.txtEstado.TabIndex = 48;
-            this.txtEstado.TextChanged += new System.EventHandler(this.txtBoxDni_TextChanged);
             // 
             // txtCantidad
             // 
@@ -297,7 +289,6 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(257, 22);
             this.txtCantidad.TabIndex = 50;
-            this.txtCantidad.TextChanged += new System.EventHandler(this.txtBoxEmail_TextChanged);
             // 
             // txtDescripcion
             // 
@@ -306,7 +297,6 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(257, 22);
             this.txtDescripcion.TabIndex = 52;
-            this.txtDescripcion.TextChanged += new System.EventHandler(this.txtBoxTelefono_TextChanged);
             // 
             // txtProductoID
             // 
@@ -315,7 +305,6 @@
             this.txtProductoID.Name = "txtProductoID";
             this.txtProductoID.Size = new System.Drawing.Size(257, 22);
             this.txtProductoID.TabIndex = 46;
-            this.txtProductoID.TextChanged += new System.EventHandler(this.txtBoxDireccion_TextChanged);
             // 
             // txtClienteID
             // 
@@ -324,7 +313,6 @@
             this.txtClienteID.Name = "txtClienteID";
             this.txtClienteID.Size = new System.Drawing.Size(257, 22);
             this.txtClienteID.TabIndex = 44;
-            this.txtClienteID.TextChanged += new System.EventHandler(this.txtBoxApellido_TextChanged);
             // 
             // iconButton1
             // 
@@ -347,7 +335,6 @@
             this.iconButton1.TabIndex = 60;
             this.iconButton1.Text = "Volver";
             this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconButton2
             // 
@@ -370,7 +357,6 @@
             this.iconButton2.TabIndex = 62;
             this.iconButton2.Text = "Limpiar Campos";
             this.iconButton2.UseVisualStyleBackColor = false;
-            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // btnGuardarUsuario
             // 
@@ -393,7 +379,6 @@
             this.btnGuardarUsuario.TabIndex = 61;
             this.btnGuardarUsuario.Text = "Guardar";
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
-            this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
             // panelSide
             // 
@@ -428,7 +413,6 @@
             this.dtpFechaVenta.Name = "dtpFechaVenta";
             this.dtpFechaVenta.Size = new System.Drawing.Size(256, 22);
             this.dtpFechaVenta.TabIndex = 65;
-            this.dtpFechaVenta.ValueChanged += new System.EventHandler(this.dtpFechaNac_ValueChanged);
             // 
             // lblFechaVenta
             // 
@@ -488,7 +472,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmVendNuevaVenta";
             this.Text = "NuevaVenta";
-            this.Load += new System.EventHandler(this.frmVendNuevaVenta_Load);
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

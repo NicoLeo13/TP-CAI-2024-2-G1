@@ -39,7 +39,7 @@ namespace Presentacion
 
                 Guid.TryParse(txtClienteID.Text, out idCliente);
                 Guid.TryParse(txtProductoID.Text, out idProducto);
-                Guid.TryParse(txtUsuarioID.Text, out idUsuario);
+                Guid.TryParse(txtBoxUsuario.Text, out idUsuario);
 
                 int cantidad;
                 int.TryParse(txtCantidad.Text, out cantidad);
@@ -49,16 +49,16 @@ namespace Presentacion
 
                 DateTime fechaAlta = dtpFechaVenta.Value;
 
-                VentaService ventaService = new VentaService();
-                ventaService.AgregarVenta(
-                    idVenta,
-                    idCliente,
-                    idProducto,
-                    cantidad,
-                    fechaAlta,
-                    estado,
-                    idUsuario
-                );
+                //VentaService ventaService = new VentaService();
+                //ventaService.AgregarVenta(
+                //    idVenta,
+                //    idCliente,
+                //    idProducto,
+                //    cantidad,
+                //    fechaAlta,
+                //    estado,
+                //    idUsuario
+                //);
 
                 MessageBox.Show($"Venta {idVenta} agregada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
