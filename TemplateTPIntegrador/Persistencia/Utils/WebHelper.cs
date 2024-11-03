@@ -13,7 +13,7 @@ namespace Persistencia.Utils
     {
         static HttpClient httpClient = new HttpClient();
         private static String rutaBase = "https://cai-tp.azurewebsites.net/api/";
-        private static String adminId = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+        private static String adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
 
         public static HttpResponseMessage Get(string url)
         {
@@ -88,6 +88,12 @@ namespace Persistencia.Utils
         public static HttpResponseMessage Patch(string url, string jsonRequest)
         {
             var uri = rutaBase + url + adminId;
+
+            Console.WriteLine("\n Veamos que tiene el URI: " + uri);
+
+            Console.WriteLine("\n Veamos que tiene el jsonRequest: " + jsonRequest);
+
+            //  Veamos que tiene el URI: https://cai-tp.azurewebsites.net/api/Usuario/CambiarContraseñaabc27a5f-7f7f-4f11-a244-475c8f0c0e89
 
             var data = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
             var request =
