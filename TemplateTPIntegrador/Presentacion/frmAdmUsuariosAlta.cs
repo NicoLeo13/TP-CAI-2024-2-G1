@@ -86,5 +86,15 @@ namespace Presentacion
         {
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
         }
+
+        private void lblFechaNacimiento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFechaNac_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

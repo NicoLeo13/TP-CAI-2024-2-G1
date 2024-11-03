@@ -107,6 +107,12 @@
     <Compile Include="frmPerfilAdministrador.Designer.cs">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPerfliSupervisor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPerfliSupervisor.Designer.cs">
+      <DependentUpon>frmPerfliSupervisor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmVendNuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPerfilAdministrador.resx">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPerfliSupervisor.resx">
+      <DependentUpon>frmPerfliSupervisor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVendNuevaVenta.resx">
       <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>

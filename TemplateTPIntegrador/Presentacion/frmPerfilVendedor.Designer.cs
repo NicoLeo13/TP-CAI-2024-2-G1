@@ -65,18 +65,18 @@
             // lblDescSistema
             // 
             this.lblDescSistema.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescSistema.Location = new System.Drawing.Point(1004, 39);
+            this.lblDescSistema.Location = new System.Drawing.Point(963, 39);
             this.lblDescSistema.Name = "lblDescSistema";
-            this.lblDescSistema.Size = new System.Drawing.Size(167, 27);
+            this.lblDescSistema.Size = new System.Drawing.Size(208, 27);
             this.lblDescSistema.TabIndex = 16;
-            this.lblDescSistema.Text = "Sistema de Gestion";
+            this.lblDescSistema.Text = "Sistema de Gestión";
             // 
             // lblTopTitulo
             // 
             this.lblTopTitulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTopTitulo.Location = new System.Drawing.Point(80, 9);
             this.lblTopTitulo.Name = "lblTopTitulo";
-            this.lblTopTitulo.Size = new System.Drawing.Size(263, 27);
+            this.lblTopTitulo.Size = new System.Drawing.Size(263, 44);
             this.lblTopTitulo.TabIndex = 15;
             this.lblTopTitulo.Text = "ElectroHogar SA";
             // 
