@@ -30,9 +30,9 @@ namespace Presentacion.Utils
             switch (usuario.Host)
             {
                 case 1: // Vendedor
-                    //return new Perfil_Vendedor();
+                    return new frmPerfilVendedor(usuario);
                 case 2: // Supervisor
-                    //return new Perfil_Supervisor();
+                    //return new frmPerfilSupervisor(usuario);
                 case 3: // Administrador
                     return new frmPerfilAdministrador(usuario);
                 default:

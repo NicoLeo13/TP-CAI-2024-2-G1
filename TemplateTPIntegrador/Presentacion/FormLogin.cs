@@ -36,9 +36,11 @@ namespace Presentacion
 
         private void SkipLogin()
         {
-            //Datos de un usuario para probar la pantalla de administrador
-            UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "adminTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: 3);
-            Form pantallaInicial = new frmPerfilAdministrador(usuario);
+            //Datos de un usuario para probar la pantalla de administrador, supervisor o vendedor
+            int host = 3; //Probando con Administrador (se puede con los otros tambien)
+            
+            UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "adminTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: host);
+            Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
             pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
             pantallaInicial.Show();
             this.Hide();
@@ -110,7 +112,7 @@ namespace Presentacion
                 try
                 {
                     Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
-                    //pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
+                    pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
                     pantallaInicial.Show();
                     this.Hide();
                 }
