@@ -18,7 +18,6 @@ namespace Presentacion
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
         private frmAdmUsuarios frmAdmUsuariosInstance;
-        private PerfilVendedor frmPerfilVendedorInstance;
 
         public frmPerfilAdministrador(UsuarioWS objUsuario)
         {
@@ -71,15 +70,7 @@ namespace Presentacion
 
         private void btnAdmVendedor_Click(object sender, EventArgs e)
         {
-            if (frmPerfilVendedorInstance == null || frmPerfilVendedorInstance.IsDisposed)
-            {
-                frmPerfilVendedorInstance = new PerfilVendedor();
-                PresentacionUtils.AbrirForm((IconButton)sender, frmPerfilVendedorInstance, panelContenedor);
-            }
-            else
-            {
-                frmPerfilVendedorInstance.BringToFront();
-            }
+            
         }
 
         private void btnAdmProveed_Click(object sender, EventArgs e)

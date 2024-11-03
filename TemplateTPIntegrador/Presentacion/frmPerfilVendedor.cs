@@ -17,7 +17,7 @@ namespace Presentacion
     {
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
-        private frmAdmUsuarios frmAdmUsuariosInstance;
+        private frmVendNuevaVenta frmVendVentaInstance;
 
         public frmPerfilVendedor(UsuarioWS objUsuario)
         {
@@ -57,40 +57,39 @@ namespace Presentacion
             botonSeleccionado.ForeColor = Color.WhiteSmoke;
         }
 
-        private void btnAdmLogout_Click(object sender, EventArgs e)
+        private void btnVendVenta_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Está seguro que desea Cerrar Sesión?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            // Verificar si la instancia ya existe
+            if (frmVendVentaInstance == null || frmVendVentaInstance.IsDisposed)
+            {
+                frmVendVentaInstance = new frmVendNuevaVenta();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendVentaInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendVentaInstance, panelContenedor);
+        }
+
+        private void btnVendProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVendReportes_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVendLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea Cerrar Sesión?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 PresentacionUtils.isFormClosing = true;
                 this.Close();
 
+                PresentacionUtils.PanelContenedor = null;
+                PresentacionUtils.FormPrevio = null;
                 PresentacionUtils.isFormClosing = false;
             }
-        }
-
-        private void btnAdmVendedor_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnAdmProveed_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnAdmSuperv_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnAdmUsuarios_Click(object sender, EventArgs e)
-        {
-            // Verificar si la instancia ya existe
-            if (frmAdmUsuariosInstance == null || frmAdmUsuariosInstance.IsDisposed)
-            {
-                frmAdmUsuariosInstance = new frmAdmUsuarios();
-                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmUsuariosInstance, panelContenedor);
-            }
-            else
-                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmUsuariosInstance, panelContenedor);
-            //frmAdmUsuariosInstance.BringToFront();
         }
     }
 }

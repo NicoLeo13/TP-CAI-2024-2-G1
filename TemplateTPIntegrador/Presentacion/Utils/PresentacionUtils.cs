@@ -89,5 +89,28 @@ namespace Presentacion.Utils
             }
             form.Show();
         }
+
+        public static void LimpiarControles(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Clear();
+                }
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).SelectedIndex = -1;
+                }
+                else if (control is DateTimePicker)
+                {
+                    ((DateTimePicker)control).Value = DateTime.Now;
+                }
+                else if (control.HasChildren)
+                {
+                    LimpiarControles(control);
+                }
+            }
+        }
     }
 }

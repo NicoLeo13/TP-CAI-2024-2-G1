@@ -79,40 +79,12 @@ namespace Presentacion
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            LimpiarControles(this);
-        }
-
-        private void LimpiarControles(Control parent)
-        {
-            foreach (Control control in parent.Controls)
-            {
-                if (control is TextBox)
-                {
-                    ((TextBox)control).Clear();
-                }
-                else if (control is ComboBox)
-                {
-                    ((ComboBox)control).SelectedIndex = -1;
-                }
-                else if (control is DateTimePicker)
-                {
-                    ((DateTimePicker)control).Value = DateTime.Now;
-                }
-                else if (control.HasChildren)
-                {
-                    LimpiarControles(control);
-                }
-            }
+            PresentacionUtils.LimpiarControles(this);
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
-        }
-
-        private void lblFechaNacimiento_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -34,16 +34,51 @@ namespace Presentacion
             toolTip.SetToolTip(linkLabelForgotPass, TOOLTIP_OLVIDAR_CONTRASEÑA);
         }
 
-        private void SkipLogin()
+        private void SkipLogin(string nombreUsuario)
         {
             //Datos de un usuario para probar la pantalla de administrador, supervisor o vendedor
-            int host = 3; //Probando con Administrador (se puede con los otros tambien)
-            
-            UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "adminTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: host);
-            Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
-            pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
-            pantallaInicial.Show();
-            this.Hide();
+            //int host = 3; //Probando con Administrador (se puede con los otros tambien)
+
+            if (int.TryParse(nombreUsuario, out int host))
+            {
+                //Validar si txtBoxUser es un int (entre 1 y 3) y si es asi, asignar a host. Si no, mostrar mensaje de error
+                if (host < 1 || host > 3)
+                {
+                    MessageBox.Show("El valor ingresado no es válido. Ingrese un número entre 1 y 3.\nAdmin: 3\nSupervisor: 2\nVendedor: 1", "Modo Prueba Activo - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (host == 3)
+                {
+                    UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "adminTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: host);
+                    Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
+                    pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
+                    pantallaInicial.Show();
+                    this.Hide();
+                }
+                else if (host == 2)
+                {
+                    MessageBox.Show("Supervisor no implementado aun.", "Modo Prueba Activo - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                    //UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "supervTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: host);
+                    //Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
+                    //pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
+                    //pantallaInicial.Show();
+                    //this.Hide();
+                }
+                else if (host == 1)
+                {
+                    UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "vendTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: host);
+                    Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
+                    pantallaInicial.FormClosing += new FormClosingEventHandler(frm_FormClosing);
+                    pantallaInicial.Show();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe ingresar un numero de Host.", "Modo Prueba Activo - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonIniciarSesion_Click(object sender, EventArgs e)
@@ -55,7 +90,7 @@ namespace Presentacion
             //Saltea login para probar pantallas directamente
             if (skipLogin)
             {
-                SkipLogin();
+                SkipLogin(nombreUsuario);
                 return;
             }
 

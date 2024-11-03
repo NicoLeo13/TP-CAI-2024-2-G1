@@ -101,29 +101,17 @@
     <Compile Include="frmPerfilVendedor.Designer.cs">
       <DependentUpon>frmPerfilVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVendNuevaVenta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmVendNuevaVenta.Designer.cs">
-      <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmPerfilAdministrador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPerfilAdministrador.Designer.cs">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="NuevaVenta.cs">
+    <Compile Include="frmVendNuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NuevaVenta.Designer.cs">
-      <DependentUpon>NuevaVenta.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PerfilVendedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PerfilVendedor.Designer.cs">
-      <DependentUpon>PerfilVendedor.cs</DependentUpon>
+    <Compile Include="frmVendNuevaVenta.Designer.cs">
+      <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,17 +135,11 @@
     <EmbeddedResource Include="frmPerfilVendedor.resx">
       <DependentUpon>frmPerfilVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVendNuevaVenta.resx">
-      <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmPerfilAdministrador.resx">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevaVenta.resx">
-      <DependentUpon>NuevaVenta.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PerfilVendedor.resx">
-      <DependentUpon>PerfilVendedor.cs</DependentUpon>
+    <EmbeddedResource Include="frmVendNuevaVenta.resx">
+      <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

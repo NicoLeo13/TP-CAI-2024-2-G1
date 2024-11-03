@@ -127,7 +127,7 @@
             this.btnVendLogout.TabIndex = 21;
             this.btnVendLogout.Text = "Cerrar Sesión";
             this.btnVendLogout.UseVisualStyleBackColor = false;
-            this.btnVendLogout.Click += new System.EventHandler(this.btnAdmLogout_Click);
+            this.btnVendLogout.Click += new System.EventHandler(this.btnVendLogout_Click);
             // 
             // btnVendReportes
             // 
@@ -148,6 +148,7 @@
             this.btnVendReportes.TabIndex = 19;
             this.btnVendReportes.Text = "Reportes";
             this.btnVendReportes.UseVisualStyleBackColor = false;
+            this.btnVendReportes.Click += new System.EventHandler(this.btnVendReportes_Click);
             this.btnVendReportes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnVendReportes.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
@@ -170,6 +171,7 @@
             this.btnVendProduct.TabIndex = 18;
             this.btnVendProduct.Text = "Productos";
             this.btnVendProduct.UseVisualStyleBackColor = false;
+            this.btnVendProduct.Click += new System.EventHandler(this.btnVendProduct_Click);
             this.btnVendProduct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnVendProduct.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
@@ -192,7 +194,7 @@
             this.btnVendVenta.TabIndex = 22;
             this.btnVendVenta.Text = "Nueva Venta";
             this.btnVendVenta.UseVisualStyleBackColor = false;
-            this.btnVendVenta.Click += new System.EventHandler(this.btnAdmUsuarios_Click);
+            this.btnVendVenta.Click += new System.EventHandler(this.btnVendVenta_Click);
             this.btnVendVenta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnVendVenta.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
