@@ -142,5 +142,41 @@ namespace Persistencia
             }
         }
 
+        public string CambiarContraseñaUsuario(string nombreUsuario, string contraseñaActual, string nuevaContraseña)
+        {
+
+            Dictionary<String, object> datos = new Dictionary<String, object>();
+
+            //var userData = new
+            datos.Add("nombreUsuario", nombreUsuario);
+            datos.Add("contraseña", contraseñaActual);
+            datos.Add("contraseñaNueva", nuevaContraseña);
+
+
+            var jsonData = JsonConvert.SerializeObject(datos);
+
+            Console.WriteLine("\n jsonData /Usuario/CambiarContraseña: " + jsonData);
+
+            HttpResponseMessage response = WebHelper.Patch("Usuario/CambiarContraseña", jsonData);
+
+            Console.WriteLine("\n response Usuario/AgregarUsuario: " + response);
+
+            String result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                result = JsonConvert.DeserializeObject<String>(reader.ReadToEnd());
+            }
+            else
+            {
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {errorContent}");
+                throw new Exception("Error al cambiar la contraseña." + response.ReasonPhrase);
+            }
+
+            return result;
+        }
+
     }
 }

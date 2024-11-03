@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.labelContraseña = new System.Windows.Forms.Label();
-            this.txtBoxPass = new System.Windows.Forms.TextBox();
+            this.txtBoxContraseñaActual = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtBoxNewPass = new System.Windows.Forms.TextBox();
+            this.txtBoxNuevaContraseña = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtBoxNewPass2 = new System.Windows.Forms.TextBox();
+            this.txtBoxReingresoNuevaContraseña = new System.Windows.Forms.TextBox();
             this.btnGuardarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
@@ -50,14 +50,14 @@
             this.labelContraseña.Text = "Contraseña Actual";
             this.labelContraseña.Click += new System.EventHandler(this.labelContraseña_Click);
             // 
-            // txtBoxPass
+            // txtBoxContraseñaActual
             // 
-            this.txtBoxPass.Location = new System.Drawing.Point(71, 58);
-            this.txtBoxPass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxPass.Name = "txtBoxPass";
-            this.txtBoxPass.PasswordChar = '*';
-            this.txtBoxPass.Size = new System.Drawing.Size(185, 20);
-            this.txtBoxPass.TabIndex = 5;
+            this.txtBoxContraseñaActual.Location = new System.Drawing.Point(71, 58);
+            this.txtBoxContraseñaActual.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxContraseñaActual.Name = "txtBoxContraseñaActual";
+            this.txtBoxContraseñaActual.PasswordChar = '*';
+            this.txtBoxContraseñaActual.Size = new System.Drawing.Size(185, 20);
+            this.txtBoxContraseñaActual.TabIndex = 5;
             // 
             // label1
             // 
@@ -70,14 +70,14 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Nueva Contraseña";
             // 
-            // txtBoxNewPass
+            // txtBoxNuevaContraseña
             // 
-            this.txtBoxNewPass.Location = new System.Drawing.Point(71, 132);
-            this.txtBoxNewPass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxNewPass.Name = "txtBoxNewPass";
-            this.txtBoxNewPass.PasswordChar = '*';
-            this.txtBoxNewPass.Size = new System.Drawing.Size(185, 20);
-            this.txtBoxNewPass.TabIndex = 7;
+            this.txtBoxNuevaContraseña.Location = new System.Drawing.Point(71, 132);
+            this.txtBoxNuevaContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxNuevaContraseña.Name = "txtBoxNuevaContraseña";
+            this.txtBoxNuevaContraseña.PasswordChar = '*';
+            this.txtBoxNuevaContraseña.Size = new System.Drawing.Size(185, 20);
+            this.txtBoxNuevaContraseña.TabIndex = 7;
             // 
             // label2
             // 
@@ -90,14 +90,14 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Reingrese Nueva Contraseña";
             // 
-            // txtBoxNewPass2
+            // txtBoxReingresoNuevaContraseña
             // 
-            this.txtBoxNewPass2.Location = new System.Drawing.Point(71, 210);
-            this.txtBoxNewPass2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBoxNewPass2.Name = "txtBoxNewPass2";
-            this.txtBoxNewPass2.PasswordChar = '*';
-            this.txtBoxNewPass2.Size = new System.Drawing.Size(185, 20);
-            this.txtBoxNewPass2.TabIndex = 9;
+            this.txtBoxReingresoNuevaContraseña.Location = new System.Drawing.Point(71, 210);
+            this.txtBoxReingresoNuevaContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBoxReingresoNuevaContraseña.Name = "txtBoxReingresoNuevaContraseña";
+            this.txtBoxReingresoNuevaContraseña.PasswordChar = '*';
+            this.txtBoxReingresoNuevaContraseña.Size = new System.Drawing.Size(185, 20);
+            this.txtBoxReingresoNuevaContraseña.TabIndex = 9;
             // 
             // btnGuardarUsuario
             // 
@@ -152,11 +152,11 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGuardarUsuario);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBoxNewPass2);
+            this.Controls.Add(this.txtBoxReingresoNuevaContraseña);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtBoxNewPass);
+            this.Controls.Add(this.txtBoxNuevaContraseña);
             this.Controls.Add(this.labelContraseña);
-            this.Controls.Add(this.txtBoxPass);
+            this.Controls.Add(this.txtBoxContraseñaActual);
             this.Name = "frmResetPass";
             this.Text = "ElectroHogar S.A - Cambio de Contraseña";
             this.ResumeLayout(false);
@@ -167,11 +167,11 @@
         #endregion
 
         private System.Windows.Forms.Label labelContraseña;
-        private System.Windows.Forms.TextBox txtBoxPass;
+        private System.Windows.Forms.TextBox txtBoxContraseñaActual;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtBoxNewPass;
+        private System.Windows.Forms.TextBox txtBoxNuevaContraseña;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBoxNewPass2;
+        private System.Windows.Forms.TextBox txtBoxReingresoNuevaContraseña;
         private FontAwesome.Sharp.IconButton btnGuardarUsuario;
         private FontAwesome.Sharp.IconButton btnVolver;
     }

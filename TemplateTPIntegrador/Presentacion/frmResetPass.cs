@@ -13,8 +13,6 @@ namespace Presentacion
 {
     public partial class frmResetPass : Form
     {
-        string contraseñaactual;
-        string contraseñanueva;
 
         public frmResetPass()
         {
@@ -28,20 +26,30 @@ namespace Presentacion
 
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
+
+            string contraseñaActual = txtBoxContraseñaActual.Text;
+            string nuevaContraseña = txtBoxNuevaContraseña.Text;
+            string reingresoNuevaContraseña = txtBoxReingresoNuevaContraseña.Text;
             
-            //Falta aplicarlo al web service
+            // Traeme el usuario que está logueado.
+
+            string nombreUsuario = "johndoe1";
+
             NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
 
-            negocioValidaciones.ValidarPass(contraseñaactual, contraseñanueva);
+            string resultValidarPass = negocioValidaciones.ValidarPass(nombreUsuario, contraseñaActual, nuevaContraseña, reingresoNuevaContraseña);
 
-            if (negocioValidaciones.ValidarPass (contraseñaactual, contraseñanueva) == true)
-            {
-                MessageBox.Show("La nueva contraseña no debe ser igual a la contraseña actual. Reingrese");
-            }
-            else 
-            {
-                MessageBox.Show("Se ha generado una nueva contraseña");
-            }
+            MessageBox.Show(resultValidarPass);
+
+
+            //if (negocioValidaciones.ValidarPass (contraseñaactual, contraseñanueva) == true)
+            //{
+            //    MessageBox.Show("La nueva contraseña no debe ser igual a la contraseña actual. Reingrese");
+            //}
+            //else 
+            //{
+            //    MessageBox.Show("Se ha generado una nueva contraseña");
+            //}
 
         }
     }
