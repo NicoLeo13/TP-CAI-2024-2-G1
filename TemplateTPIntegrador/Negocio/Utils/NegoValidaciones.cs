@@ -13,6 +13,7 @@ namespace Negocio.Utils
         string nombre;
         string apellido;
         string contraseña;
+        string contraseñanueva;
 
         //IndexOf devuelve el índice de la primera aparición de una subcadena en otra, y con StringComparison.OrdinalIgnoreCase ignora las diferencias entre mayúsculas y minúsculas. Si no se encuentra la subcadena, devuelve -1. Por eso verificamos si es mayor o igual a 0.
         public bool ValidarUsuario(string usuario, string nombre, string apellido)
@@ -32,7 +33,13 @@ namespace Negocio.Utils
             return false;
         }
 
-
+        //Validacion que la nueva contraseña no sea igual a la contraseña actual
+        public bool ValidarPass (string contraseña, string contraseñanueva)
+        {
+            if (contraseña == contraseñanueva)
+            return true;
+            return false;
+        }
 
         }
 }
