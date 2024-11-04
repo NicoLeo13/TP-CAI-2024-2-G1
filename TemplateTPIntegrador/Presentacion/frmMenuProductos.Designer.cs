@@ -57,6 +57,7 @@
             this.btnAltaProducto.TabIndex = 19;
             this.btnAltaProducto.Text = "Agregar Productos";
             this.btnAltaProducto.UseVisualStyleBackColor = false;
+            this.btnAltaProducto.Click += new System.EventHandler(this.btnAltaProducto_Click);
             // 
             // btnModificarProducto
             // 

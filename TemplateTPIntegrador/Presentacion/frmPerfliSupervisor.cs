@@ -36,5 +36,12 @@ namespace Presentacion
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmMenuProductos frmMenuProductos = new frmMenuProductos();
+            frmMenuProductos.Show();
+            this.Hide();
+        }
     }
 }

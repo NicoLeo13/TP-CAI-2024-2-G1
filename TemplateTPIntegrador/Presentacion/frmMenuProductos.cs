@@ -16,5 +16,12 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void btnAltaProducto_Click(object sender, EventArgs e)
+        {
+            AltaProducto altaProducto = new AltaProducto();
+            altaProducto.Show();
+            this.Hide();
+        }
     }
 }

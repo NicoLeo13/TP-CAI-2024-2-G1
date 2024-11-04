@@ -1,4 +1,6 @@
 ﻿using Datos;
+using Negocio;
+using Persistencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +16,6 @@ namespace Presentacion
     public partial class AltaProducto : Form
     {
         
-
         public AltaProducto()
         {
             InitializeComponent();
@@ -27,12 +28,16 @@ namespace Presentacion
             Guid idusuario = Guid.Parse(txtBoxIDUsuario.Text);
             Guid idproveedor = Guid.Parse(txtBoxIDProveedor.Text);
             string nombre = txtBoxNombre.Text;
-            double precio = double.Parse(txtBoxPrecio.Text);
+            int precio = int.Parse(txtBoxPrecio.Text);
             int stock = int.Parse(txtBoxStock.Text);   
 
             Producto producto = new Producto(idcategoria, idusuario, idproveedor, nombre, precio, stock);
+            ProductoService productoService = new ProductoService();
 
+            string respuestaAltaProducto = productoService.AgregarProducto(producto);
 
+            
+            MessageBox.Show("Se guardo el producto correctamente" + respuestaAltaProducto);
         }
     }
 }
