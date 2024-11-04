@@ -19,7 +19,7 @@ namespace Presentacion
         {
             InitializeComponent();
         }
-
+        
         private void btnVolver_Click(object sender, EventArgs e)
         {
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
@@ -30,56 +30,41 @@ namespace Presentacion
         }
         private void btnGuardarVenta_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Guid idVenta = Guid.NewGuid();
-                Guid idCliente;
-                Guid idProducto;
-                Guid idUsuario;
+            Guid idVenta = Guid.NewGuid();
+            Guid idCliente;
+            Guid idUsuario;
+            Guid idProducto;
 
-                Guid.TryParse(txtClienteID.Text, out idCliente);
-                Guid.TryParse(txtProductoID.Text, out idProducto);
-                Guid.TryParse(txtBoxUsuario.Text, out idUsuario);
+            Guid.TryParse(txtClienteID.Text, out idCliente);
+            Guid.TryParse(txtProductoID.Text, out idProducto);
+            Guid.TryParse(txtBoxUsuario.Text, out idUsuario);
 
-                int cantidad;
-                int.TryParse(txtCantidad.Text, out cantidad);
+            int cantidad;
+            int.TryParse(txtCantidad.Text, out cantidad);
 
-                int estado;
-                int.TryParse(txtEstado.Text, out estado);
+            int estado;
+            int.TryParse(txtEstado.Text, out estado);
 
-                DateTime fechaAlta = dtpFechaVenta.Value;
+            DateTime fechaAlta = dtpFechaVenta.Value;
 
-                //VentaService ventaService = new VentaService();
-                //ventaService.AgregarVenta(
-                //    idVenta,
-                //    idCliente,
-                //    idProducto,
-                //    cantidad,
-                //    fechaAlta,
-                //    estado,
-                //    idUsuario
-                //);
+            Venta venta = new Venta(idCliente, idProducto, idUsuario, cantidad, estado, fechaAlta);
+            VentaService ventaService = new VentaService();
 
-                MessageBox.Show($"Venta {idVenta} agregada exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (FormatException ex)
-            {
-                MessageBox.Show($"Error en el formato de los datos: {ex.Message} - {ex.Source}", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (NullReferenceException ex)
-            {
-                MessageBox.Show($"Error interno:\n{ex.Message} - {ex.Source}", "Error programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            string respuestaNuevaVenta = ventaService.AgregarVenta(venta);
+
+
+            MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");
         }
 
 
         private void btnCargarVenta_Click(object sender, EventArgs e)
         {
             // Código para cargar una venta
+        }
+
+        private void btnGuardarUsuario_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

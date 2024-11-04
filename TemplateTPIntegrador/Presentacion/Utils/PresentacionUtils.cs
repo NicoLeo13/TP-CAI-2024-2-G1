@@ -67,11 +67,6 @@ namespace Presentacion.Utils
         {
             if (formActivo != null)
             {
-                if (formActivo.Text == form.Text)
-                {
-                    //formActivo.Hide();
-                    return;
-                }
                 formActivo.Hide();
             }
             contenedor.Controls.Clear();
