@@ -19,16 +19,29 @@ namespace Presentacion
         public frmVendNuevaVenta()
         {
             InitializeComponent();
+            btnVolver.Click += btnVolver_Click;
+            btnLimpiarCampos.Click += btnLimpiarCampos_Click;
+
         }
         
         private void btnVolver_Click(object sender, EventArgs e)
         {
+
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
         }
         private void btnLimpiarCampos_Click(object sender, EventArgs e)
         {
-            PresentacionUtils.LimpiarControles(this);
+            try
+            {
+                PresentacionUtils.LimpiarControles(this); 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
         }
+        
+
         private void btnGuardarVenta_Click(object sender, EventArgs e)
         {
 
@@ -69,5 +82,29 @@ namespace Presentacion
         {
 
         }
+
+        public static void LimpiarControles(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is TextBox)
+                {
+                    ((TextBox)control).Clear();
+                }
+                else if (control is ComboBox)
+                {
+                    ((ComboBox)control).SelectedIndex = -1;
+                }
+                else if (control is DateTimePicker)
+                {
+                    ((DateTimePicker)control).Value = DateTime.Now;
+                }
+                else if (control.HasChildren)
+                {
+                    LimpiarControles(control);
+                }
+            }
+        }
+
     }
 }

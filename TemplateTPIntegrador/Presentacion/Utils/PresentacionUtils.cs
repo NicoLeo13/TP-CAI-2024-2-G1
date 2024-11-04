@@ -44,15 +44,16 @@ namespace Presentacion.Utils
         {
             if (formActivo != null)
             {
+                FormPrevio = formActivo;
                 if (formActivo.Text == form.Text)
                 {
                     //formActivo.Hide();
                     return;
                 }
+                
                 formActivo.Hide();
             }
 
-            FormPrevio = formActivo;
             formActivo = form;
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
@@ -68,6 +69,11 @@ namespace Presentacion.Utils
             if (formActivo != null)
             {
                 formActivo.Hide();
+            }
+            if (FormPrevio != null)
+            {
+                FormPrevio.Show(); 
+                formActivo = FormPrevio; 
             }
             contenedor.Controls.Clear();
 
