@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using Negocio;
+using Datos;
 using Presentacion.Utils;
 using System;
 using System.Collections.Generic;
@@ -30,6 +31,7 @@ namespace Presentacion
         }
         private void btnGuardarVenta_Click(object sender, EventArgs e)
         {
+
             Guid idVenta = Guid.NewGuid();
             Guid idCliente;
             Guid idUsuario;
@@ -47,10 +49,11 @@ namespace Presentacion
 
             DateTime fechaAlta = dtpFechaVenta.Value;
 
-            Venta venta = new Venta(idCliente, idProducto, idUsuario, cantidad, estado, fechaAlta);
+            Datos.Venta venta = new Datos.Venta(idCliente, idProducto, idUsuario, cantidad, estado, fechaAlta);
             VentaService ventaService = new VentaService();
 
             string respuestaNuevaVenta = ventaService.AgregarVenta(venta);
+
 
 
             MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");

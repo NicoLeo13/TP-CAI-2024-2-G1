@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Datos;
 
-namespace Negocio
+
+namespace Datos
 {
     public class Venta
     {
+        public int idVenta { get; set; }
+        public int idUsuario { get; set; }
+        public int idCliente { get; set; }
+        public int idProducto { get; set; }
+        public int cantidad { get; set; }
+        public DateTime fechaAlta { get; set; } = DateTime.Now;
+
         public Venta(Guid idCliente, Guid idProducto, Guid idUsuario, int cantidad, int estado, DateTime fechaAlta)
         {
-            Dictionary<String, object> datos = new Dictionary<String, object>();
-
             
         }
     }

@@ -30,7 +30,9 @@ namespace Datos
 
         public AgregarVenta()
         {
+            Dictionary<String, object> datos = new Dictionary<String, object>();
 
+            
         }
     }
 }
