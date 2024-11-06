@@ -18,5 +18,10 @@ namespace Negocio
             return ventaWS.AgregarVenta(venta);
 
         }
+        public Datos.Venta ObtenerVentaPorVenta(Guid idVenta)
+        {
+            var ventaWS = new VentaWS();
+            return ventaWS.ObtenerVentaPorId(idVenta);
+        }
     }
 }

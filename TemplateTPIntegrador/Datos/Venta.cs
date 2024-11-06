@@ -18,7 +18,11 @@ namespace Datos
 
         public Venta(Guid idCliente, Guid idProducto, Guid idUsuario, int cantidad, int estado, DateTime fechaAlta)
         {
-            
+            this.idCliente = idCliente;
+            this.idProducto = idProducto;
+            this.idUsuario = idUsuario;
+            this.cantidad = cantidad;
+            this.fechaAlta = fechaAlta;
         }
     }
 }

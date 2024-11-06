@@ -21,7 +21,7 @@ namespace Persistencia
         public DateTime fechaAlta { get; set; }
         public string AgregarVenta(Venta venta)
         {
-            
+
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
             datos.Add("idVenta", venta.idVenta);
@@ -56,5 +56,21 @@ namespace Persistencia
 
             return result;
         }
+        public Venta ObtenerVentaPorId(Guid idVenta)
+        {
+            string url = $"https://api.swaggerendpoint.com/ventas/{idVenta}";
+            HttpResponseMessage response = httpClient.GetAsync(url).Result;
+
+            if (response.IsSuccessStatusCode)
+            {
+                string json = response.Content.ReadAsStringAsync().Result;
+                return JsonConvert.DeserializeObject<Venta>(json);
+            }
+            else
+            {
+                throw new Exception("Error al obtener la venta desde el servicio.");
+            }
+        }
     }
 }
+

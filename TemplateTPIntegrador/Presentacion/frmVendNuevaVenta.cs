@@ -20,7 +20,7 @@ namespace Presentacion
         {
             InitializeComponent();
             btnVolver.Click += btnVolver_Click;
-            btnLimpiarCampos.Click += btnLimpiarCampos_Click;
+            btnLimpiarCampos.Click += btnLimpiarCampos_Click; 
 
         }
         
@@ -71,19 +71,14 @@ namespace Presentacion
 
             MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");
         }
-
-
+        
         private void btnCargarVenta_Click(object sender, EventArgs e)
         {
-            // Código para cargar una venta
-        }
-
-        private void btnGuardarUsuario_Click(object sender, EventArgs e)
-        {
 
         }
 
-        public static void LimpiarControles(Control parent)
+        // Método para limpiar controles
+        private void LimpiarControles(Control parent)
         {
             foreach (Control control in parent.Controls)
             {
@@ -105,6 +100,5 @@ namespace Presentacion
                 }
             }
         }
-
     }
 }
