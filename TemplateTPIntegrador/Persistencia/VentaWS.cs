@@ -24,12 +24,13 @@ namespace Persistencia
 
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("idVenta", venta.idVenta);
-            datos.Add("idUsuario", venta.idUsuario);
-            datos.Add("idCliente", venta.idCliente);
-            datos.Add("idProducto", venta.idProducto);
-            datos.Add("cantidad", venta.cantidad);
-            datos.Add("fechaAlta", venta.fechaAlta);
+            datos.Add("IdVenta", venta.IdVenta);
+            datos.Add("IdCliente", venta.IdCliente);
+            datos.Add("IdProducto", venta.IdProducto);
+            datos.Add("Cantidad", venta.Cantidad);
+            datos.Add("FechaAlta", venta.FechaAlta);
+            datos.Add("Estado", venta.Estado);
+            datos.Add("IdUsuario", venta.IdUsuario);
 
             //Convert the data to a JSON string
             var jsonData = JsonConvert.SerializeObject(datos);
@@ -59,7 +60,7 @@ namespace Persistencia
         public Venta ObtenerVentaPorId(Guid idVenta)
         {
             string url = $"https://api.swaggerendpoint.com/ventas/{idVenta}";
-            HttpResponseMessage response = httpClient.GetAsync(url).Result;
+            HttpResponseMessage response = WebHelper.GetAsync(url).Result;
 
             if (response.IsSuccessStatusCode)
             {

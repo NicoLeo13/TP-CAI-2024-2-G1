@@ -19,9 +19,6 @@ namespace Presentacion
         public frmVendNuevaVenta()
         {
             InitializeComponent();
-            btnVolver.Click += btnVolver_Click;
-            btnLimpiarCampos.Click += btnLimpiarCampos_Click; 
-
         }
         
         private void btnVolver_Click(object sender, EventArgs e)
@@ -40,7 +37,16 @@ namespace Presentacion
                 MessageBox.Show($"Error: {ex.Message}");
             }
         }
-        
+
+        //Genera datos de prueba para la venta
+        private void btnGenerarDatos_Click(object sender, EventArgs e)
+        {
+            txtClienteID.Text = "1";
+            txtProductoID.Text = "1";
+            txtCantidad.Text = "1";
+            txtEstado.Text = "1";
+            txtBoxUsuario.Text = "1";
+        }
 
         private void btnGuardarVenta_Click(object sender, EventArgs e)
         {
@@ -54,6 +60,7 @@ namespace Presentacion
             Guid.TryParse(txtProductoID.Text, out idProducto);
             Guid.TryParse(txtBoxUsuario.Text, out idUsuario);
 
+            //TODO: Añadir metodo validar int de cantidad y estado
             int cantidad;
             int.TryParse(txtCantidad.Text, out cantidad);
 
@@ -62,19 +69,12 @@ namespace Presentacion
 
             DateTime fechaAlta = dtpFechaVenta.Value;
 
-            Datos.Venta venta = new Datos.Venta(idCliente, idProducto, idUsuario, cantidad, estado, fechaAlta);
+            Venta venta = new Venta(idVenta, idCliente, idProducto, cantidad, fechaAlta, estado, idUsuario);
             VentaService ventaService = new VentaService();
 
             string respuestaNuevaVenta = ventaService.AgregarVenta(venta);
 
-
-
             MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");
-        }
-        
-        private void btnCargarVenta_Click(object sender, EventArgs e)
-        {
-
         }
 
         // Método para limpiar controles
@@ -100,5 +100,6 @@ namespace Presentacion
                 }
             }
         }
+
     }
 }
