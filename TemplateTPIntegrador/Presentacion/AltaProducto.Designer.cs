@@ -269,7 +269,7 @@
             this.Controls.Add(this.txtBoxIDCategoria);
             this.Controls.Add(this.panelSupProdAlta);
             this.Name = "AltaProducto";
-            this.Text = "AltaProducto";
+            this.Text = "ElectroHogar S.A - Alta de Producto";
             this.panelSupProdAlta.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
