@@ -10,9 +10,9 @@ namespace Datos
     public class Venta
     {
         public int idVenta { get; set; }
-        public int idUsuario { get; set; }
-        public int idCliente { get; set; }
-        public int idProducto { get; set; }
+        public Guid idUsuario { get; set; }
+        public Guid idCliente { get; set; }
+        public Guid idProducto { get; set; }
         public int cantidad { get; set; }
         public DateTime fechaAlta { get; set; } = DateTime.Now;
 
