@@ -19,7 +19,7 @@ namespace Presentacion
 
         private void btnAltaProducto_Click(object sender, EventArgs e)
         {
-            AltaProducto altaProducto = new AltaProducto();
+            frmAltaProducto altaProducto = new frmAltaProducto();
             altaProducto.Show();
             this.Hide();
         }

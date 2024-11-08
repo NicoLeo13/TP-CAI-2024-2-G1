@@ -52,5 +52,61 @@ namespace Presentacion
             mensaje = string.Empty;
             return false;
         }
+
+        public bool ValidarControles(Control form, out string mensajeError)
+        {
+            bool camposValidos = true;
+            mensajeError = string.Empty;
+
+            foreach (Control control in form.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    if (string.IsNullOrWhiteSpace(textBox.Text))
+                    {
+                        textBox.BorderStyle = BorderStyle.FixedSingle;
+                        textBox.BackColor = System.Drawing.Color.DarkRed;
+                        textBox.ForeColor = System.Drawing.Color.White;
+                        camposValidos = false;
+                    }
+                    else
+                    {
+                        textBox.BorderStyle = BorderStyle.Fixed3D;
+                        textBox.BackColor = System.Drawing.Color.White;
+                        textBox.ForeColor = System.Drawing.Color.Black;
+                    }
+                }
+                else if (control is ComboBox comboBox)
+                {
+                    if (comboBox.SelectedIndex == -1)
+                    {
+                        comboBox.FlatStyle = FlatStyle.Popup;
+                        comboBox.BackColor = System.Drawing.Color.DarkRed;
+                        comboBox.ForeColor = System.Drawing.Color.White;
+                        camposValidos = false;
+                    }
+                    else
+                    {
+                        comboBox.FlatStyle = FlatStyle.Standard;
+                        comboBox.BackColor = System.Drawing.Color.White;
+                        comboBox.ForeColor = System.Drawing.Color.Black;
+                    }
+                }
+                else if (control.HasChildren)
+                {
+                    bool childCamposValidos = ValidarControles(control, out string childMensajeError);  // Recursividad para controles dentro del control actual
+                    if (!childCamposValidos)
+                    {
+                        camposValidos = false;
+                        mensajeError = childMensajeError;
+                    }
+                }
+            }
+
+            if (!camposValidos)
+                mensajeError = COMPLETAR_CAMPOS;
+
+            return camposValidos;
+        }
     }
 }

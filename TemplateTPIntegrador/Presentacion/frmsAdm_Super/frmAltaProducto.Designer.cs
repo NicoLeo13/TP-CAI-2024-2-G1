@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class AltaProducto
+    partial class frmAltaProducto
     {
         /// <summary>
         /// Required designer variable.

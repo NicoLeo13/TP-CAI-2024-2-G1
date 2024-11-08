@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class AltaProducto : Form
+    public partial class frmAltaProducto : Form
     {
         
-        public AltaProducto()
+        public frmAltaProducto()
         {
             InitializeComponent();
         }

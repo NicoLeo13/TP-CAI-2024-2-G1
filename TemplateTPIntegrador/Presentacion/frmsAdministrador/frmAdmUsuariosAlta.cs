@@ -63,6 +63,13 @@ namespace Presentacion
                 // Llamo al método de agregar usuario de la capa de negocio
                 string nombreUsuario = txtBoxUsuario.Text;
 
+                PresentacionValidaciones validaciones = new PresentacionValidaciones();
+                if (!validaciones.ValidarControles(this, out string mensajeError))
+                {
+                    MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
                 UsuarioService usuarioService = new UsuarioService();
                 usuarioService.AgregarUsuario(
                     Guid.NewGuid(),

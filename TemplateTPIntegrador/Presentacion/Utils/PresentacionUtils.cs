@@ -95,21 +95,41 @@ namespace Presentacion.Utils
         {
             foreach (Control control in parent.Controls)
             {
-                if (control is TextBox)
+                if (control is TextBox textBox)
                 {
-                    ((TextBox)control).Clear();
+                    textBox.Clear();
+
+                    if (textBox.BackColor == System.Drawing.Color.DarkRed)
+                    {
+                        textBox.BorderStyle = BorderStyle.Fixed3D;
+                        textBox.BackColor = System.Drawing.Color.White;
+                        textBox.ForeColor = System.Drawing.Color.Black;
+                    }
                 }
-                else if (control is ComboBox)
+                else if (control is ComboBox comboBox)
                 {
-                    ((ComboBox)control).SelectedIndex = -1;
+                    comboBox.SelectedIndex = -1;
+
+                    if (comboBox.BackColor == System.Drawing.Color.DarkRed)
+                    {
+                        comboBox.FlatStyle = FlatStyle.Standard;
+                        comboBox.BackColor = System.Drawing.Color.White;
+                        comboBox.ForeColor = System.Drawing.Color.Black;
+                    }
                 }
-                else if (control is DateTimePicker)
+                else if (control is DateTimePicker dtmPicker)
                 {
-                    ((DateTimePicker)control).Value = DateTime.Now;
+                    dtmPicker.Value = DateTime.Now;
+
+                    if (dtmPicker.BackColor == System.Drawing.Color.DarkRed)
+                    {
+                        dtmPicker.BackColor = System.Drawing.Color.White;
+                        dtmPicker.ForeColor = System.Drawing.Color.Black;
+                    }
                 }
                 else if (control.HasChildren)
                 {
-                    LimpiarControles(control);
+                    LimpiarControles(control);      // Recursividad para limpiar controles del control actual
                 }
             }
         }
