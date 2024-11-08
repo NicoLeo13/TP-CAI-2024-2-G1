@@ -213,9 +213,9 @@
             // lblVendRol
             // 
             this.lblVendRol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVendRol.Location = new System.Drawing.Point(35, 117);
+            this.lblVendRol.Location = new System.Drawing.Point(16, 117);
             this.lblVendRol.Name = "lblVendRol";
-            this.lblVendRol.Size = new System.Drawing.Size(110, 21);
+            this.lblVendRol.Size = new System.Drawing.Size(148, 21);
             this.lblVendRol.TabIndex = 15;
             this.lblVendRol.Text = "Vendedor";
             this.lblVendRol.TextAlign = System.Drawing.ContentAlignment.TopCenter;

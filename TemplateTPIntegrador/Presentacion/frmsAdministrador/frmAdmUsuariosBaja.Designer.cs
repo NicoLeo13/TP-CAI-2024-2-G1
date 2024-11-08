@@ -42,15 +42,15 @@
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblContIdUser = new System.Windows.Forms.Label();
+            this.lblIdUser = new System.Windows.Forms.Label();
+            this.lblContDni = new System.Windows.Forms.Label();
+            this.lblDni = new System.Windows.Forms.Label();
+            this.lblContHost = new System.Windows.Forms.Label();
+            this.lblHost = new System.Windows.Forms.Label();
             this.lblContEstado = new System.Windows.Forms.Label();
             this.lblContApellido = new System.Windows.Forms.Label();
             this.lblContNombre = new System.Windows.Forms.Label();
-            this.lblContHost = new System.Windows.Forms.Label();
-            this.lblHost = new System.Windows.Forms.Label();
-            this.lblContDni = new System.Windows.Forms.Label();
-            this.lblDni = new System.Windows.Forms.Label();
-            this.lblContIdUser = new System.Windows.Forms.Label();
-            this.lblIdUser = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -137,11 +137,11 @@
             // 
             // btnEliminarUsuario
             // 
-            this.btnEliminarUsuario.BackColor = System.Drawing.Color.Orange;
+            this.btnEliminarUsuario.BackColor = System.Drawing.Color.Firebrick;
             this.btnEliminarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminarUsuario.FlatAppearance.BorderSize = 0;
-            this.btnEliminarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
-            this.btnEliminarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
+            this.btnEliminarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
+            this.btnEliminarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
             this.btnEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminarUsuario.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -160,11 +160,11 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.BackColor = System.Drawing.Color.Firebrick;
+            this.btnVolver.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.WhiteSmoke;
@@ -173,7 +173,7 @@
             this.btnVolver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVolver.IconSize = 30;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolver.Location = new System.Drawing.Point(27, 460);
+            this.btnVolver.Location = new System.Drawing.Point(26, 455);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 41);
             this.btnVolver.TabIndex = 31;
@@ -242,6 +242,76 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de Usuario";
             // 
+            // lblContIdUser
+            // 
+            this.lblContIdUser.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContIdUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContIdUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContIdUser.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContIdUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblContIdUser.Location = new System.Drawing.Point(675, 114);
+            this.lblContIdUser.Name = "lblContIdUser";
+            this.lblContIdUser.Size = new System.Drawing.Size(230, 25);
+            this.lblContIdUser.TabIndex = 41;
+            this.lblContIdUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblIdUser
+            // 
+            this.lblIdUser.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIdUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdUser.Location = new System.Drawing.Point(552, 114);
+            this.lblIdUser.Name = "lblIdUser";
+            this.lblIdUser.Size = new System.Drawing.Size(105, 25);
+            this.lblIdUser.TabIndex = 40;
+            this.lblIdUser.Text = "ID Usuario";
+            this.lblIdUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContDni
+            // 
+            this.lblContDni.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContDni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContDni.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContDni.Location = new System.Drawing.Point(130, 190);
+            this.lblContDni.Name = "lblContDni";
+            this.lblContDni.Size = new System.Drawing.Size(230, 25);
+            this.lblContDni.TabIndex = 39;
+            this.lblContDni.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDni
+            // 
+            this.lblDni.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDni.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDni.Location = new System.Drawing.Point(7, 190);
+            this.lblDni.Name = "lblDni";
+            this.lblDni.Size = new System.Drawing.Size(105, 25);
+            this.lblDni.TabIndex = 38;
+            this.lblDni.Text = "DNI";
+            this.lblDni.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContHost
+            // 
+            this.lblContHost.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContHost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContHost.Location = new System.Drawing.Point(674, 47);
+            this.lblContHost.Name = "lblContHost";
+            this.lblContHost.Size = new System.Drawing.Size(230, 25);
+            this.lblContHost.TabIndex = 37;
+            this.lblContHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblHost
+            // 
+            this.lblHost.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHost.Location = new System.Drawing.Point(552, 47);
+            this.lblHost.Name = "lblHost";
+            this.lblHost.Size = new System.Drawing.Size(105, 25);
+            this.lblHost.TabIndex = 36;
+            this.lblHost.Text = "Perfil";
+            this.lblHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // lblContEstado
             // 
             this.lblContEstado.BackColor = System.Drawing.Color.DarkGray;
@@ -277,76 +347,6 @@
             this.lblContNombre.Size = new System.Drawing.Size(230, 25);
             this.lblContNombre.TabIndex = 33;
             this.lblContNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContHost
-            // 
-            this.lblContHost.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContHost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContHost.Location = new System.Drawing.Point(674, 47);
-            this.lblContHost.Name = "lblContHost";
-            this.lblContHost.Size = new System.Drawing.Size(230, 25);
-            this.lblContHost.TabIndex = 37;
-            this.lblContHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblHost
-            // 
-            this.lblHost.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHost.Location = new System.Drawing.Point(552, 47);
-            this.lblHost.Name = "lblHost";
-            this.lblHost.Size = new System.Drawing.Size(105, 25);
-            this.lblHost.TabIndex = 36;
-            this.lblHost.Text = "Perfil";
-            this.lblHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContDni
-            // 
-            this.lblContDni.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContDni.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContDni.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContDni.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContDni.Location = new System.Drawing.Point(130, 190);
-            this.lblContDni.Name = "lblContDni";
-            this.lblContDni.Size = new System.Drawing.Size(230, 25);
-            this.lblContDni.TabIndex = 39;
-            this.lblContDni.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDni
-            // 
-            this.lblDni.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDni.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDni.Location = new System.Drawing.Point(7, 190);
-            this.lblDni.Name = "lblDni";
-            this.lblDni.Size = new System.Drawing.Size(105, 25);
-            this.lblDni.TabIndex = 38;
-            this.lblDni.Text = "DNI";
-            this.lblDni.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContIdUser
-            // 
-            this.lblContIdUser.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContIdUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContIdUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContIdUser.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContIdUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblContIdUser.Location = new System.Drawing.Point(675, 114);
-            this.lblContIdUser.Name = "lblContIdUser";
-            this.lblContIdUser.Size = new System.Drawing.Size(230, 25);
-            this.lblContIdUser.TabIndex = 41;
-            this.lblContIdUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblIdUser
-            // 
-            this.lblIdUser.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblIdUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdUser.Location = new System.Drawing.Point(552, 114);
-            this.lblIdUser.Name = "lblIdUser";
-            this.lblIdUser.Size = new System.Drawing.Size(105, 25);
-            this.lblIdUser.TabIndex = 40;
-            this.lblIdUser.Text = "ID Usuario";
-            this.lblIdUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmAdmUsuariosBaja
             // 

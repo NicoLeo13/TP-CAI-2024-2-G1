@@ -306,11 +306,11 @@
             // 
             // btnVolver
             // 
-            this.btnVolver.BackColor = System.Drawing.Color.Firebrick;
+            this.btnVolver.BackColor = System.Drawing.Color.SlateGray;
             this.btnVolver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkRed;
-            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.IndianRed;
+            this.btnVolver.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnVolver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
             this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVolver.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolver.ForeColor = System.Drawing.Color.WhiteSmoke;

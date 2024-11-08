@@ -286,9 +286,9 @@
             // lblAdmRol
             // 
             this.lblAdmRol.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAdmRol.Location = new System.Drawing.Point(22, 117);
+            this.lblAdmRol.Location = new System.Drawing.Point(13, 117);
             this.lblAdmRol.Name = "lblAdmRol";
-            this.lblAdmRol.Size = new System.Drawing.Size(129, 26);
+            this.lblAdmRol.Size = new System.Drawing.Size(151, 26);
             this.lblAdmRol.TabIndex = 15;
             this.lblAdmRol.Text = "Administrador";
             this.lblAdmRol.TextAlign = System.Drawing.ContentAlignment.TopCenter;

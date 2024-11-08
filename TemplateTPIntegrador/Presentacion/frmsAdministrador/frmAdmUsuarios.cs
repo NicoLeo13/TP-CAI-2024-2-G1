@@ -47,8 +47,7 @@ namespace Presentacion
 
         private void btnModUsuario_Click(object sender, EventArgs e)
         {
-            //frmModifUsuarios modusuario = new frmModifUsuarios();
-            //modusuario.Show();
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuariosModif(), PresentacionUtils.PanelContenedor);
         }
 
         private void btnBajaUsuario_Click(object sender, EventArgs e)
