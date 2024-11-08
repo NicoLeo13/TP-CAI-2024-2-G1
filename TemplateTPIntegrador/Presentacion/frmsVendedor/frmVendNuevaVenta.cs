@@ -19,8 +19,26 @@ namespace Presentacion
         public frmVendNuevaVenta()
         {
             InitializeComponent();
+            ConfigurarTabIndex();
         }
-        
+
+        //Metodo para configurar el TabIndex de los controles (txtBox)
+        private void ConfigurarTabIndex()
+        {
+            txtVentaID.TabIndex = 0;
+            txtClienteID.TabIndex = 1;
+            txtProductoID.TabIndex = 2;
+            txtDescripcion.TabIndex = 3;
+            txtCantidad.TabIndex = 4;
+            txtEstado.TabIndex = 5;
+            dtpFechaVenta.TabIndex = 6;
+            txtBoxUsuario.TabIndex = 7;
+            txtBoxContraseña.TabIndex = 8;
+            cmbHost.TabIndex = 9;
+            btnCargarVenta.TabIndex = 10;
+            btnLimpiarCampos.TabIndex = 11;
+        }
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
 
@@ -36,16 +54,6 @@ namespace Presentacion
             {
                 MessageBox.Show($"Error: {ex.Message}");
             }
-        }
-
-        //Genera datos de prueba para la venta
-        private void btnGenerarDatos_Click(object sender, EventArgs e)
-        {
-            txtClienteID.Text = "1";
-            txtProductoID.Text = "1";
-            txtCantidad.Text = "1";
-            txtEstado.Text = "1";
-            txtBoxUsuario.Text = "1";
         }
 
         private void btnGuardarVenta_Click(object sender, EventArgs e)

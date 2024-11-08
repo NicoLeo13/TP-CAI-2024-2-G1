@@ -42,7 +42,7 @@
             this.lblProductoID = new System.Windows.Forms.Label();
             this.lblVentaID = new System.Windows.Forms.Label();
             this.lblInfoDatosPers = new System.Windows.Forms.Label();
-            this.comboBoxHost = new System.Windows.Forms.ComboBox();
+            this.cmbHost = new System.Windows.Forms.ComboBox();
             this.txtBoxContraseña = new System.Windows.Forms.TextBox();
             this.txtBoxUsuario = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
@@ -232,14 +232,14 @@
             this.lblInfoDatosPers.Text = "Datos Personales";
             this.lblInfoDatosPers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBoxHost
+            // cmbHost
             // 
-            this.comboBoxHost.FormattingEnabled = true;
-            this.comboBoxHost.Location = new System.Drawing.Point(708, 209);
-            this.comboBoxHost.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxHost.Name = "comboBoxHost";
-            this.comboBoxHost.Size = new System.Drawing.Size(194, 25);
-            this.comboBoxHost.TabIndex = 59;
+            this.cmbHost.FormattingEnabled = true;
+            this.cmbHost.Location = new System.Drawing.Point(708, 209);
+            this.cmbHost.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbHost.Name = "cmbHost";
+            this.cmbHost.Size = new System.Drawing.Size(194, 25);
+            this.cmbHost.TabIndex = 59;
             // 
             // txtBoxContraseña
             // 
@@ -375,7 +375,7 @@
             this.Controls.Add(this.lblProductoID);
             this.Controls.Add(this.lblVentaID);
             this.Controls.Add(this.lblInfoDatosPers);
-            this.Controls.Add(this.comboBoxHost);
+            this.Controls.Add(this.cmbHost);
             this.Controls.Add(this.txtBoxContraseña);
             this.Controls.Add(this.txtBoxUsuario);
             this.Controls.Add(this.txtEstado);
@@ -412,7 +412,7 @@
         private System.Windows.Forms.Label lblProductoID;
         private System.Windows.Forms.Label lblVentaID;
         private System.Windows.Forms.Label lblInfoDatosPers;
-        private System.Windows.Forms.ComboBox comboBoxHost;
+        private System.Windows.Forms.ComboBox cmbHost;
         private System.Windows.Forms.TextBox txtBoxContraseña;
         private System.Windows.Forms.TextBox txtBoxUsuario;
         private System.Windows.Forms.TextBox txtEstado;

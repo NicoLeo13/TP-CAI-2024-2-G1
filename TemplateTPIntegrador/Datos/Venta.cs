@@ -9,20 +9,23 @@ namespace Datos
 {
     public class Venta
     {
-        public int idVenta { get; set; }
-        public Guid idUsuario { get; set; }
-        public Guid idCliente { get; set; }
-        public Guid idProducto { get; set; }
-        public int cantidad { get; set; }
-        public DateTime fechaAlta { get; set; } = DateTime.Now;
+        public int IdVenta { get; set; }
+        public Guid IdCliente { get; set; }
+        public Guid IdProducto { get; set; }
+        public int Cantidad { get; set; }
+        public DateTime FechaAlta { get; set; } = DateTime.Now;
+        public int Estado { get; set; } = -1;   // Para que no se inicialice en los estados 0 o 1
+        public Guid IdUsuario { get; set; }
 
-        public Venta(Guid idCliente, Guid idProducto, Guid idUsuario, int cantidad, int estado, DateTime fechaAlta)
+        public Venta(Guid idVenta, Guid idCliente, Guid idProducto, int cantidad, DateTime fechaAlta, int estado, Guid idUsuario)
         {
-            this.idCliente = idCliente;
-            this.idProducto = idProducto;
-            this.idUsuario = idUsuario;
-            this.cantidad = cantidad;
-            this.fechaAlta = fechaAlta;
+            IdVenta = IdVenta;
+            IdCliente = idCliente;
+            IdProducto = idProducto;
+            Cantidad = cantidad;
+            FechaAlta = fechaAlta;
+            Estado = estado;
+            IdUsuario = idUsuario;
         }
     }
 }

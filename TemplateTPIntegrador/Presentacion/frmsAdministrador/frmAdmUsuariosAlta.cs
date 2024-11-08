@@ -19,6 +19,26 @@ namespace Presentacion
         public frmAdmUsuariosAlta()
         {
             InitializeComponent();
+            ConfigurarTabIndex();
+        }
+
+        public void ConfigurarTabIndex()
+        {
+            //Agrega los controles al TabIndex segun el orden en el que se encuentran en el formulario
+            txtBoxNombre.TabIndex = 0;
+            txtBoxApellido.TabIndex = 1;
+            txtBoxDireccion.TabIndex = 2;
+            txtBoxTelefono.TabIndex = 3;
+            txtBoxEmail.TabIndex = 4;
+            txtBoxDni.TabIndex = 5;
+            dtpFechaNac.TabIndex = 6;
+            txtBoxUsuario.TabIndex = 7;
+            txtBoxContraseña.TabIndex = 8;
+            cmbHost.TabIndex = 9;
+            btnGuardarUsuario.TabIndex = 10;
+            btnLimpiarCampos.TabIndex = 11;
+            btnVolver.TabIndex = 12;
+
         }
 
         private void frmAdmUsuariosAlta_Load(object sender, EventArgs e)
@@ -27,13 +47,13 @@ namespace Presentacion
             {
                 { 3, "Administrador" },
                 { 2, "Supervisor" },
-                { 1, "Usuario" }
+                { 1, "Vendedor" }
             };
 
-            comboBoxHost.DataSource = new BindingSource(hosts, null);
-            comboBoxHost.DisplayMember = "Value";
-            comboBoxHost.ValueMember = "Key";
-            comboBoxHost.SelectedIndex = -1;
+            cmbHost.DataSource = new BindingSource(hosts, null);
+            cmbHost.DisplayMember = "Value";
+            cmbHost.ValueMember = "Key";
+            cmbHost.SelectedIndex = -1;
         }
 
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
@@ -53,7 +73,7 @@ namespace Presentacion
                     txtBoxEmail.Text,
                     dtpFechaNac.Value,
                     txtBoxUsuario.Text,
-                    (int)comboBoxHost.SelectedValue,
+                    (int)cmbHost.SelectedValue,
                     Convert.ToInt32(txtBoxDni.Text),
                     txtBoxContraseña.Text
                 );

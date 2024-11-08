@@ -50,7 +50,7 @@
             this.txtBoxContraseña = new System.Windows.Forms.TextBox();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblHost = new System.Windows.Forms.Label();
-            this.comboBoxHost = new System.Windows.Forms.ComboBox();
+            this.cmbHost = new System.Windows.Forms.ComboBox();
             this.btnGuardarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnLimpiarCampos = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
@@ -83,7 +83,7 @@
             // lblNombre
             // 
             this.lblNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNombre.Location = new System.Drawing.Point(59, 69);
+            this.lblNombre.Location = new System.Drawing.Point(43, 70);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(105, 25);
             this.lblNombre.TabIndex = 9;
@@ -92,9 +92,9 @@
             // 
             // txtBoxNombre
             // 
-            this.txtBoxNombre.Location = new System.Drawing.Point(168, 69);
+            this.txtBoxNombre.Location = new System.Drawing.Point(154, 69);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxNombre.Size = new System.Drawing.Size(257, 25);
             this.txtBoxNombre.TabIndex = 10;
             // 
             // lblInfoDatosPers
@@ -102,24 +102,24 @@
             this.lblInfoDatosPers.AutoSize = true;
             this.lblInfoDatosPers.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblInfoDatosPers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosPers.Location = new System.Drawing.Point(37, 38);
+            this.lblInfoDatosPers.Location = new System.Drawing.Point(23, 38);
             this.lblInfoDatosPers.Name = "lblInfoDatosPers";
-            this.lblInfoDatosPers.Size = new System.Drawing.Size(167, 28);
+            this.lblInfoDatosPers.Size = new System.Drawing.Size(133, 21);
             this.lblInfoDatosPers.TabIndex = 11;
             this.lblInfoDatosPers.Text = "Datos Personales";
             this.lblInfoDatosPers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtBoxApellido
             // 
-            this.txtBoxApellido.Location = new System.Drawing.Point(169, 101);
+            this.txtBoxApellido.Location = new System.Drawing.Point(154, 108);
             this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxApellido.Size = new System.Drawing.Size(257, 25);
             this.txtBoxApellido.TabIndex = 13;
             // 
             // lblApellido
             // 
             this.lblApellido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblApellido.Location = new System.Drawing.Point(58, 100);
+            this.lblApellido.Location = new System.Drawing.Point(43, 107);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(105, 25);
             this.lblApellido.TabIndex = 12;
@@ -128,15 +128,15 @@
             // 
             // txtBoxDireccion
             // 
-            this.txtBoxDireccion.Location = new System.Drawing.Point(169, 132);
+            this.txtBoxDireccion.Location = new System.Drawing.Point(155, 147);
             this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 25);
             this.txtBoxDireccion.TabIndex = 15;
             // 
             // lblDireccion
             // 
             this.lblDireccion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDireccion.Location = new System.Drawing.Point(58, 131);
+            this.lblDireccion.Location = new System.Drawing.Point(44, 146);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(105, 25);
             this.lblDireccion.TabIndex = 14;
@@ -145,15 +145,15 @@
             // 
             // txtBoxDni
             // 
-            this.txtBoxDni.Location = new System.Drawing.Point(168, 225);
+            this.txtBoxDni.Location = new System.Drawing.Point(154, 264);
             this.txtBoxDni.Name = "txtBoxDni";
-            this.txtBoxDni.Size = new System.Drawing.Size(258, 29);
+            this.txtBoxDni.Size = new System.Drawing.Size(257, 25);
             this.txtBoxDni.TabIndex = 17;
             // 
             // lblDni
             // 
             this.lblDni.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDni.Location = new System.Drawing.Point(58, 224);
+            this.lblDni.Location = new System.Drawing.Point(43, 256);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(105, 25);
             this.lblDni.TabIndex = 16;
@@ -162,15 +162,15 @@
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(169, 194);
+            this.txtBoxEmail.Location = new System.Drawing.Point(155, 225);
             this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxEmail.Size = new System.Drawing.Size(257, 25);
             this.txtBoxEmail.TabIndex = 19;
             // 
             // lblEmail
             // 
             this.lblEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Location = new System.Drawing.Point(58, 193);
+            this.lblEmail.Location = new System.Drawing.Point(43, 225);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(105, 25);
             this.lblEmail.TabIndex = 18;
@@ -179,15 +179,15 @@
             // 
             // txtBoxTelefono
             // 
-            this.txtBoxTelefono.Location = new System.Drawing.Point(169, 163);
+            this.txtBoxTelefono.Location = new System.Drawing.Point(155, 186);
             this.txtBoxTelefono.Name = "txtBoxTelefono";
-            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 25);
             this.txtBoxTelefono.TabIndex = 21;
             // 
             // lblTelefono
             // 
             this.lblTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTelefono.Location = new System.Drawing.Point(58, 162);
+            this.lblTelefono.Location = new System.Drawing.Point(43, 185);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(105, 25);
             this.lblTelefono.TabIndex = 20;
@@ -199,24 +199,24 @@
             this.lblInfoDatosUser.AutoSize = true;
             this.lblInfoDatosUser.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblInfoDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosUser.Location = new System.Drawing.Point(492, 195);
+            this.lblInfoDatosUser.Location = new System.Drawing.Point(529, 38);
             this.lblInfoDatosUser.Name = "lblInfoDatosUser";
-            this.lblInfoDatosUser.Size = new System.Drawing.Size(168, 28);
+            this.lblInfoDatosUser.Size = new System.Drawing.Size(134, 21);
             this.lblInfoDatosUser.TabIndex = 22;
             this.lblInfoDatosUser.Text = "Datos de Usuario";
             this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtBoxUsuario
             // 
-            this.txtBoxUsuario.Location = new System.Drawing.Point(618, 226);
+            this.txtBoxUsuario.Location = new System.Drawing.Point(668, 70);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 25);
             this.txtBoxUsuario.TabIndex = 24;
             // 
             // lblUsuario
             // 
             this.lblUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblUsuario.Location = new System.Drawing.Point(508, 230);
+            this.lblUsuario.Location = new System.Drawing.Point(558, 69);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(90, 25);
             this.lblUsuario.TabIndex = 23;
@@ -225,17 +225,17 @@
             // 
             // txtBoxContraseña
             // 
-            this.txtBoxContraseña.Location = new System.Drawing.Point(618, 260);
+            this.txtBoxContraseña.Location = new System.Drawing.Point(668, 108);
             this.txtBoxContraseña.Name = "txtBoxContraseña";
-            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 25);
             this.txtBoxContraseña.TabIndex = 26;
             // 
             // lblContraseña
             // 
             this.lblContraseña.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblContraseña.Location = new System.Drawing.Point(508, 264);
+            this.lblContraseña.Location = new System.Drawing.Point(558, 107);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(105, 25);
+            this.lblContraseña.Size = new System.Drawing.Size(90, 25);
             this.lblContraseña.TabIndex = 25;
             this.lblContraseña.Text = "Contraseña";
             this.lblContraseña.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -243,20 +243,20 @@
             // lblHost
             // 
             this.lblHost.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblHost.Location = new System.Drawing.Point(508, 299);
+            this.lblHost.Location = new System.Drawing.Point(558, 147);
             this.lblHost.Name = "lblHost";
             this.lblHost.Size = new System.Drawing.Size(90, 25);
             this.lblHost.TabIndex = 27;
             this.lblHost.Text = "Rol";
             this.lblHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBoxHost
+            // cmbHost
             // 
-            this.comboBoxHost.FormattingEnabled = true;
-            this.comboBoxHost.Location = new System.Drawing.Point(617, 295);
-            this.comboBoxHost.Name = "comboBoxHost";
-            this.comboBoxHost.Size = new System.Drawing.Size(257, 29);
-            this.comboBoxHost.TabIndex = 28;
+            this.cmbHost.FormattingEnabled = true;
+            this.cmbHost.Location = new System.Drawing.Point(668, 148);
+            this.cmbHost.Name = "cmbHost";
+            this.cmbHost.Size = new System.Drawing.Size(257, 25);
+            this.cmbHost.TabIndex = 28;
             // 
             // btnGuardarUsuario
             // 
@@ -273,7 +273,7 @@
             this.btnGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarUsuario.IconSize = 30;
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(751, 411);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(370, 460);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(195, 41);
             this.btnGuardarUsuario.TabIndex = 29;
@@ -296,7 +296,7 @@
             this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCampos.IconSize = 30;
             this.btnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(751, 458);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(754, 460);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(195, 41);
             this.btnLimpiarCampos.TabIndex = 30;
@@ -319,7 +319,7 @@
             this.btnVolver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVolver.IconSize = 30;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolver.Location = new System.Drawing.Point(19, 460);
+            this.btnVolver.Location = new System.Drawing.Point(27, 460);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 41);
             this.btnVolver.TabIndex = 31;
@@ -345,7 +345,7 @@
             this.panelContenedor.Controls.Add(this.lblApellido);
             this.panelContenedor.Controls.Add(this.lblNombre);
             this.panelContenedor.Controls.Add(this.lblInfoDatosPers);
-            this.panelContenedor.Controls.Add(this.comboBoxHost);
+            this.panelContenedor.Controls.Add(this.cmbHost);
             this.panelContenedor.Controls.Add(this.txtBoxContraseña);
             this.panelContenedor.Controls.Add(this.txtBoxUsuario);
             this.panelContenedor.Controls.Add(this.dtpFechaNac);
@@ -364,9 +364,9 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(58, 255);
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(43, 292);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(201, 36);
+            this.lblFechaNacimiento.Size = new System.Drawing.Size(105, 36);
             this.lblFechaNacimiento.TabIndex = 32;
             this.lblFechaNacimiento.Text = "Fecha de Nacimiento";
             this.lblFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -374,9 +374,9 @@
             // 
             // dtpFechaNac
             // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(168, 299);
+            this.dtpFechaNac.Location = new System.Drawing.Point(154, 303);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(256, 29);
+            this.dtpFechaNac.Size = new System.Drawing.Size(257, 25);
             this.dtpFechaNac.TabIndex = 33;
             this.dtpFechaNac.ValueChanged += new System.EventHandler(this.dtpFechaNac_ValueChanged);
             // 
@@ -434,7 +434,7 @@
         private System.Windows.Forms.TextBox txtBoxContraseña;
         private System.Windows.Forms.Label lblContraseña;
         private System.Windows.Forms.Label lblHost;
-        private System.Windows.Forms.ComboBox comboBoxHost;
+        private System.Windows.Forms.ComboBox cmbHost;
         private FontAwesome.Sharp.IconButton btnGuardarUsuario;
         private FontAwesome.Sharp.IconButton btnLimpiarCampos;
         private FontAwesome.Sharp.IconButton btnVolver;
