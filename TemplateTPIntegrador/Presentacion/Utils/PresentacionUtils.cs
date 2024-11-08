@@ -8,6 +8,7 @@ using System.IO;
 using Persistencia.Utils;
 using Datos;
 using FontAwesome.Sharp;
+using System.Security.Cryptography.X509Certificates;
 
 
 namespace Presentacion.Utils
@@ -131,6 +132,22 @@ namespace Presentacion.Utils
                 {
                     LimpiarControles(control);      // Recursividad para limpiar controles del control actual
                 }
+            }
+
+        }
+
+        public static string HostToString(int host)
+        {
+            switch (host)
+            {
+                case 1:
+                    return "Vendedor";
+                case 2:
+                    return "Supervisor";
+                case 3:
+                    return "Administrador";
+                default:
+                    return "No definido";
             }
         }
     }

@@ -53,8 +53,7 @@ namespace Presentacion
 
         private void btnBajaUsuario_Click(object sender, EventArgs e)
         {
-            //BajaUsuario bajaUsuario = new BajaUsuario();
-            //bajaUsuario.Show();
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuariosBaja(), PresentacionUtils.PanelContenedor);
         }
     }
 }

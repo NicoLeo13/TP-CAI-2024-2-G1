@@ -11,6 +11,7 @@ using Negocio.Utils;
 using Datos;
 using Negocio;
 using Presentacion.Utils;
+using Persistencia;
 
 namespace Presentacion
 {
@@ -107,7 +108,8 @@ namespace Presentacion
 
             try
             {
-                usuario = loginUsuario.TraerUsuario(nombreUsuario);
+                //usuario = loginUsuario.TraerUsuario(nombreUsuario);
+                usuario = UserManager.TraerUsuario(nombreUsuario);
             }
             catch (Exception ex)
             {

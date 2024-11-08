@@ -52,42 +52,42 @@ namespace Negocio
             return (idUsuario, responseBody);
         }
 
-        public UsuarioWS TraerUsuario(string usuario)
-        {
-            UserManager userManager = new UserManager();
+        //public UsuarioWS TraerUsuario(string usuario)
+        //{
+        //    UserManager userManager = new UserManager();
 
-            try
-            {
-                // Llama al método que trae los usuarios activos
-                List<UsuarioWS> usuariosActivos = userManager.TraerUsuariosActivos();
+        //    try
+        //    {
+        //        // Llama al método que trae los usuarios activos
+        //        List<UsuarioWS> usuariosActivos = userManager.TraerUsuariosActivos();
 
-                // Busca el usuario con LINQ
-                var usuarioEncontrado = usuariosActivos.FirstOrDefault(u => u.NombreUsuario == usuario);
+        //        // Busca el usuario con LINQ
+        //        var usuarioEncontrado = usuariosActivos.FirstOrDefault(u => u.NombreUsuario == usuario);
 
-                if (usuarioEncontrado != null)
-                {
-                    Console.WriteLine($"\nUsuario encontrado: {usuarioEncontrado.Nombre} {usuarioEncontrado.Apellido} - {usuarioEncontrado.Id}");
-                    return usuarioEncontrado;
-                }
-            }
-            catch (HttpRequestException ex)
-            {
-                Console.WriteLine($"\nError de red: {ex.Message}");
-                throw new Exception($"Error de red al intentar traer el usuario '{usuario}':\n{ex.Message}", ex);
-            }
-            catch (ArgumentNullException ex)
-            {
-                Console.WriteLine($"\nArgumento nulo: {ex.Message}");
-                throw new Exception($"Argumento nulo al intentar traer el usuario '{usuario}':\n{ex.Message}", ex);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"\nError inesperado: {ex.Message}");
-                throw new Exception($"Error inesperado al intentar traer el usuario '{usuario}':\n{ex.Message}", ex);
-            }
+        //        if (usuarioEncontrado != null)
+        //        {
+        //            Console.WriteLine($"\nUsuario encontrado: {usuarioEncontrado.Nombre} {usuarioEncontrado.Apellido} - {usuarioEncontrado.Id}");
+        //            return usuarioEncontrado;
+        //        }
+        //    }
+        //    catch (HttpRequestException ex)
+        //    {
+        //        Console.WriteLine($"\nError de red: {ex.Message}");
+        //        throw new Exception($"Error de red al intentar traer el usuario '{usuario}':\n{ex.Message}", ex);
+        //    }
+        //    catch (ArgumentNullException ex)
+        //    {
+        //        Console.WriteLine($"\nArgumento nulo: {ex.Message}");
+        //        throw new Exception($"Argumento nulo al intentar traer el usuario '{usuario}':\n{ex.Message}", ex);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Console.WriteLine($"\nError inesperado: {ex.Message}");
+        //        throw new Exception($"Error inesperado al intentar traer el usuario '{usuario}':\n{ex.Message}", ex);
+        //    }
 
-            return null;
-        }
+        //    return null;
+        //}
 
         //public string AltaUsuario(UsuarioLocal usuarioLocal)
         //{

@@ -123,9 +123,10 @@ namespace Persistencia.Utils
             return response;
         }
 
-        public static HttpResponseMessage Delete(string url)
+        public static HttpResponseMessage Delete(string url, string queryParam, string data)
         {
-            var uri = rutaBase + url + adminId;
+            //var uri = rutaBase + url + adminId;
+            var uri = $"{rutaBase}{url}?id={adminId}&{queryParam}={data}";
 
             HttpResponseMessage response = httpClient.DeleteAsync(uri).Result;
 
@@ -143,7 +144,7 @@ namespace Persistencia.Utils
 
         public static HttpResponseMessage DeleteWithBody(string url, string jsonRequest)
         {
-            var uri = rutaBase + url + adminId;
+            var uri = rutaBase + url;
 
             HttpRequestMessage request = new HttpRequestMessage
             {

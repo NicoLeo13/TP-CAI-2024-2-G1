@@ -32,11 +32,24 @@ namespace Negocio
             }
         }
 
+        public static UsuarioWS BuscarUsuario(string nombreUsuario)
+        {
+            try
+            {
+                return UserManager.TraerUsuario(nombreUsuario);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar usuario: {ex.Message}");
+                throw;
+            }
+        }
+
         public void AgregarUsuario(Guid idUsuario, string nombre, string apellido, string direccion, string telefono, string email, DateTime fechaNacimiento, string nombreUsuario, int host, int dni, string contraseña, DateTime? fechaAlta = null, DateTime? fechaBaja = null)
         /*Uso de parámetros opcionales para las fechas de alta y baja. Hago los campos nullable para poder asignarles valores por defecto en caso de que no se proporcionen*/
         {
             //Preguntar si esta bien que haya que usar admin o hay un error
-            const string adminId = "70b37dc1-8fde-4840-be47-9ababd0ee7e5";
+            const string adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
             Guid adminGuid = Guid.Parse(adminId);
 
             try
@@ -84,20 +97,34 @@ namespace Negocio
             // Lógica de negocio para agregar un usuario
             // Validaciones, transformaciones, etc.
             // Llamar a la capa de persistencia para actualizar el usuario
-            Persistencia.UserManager persistencia = new Persistencia.UserManager();
+            UserManager persistencia = new UserManager();
             //return persistencia.ModificarUsuario(usuarioLocal);
             return "No implementado";
         }
 
 
-        public string EliminarUsuario(Guid idUsuario)
+        public void EliminarUsuario(UsuarioWS usuario)
         {
             // Lógica de negocio para agregar un usuario
             // Validaciones, transformaciones, etc.
             // Llamar a la capa de persistencia para eliminar el usuario
-            Persistencia.UserManager persistencia = new Persistencia.UserManager();
-            //return persistencia.EliminarUsuario(idUsuario);
-            return "No implementado";
+            try
+            {
+                UserManager persistencia = new UserManager();
+                persistencia.EliminarUsuario(usuario);
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"\nError de WS: {ex.ToString()}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError Inesperado: {ex.ToString()}");
+                throw;
+            }
+
+            //return "No implementado";
         }
 
     }
