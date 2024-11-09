@@ -65,34 +65,64 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmsAdministrador\frmAdmUsuariosModif.cs">
+    <Compile Include="frmsSupervisor\frmPerfilSupervisor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuariosModif.Designer.cs">
+    <Compile Include="frmsSupervisor\frmPerfilSupervisor.Designer.cs">
+      <DependentUpon>frmPerfilSupervisor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsAdministrador\Vendedores\frmAdmVendedoresAlta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdministrador\Vendedores\frmAdmVendedoresAlta.Designer.cs">
+      <DependentUpon>frmAdmVendedoresAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsAdministrador\Vendedores\frmAdmVendedoresBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdministrador\Vendedores\frmAdmVendedoresBaja.Designer.cs">
+      <DependentUpon>frmAdmVendedoresBaja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsAdministrador\Vendedores\frmAdmVendedoresModif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdministrador\Vendedores\frmAdmVendedoresModif.Designer.cs">
+      <DependentUpon>frmAdmVendedoresModif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsAdministrador\Vendedores\frmAdmVendedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdministrador\Vendedores\frmAdmVendedores.Designer.cs">
+      <DependentUpon>frmAdmVendedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosModif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosModif.Designer.cs">
       <DependentUpon>frmAdmUsuariosModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuariosBaja.cs">
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosBaja.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuariosBaja.Designer.cs">
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosBaja.Designer.cs">
       <DependentUpon>frmAdmUsuariosBaja.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsAdm_Super\frmAltaProducto.cs">
+    <Compile Include="frmsAdm_Super\Productos\frmAltaProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdm_Super\frmAltaProducto.Designer.cs">
+    <Compile Include="frmsAdm_Super\Productos\frmAltaProducto.Designer.cs">
       <DependentUpon>frmAltaProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuarios.cs">
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuarios.Designer.cs">
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuarios.Designer.cs">
       <DependentUpon>frmAdmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuariosAlta.cs">
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosAlta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuariosAlta.Designer.cs">
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosAlta.Designer.cs">
       <DependentUpon>frmAdmUsuariosAlta.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
@@ -101,29 +131,23 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuariosModifv2.cs">
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosModifv2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdministrador\frmAdmUsuariosModifv2.Designer.cs">
+    <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosModifv2.Designer.cs">
       <DependentUpon>frmAdmUsuariosModifv2.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsAdm_Super\frmMenuProductos.cs">
+    <Compile Include="frmsAdm_Super\Productos\frmMenuProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdm_Super\frmMenuProductos.Designer.cs">
+    <Compile Include="frmsAdm_Super\Productos\frmMenuProductos.Designer.cs">
       <DependentUpon>frmMenuProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsAdministrador\frmMenuProveedores.cs">
+    <Compile Include="frmsAdministrador\Proveedores\frmMenuProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdministrador\frmMenuProveedores.Designer.cs">
+    <Compile Include="frmsAdministrador\Proveedores\frmMenuProveedores.Designer.cs">
       <DependentUpon>frmMenuProveedores.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmsSupervisor\frmSuperReportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmsSupervisor\frmSuperReportes.Designer.cs">
-      <DependentUpon>frmSuperReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmsVendedor\frmPerfilVendedor.cs">
       <SubType>Form</SubType>
@@ -137,11 +161,11 @@
     <Compile Include="frmsAdministrador\frmPerfilAdministrador.Designer.cs">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsSupervisor\frmPerfliSupervisor.cs">
+    <Compile Include="frmsSupervisor\frmPerfliSupervisorV2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsSupervisor\frmPerfliSupervisor.Designer.cs">
-      <DependentUpon>frmPerfliSupervisor.cs</DependentUpon>
+    <Compile Include="frmsSupervisor\frmPerfliSupervisorV2.Designer.cs">
+      <DependentUpon>frmPerfliSupervisorV2.cs</DependentUpon>
     </Compile>
     <Compile Include="frmResetPass.cs">
       <SubType>Form</SubType>
@@ -149,57 +173,69 @@
     <Compile Include="frmResetPass.Designer.cs">
       <DependentUpon>frmResetPass.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsVendedor\frmVendNuevaVenta.cs">
+    <Compile Include="frmsVendedor\Venta\frmVendNuevaVenta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsVendedor\frmVendNuevaVenta.Designer.cs">
+    <Compile Include="frmsVendedor\Venta\frmVendNuevaVenta.Designer.cs">
       <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsVendedor\frmVendProductos.cs">
+    <Compile Include="frmsVendedor\Productos\frmVendProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsVendedor\frmVendProductos.Designer.cs">
+    <Compile Include="frmsVendedor\Productos\frmVendProductos.Designer.cs">
       <DependentUpon>frmVendProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsVendedor\frmVendReportes.cs">
+    <Compile Include="frmsVendedor\Reportes\frmVendReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsVendedor\frmVendReportes.Designer.cs">
+    <Compile Include="frmsVendedor\Reportes\frmVendReportes.Designer.cs">
       <DependentUpon>frmVendReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\PresentacionUtils.cs" />
     <Compile Include="Utils\PresentValidaciones.cs" />
-    <EmbeddedResource Include="frmsAdministrador\frmAdmUsuariosModif.resx">
+    <EmbeddedResource Include="frmsSupervisor\frmPerfilSupervisor.resx">
+      <DependentUpon>frmPerfilSupervisor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdministrador\Vendedores\frmAdmVendedoresAlta.resx">
+      <DependentUpon>frmAdmVendedoresAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdministrador\Vendedores\frmAdmVendedoresBaja.resx">
+      <DependentUpon>frmAdmVendedoresBaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdministrador\Vendedores\frmAdmVendedoresModif.resx">
+      <DependentUpon>frmAdmVendedoresModif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdministrador\Vendedores\frmAdmVendedores.resx">
+      <DependentUpon>frmAdmVendedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdministrador\Usuarios\frmAdmUsuariosModif.resx">
       <DependentUpon>frmAdmUsuariosModif.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdministrador\frmAdmUsuariosBaja.resx">
+    <EmbeddedResource Include="frmsAdministrador\Usuarios\frmAdmUsuariosBaja.resx">
       <DependentUpon>frmAdmUsuariosBaja.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdm_Super\frmAltaProducto.resx">
+    <EmbeddedResource Include="frmsAdm_Super\Productos\frmAltaProducto.resx">
       <DependentUpon>frmAltaProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdministrador\frmAdmUsuarios.resx">
+    <EmbeddedResource Include="frmsAdministrador\Usuarios\frmAdmUsuarios.resx">
       <DependentUpon>frmAdmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdministrador\frmAdmUsuariosAlta.resx">
+    <EmbeddedResource Include="frmsAdministrador\Usuarios\frmAdmUsuariosAlta.resx">
       <DependentUpon>frmAdmUsuariosAlta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdministrador\frmAdmUsuariosModifv2.resx">
+    <EmbeddedResource Include="frmsAdministrador\Usuarios\frmAdmUsuariosModifv2.resx">
       <DependentUpon>frmAdmUsuariosModifv2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdm_Super\frmMenuProductos.resx">
+    <EmbeddedResource Include="frmsAdm_Super\Productos\frmMenuProductos.resx">
       <DependentUpon>frmMenuProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdministrador\frmMenuProveedores.resx">
+    <EmbeddedResource Include="frmsAdministrador\Proveedores\frmMenuProveedores.resx">
       <DependentUpon>frmMenuProveedores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmsSupervisor\frmSuperReportes.resx">
-      <DependentUpon>frmSuperReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsVendedor\frmPerfilVendedor.resx">
       <DependentUpon>frmPerfilVendedor.cs</DependentUpon>
@@ -207,19 +243,19 @@
     <EmbeddedResource Include="frmsAdministrador\frmPerfilAdministrador.resx">
       <DependentUpon>frmPerfilAdministrador.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsSupervisor\frmPerfliSupervisor.resx">
-      <DependentUpon>frmPerfliSupervisor.cs</DependentUpon>
+    <EmbeddedResource Include="frmsSupervisor\frmPerfliSupervisorV2.resx">
+      <DependentUpon>frmPerfliSupervisorV2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmResetPass.resx">
       <DependentUpon>frmResetPass.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsVendedor\frmVendNuevaVenta.resx">
+    <EmbeddedResource Include="frmsVendedor\Venta\frmVendNuevaVenta.resx">
       <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsVendedor\frmVendProductos.resx">
+    <EmbeddedResource Include="frmsVendedor\Productos\frmVendProductos.resx">
       <DependentUpon>frmVendProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsVendedor\frmVendReportes.resx">
+    <EmbeddedResource Include="frmsVendedor\Reportes\frmVendReportes.resx">
       <DependentUpon>frmVendReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -264,7 +300,12 @@
     <Content Include="icons8-store-64.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="frmsAdministrador\Productos\" />
+    <Folder Include="frmsAdministrador\Reportes\" />
+    <Folder Include="frmsAdministrador\Supervisores\" />
+    <Folder Include="frmsAdm_Super\Reportes\" />
     <Folder Include="frmsAdm_Super_Vend\" />
+    <Folder Include="frmsSupervisor\Devoluciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -66,11 +66,6 @@ namespace Presentacion
             }
         }
 
-        private void btnEliminarUsuario_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public void LimpiarCamposBaja()
         {
             //txtBoxUsuario.Text = "";
