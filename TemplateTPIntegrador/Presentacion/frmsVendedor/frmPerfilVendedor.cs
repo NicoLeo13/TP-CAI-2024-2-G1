@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Datos;
 using FontAwesome.Sharp;
+using Presentacion.frmsVendedor;
 using Presentacion.Utils;
 
 namespace Presentacion
@@ -18,6 +19,8 @@ namespace Presentacion
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
         private frmVendNuevaVenta frmVendVentaInstance;
+        private frmVendProductos frmVendProductosInstance;
+        private frmVendReportes frmVendReportesInstance;
 
         public frmPerfilVendedor(UsuarioWS objUsuario)
         {
@@ -71,11 +74,25 @@ namespace Presentacion
 
         private void btnVendProduct_Click(object sender, EventArgs e)
         {
+            if (frmVendProductosInstance == null || frmVendProductosInstance.IsDisposed)
+            {
+                frmVendProductosInstance = new frmVendProductos();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendProductosInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendProductosInstance, panelContenedor);
 
         }
 
         private void btnVendReportes_Click(object sender, EventArgs e)
         {
+            if (frmVendReportesInstance == null || frmVendReportesInstance.IsDisposed)
+            {
+                frmVendReportesInstance = new frmVendReportes();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendReportesInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendReportesInstance, panelContenedor);
 
         }
 
