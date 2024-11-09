@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,31 @@ namespace Presentacion.frmsVendedor
         public frmVendReportes()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblFechaVenta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtpFechaVenta_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscarVenta_Click(object sender, EventArgs e)
+        {
+            //Buscar ventas del Cliente y Mostrar en pantalla
+            int clienteId = Convert.ToInt32(txtCliente.Text);
+            string empresa = txtEmpresa.Text;
+            DateTime fechaCompra = dtpFechaVenta.Value;
+
+            
         }
     }
 }
