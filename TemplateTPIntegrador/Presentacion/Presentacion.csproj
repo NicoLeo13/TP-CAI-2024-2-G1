@@ -119,6 +119,12 @@
     <Compile Include="frmsAdministrador\frmMenuProveedores.Designer.cs">
       <DependentUpon>frmMenuProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmsSupervisor\frmSuperReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsSupervisor\frmSuperReportes.Designer.cs">
+      <DependentUpon>frmSuperReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmsVendedor\frmPerfilVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,18 @@
     </Compile>
     <Compile Include="frmsVendedor\frmVendNuevaVenta.Designer.cs">
       <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsVendedor\frmVendProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsVendedor\frmVendProductos.Designer.cs">
+      <DependentUpon>frmVendProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsVendedor\frmVendReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsVendedor\frmVendReportes.Designer.cs">
+      <DependentUpon>frmVendReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -180,6 +198,9 @@
     <EmbeddedResource Include="frmsAdministrador\frmMenuProveedores.resx">
       <DependentUpon>frmMenuProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmsSupervisor\frmSuperReportes.resx">
+      <DependentUpon>frmSuperReportes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmsVendedor\frmPerfilVendedor.resx">
       <DependentUpon>frmPerfilVendedor.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +215,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmsVendedor\frmVendNuevaVenta.resx">
       <DependentUpon>frmVendNuevaVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsVendedor\frmVendProductos.resx">
+      <DependentUpon>frmVendProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsVendedor\frmVendReportes.resx">
+      <DependentUpon>frmVendReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

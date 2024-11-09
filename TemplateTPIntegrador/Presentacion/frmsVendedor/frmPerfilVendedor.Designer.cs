@@ -43,11 +43,13 @@
             this.lblVendUser = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.Bienv = new System.Windows.Forms.Label();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
             this.panelInfoUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.panelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop
@@ -246,11 +248,22 @@
             // 
             this.panelContenedor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.panelContenedor.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelContenedor.Controls.Add(this.Bienv);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(180, 75);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(994, 566);
             this.panelContenedor.TabIndex = 17;
+            // 
+            // Bienv
+            // 
+            this.Bienv.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bienv.Location = new System.Drawing.Point(262, 63);
+            this.Bienv.Name = "Bienv";
+            this.Bienv.Size = new System.Drawing.Size(490, 44);
+            this.Bienv.TabIndex = 16;
+            this.Bienv.Text = "¡Bienvenidos a ElectroHogar SA!";
+            this.Bienv.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmPerfilVendedor
             // 
@@ -272,6 +285,7 @@
             this.panelOpciones.ResumeLayout(false);
             this.panelInfoUser.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -291,5 +305,6 @@
         private System.Windows.Forms.Label lblDescSistema;
         private FontAwesome.Sharp.IconButton btnVendVenta;
         private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Label Bienv;
     }
 }

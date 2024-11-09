@@ -34,6 +34,7 @@
             this.panelAdmProductos = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
+            this.panelSide = new System.Windows.Forms.Panel();
             this.panelAdmProductos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,9 +52,10 @@
             this.btnAltaProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAltaProducto.IconSize = 30;
             this.btnAltaProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAltaProducto.Location = new System.Drawing.Point(102, 80);
+            this.btnAltaProducto.Location = new System.Drawing.Point(136, 98);
+            this.btnAltaProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAltaProducto.Name = "btnAltaProducto";
-            this.btnAltaProducto.Size = new System.Drawing.Size(220, 56);
+            this.btnAltaProducto.Size = new System.Drawing.Size(293, 69);
             this.btnAltaProducto.TabIndex = 19;
             this.btnAltaProducto.Text = "Agregar Productos";
             this.btnAltaProducto.UseVisualStyleBackColor = false;
@@ -73,9 +75,10 @@
             this.btnModificarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarProducto.IconSize = 30;
             this.btnModificarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarProducto.Location = new System.Drawing.Point(102, 175);
+            this.btnModificarProducto.Location = new System.Drawing.Point(136, 215);
+            this.btnModificarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModificarProducto.Name = "btnModificarProducto";
-            this.btnModificarProducto.Size = new System.Drawing.Size(220, 56);
+            this.btnModificarProducto.Size = new System.Drawing.Size(293, 69);
             this.btnModificarProducto.TabIndex = 20;
             this.btnModificarProducto.Text = "Modificar Productos";
             this.btnModificarProducto.UseVisualStyleBackColor = false;
@@ -94,9 +97,10 @@
             this.btnEliminarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarProducto.IconSize = 30;
             this.btnEliminarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(102, 260);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(136, 320);
+            this.btnEliminarProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
-            this.btnEliminarProducto.Size = new System.Drawing.Size(220, 56);
+            this.btnEliminarProducto.Size = new System.Drawing.Size(293, 69);
             this.btnEliminarProducto.TabIndex = 21;
             this.btnEliminarProducto.Text = "Eliminar Productos";
             this.btnEliminarProducto.UseVisualStyleBackColor = false;
@@ -106,16 +110,18 @@
             this.panelAdmProductos.Controls.Add(this.label2);
             this.panelAdmProductos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAdmProductos.Location = new System.Drawing.Point(0, 0);
+            this.panelAdmProductos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAdmProductos.Name = "panelAdmProductos";
-            this.panelAdmProductos.Size = new System.Drawing.Size(403, 56);
+            this.panelAdmProductos.Size = new System.Drawing.Size(764, 69);
             this.panelAdmProductos.TabIndex = 22;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 9);
+            this.label2.Location = new System.Drawing.Point(13, 9);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(589, 39);
+            this.label2.Size = new System.Drawing.Size(785, 48);
             this.label2.TabIndex = 7;
             this.label2.Text = "Panel de Productos - Seleccione una Acción";
             // 
@@ -134,23 +140,36 @@
             this.btnVolver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVolver.IconSize = 30;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolver.Location = new System.Drawing.Point(21, 346);
+            this.btnVolver.Location = new System.Drawing.Point(28, 426);
+            this.btnVolver.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(112, 41);
+            this.btnVolver.Size = new System.Drawing.Size(149, 50);
             this.btnVolver.TabIndex = 32;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = false;
             // 
+            // panelSide
+            // 
+            this.panelSide.BackColor = System.Drawing.Color.Teal;
+            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSide.Location = new System.Drawing.Point(0, 69);
+            this.panelSide.Margin = new System.Windows.Forms.Padding(2);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(14, 425);
+            this.panelSide.TabIndex = 66;
+            // 
             // frmMenuProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 401);
+            this.ClientSize = new System.Drawing.Size(764, 494);
+            this.Controls.Add(this.panelSide);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.panelAdmProductos);
             this.Controls.Add(this.btnEliminarProducto);
             this.Controls.Add(this.btnModificarProducto);
             this.Controls.Add(this.btnAltaProducto);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmMenuProductos";
             this.Text = "frmMenuProductos";
             this.panelAdmProductos.ResumeLayout(false);
@@ -166,5 +185,6 @@
         private System.Windows.Forms.Panel panelAdmProductos;
         private System.Windows.Forms.Label label2;
         private FontAwesome.Sharp.IconButton btnVolver;
+        private System.Windows.Forms.Panel panelSide;
     }
 }

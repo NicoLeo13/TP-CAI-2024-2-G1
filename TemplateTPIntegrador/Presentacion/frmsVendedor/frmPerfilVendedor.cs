@@ -62,6 +62,7 @@ namespace Presentacion
 
         private void btnVendVenta_Click(object sender, EventArgs e)
         {
+            Bienv.Visible = false;
             // Verificar si la instancia ya existe
             if (frmVendVentaInstance == null || frmVendVentaInstance.IsDisposed)
             {
@@ -74,6 +75,7 @@ namespace Presentacion
 
         private void btnVendProduct_Click(object sender, EventArgs e)
         {
+            Bienv.Visible = false;
             if (frmVendProductosInstance == null || frmVendProductosInstance.IsDisposed)
             {
                 frmVendProductosInstance = new frmVendProductos();
@@ -86,6 +88,7 @@ namespace Presentacion
 
         private void btnVendReportes_Click(object sender, EventArgs e)
         {
+            Bienv.Visible = false;
             if (frmVendReportesInstance == null || frmVendReportesInstance.IsDisposed)
             {
                 frmVendReportesInstance = new frmVendReportes();
@@ -113,7 +116,10 @@ namespace Presentacion
         {
 
         }
-     
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

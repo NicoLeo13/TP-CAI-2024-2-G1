@@ -70,19 +70,23 @@ namespace Presentacion
 
         private void btnAdmVendedor_Click(object sender, EventArgs e)
         {
-            
+            Bienv.Visible = false;
+
         }
 
         private void btnAdmProveed_Click(object sender, EventArgs e)
         {
+            Bienv.Visible = false;
         }
 
         private void btnAdmSuperv_Click(object sender, EventArgs e)
         {
+            Bienv.Visible = false;
         }
 
         private void btnAdmUsuarios_Click(object sender, EventArgs e)
         {
+            Bienv.Visible = false;
             // Verificar si la instancia ya existe
             if (frmAdmUsuariosInstance == null || frmAdmUsuariosInstance.IsDisposed)
             {
