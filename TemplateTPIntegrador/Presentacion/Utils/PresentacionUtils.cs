@@ -33,7 +33,7 @@ namespace Presentacion.Utils
                 case 1: // Vendedor
                     return new frmPerfilVendedor(usuario);
                 case 2: // Supervisor
-                    return new frmPerfliSupervisor(usuario);
+                    return new frmPerfilSupervisor(usuario);
                 case 3: // Administrador
                     return new frmPerfilAdministrador(usuario);
                 default:

@@ -18,7 +18,7 @@ namespace Presentacion
     public partial class frmAdmUsuarios : Form
     {
         private readonly UsuarioService _usuarioService;
-        private frmPerfilAdministrador mainForm;
+        private frmPerfilSupervisor mainForm;
 
         public frmAdmUsuarios()
         {

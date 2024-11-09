@@ -156,6 +156,7 @@
             this.btnAdmReportes.TabIndex = 19;
             this.btnAdmReportes.Text = "Reportes";
             this.btnAdmReportes.UseVisualStyleBackColor = false;
+            this.btnAdmReportes.Click += new System.EventHandler(this.btnAdmReportes_Click);
             this.btnAdmReportes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnAdmReportes.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
@@ -178,6 +179,7 @@
             this.btnAdmProduct.TabIndex = 18;
             this.btnAdmProduct.Text = "Productos";
             this.btnAdmProduct.UseVisualStyleBackColor = false;
+            this.btnAdmProduct.Click += new System.EventHandler(this.btnAdmProduct_Click);
             this.btnAdmProduct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnAdmProduct.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 

@@ -37,7 +37,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombUser = new System.Windows.Forms.Label();
             this.lblInfoDatosUser = new System.Windows.Forms.Label();
-            this.btnEliminarUsuario = new FontAwesome.Sharp.IconButton();
+            this.btnModificarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -141,28 +141,28 @@
             this.lblInfoDatosUser.Text = "Ingrese el Usuario a Modificar";
             this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnEliminarUsuario
+            // btnModificarUsuario
             // 
-            this.btnEliminarUsuario.BackColor = System.Drawing.Color.Orange;
-            this.btnEliminarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEliminarUsuario.FlatAppearance.BorderSize = 0;
-            this.btnEliminarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
-            this.btnEliminarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
-            this.btnEliminarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarUsuario.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEliminarUsuario.IconChar = FontAwesome.Sharp.IconChar.FilePen;
-            this.btnEliminarUsuario.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEliminarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnEliminarUsuario.IconSize = 30;
-            this.btnEliminarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(736, 455);
-            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(195, 41);
-            this.btnEliminarUsuario.TabIndex = 29;
-            this.btnEliminarUsuario.Text = "Modificar Usuario";
-            this.btnEliminarUsuario.UseVisualStyleBackColor = false;
-            this.btnEliminarUsuario.Click += new System.EventHandler(this.btnModificarUsuario_Click);
+            this.btnModificarUsuario.BackColor = System.Drawing.Color.Orange;
+            this.btnModificarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnModificarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
+            this.btnModificarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
+            this.btnModificarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarUsuario.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnModificarUsuario.IconChar = FontAwesome.Sharp.IconChar.FilePen;
+            this.btnModificarUsuario.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnModificarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModificarUsuario.IconSize = 30;
+            this.btnModificarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarUsuario.Location = new System.Drawing.Point(736, 455);
+            this.btnModificarUsuario.Name = "btnModificarUsuario";
+            this.btnModificarUsuario.Size = new System.Drawing.Size(195, 41);
+            this.btnModificarUsuario.TabIndex = 29;
+            this.btnModificarUsuario.Text = "Modificar Usuario";
+            this.btnModificarUsuario.UseVisualStyleBackColor = false;
+            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarUsuario_Click);
             // 
             // btnVolver
             // 
@@ -217,7 +217,7 @@
             this.panelContenedor.Controls.Add(this.grpDatosUser);
             this.panelContenedor.Controls.Add(this.btnBuscar);
             this.panelContenedor.Controls.Add(this.btnVolver);
-            this.panelContenedor.Controls.Add(this.btnEliminarUsuario);
+            this.panelContenedor.Controls.Add(this.btnModificarUsuario);
             this.panelContenedor.Controls.Add(this.lblInfoDatosUser);
             this.panelContenedor.Controls.Add(this.txtBoxUsuario);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
@@ -445,7 +445,7 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombUser;
         private System.Windows.Forms.Label lblInfoDatosUser;
-        private FontAwesome.Sharp.IconButton btnEliminarUsuario;
+        private FontAwesome.Sharp.IconButton btnModificarUsuario;
         private FontAwesome.Sharp.IconButton btnVolver;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Panel panelContenedor;
