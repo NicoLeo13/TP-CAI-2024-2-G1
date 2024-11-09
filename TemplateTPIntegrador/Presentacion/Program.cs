@@ -16,8 +16,7 @@ namespace Presentacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run (new Perfil_Administrador ());
-            Application.Run (new FormLogin());
+            Application.Run(new FormLogin());
         }
     }
 }

@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Presentacion.Utils;
-using Presentacion.frmsSupervisor;
+//using Presentacion.frmsSupervisor;
 using Presentacion.frmsVendedor;
 
 namespace Presentacion
@@ -20,7 +20,7 @@ namespace Presentacion
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
         private frmVendNuevaVenta frmVendVentaInstance;
-        private frmSuperReportes frmSuperReportesInstance;
+        //private frmSuperReportes frmSuperReportesInstance;
 
         public frmPerfliSupervisor(UsuarioWS objUsuario)
         {
@@ -50,15 +50,15 @@ namespace Presentacion
 
         private void button1_Click(object sender, EventArgs e)
         {
-            BienvSup.Visible = false;
+            //BienvSup.Visible = false;
 
-            if (frmSuperReportesInstance == null || frmSuperReportesInstance.IsDisposed)
-            {
-                frmSuperReportesInstance = new frmSuperReportes();
-                PresentacionUtils.AbrirForm((IconButton)sender, frmSuperReportesInstance, panelContenedor);
-            }
-            else
-                PresentacionUtils.AbrirForm((IconButton)sender, frmSuperReportesInstance, panelContenedor);
+            //if (frmSuperReportesInstance == null || frmSuperReportesInstance.IsDisposed)
+            //{
+            //    frmSuperReportesInstance = new frmSuperReportes();
+            //    PresentacionUtils.AbrirForm((IconButton)sender, frmSuperReportesInstance, panelContenedor);
+            //}
+            //else
+            //    PresentacionUtils.AbrirForm((IconButton)sender, frmSuperReportesInstance, panelContenedor);
             
             
         }
