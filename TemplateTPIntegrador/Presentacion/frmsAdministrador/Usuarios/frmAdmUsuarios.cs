@@ -18,7 +18,6 @@ namespace Presentacion
     public partial class frmAdmUsuarios : Form
     {
         private readonly UsuarioService _usuarioService;
-        private frmPerfilSupervisor mainForm;
 
         public frmAdmUsuarios()
         {
@@ -38,6 +37,8 @@ namespace Presentacion
         private void ActualizarUI(List<UsuarioWS> usuariosActivos)
         {
             lblActivos.Text = usuariosActivos.Count.ToString();
+            lblSupervActivos.Text = usuariosActivos.Where(u => u.Host == 2).Count().ToString();
+            lblVendActivos.Text = usuariosActivos.Where(u => u.Host == 1).Count().ToString();
         }
 
         private void btnAltaUsuario_Click(object sender, EventArgs e)

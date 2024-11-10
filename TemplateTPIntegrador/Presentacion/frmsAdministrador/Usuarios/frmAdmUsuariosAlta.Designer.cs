@@ -33,7 +33,6 @@
             this.lblTop = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtBoxNombre = new System.Windows.Forms.TextBox();
-            this.lblInfoDatosPers = new System.Windows.Forms.Label();
             this.txtBoxApellido = new System.Windows.Forms.TextBox();
             this.lblApellido = new System.Windows.Forms.Label();
             this.txtBoxDireccion = new System.Windows.Forms.TextBox();
@@ -44,7 +43,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtBoxTelefono = new System.Windows.Forms.TextBox();
             this.lblTelefono = new System.Windows.Forms.Label();
-            this.lblInfoDatosUser = new System.Windows.Forms.Label();
             this.txtBoxUsuario = new System.Windows.Forms.TextBox();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtBoxContraseña = new System.Windows.Forms.TextBox();
@@ -58,8 +56,12 @@
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.panelSide = new System.Windows.Forms.Panel();
+            this.grpDatosPers = new System.Windows.Forms.GroupBox();
+            this.grpDatosUser = new System.Windows.Forms.GroupBox();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
+            this.grpDatosPers.SuspendLayout();
+            this.grpDatosUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
@@ -83,7 +85,8 @@
             // lblNombre
             // 
             this.lblNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNombre.Location = new System.Drawing.Point(43, 70);
+            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(34, 34);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(105, 25);
             this.lblNombre.TabIndex = 9;
@@ -92,34 +95,23 @@
             // 
             // txtBoxNombre
             // 
-            this.txtBoxNombre.Location = new System.Drawing.Point(154, 69);
+            this.txtBoxNombre.Location = new System.Drawing.Point(144, 35);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxNombre.Size = new System.Drawing.Size(257, 29);
             this.txtBoxNombre.TabIndex = 10;
-            // 
-            // lblInfoDatosPers
-            // 
-            this.lblInfoDatosPers.AutoSize = true;
-            this.lblInfoDatosPers.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblInfoDatosPers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosPers.Location = new System.Drawing.Point(23, 38);
-            this.lblInfoDatosPers.Name = "lblInfoDatosPers";
-            this.lblInfoDatosPers.Size = new System.Drawing.Size(133, 21);
-            this.lblInfoDatosPers.TabIndex = 11;
-            this.lblInfoDatosPers.Text = "Datos Personales";
-            this.lblInfoDatosPers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtBoxApellido
             // 
-            this.txtBoxApellido.Location = new System.Drawing.Point(154, 108);
+            this.txtBoxApellido.Location = new System.Drawing.Point(144, 85);
             this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxApellido.Size = new System.Drawing.Size(257, 29);
             this.txtBoxApellido.TabIndex = 13;
             // 
             // lblApellido
             // 
             this.lblApellido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblApellido.Location = new System.Drawing.Point(43, 107);
+            this.lblApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido.Location = new System.Drawing.Point(34, 84);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(105, 25);
             this.lblApellido.TabIndex = 12;
@@ -128,15 +120,16 @@
             // 
             // txtBoxDireccion
             // 
-            this.txtBoxDireccion.Location = new System.Drawing.Point(155, 147);
+            this.txtBoxDireccion.Location = new System.Drawing.Point(144, 135);
             this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 29);
             this.txtBoxDireccion.TabIndex = 15;
             // 
             // lblDireccion
             // 
             this.lblDireccion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDireccion.Location = new System.Drawing.Point(44, 146);
+            this.lblDireccion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(34, 134);
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(105, 25);
             this.lblDireccion.TabIndex = 14;
@@ -145,15 +138,16 @@
             // 
             // txtBoxDni
             // 
-            this.txtBoxDni.Location = new System.Drawing.Point(154, 264);
+            this.txtBoxDni.Location = new System.Drawing.Point(144, 285);
             this.txtBoxDni.Name = "txtBoxDni";
-            this.txtBoxDni.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxDni.Size = new System.Drawing.Size(257, 29);
             this.txtBoxDni.TabIndex = 17;
             // 
             // lblDni
             // 
             this.lblDni.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDni.Location = new System.Drawing.Point(43, 256);
+            this.lblDni.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDni.Location = new System.Drawing.Point(33, 284);
             this.lblDni.Name = "lblDni";
             this.lblDni.Size = new System.Drawing.Size(105, 25);
             this.lblDni.TabIndex = 16;
@@ -162,15 +156,16 @@
             // 
             // txtBoxEmail
             // 
-            this.txtBoxEmail.Location = new System.Drawing.Point(155, 225);
+            this.txtBoxEmail.Location = new System.Drawing.Point(145, 235);
             this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxEmail.Size = new System.Drawing.Size(257, 29);
             this.txtBoxEmail.TabIndex = 19;
             // 
             // lblEmail
             // 
             this.lblEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Location = new System.Drawing.Point(43, 225);
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(33, 234);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(105, 25);
             this.lblEmail.TabIndex = 18;
@@ -179,44 +174,34 @@
             // 
             // txtBoxTelefono
             // 
-            this.txtBoxTelefono.Location = new System.Drawing.Point(155, 186);
+            this.txtBoxTelefono.Location = new System.Drawing.Point(146, 185);
             this.txtBoxTelefono.Name = "txtBoxTelefono";
-            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 29);
             this.txtBoxTelefono.TabIndex = 21;
             // 
             // lblTelefono
             // 
             this.lblTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTelefono.Location = new System.Drawing.Point(43, 185);
+            this.lblTelefono.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(34, 184);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(105, 25);
             this.lblTelefono.TabIndex = 20;
             this.lblTelefono.Text = "Teléfono";
             this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblInfoDatosUser
-            // 
-            this.lblInfoDatosUser.AutoSize = true;
-            this.lblInfoDatosUser.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblInfoDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosUser.Location = new System.Drawing.Point(529, 38);
-            this.lblInfoDatosUser.Name = "lblInfoDatosUser";
-            this.lblInfoDatosUser.Size = new System.Drawing.Size(134, 21);
-            this.lblInfoDatosUser.TabIndex = 22;
-            this.lblInfoDatosUser.Text = "Datos de Usuario";
-            this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // txtBoxUsuario
             // 
-            this.txtBoxUsuario.Location = new System.Drawing.Point(668, 70);
+            this.txtBoxUsuario.Location = new System.Drawing.Point(116, 36);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 29);
             this.txtBoxUsuario.TabIndex = 24;
             // 
             // lblUsuario
             // 
             this.lblUsuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblUsuario.Location = new System.Drawing.Point(558, 69);
+            this.lblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(6, 35);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(90, 25);
             this.lblUsuario.TabIndex = 23;
@@ -225,15 +210,16 @@
             // 
             // txtBoxContraseña
             // 
-            this.txtBoxContraseña.Location = new System.Drawing.Point(668, 108);
+            this.txtBoxContraseña.Location = new System.Drawing.Point(116, 85);
             this.txtBoxContraseña.Name = "txtBoxContraseña";
-            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 29);
             this.txtBoxContraseña.TabIndex = 26;
             // 
             // lblContraseña
             // 
             this.lblContraseña.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblContraseña.Location = new System.Drawing.Point(558, 107);
+            this.lblContraseña.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraseña.Location = new System.Drawing.Point(6, 84);
             this.lblContraseña.Name = "lblContraseña";
             this.lblContraseña.Size = new System.Drawing.Size(90, 25);
             this.lblContraseña.TabIndex = 25;
@@ -243,7 +229,8 @@
             // lblHost
             // 
             this.lblHost.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblHost.Location = new System.Drawing.Point(558, 147);
+            this.lblHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHost.Location = new System.Drawing.Point(6, 139);
             this.lblHost.Name = "lblHost";
             this.lblHost.Size = new System.Drawing.Size(90, 25);
             this.lblHost.TabIndex = 27;
@@ -253,9 +240,9 @@
             // cmbHost
             // 
             this.cmbHost.FormattingEnabled = true;
-            this.cmbHost.Location = new System.Drawing.Point(668, 148);
+            this.cmbHost.Location = new System.Drawing.Point(116, 140);
             this.cmbHost.Name = "cmbHost";
-            this.cmbHost.Size = new System.Drawing.Size(257, 25);
+            this.cmbHost.Size = new System.Drawing.Size(257, 29);
             this.cmbHost.TabIndex = 28;
             // 
             // btnGuardarUsuario
@@ -273,7 +260,7 @@
             this.btnGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarUsuario.IconSize = 30;
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(370, 460);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(350, 460);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(195, 41);
             this.btnGuardarUsuario.TabIndex = 29;
@@ -296,7 +283,7 @@
             this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCampos.IconSize = 30;
             this.btnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(754, 460);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(766, 460);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(195, 41);
             this.btnLimpiarCampos.TabIndex = 30;
@@ -319,7 +306,7 @@
             this.btnVolver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVolver.IconSize = 30;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolver.Location = new System.Drawing.Point(27, 460);
+            this.btnVolver.Location = new System.Drawing.Point(17, 455);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 41);
             this.btnVolver.TabIndex = 31;
@@ -330,31 +317,12 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelContenedor.Controls.Add(this.grpDatosUser);
+            this.panelContenedor.Controls.Add(this.grpDatosPers);
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnLimpiarCampos);
             this.panelContenedor.Controls.Add(this.btnGuardarUsuario);
-            this.panelContenedor.Controls.Add(this.lblHost);
-            this.panelContenedor.Controls.Add(this.lblContraseña);
-            this.panelContenedor.Controls.Add(this.lblUsuario);
-            this.panelContenedor.Controls.Add(this.lblInfoDatosUser);
-            this.panelContenedor.Controls.Add(this.lblFechaNacimiento);
-            this.panelContenedor.Controls.Add(this.lblDni);
-            this.panelContenedor.Controls.Add(this.lblEmail);
-            this.panelContenedor.Controls.Add(this.lblTelefono);
-            this.panelContenedor.Controls.Add(this.lblDireccion);
-            this.panelContenedor.Controls.Add(this.lblApellido);
-            this.panelContenedor.Controls.Add(this.lblNombre);
-            this.panelContenedor.Controls.Add(this.lblInfoDatosPers);
-            this.panelContenedor.Controls.Add(this.cmbHost);
-            this.panelContenedor.Controls.Add(this.txtBoxContraseña);
-            this.panelContenedor.Controls.Add(this.txtBoxUsuario);
-            this.panelContenedor.Controls.Add(this.dtpFechaNac);
-            this.panelContenedor.Controls.Add(this.txtBoxDni);
-            this.panelContenedor.Controls.Add(this.txtBoxEmail);
-            this.panelContenedor.Controls.Add(this.txtBoxTelefono);
-            this.panelContenedor.Controls.Add(this.txtBoxDireccion);
-            this.panelContenedor.Controls.Add(this.txtBoxApellido);
-            this.panelContenedor.Controls.Add(this.txtBoxNombre);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -364,7 +332,8 @@
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(43, 292);
+            this.lblFechaNacimiento.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimiento.Location = new System.Drawing.Point(34, 331);
             this.lblFechaNacimiento.Name = "lblFechaNacimiento";
             this.lblFechaNacimiento.Size = new System.Drawing.Size(105, 36);
             this.lblFechaNacimiento.TabIndex = 32;
@@ -374,7 +343,9 @@
             // 
             // dtpFechaNac
             // 
-            this.dtpFechaNac.Location = new System.Drawing.Point(154, 303);
+            this.dtpFechaNac.CalendarFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNac.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaNac.Location = new System.Drawing.Point(145, 335);
             this.dtpFechaNac.Name = "dtpFechaNac";
             this.dtpFechaNac.Size = new System.Drawing.Size(257, 25);
             this.dtpFechaNac.TabIndex = 33;
@@ -388,6 +359,46 @@
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
+            // 
+            // grpDatosPers
+            // 
+            this.grpDatosPers.Controls.Add(this.lblNombre);
+            this.grpDatosPers.Controls.Add(this.txtBoxNombre);
+            this.grpDatosPers.Controls.Add(this.lblApellido);
+            this.grpDatosPers.Controls.Add(this.txtBoxApellido);
+            this.grpDatosPers.Controls.Add(this.lblDireccion);
+            this.grpDatosPers.Controls.Add(this.txtBoxDireccion);
+            this.grpDatosPers.Controls.Add(this.lblTelefono);
+            this.grpDatosPers.Controls.Add(this.txtBoxTelefono);
+            this.grpDatosPers.Controls.Add(this.lblFechaNacimiento);
+            this.grpDatosPers.Controls.Add(this.lblEmail);
+            this.grpDatosPers.Controls.Add(this.lblDni);
+            this.grpDatosPers.Controls.Add(this.txtBoxEmail);
+            this.grpDatosPers.Controls.Add(this.dtpFechaNac);
+            this.grpDatosPers.Controls.Add(this.txtBoxDni);
+            this.grpDatosPers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDatosPers.Location = new System.Drawing.Point(27, 26);
+            this.grpDatosPers.Name = "grpDatosPers";
+            this.grpDatosPers.Size = new System.Drawing.Size(454, 395);
+            this.grpDatosPers.TabIndex = 34;
+            this.grpDatosPers.TabStop = false;
+            this.grpDatosPers.Text = "Datos Personales";
+            // 
+            // grpDatosUser
+            // 
+            this.grpDatosUser.Controls.Add(this.lblUsuario);
+            this.grpDatosUser.Controls.Add(this.txtBoxUsuario);
+            this.grpDatosUser.Controls.Add(this.lblContraseña);
+            this.grpDatosUser.Controls.Add(this.txtBoxContraseña);
+            this.grpDatosUser.Controls.Add(this.cmbHost);
+            this.grpDatosUser.Controls.Add(this.lblHost);
+            this.grpDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDatosUser.Location = new System.Drawing.Point(538, 26);
+            this.grpDatosUser.Name = "grpDatosUser";
+            this.grpDatosUser.Size = new System.Drawing.Size(410, 209);
+            this.grpDatosUser.TabIndex = 35;
+            this.grpDatosUser.TabStop = false;
+            this.grpDatosUser.Text = "Datos de Usuario";
             // 
             // frmAdmUsuariosAlta
             // 
@@ -407,7 +418,10 @@
             this.Load += new System.EventHandler(this.frmAdmUsuariosAlta_Load);
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
-            this.panelContenedor.PerformLayout();
+            this.grpDatosPers.ResumeLayout(false);
+            this.grpDatosPers.PerformLayout();
+            this.grpDatosUser.ResumeLayout(false);
+            this.grpDatosUser.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -417,7 +431,6 @@
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtBoxNombre;
-        private System.Windows.Forms.Label lblInfoDatosPers;
         private System.Windows.Forms.TextBox txtBoxApellido;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtBoxDireccion;
@@ -428,7 +441,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtBoxTelefono;
         private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.Label lblInfoDatosUser;
         private System.Windows.Forms.TextBox txtBoxUsuario;
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtBoxContraseña;
@@ -442,5 +454,7 @@
         private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.DateTimePicker dtpFechaNac;
         private System.Windows.Forms.Label lblFechaNacimiento;
+        private System.Windows.Forms.GroupBox grpDatosPers;
+        private System.Windows.Forms.GroupBox grpDatosUser;
     }
 }

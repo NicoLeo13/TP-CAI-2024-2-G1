@@ -32,16 +32,16 @@
             this.panelAdmUsers = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblUsersTotal = new System.Windows.Forms.Label();
+            this.lblSupervActivos = new System.Windows.Forms.Label();
+            this.lblDescSupervActivos = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblActivos = new System.Windows.Forms.Label();
             this.lblUsersActivos = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblInactivos = new System.Windows.Forms.Label();
-            this.lblUsersInactivos = new System.Windows.Forms.Label();
+            this.lblVendActivos = new System.Windows.Forms.Label();
+            this.lblDescVendActivos = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAltaUsuario = new FontAwesome.Sharp.IconButton();
             this.btnModificarUsuario = new FontAwesome.Sharp.IconButton();
@@ -75,41 +75,41 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblTotal);
-            this.panel1.Controls.Add(this.lblUsersTotal);
+            this.panel1.Controls.Add(this.lblSupervActivos);
+            this.panel1.Controls.Add(this.lblDescSupervActivos);
             this.panel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.panel1.Location = new System.Drawing.Point(22, 62);
+            this.panel1.Location = new System.Drawing.Point(387, 62);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(220, 119);
             this.panel1.TabIndex = 7;
             // 
-            // lblTotal
+            // lblSupervActivos
             // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(127, 49);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(42, 20);
-            this.lblTotal.TabIndex = 11;
-            this.lblTotal.Text = "Total";
-            this.lblTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSupervActivos.AutoSize = true;
+            this.lblSupervActivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSupervActivos.Location = new System.Drawing.Point(116, 49);
+            this.lblSupervActivos.Name = "lblSupervActivos";
+            this.lblSupervActivos.Size = new System.Drawing.Size(32, 15);
+            this.lblSupervActivos.TabIndex = 11;
+            this.lblSupervActivos.Text = "Total";
+            this.lblSupervActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblUsersTotal
+            // lblDescSupervActivos
             // 
-            this.lblUsersTotal.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsersTotal.Location = new System.Drawing.Point(81, 26);
-            this.lblUsersTotal.Name = "lblUsersTotal";
-            this.lblUsersTotal.Size = new System.Drawing.Size(136, 23);
-            this.lblUsersTotal.TabIndex = 10;
-            this.lblUsersTotal.Text = "Usuarios Totales";
-            this.lblUsersTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDescSupervActivos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescSupervActivos.Location = new System.Drawing.Point(70, 26);
+            this.lblDescSupervActivos.Name = "lblDescSupervActivos";
+            this.lblDescSupervActivos.Size = new System.Drawing.Size(136, 23);
+            this.lblDescSupervActivos.TabIndex = 10;
+            this.lblDescSupervActivos.Text = "Supervisores Activos";
+            this.lblDescSupervActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(11, 26);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(3, 26);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 64);
@@ -122,7 +122,7 @@
             this.panel2.Controls.Add(this.lblActivos);
             this.panel2.Controls.Add(this.lblUsersActivos);
             this.panel2.Controls.Add(this.guna2CirclePictureBox2);
-            this.panel2.Location = new System.Drawing.Point(387, 62);
+            this.panel2.Location = new System.Drawing.Point(22, 62);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 119);
             this.panel2.TabIndex = 8;
@@ -131,9 +131,9 @@
             // 
             this.lblActivos.AutoSize = true;
             this.lblActivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblActivos.Location = new System.Drawing.Point(127, 49);
+            this.lblActivos.Location = new System.Drawing.Point(119, 49);
             this.lblActivos.Name = "lblActivos";
-            this.lblActivos.Size = new System.Drawing.Size(42, 20);
+            this.lblActivos.Size = new System.Drawing.Size(32, 15);
             this.lblActivos.TabIndex = 14;
             this.lblActivos.Text = "Total";
             this.lblActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,7 +141,7 @@
             // lblUsersActivos
             // 
             this.lblUsersActivos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsersActivos.Location = new System.Drawing.Point(81, 26);
+            this.lblUsersActivos.Location = new System.Drawing.Point(73, 26);
             this.lblUsersActivos.Name = "lblUsersActivos";
             this.lblUsersActivos.Size = new System.Drawing.Size(136, 23);
             this.lblUsersActivos.TabIndex = 12;
@@ -153,7 +153,7 @@
             this.guna2CirclePictureBox2.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(11, 26);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(3, 26);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.Size = new System.Drawing.Size(64, 64);
@@ -163,34 +163,34 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.lblInactivos);
-            this.panel3.Controls.Add(this.lblUsersInactivos);
+            this.panel3.Controls.Add(this.lblVendActivos);
+            this.panel3.Controls.Add(this.lblDescVendActivos);
             this.panel3.Controls.Add(this.guna2CirclePictureBox3);
             this.panel3.Location = new System.Drawing.Point(752, 62);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(220, 119);
             this.panel3.TabIndex = 9;
             // 
-            // lblInactivos
+            // lblVendActivos
             // 
-            this.lblInactivos.AutoSize = true;
-            this.lblInactivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInactivos.Location = new System.Drawing.Point(127, 49);
-            this.lblInactivos.Name = "lblInactivos";
-            this.lblInactivos.Size = new System.Drawing.Size(42, 20);
-            this.lblInactivos.TabIndex = 17;
-            this.lblInactivos.Text = "Total";
-            this.lblInactivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblVendActivos.AutoSize = true;
+            this.lblVendActivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVendActivos.Location = new System.Drawing.Point(127, 49);
+            this.lblVendActivos.Name = "lblVendActivos";
+            this.lblVendActivos.Size = new System.Drawing.Size(32, 15);
+            this.lblVendActivos.TabIndex = 17;
+            this.lblVendActivos.Text = "Total";
+            this.lblVendActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblUsersInactivos
+            // lblDescVendActivos
             // 
-            this.lblUsersInactivos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsersInactivos.Location = new System.Drawing.Point(81, 26);
-            this.lblUsersInactivos.Name = "lblUsersInactivos";
-            this.lblUsersInactivos.Size = new System.Drawing.Size(136, 23);
-            this.lblUsersInactivos.TabIndex = 15;
-            this.lblUsersInactivos.Text = "Usuarios Inactivos";
-            this.lblUsersInactivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblDescVendActivos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescVendActivos.Location = new System.Drawing.Point(81, 26);
+            this.lblDescVendActivos.Name = "lblDescVendActivos";
+            this.lblDescVendActivos.Size = new System.Drawing.Size(136, 23);
+            this.lblDescVendActivos.TabIndex = 15;
+            this.lblDescVendActivos.Text = "Vendedores Activos";
+            this.lblDescVendActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CirclePictureBox3
             // 
@@ -310,14 +310,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblUsersTotal;
+        private System.Windows.Forms.Label lblSupervActivos;
+        private System.Windows.Forms.Label lblDescSupervActivos;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private System.Windows.Forms.Label lblActivos;
         private System.Windows.Forms.Label lblUsersActivos;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
-        private System.Windows.Forms.Label lblInactivos;
-        private System.Windows.Forms.Label lblUsersInactivos;
+        private System.Windows.Forms.Label lblVendActivos;
+        private System.Windows.Forms.Label lblDescVendActivos;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
         private FontAwesome.Sharp.IconButton btnAltaUsuario;
         private FontAwesome.Sharp.IconButton btnModificarUsuario;

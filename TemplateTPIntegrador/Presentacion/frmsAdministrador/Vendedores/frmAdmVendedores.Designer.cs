@@ -75,7 +75,7 @@
             // 
             this.lblVendActivos.AutoSize = true;
             this.lblVendActivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVendActivos.Location = new System.Drawing.Point(127, 49);
+            this.lblVendActivos.Location = new System.Drawing.Point(119, 49);
             this.lblVendActivos.Name = "lblVendActivos";
             this.lblVendActivos.Size = new System.Drawing.Size(32, 15);
             this.lblVendActivos.TabIndex = 14;
@@ -85,7 +85,7 @@
             // lblTopVendActivos
             // 
             this.lblTopVendActivos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopVendActivos.Location = new System.Drawing.Point(81, 26);
+            this.lblTopVendActivos.Location = new System.Drawing.Point(73, 26);
             this.lblTopVendActivos.Name = "lblTopVendActivos";
             this.lblTopVendActivos.Size = new System.Drawing.Size(136, 23);
             this.lblTopVendActivos.TabIndex = 12;
@@ -97,7 +97,7 @@
             this.guna2CirclePictureBox2.FillColor = System.Drawing.Color.WhiteSmoke;
             this.guna2CirclePictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox2.Image")));
             this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(11, 26);
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(3, 26);
             this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
             this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox2.Size = new System.Drawing.Size(64, 64);

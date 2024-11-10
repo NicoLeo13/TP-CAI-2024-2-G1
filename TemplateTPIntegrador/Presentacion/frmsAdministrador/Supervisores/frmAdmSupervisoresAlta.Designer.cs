@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class frmAdmVendedoresAlta
+    partial class frmAdmSupervisoresAlta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmVendedoresAlta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmSupervisoresAlta));
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
-            this.panelSide = new System.Windows.Forms.Panel();
-            this.btnGuardarVendedor = new FontAwesome.Sharp.IconButton();
+            this.btnGuardarSuperv = new FontAwesome.Sharp.IconButton();
             this.btnLimpiarCampos = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -56,6 +55,7 @@
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.txtBoxDni = new System.Windows.Forms.TextBox();
+            this.panelSide = new System.Windows.Forms.Panel();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.grpDatosUser.SuspendLayout();
@@ -78,39 +78,30 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Vendedores - Agregar Vendedores";
+            this.lblTop.Text = "Panel de Supervisores - Agregar Supervisores";
             // 
-            // panelSide
+            // btnGuardarSuperv
             // 
-            this.panelSide.BackColor = System.Drawing.Color.Teal;
-            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSide.Location = new System.Drawing.Point(0, 0);
-            this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(18, 566);
-            this.panelSide.TabIndex = 34;
-            // 
-            // btnGuardarVendedor
-            // 
-            this.btnGuardarVendedor.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnGuardarVendedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarVendedor.FlatAppearance.BorderSize = 0;
-            this.btnGuardarVendedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
-            this.btnGuardarVendedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
-            this.btnGuardarVendedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarVendedor.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarVendedor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnGuardarVendedor.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
-            this.btnGuardarVendedor.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.btnGuardarVendedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnGuardarVendedor.IconSize = 30;
-            this.btnGuardarVendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarVendedor.Location = new System.Drawing.Point(370, 460);
-            this.btnGuardarVendedor.Name = "btnGuardarVendedor";
-            this.btnGuardarVendedor.Size = new System.Drawing.Size(195, 41);
-            this.btnGuardarVendedor.TabIndex = 29;
-            this.btnGuardarVendedor.Text = "Guardar";
-            this.btnGuardarVendedor.UseVisualStyleBackColor = false;
-            this.btnGuardarVendedor.Click += new System.EventHandler(this.btnGuardarVendedor_Click);
+            this.btnGuardarSuperv.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnGuardarSuperv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardarSuperv.FlatAppearance.BorderSize = 0;
+            this.btnGuardarSuperv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.btnGuardarSuperv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
+            this.btnGuardarSuperv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarSuperv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarSuperv.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnGuardarSuperv.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnGuardarSuperv.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnGuardarSuperv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGuardarSuperv.IconSize = 30;
+            this.btnGuardarSuperv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardarSuperv.Location = new System.Drawing.Point(370, 460);
+            this.btnGuardarSuperv.Name = "btnGuardarSuperv";
+            this.btnGuardarSuperv.Size = new System.Drawing.Size(195, 41);
+            this.btnGuardarSuperv.TabIndex = 29;
+            this.btnGuardarSuperv.Text = "Guardar";
+            this.btnGuardarSuperv.UseVisualStyleBackColor = false;
+            this.btnGuardarSuperv.Click += new System.EventHandler(this.btnGuardarSupervisor_Click);
             // 
             // btnLimpiarCampos
             // 
@@ -161,11 +152,12 @@
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelContenedor.Controls.Add(this.grpDatosUser);
             this.panelContenedor.Controls.Add(this.grpDatosPers);
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnLimpiarCampos);
-            this.panelContenedor.Controls.Add(this.btnGuardarVendedor);
+            this.panelContenedor.Controls.Add(this.btnGuardarSuperv);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -184,7 +176,7 @@
             this.grpDatosUser.Size = new System.Drawing.Size(410, 159);
             this.grpDatosUser.TabIndex = 36;
             this.grpDatosUser.TabStop = false;
-            this.grpDatosUser.Text = "Datos de Usuario Vendedor";
+            this.grpDatosUser.Text = "Datos de Usuario";
             // 
             // label1
             // 
@@ -374,7 +366,16 @@
             this.txtBoxDni.Size = new System.Drawing.Size(257, 29);
             this.txtBoxDni.TabIndex = 17;
             // 
-            // frmAdmVendedoresAlta
+            // panelSide
+            // 
+            this.panelSide.BackColor = System.Drawing.Color.Teal;
+            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSide.Location = new System.Drawing.Point(0, 0);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(18, 566);
+            this.panelSide.TabIndex = 34;
+            // 
+            // frmAdmSupervisoresAlta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -386,7 +387,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmAdmVendedoresAlta";
+            this.Name = "frmAdmSupervisoresAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosAlta";
             this.Load += new System.EventHandler(this.frmAdmUsuariosAlta_Load);
@@ -403,11 +404,11 @@
         #endregion
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
-        private System.Windows.Forms.Panel panelSide;
-        private FontAwesome.Sharp.IconButton btnGuardarVendedor;
+        private FontAwesome.Sharp.IconButton btnGuardarSuperv;
         private FontAwesome.Sharp.IconButton btnLimpiarCampos;
         private FontAwesome.Sharp.IconButton btnVolver;
         private System.Windows.Forms.Panel panelContenedor;
+        private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.GroupBox grpDatosPers;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtBoxNombre;

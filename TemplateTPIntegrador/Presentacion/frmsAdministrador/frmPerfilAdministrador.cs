@@ -19,6 +19,8 @@ namespace Presentacion
         private static UsuarioWS usuarioActual;
         private frmAdmUsuarios frmAdmUsuariosInstance;
         private frmAdmVendedores frmAdmVendedorInstance;
+        private frmAdmSupervisores frmAdmSupervInstance;
+        private frmAdmProveedores frmAdmProveedInstance;
 
         public frmPerfilAdministrador(UsuarioWS objUsuario)
         {
@@ -96,11 +98,26 @@ namespace Presentacion
         
         private void btnAdmSuperv_Click(object sender, EventArgs e)
         {
-
+            // Verificar si la instancia ya existe
+            if (frmAdmSupervInstance == null || frmAdmSupervInstance.IsDisposed)
+            {
+                frmAdmSupervInstance = new frmAdmSupervisores();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmSupervInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmSupervInstance, panelContenedor);
         }
-        
+
         private void btnAdmProveed_Click(object sender, EventArgs e)
         {
+            // Verificar si la instancia ya existe
+            if (frmAdmProveedInstance == null || frmAdmProveedInstance.IsDisposed)
+            {
+                frmAdmProveedInstance = new frmAdmProveedores();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmProveedInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmProveedInstance, panelContenedor);
         }
 
         private void btnAdmProduct_Click(object sender, EventArgs e)

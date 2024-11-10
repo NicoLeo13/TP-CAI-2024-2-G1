@@ -150,9 +150,9 @@
             this.btnModificarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
             this.btnModificarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarUsuario.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnModificarUsuario.ForeColor = System.Drawing.Color.Black;
             this.btnModificarUsuario.IconChar = FontAwesome.Sharp.IconChar.FilePen;
-            this.btnModificarUsuario.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnModificarUsuario.IconColor = System.Drawing.Color.Black;
             this.btnModificarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarUsuario.IconSize = 30;
             this.btnModificarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;

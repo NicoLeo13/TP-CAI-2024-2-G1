@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class frmAdmVendedoresModif
+    partial class frmAdmSupervisoresModif
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmVendedoresModif));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmSupervisoresModif));
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
@@ -37,7 +37,7 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblNombUser = new System.Windows.Forms.Label();
             this.lblInfoDatosUser = new System.Windows.Forms.Label();
-            this.btnModificarVend = new FontAwesome.Sharp.IconButton();
+            this.btnModificarSuperv = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
@@ -76,7 +76,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Vendedores - Modificar Vendedores";
+            this.lblTop.Text = "Panel de Supervisores - Modificar Supervisores";
             // 
             // panelSide
             // 
@@ -134,33 +134,33 @@
             this.lblInfoDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoDatosUser.Location = new System.Drawing.Point(23, 33);
             this.lblInfoDatosUser.Name = "lblInfoDatosUser";
-            this.lblInfoDatosUser.Size = new System.Drawing.Size(331, 21);
+            this.lblInfoDatosUser.Size = new System.Drawing.Size(338, 21);
             this.lblInfoDatosUser.TabIndex = 22;
-            this.lblInfoDatosUser.Text = "Ingrese el Usuario del Vendedor a Modificar";
+            this.lblInfoDatosUser.Text = "Ingrese el Usuario del Supervisor a Modificar";
             this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnModificarVend
+            // btnModificarSuperv
             // 
-            this.btnModificarVend.BackColor = System.Drawing.Color.Orange;
-            this.btnModificarVend.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarVend.FlatAppearance.BorderSize = 0;
-            this.btnModificarVend.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
-            this.btnModificarVend.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
-            this.btnModificarVend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarVend.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarVend.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarVend.IconChar = FontAwesome.Sharp.IconChar.FilePen;
-            this.btnModificarVend.IconColor = System.Drawing.Color.Black;
-            this.btnModificarVend.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnModificarVend.IconSize = 30;
-            this.btnModificarVend.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarVend.Location = new System.Drawing.Point(736, 455);
-            this.btnModificarVend.Name = "btnModificarVend";
-            this.btnModificarVend.Size = new System.Drawing.Size(195, 41);
-            this.btnModificarVend.TabIndex = 29;
-            this.btnModificarVend.Text = "Modificar Vendedor";
-            this.btnModificarVend.UseVisualStyleBackColor = false;
-            this.btnModificarVend.Click += new System.EventHandler(this.btnModificarVendedor_Click);
+            this.btnModificarSuperv.BackColor = System.Drawing.Color.Orange;
+            this.btnModificarSuperv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarSuperv.FlatAppearance.BorderSize = 0;
+            this.btnModificarSuperv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
+            this.btnModificarSuperv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
+            this.btnModificarSuperv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarSuperv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarSuperv.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarSuperv.IconChar = FontAwesome.Sharp.IconChar.FilePen;
+            this.btnModificarSuperv.IconColor = System.Drawing.Color.Black;
+            this.btnModificarSuperv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModificarSuperv.IconSize = 30;
+            this.btnModificarSuperv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarSuperv.Location = new System.Drawing.Point(736, 455);
+            this.btnModificarSuperv.Name = "btnModificarSuperv";
+            this.btnModificarSuperv.Size = new System.Drawing.Size(195, 41);
+            this.btnModificarSuperv.TabIndex = 29;
+            this.btnModificarSuperv.Text = "Modificar Vendedor";
+            this.btnModificarSuperv.UseVisualStyleBackColor = false;
+            this.btnModificarSuperv.Click += new System.EventHandler(this.btnModificarSupervisor_Click);
             // 
             // btnVolver
             // 
@@ -206,7 +206,7 @@
             this.btnBuscar.TabIndex = 34;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarVendedor_click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarSupervisor_click);
             // 
             // panelContenedor
             // 
@@ -215,7 +215,7 @@
             this.panelContenedor.Controls.Add(this.grpDatosUser);
             this.panelContenedor.Controls.Add(this.btnBuscar);
             this.panelContenedor.Controls.Add(this.btnVolver);
-            this.panelContenedor.Controls.Add(this.btnModificarVend);
+            this.panelContenedor.Controls.Add(this.btnModificarSuperv);
             this.panelContenedor.Controls.Add(this.lblInfoDatosUser);
             this.panelContenedor.Controls.Add(this.txtBoxUsuario);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
@@ -386,7 +386,7 @@
             this.lblDni.Text = "DNI";
             this.lblDni.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // frmAdmVendedoresModif
+            // frmAdmSupervisoresModif
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -398,7 +398,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmAdmVendedoresModif";
+            this.Name = "frmAdmSupervisoresModif";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosAlta";
             this.Load += new System.EventHandler(this.frmAdmUsuariosModif_Load);
@@ -420,7 +420,7 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblNombUser;
         private System.Windows.Forms.Label lblInfoDatosUser;
-        private FontAwesome.Sharp.IconButton btnModificarVend;
+        private FontAwesome.Sharp.IconButton btnModificarSuperv;
         private FontAwesome.Sharp.IconButton btnVolver;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Panel panelContenedor;

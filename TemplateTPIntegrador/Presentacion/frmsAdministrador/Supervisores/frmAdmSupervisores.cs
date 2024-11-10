@@ -15,11 +15,11 @@ using Negocio;
 
 namespace Presentacion
 {
-    public partial class frmAdmVendedores : Form
+    public partial class frmAdmSupervisores : Form
     {
         private readonly UsuarioService _usuarioService;
 
-        public frmAdmVendedores()
+        public frmAdmSupervisores()
         {
             InitializeComponent();
             _usuarioService = new UsuarioService();
@@ -36,25 +36,24 @@ namespace Presentacion
 
         private void ActualizarUI(List<UsuarioWS> usuariosActivos)
         {
-            //Filtro por host = 1 (Vendedor)
-            string vendedoresActivos = usuariosActivos.Where(u => u.Host == 1).Count().ToString();
-            lblVendActivos.Text = vendedoresActivos;
+            //Filtro por host = 2 (Supervisor)
+            string supervisoresActivos = usuariosActivos.Where(u => u.Host == 2).Count().ToString();
+            lblSupervActivos.Text = supervisoresActivos;
         }
         
-        private void btnAltaVend_Click(object sender, EventArgs e)
+        private void btnAltaSuperv_Click(object sender, EventArgs e)
         {
-            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmVendedoresAlta(), PresentacionUtils.PanelContenedor);
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmSupervisoresAlta(), PresentacionUtils.PanelContenedor);
         }
 
-
-        private void btnModVend_Click(object sender, EventArgs e)
+        private void btnModSuperv_Click(object sender, EventArgs e)
         {
-            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmVendedoresModif(), PresentacionUtils.PanelContenedor);
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmSupervisoresModif(), PresentacionUtils.PanelContenedor);
         }
         
-        private void btnBajaVend_Click(object sender, EventArgs e)
+        private void btnBajaSuperv_Click(object sender, EventArgs e)
         {
-            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmVendedoresBaja(), PresentacionUtils.PanelContenedor);
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmSupervisoresBaja(), PresentacionUtils.PanelContenedor);
         }
 
     }

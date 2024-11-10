@@ -37,7 +37,7 @@ namespace Presentacion
             dtpFechaNac.TabIndex = 6;
             txtBoxUsuario.TabIndex = 7;
             txtBoxContraseña.TabIndex = 8;
-            btnGuardarUsuario.TabIndex = 9;
+            btnGuardarVendedor.TabIndex = 9;
             btnLimpiarCampos.TabIndex = 10;
             btnVolver.TabIndex = 11;
 
