@@ -118,9 +118,9 @@
             this.lblInfoDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoDatosUser.Location = new System.Drawing.Point(23, 33);
             this.lblInfoDatosUser.Name = "lblInfoDatosUser";
-            this.lblInfoDatosUser.Size = new System.Drawing.Size(336, 21);
+            this.lblInfoDatosUser.Size = new System.Drawing.Size(316, 21);
             this.lblInfoDatosUser.TabIndex = 22;
-            this.lblInfoDatosUser.Text = "Ingrese el Usuario del Proveedor a Modificar";
+            this.lblInfoDatosUser.Text = "Ingrese el CUIT del Proveedor a Modificar";
             this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnModificarProvee
@@ -227,7 +227,7 @@
             this.grpDatosUser.Size = new System.Drawing.Size(395, 293);
             this.grpDatosUser.TabIndex = 35;
             this.grpDatosUser.TabStop = false;
-            this.grpDatosUser.Text = "Datos de Usuario";
+            this.grpDatosUser.Text = "Datos de Proveedor";
             // 
             // rbInactivo
             // 

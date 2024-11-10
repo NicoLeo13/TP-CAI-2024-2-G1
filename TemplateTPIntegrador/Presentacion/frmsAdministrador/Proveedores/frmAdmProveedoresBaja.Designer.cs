@@ -130,9 +130,9 @@
             this.lblInfoDatosVend.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoDatosVend.Location = new System.Drawing.Point(23, 33);
             this.lblInfoDatosVend.Name = "lblInfoDatosVend";
-            this.lblInfoDatosVend.Size = new System.Drawing.Size(346, 21);
+            this.lblInfoDatosVend.Size = new System.Drawing.Size(326, 21);
             this.lblInfoDatosVend.TabIndex = 22;
-            this.lblInfoDatosVend.Text = "Ingrese el Usuario del Proveedor a dar de Baja";
+            this.lblInfoDatosVend.Text = "Ingrese el CUIT del Proveedor a dar de Baja";
             this.lblInfoDatosVend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnEliminarProvee
@@ -240,7 +240,7 @@
             this.groupBox1.Size = new System.Drawing.Size(920, 236);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de Usuario";
+            this.groupBox1.Text = "Datos de Proveedor";
             // 
             // lblContFechaAlta
             // 
