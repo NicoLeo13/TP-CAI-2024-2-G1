@@ -36,6 +36,7 @@
             this.panelOpciones = new System.Windows.Forms.Panel();
             this.btnVendLogout = new FontAwesome.Sharp.IconButton();
             this.btnVendReportes = new FontAwesome.Sharp.IconButton();
+            this.btnVendClientes = new FontAwesome.Sharp.IconButton();
             this.btnVendProduct = new FontAwesome.Sharp.IconButton();
             this.btnVendVenta = new FontAwesome.Sharp.IconButton();
             this.panelInfoUser = new System.Windows.Forms.Panel();
@@ -43,7 +44,6 @@
             this.lblVendUser = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnVendClientes = new FontAwesome.Sharp.IconButton();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
@@ -154,6 +154,29 @@
             this.btnVendReportes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnVendReportes.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
+            // btnVendClientes
+            // 
+            this.btnVendClientes.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVendClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVendClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVendClientes.FlatAppearance.BorderSize = 0;
+            this.btnVendClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnVendClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendClientes.IconChar = FontAwesome.Sharp.IconChar.UserTag;
+            this.btnVendClientes.IconColor = System.Drawing.Color.Black;
+            this.btnVendClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVendClientes.IconSize = 30;
+            this.btnVendClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVendClientes.Location = new System.Drawing.Point(0, 258);
+            this.btnVendClientes.Name = "btnVendClientes";
+            this.btnVendClientes.Size = new System.Drawing.Size(180, 56);
+            this.btnVendClientes.TabIndex = 23;
+            this.btnVendClientes.Text = "Clientes";
+            this.btnVendClientes.UseVisualStyleBackColor = false;
+            this.btnVendClientes.Click += new System.EventHandler(this.btnVendClientes_Click);
+            this.btnVendClientes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnVendClientes.MouseEnter += new System.EventHandler(this.btn_MouseHover);
+            // 
             // btnVendProduct
             // 
             this.btnVendProduct.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -253,27 +276,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(994, 566);
             this.panelContenedor.TabIndex = 17;
-            // 
-            // btnVendClientes
-            // 
-            this.btnVendClientes.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnVendClientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVendClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVendClientes.FlatAppearance.BorderSize = 0;
-            this.btnVendClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnVendClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendClientes.IconChar = FontAwesome.Sharp.IconChar.UserTag;
-            this.btnVendClientes.IconColor = System.Drawing.Color.Black;
-            this.btnVendClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVendClientes.IconSize = 30;
-            this.btnVendClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendClientes.Location = new System.Drawing.Point(0, 258);
-            this.btnVendClientes.Name = "btnVendClientes";
-            this.btnVendClientes.Size = new System.Drawing.Size(180, 56);
-            this.btnVendClientes.TabIndex = 23;
-            this.btnVendClientes.Text = "Clientes";
-            this.btnVendClientes.UseVisualStyleBackColor = false;
-            this.btnVendClientes.Click += new System.EventHandler(this.btnVendClientes_Click);
             // 
             // frmPerfilVendedor
             // 
