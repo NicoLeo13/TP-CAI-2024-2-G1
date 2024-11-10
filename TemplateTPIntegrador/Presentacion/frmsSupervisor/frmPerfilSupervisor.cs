@@ -17,8 +17,8 @@ namespace Presentacion
     {
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
-        private frmAdmUsuarios frmAdmUsuariosInstance;
-        private frmAdmVendedores frmAdmVendedorInstance;
+        private frmMenuProductos frmMenuProductosInstance;
+        private frmMenuReportes frmMenuReportesInstance;
 
         public frmPerfilSupervisor(UsuarioWS objUsuario)
         {
@@ -71,17 +71,35 @@ namespace Presentacion
 
         private void btnSupProduct_Click(object sender, EventArgs e)
         {
-
+            //Verificar si la instancia ya existe
+            if (frmMenuProductosInstance == null || frmMenuProductosInstance.IsDisposed)
+            {
+                frmMenuProductosInstance = new frmMenuProductos(usuarioActual);
+                PresentacionUtils.AbrirForm((IconButton)sender, frmMenuProductosInstance, panelContenedor);
+            }
+            else
+            {
+                PresentacionUtils.AbrirForm((IconButton)sender, frmMenuProductosInstance, panelContenedor);
+            }
         }
 
         private void btnSupDevoluciones_Click(object sender, EventArgs e)
         {
 
         }
-        
+
         private void btnSupReportes_Click(object sender, EventArgs e)
         {
-
+            //Verificar si la instancia ya existe
+            if (frmMenuReportesInstance == null || frmMenuReportesInstance.IsDisposed)
+            {
+                frmMenuReportesInstance = new frmMenuReportes(usuarioActual);
+                PresentacionUtils.AbrirForm((IconButton)sender, frmMenuReportesInstance, panelContenedor);
+            }
+            else
+            {
+                PresentacionUtils.AbrirForm((IconButton)sender, frmMenuReportesInstance, panelContenedor);
+            }
         }
     }
 }

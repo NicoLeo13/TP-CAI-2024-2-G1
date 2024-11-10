@@ -24,6 +24,23 @@ namespace Presentacion
             InitializeComponent();
         }
 
+        private void frmProductosModif_Load(object sender, EventArgs e)
+        {
+            Dictionary<int, string> categorias = new Dictionary<int, string>
+            {
+                { 1, "1 - Audio" },
+                { 2, "2 - Celulares" },
+                { 3, "3 - Electro Hogar" },
+                { 4, "4 - Informatica" },
+                { 5, "5 - Smart TV" }
+            };
+
+            cmbCategoria.DataSource = new BindingSource(categorias, null);
+            cmbCategoria.DisplayMember = "Value";
+            cmbCategoria.ValueMember = "Key";
+            cmbCategoria.SelectedIndex = -1;
+        }
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);

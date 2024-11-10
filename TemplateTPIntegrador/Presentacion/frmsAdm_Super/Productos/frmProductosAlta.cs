@@ -27,11 +27,19 @@ namespace Presentacion
 
         private void frmProductosAlta_Load(object sender, EventArgs e)
         {
-            //Llenar combo de categorias con valores del 1 al 5
-            for (int i = 1; i <= 5; i++)
+            Dictionary<int, string> categorias = new Dictionary<int, string>
             {
-                cmbCategoria.Items.Add(i);
-            }
+                { 1, "1 - Audio" },
+                { 2, "2 - Celulares" },
+                { 3, "3 - Electro Hogar" },
+                { 4, "4 - Informatica" },
+                { 5, "5 - Smart TV" }
+            };
+
+            cmbCategoria.DataSource = new BindingSource(categorias, null);
+            cmbCategoria.DisplayMember = "Value";
+            cmbCategoria.ValueMember = "Key";
+            cmbCategoria.SelectedIndex = -1;
         }
 
         public void ConfigurarTabIndex()
@@ -64,9 +72,9 @@ namespace Presentacion
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
-            int idcategoria = int.Parse(cmbCategoria.Text);
+            int idcategoria = (int)cmbCategoria.SelectedValue;
             //Guid idusuario = usuarioActual.Id;
-            Guid idusuario = Guid.Parse("7a06c9f0-8887-4b4f-b635-1ef5fe4d116f");        //Harcode para probar (borrar despues)
+            Guid idusuario = Guid.Parse("7a06c9f0-8887-4b4f-b635-1ef5fe4d116f");        //Hardcode para probar (borrar despues)
             Guid idproveedor = Guid.Parse(txtBoxIDProveedor.Text);
             string nombre = txtBoxNombre.Text;
             int precio = int.Parse(txtBoxPrecio.Text);

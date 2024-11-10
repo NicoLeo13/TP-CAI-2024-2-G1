@@ -22,6 +22,7 @@ namespace Presentacion
         private frmAdmSupervisores frmAdmSupervInstance;
         private frmAdmProveedores frmAdmProveedInstance;
         private frmMenuProductos frmAdmProductosInstance;
+        private frmMenuReportes frmAdmReportesInstance;
 
         public frmPerfilAdministrador(UsuarioWS objUsuario)
         {
@@ -135,7 +136,14 @@ namespace Presentacion
 
         private void btnAdmReportes_Click(object sender, EventArgs e)
         {
-
+            // Verificar si la instancia ya existe
+            if (frmAdmReportesInstance == null || frmAdmReportesInstance.IsDisposed)
+            {
+                frmAdmReportesInstance = new frmMenuReportes(usuarioActual);
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmReportesInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmReportesInstance, panelContenedor);
         }
     }
 }
