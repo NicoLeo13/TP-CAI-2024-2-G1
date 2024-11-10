@@ -42,6 +42,7 @@
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpDatosUser = new System.Windows.Forms.GroupBox();
+            this.cmbHost = new System.Windows.Forms.ComboBox();
             this.txtBoxEstado = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.txtBoxDireccion = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.txtBoxNombUser = new System.Windows.Forms.TextBox();
-            this.txtBoxHost = new System.Windows.Forms.TextBox();
             this.txtBoxDni = new System.Windows.Forms.TextBox();
             this.txtBoxApellido = new System.Windows.Forms.TextBox();
             this.txtBoxNombre = new System.Windows.Forms.TextBox();
@@ -122,9 +122,9 @@
             // 
             this.lblNombUser.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblNombUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombUser.Location = new System.Drawing.Point(529, 31);
+            this.lblNombUser.Location = new System.Drawing.Point(529, 86);
             this.lblNombUser.Name = "lblNombUser";
-            this.lblNombUser.Size = new System.Drawing.Size(127, 39);
+            this.lblNombUser.Size = new System.Drawing.Size(127, 25);
             this.lblNombUser.TabIndex = 32;
             this.lblNombUser.Text = "Nombre de Usuario";
             this.lblNombUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -228,6 +228,7 @@
             // 
             // grpDatosUser
             // 
+            this.grpDatosUser.Controls.Add(this.cmbHost);
             this.grpDatosUser.Controls.Add(this.txtBoxEstado);
             this.grpDatosUser.Controls.Add(this.lblEstado);
             this.grpDatosUser.Controls.Add(this.txtBoxEmail);
@@ -235,14 +236,13 @@
             this.grpDatosUser.Controls.Add(this.txtBoxTelefono);
             this.grpDatosUser.Controls.Add(this.lblTelefono);
             this.grpDatosUser.Controls.Add(this.txtBoxDireccion);
+            this.grpDatosUser.Controls.Add(this.lblHost);
             this.grpDatosUser.Controls.Add(this.lblDireccion);
             this.grpDatosUser.Controls.Add(this.txtBoxNombUser);
-            this.grpDatosUser.Controls.Add(this.txtBoxHost);
             this.grpDatosUser.Controls.Add(this.txtBoxDni);
             this.grpDatosUser.Controls.Add(this.txtBoxApellido);
             this.grpDatosUser.Controls.Add(this.txtBoxNombre);
             this.grpDatosUser.Controls.Add(this.lblDni);
-            this.grpDatosUser.Controls.Add(this.lblHost);
             this.grpDatosUser.Controls.Add(this.lblNombre);
             this.grpDatosUser.Controls.Add(this.lblApellido);
             this.grpDatosUser.Controls.Add(this.lblNombUser);
@@ -254,12 +254,23 @@
             this.grpDatosUser.TabStop = false;
             this.grpDatosUser.Text = "Datos de Usuario";
             // 
+            // cmbHost
+            // 
+            this.cmbHost.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cmbHost.Enabled = false;
+            this.cmbHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbHost.FormattingEnabled = true;
+            this.cmbHost.Location = new System.Drawing.Point(674, 33);
+            this.cmbHost.Name = "cmbHost";
+            this.cmbHost.Size = new System.Drawing.Size(230, 29);
+            this.cmbHost.TabIndex = 55;
+            // 
             // txtBoxEstado
             // 
             this.txtBoxEstado.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtBoxEstado.Enabled = false;
             this.txtBoxEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEstado.Location = new System.Drawing.Point(674, 133);
+            this.txtBoxEstado.Location = new System.Drawing.Point(674, 134);
             this.txtBoxEstado.Name = "txtBoxEstado";
             this.txtBoxEstado.Size = new System.Drawing.Size(230, 25);
             this.txtBoxEstado.TabIndex = 54;
@@ -343,20 +354,10 @@
             this.txtBoxNombUser.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtBoxNombUser.Enabled = false;
             this.txtBoxNombUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNombUser.Location = new System.Drawing.Point(674, 39);
+            this.txtBoxNombUser.Location = new System.Drawing.Point(674, 86);
             this.txtBoxNombUser.Name = "txtBoxNombUser";
             this.txtBoxNombUser.Size = new System.Drawing.Size(230, 25);
             this.txtBoxNombUser.TabIndex = 46;
-            // 
-            // txtBoxHost
-            // 
-            this.txtBoxHost.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxHost.Enabled = false;
-            this.txtBoxHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxHost.Location = new System.Drawing.Point(674, 86);
-            this.txtBoxHost.Name = "txtBoxHost";
-            this.txtBoxHost.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxHost.TabIndex = 44;
             // 
             // txtBoxDni
             // 
@@ -404,7 +405,7 @@
             // 
             this.lblHost.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHost.Location = new System.Drawing.Point(532, 85);
+            this.lblHost.Location = new System.Drawing.Point(532, 37);
             this.lblHost.Name = "lblHost";
             this.lblHost.Size = new System.Drawing.Size(124, 25);
             this.lblHost.TabIndex = 36;
@@ -456,7 +457,6 @@
         private System.Windows.Forms.TextBox txtBoxApellido;
         private System.Windows.Forms.TextBox txtBoxNombre;
         private System.Windows.Forms.TextBox txtBoxNombUser;
-        private System.Windows.Forms.TextBox txtBoxHost;
         private System.Windows.Forms.TextBox txtBoxTelefono;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.TextBox txtBoxDireccion;
@@ -465,5 +465,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtBoxEstado;
         private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.ComboBox cmbHost;
     }
 }

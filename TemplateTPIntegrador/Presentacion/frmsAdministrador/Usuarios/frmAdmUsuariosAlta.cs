@@ -45,9 +45,9 @@ namespace Presentacion
         {
             Dictionary<int, string> hosts = new Dictionary<int, string>
             {
-                { 3, "Administrador" },
+                { 1, "Vendedor" },
                 { 2, "Supervisor" },
-                { 1, "Vendedor" }
+                { 3, "Administrador" }
             };
 
             cmbHost.DataSource = new BindingSource(hosts, null);

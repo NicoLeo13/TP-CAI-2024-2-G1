@@ -44,6 +44,7 @@
             this.lblVendUser = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnVendInicio = new FontAwesome.Sharp.IconButton();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
@@ -100,6 +101,7 @@
             this.panelOpciones.Controls.Add(this.btnVendClientes);
             this.panelOpciones.Controls.Add(this.btnVendProduct);
             this.panelOpciones.Controls.Add(this.btnVendVenta);
+            this.panelOpciones.Controls.Add(this.btnVendInicio);
             this.panelOpciones.Controls.Add(this.panelInfoUser);
             this.panelOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelOpciones.Location = new System.Drawing.Point(0, 75);
@@ -144,7 +146,7 @@
             this.btnVendReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVendReportes.IconSize = 30;
             this.btnVendReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendReportes.Location = new System.Drawing.Point(0, 314);
+            this.btnVendReportes.Location = new System.Drawing.Point(0, 370);
             this.btnVendReportes.Name = "btnVendReportes";
             this.btnVendReportes.Size = new System.Drawing.Size(180, 56);
             this.btnVendReportes.TabIndex = 19;
@@ -167,7 +169,7 @@
             this.btnVendClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVendClientes.IconSize = 30;
             this.btnVendClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendClientes.Location = new System.Drawing.Point(0, 258);
+            this.btnVendClientes.Location = new System.Drawing.Point(0, 314);
             this.btnVendClientes.Name = "btnVendClientes";
             this.btnVendClientes.Size = new System.Drawing.Size(180, 56);
             this.btnVendClientes.TabIndex = 23;
@@ -190,7 +192,7 @@
             this.btnVendProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVendProduct.IconSize = 30;
             this.btnVendProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendProduct.Location = new System.Drawing.Point(0, 202);
+            this.btnVendProduct.Location = new System.Drawing.Point(0, 258);
             this.btnVendProduct.Name = "btnVendProduct";
             this.btnVendProduct.Size = new System.Drawing.Size(180, 56);
             this.btnVendProduct.TabIndex = 18;
@@ -213,7 +215,7 @@
             this.btnVendVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVendVenta.IconSize = 30;
             this.btnVendVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendVenta.Location = new System.Drawing.Point(0, 146);
+            this.btnVendVenta.Location = new System.Drawing.Point(0, 202);
             this.btnVendVenta.Name = "btnVendVenta";
             this.btnVendVenta.Size = new System.Drawing.Size(180, 56);
             this.btnVendVenta.TabIndex = 22;
@@ -277,6 +279,27 @@
             this.panelContenedor.Size = new System.Drawing.Size(994, 566);
             this.panelContenedor.TabIndex = 17;
             // 
+            // btnVendInicio
+            // 
+            this.btnVendInicio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVendInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVendInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVendInicio.FlatAppearance.BorderSize = 0;
+            this.btnVendInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnVendInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendInicio.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnVendInicio.IconColor = System.Drawing.Color.Black;
+            this.btnVendInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVendInicio.IconSize = 30;
+            this.btnVendInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVendInicio.Location = new System.Drawing.Point(0, 146);
+            this.btnVendInicio.Name = "btnVendInicio";
+            this.btnVendInicio.Size = new System.Drawing.Size(180, 56);
+            this.btnVendInicio.TabIndex = 24;
+            this.btnVendInicio.Text = "Inicio";
+            this.btnVendInicio.UseVisualStyleBackColor = false;
+            this.btnVendInicio.Click += new System.EventHandler(this.btnVendInicio_Click);
+            // 
             // frmPerfilVendedor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -317,5 +340,6 @@
         private FontAwesome.Sharp.IconButton btnVendVenta;
         private System.Windows.Forms.Panel panelContenedor;
         private FontAwesome.Sharp.IconButton btnVendClientes;
+        private FontAwesome.Sharp.IconButton btnVendInicio;
     }
 }

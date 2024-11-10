@@ -17,9 +17,8 @@ namespace Presentacion
     {
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
+        private frmAdmInicio frmAdmInicioInstance;
         private frmAdmUsuarios frmAdmUsuariosInstance;
-        private frmAdmVendedores frmAdmVendedorInstance;
-        private frmAdmSupervisores frmAdmSupervInstance;
         private frmAdmProveedores frmAdmProveedInstance;
         private frmMenuProductos frmAdmProductosInstance;
         private frmMenuReportes frmAdmReportesInstance;
@@ -30,6 +29,10 @@ namespace Presentacion
             usuarioActual = objUsuario;
 
             this.lblAdmUser.Text = usuarioActual.NombreUsuario;
+
+            frmAdmInicioInstance = new frmAdmInicio();
+            PresentacionUtils.AbrirForm(btnAdmInicio, frmAdmInicioInstance, panelContenedor);
+            btn_MouseDown(btnAdmInicio, null);
         }
 
         // Método para manejar el evento Hover de los botones
@@ -73,6 +76,18 @@ namespace Presentacion
             }
         }
 
+        private void btnAdmInicio_Click(object sender, EventArgs e)
+        {
+            // Verificar si la instancia ya existe
+            if (frmAdmInicioInstance == null || frmAdmInicioInstance.IsDisposed)
+            {
+                frmAdmInicioInstance = new frmAdmInicio();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmInicioInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmInicioInstance, panelContenedor);
+        }
+
         private void btnAdmUsuarios_Click(object sender, EventArgs e)
         {
             // Verificar si la instancia ya existe
@@ -86,30 +101,6 @@ namespace Presentacion
             //frmAdmUsuariosInstance.BringToFront();
         }
         
-        private void btnAdmVendedor_Click(object sender, EventArgs e)
-        {
-            // Verificar si la instancia ya existe
-            if (frmAdmVendedorInstance == null || frmAdmVendedorInstance.IsDisposed)
-            {
-                frmAdmVendedorInstance = new frmAdmVendedores();
-                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmVendedorInstance, panelContenedor);
-            }
-            else
-                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmVendedorInstance, panelContenedor);
-        }
-        
-        private void btnAdmSuperv_Click(object sender, EventArgs e)
-        {
-            // Verificar si la instancia ya existe
-            if (frmAdmSupervInstance == null || frmAdmSupervInstance.IsDisposed)
-            {
-                frmAdmSupervInstance = new frmAdmSupervisores();
-                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmSupervInstance, panelContenedor);
-            }
-            else
-                PresentacionUtils.AbrirForm((IconButton)sender, frmAdmSupervInstance, panelContenedor);
-        }
-
         private void btnAdmProveed_Click(object sender, EventArgs e)
         {
             // Verificar si la instancia ya existe
@@ -145,5 +136,6 @@ namespace Presentacion
             else
                 PresentacionUtils.AbrirForm((IconButton)sender, frmAdmReportesInstance, panelContenedor);
         }
+
     }
 }

@@ -18,6 +18,7 @@ namespace Presentacion
     {
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
+        private frmVendInicio frmVendInicioInstance;
         private frmVendNuevaVenta frmVendVentaInstance;
         private frmVendProductos frmVendProductosInstance;
         private frmVendReportes frmVendReportesInstance;
@@ -28,6 +29,10 @@ namespace Presentacion
             usuarioActual = objUsuario;
 
             this.lblVendUser.Text = usuarioActual.NombreUsuario;
+
+            frmVendInicioInstance = new frmVendInicio();
+            PresentacionUtils.AbrirForm(btnVendInicio, frmVendInicioInstance, panelContenedor);
+            btn_MouseDown(btnVendInicio, null);
         }
 
         private void frmPerfilVendedor_Load(object sender, EventArgs e)
@@ -76,6 +81,18 @@ namespace Presentacion
                 PresentacionUtils.FormPrevio = null;
                 PresentacionUtils.isFormClosing = false;
             }
+        }
+
+        private void btnVendInicio_Click(object sender, EventArgs e)
+        {
+            // Verificar si la instancia ya existe
+            if (frmVendInicioInstance == null || frmVendInicioInstance.IsDisposed)
+            {
+                frmVendInicioInstance = new frmVendInicio();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendInicioInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendInicioInstance, panelContenedor);
         }
 
         private void btnVendVenta_Click(object sender, EventArgs e)

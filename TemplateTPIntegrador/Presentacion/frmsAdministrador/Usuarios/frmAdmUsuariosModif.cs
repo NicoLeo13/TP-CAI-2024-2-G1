@@ -27,6 +27,17 @@ namespace Presentacion
 
         private void frmAdmUsuariosModif_Load(object sender, EventArgs e)
         {
+            Dictionary<int, string> hosts = new Dictionary<int, string>
+            {
+                { 1, "Vendedor" },
+                { 2, "Supervisor" },
+                { 3, "Administrador" }
+            };
+
+            cmbHost.DataSource = new BindingSource(hosts, null);
+            cmbHost.DisplayMember = "Value";
+            cmbHost.ValueMember = "Key";
+            cmbHost.SelectedIndex = -1;
         }
 
 

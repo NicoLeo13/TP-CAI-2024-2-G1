@@ -38,6 +38,7 @@
             this.btnSupReportes = new FontAwesome.Sharp.IconButton();
             this.btnSupDevoluciones = new FontAwesome.Sharp.IconButton();
             this.btnSupProduct = new FontAwesome.Sharp.IconButton();
+            this.btnSupervInicio = new FontAwesome.Sharp.IconButton();
             this.panelInfoUser = new System.Windows.Forms.Panel();
             this.lblSupRol = new System.Windows.Forms.Label();
             this.lblAdmUser = new System.Windows.Forms.Label();
@@ -98,6 +99,7 @@
             this.panelOpciones.Controls.Add(this.btnSupReportes);
             this.panelOpciones.Controls.Add(this.btnSupDevoluciones);
             this.panelOpciones.Controls.Add(this.btnSupProduct);
+            this.panelOpciones.Controls.Add(this.btnSupervInicio);
             this.panelOpciones.Controls.Add(this.panelInfoUser);
             this.panelOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelOpciones.Location = new System.Drawing.Point(0, 75);
@@ -142,7 +144,7 @@
             this.btnSupReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSupReportes.IconSize = 30;
             this.btnSupReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupReportes.Location = new System.Drawing.Point(0, 258);
+            this.btnSupReportes.Location = new System.Drawing.Point(0, 314);
             this.btnSupReportes.Name = "btnSupReportes";
             this.btnSupReportes.Size = new System.Drawing.Size(180, 56);
             this.btnSupReportes.TabIndex = 19;
@@ -165,7 +167,7 @@
             this.btnSupDevoluciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSupDevoluciones.IconSize = 30;
             this.btnSupDevoluciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupDevoluciones.Location = new System.Drawing.Point(0, 202);
+            this.btnSupDevoluciones.Location = new System.Drawing.Point(0, 258);
             this.btnSupDevoluciones.Name = "btnSupDevoluciones";
             this.btnSupDevoluciones.Size = new System.Drawing.Size(180, 56);
             this.btnSupDevoluciones.TabIndex = 22;
@@ -188,7 +190,7 @@
             this.btnSupProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSupProduct.IconSize = 30;
             this.btnSupProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupProduct.Location = new System.Drawing.Point(0, 146);
+            this.btnSupProduct.Location = new System.Drawing.Point(0, 202);
             this.btnSupProduct.Name = "btnSupProduct";
             this.btnSupProduct.Size = new System.Drawing.Size(180, 56);
             this.btnSupProduct.TabIndex = 18;
@@ -197,6 +199,29 @@
             this.btnSupProduct.Click += new System.EventHandler(this.btnSupProduct_Click);
             this.btnSupProduct.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnSupProduct.MouseEnter += new System.EventHandler(this.btn_MouseHover);
+            // 
+            // btnSupervInicio
+            // 
+            this.btnSupervInicio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSupervInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSupervInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSupervInicio.FlatAppearance.BorderSize = 0;
+            this.btnSupervInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSupervInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupervInicio.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnSupervInicio.IconColor = System.Drawing.Color.Black;
+            this.btnSupervInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSupervInicio.IconSize = 30;
+            this.btnSupervInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupervInicio.Location = new System.Drawing.Point(0, 146);
+            this.btnSupervInicio.Name = "btnSupervInicio";
+            this.btnSupervInicio.Size = new System.Drawing.Size(180, 56);
+            this.btnSupervInicio.TabIndex = 24;
+            this.btnSupervInicio.Text = "Inicio";
+            this.btnSupervInicio.UseVisualStyleBackColor = false;
+            this.btnSupervInicio.Click += new System.EventHandler(this.btnSupervInicio_Click);
+            this.btnSupervInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnSupervInicio.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
             // panelInfoUser
             // 
@@ -290,5 +315,6 @@
         private System.Windows.Forms.Label lblDescSistema;
         private System.Windows.Forms.Panel panelContenedor;
         private FontAwesome.Sharp.IconButton btnSupDevoluciones;
+        private FontAwesome.Sharp.IconButton btnSupervInicio;
     }
 }

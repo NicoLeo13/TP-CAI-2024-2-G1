@@ -38,9 +38,8 @@
             this.btnAdmReportes = new FontAwesome.Sharp.IconButton();
             this.btnAdmProduct = new FontAwesome.Sharp.IconButton();
             this.btnAdmProveed = new FontAwesome.Sharp.IconButton();
-            this.btnAdmSuperv = new FontAwesome.Sharp.IconButton();
-            this.btnAdmVendedor = new FontAwesome.Sharp.IconButton();
             this.btnAdmUsuarios = new FontAwesome.Sharp.IconButton();
+            this.btnAdmInicio = new FontAwesome.Sharp.IconButton();
             this.panelInfoUser = new System.Windows.Forms.Panel();
             this.lblAdmRol = new System.Windows.Forms.Label();
             this.lblAdmUser = new System.Windows.Forms.Label();
@@ -101,9 +100,8 @@
             this.panelOpciones.Controls.Add(this.btnAdmReportes);
             this.panelOpciones.Controls.Add(this.btnAdmProduct);
             this.panelOpciones.Controls.Add(this.btnAdmProveed);
-            this.panelOpciones.Controls.Add(this.btnAdmSuperv);
-            this.panelOpciones.Controls.Add(this.btnAdmVendedor);
             this.panelOpciones.Controls.Add(this.btnAdmUsuarios);
+            this.panelOpciones.Controls.Add(this.btnAdmInicio);
             this.panelOpciones.Controls.Add(this.panelInfoUser);
             this.panelOpciones.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelOpciones.Location = new System.Drawing.Point(0, 75);
@@ -148,7 +146,7 @@
             this.btnAdmReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmReportes.IconSize = 30;
             this.btnAdmReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmReportes.Location = new System.Drawing.Point(0, 426);
+            this.btnAdmReportes.Location = new System.Drawing.Point(0, 370);
             this.btnAdmReportes.Name = "btnAdmReportes";
             this.btnAdmReportes.Size = new System.Drawing.Size(180, 56);
             this.btnAdmReportes.TabIndex = 19;
@@ -171,7 +169,7 @@
             this.btnAdmProduct.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmProduct.IconSize = 30;
             this.btnAdmProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmProduct.Location = new System.Drawing.Point(0, 370);
+            this.btnAdmProduct.Location = new System.Drawing.Point(0, 314);
             this.btnAdmProduct.Name = "btnAdmProduct";
             this.btnAdmProduct.Size = new System.Drawing.Size(180, 56);
             this.btnAdmProduct.TabIndex = 18;
@@ -194,7 +192,7 @@
             this.btnAdmProveed.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmProveed.IconSize = 30;
             this.btnAdmProveed.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmProveed.Location = new System.Drawing.Point(0, 314);
+            this.btnAdmProveed.Location = new System.Drawing.Point(0, 258);
             this.btnAdmProveed.Name = "btnAdmProveed";
             this.btnAdmProveed.Size = new System.Drawing.Size(180, 56);
             this.btnAdmProveed.TabIndex = 17;
@@ -203,52 +201,6 @@
             this.btnAdmProveed.Click += new System.EventHandler(this.btnAdmProveed_Click);
             this.btnAdmProveed.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnAdmProveed.MouseEnter += new System.EventHandler(this.btn_MouseHover);
-            // 
-            // btnAdmSuperv
-            // 
-            this.btnAdmSuperv.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAdmSuperv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdmSuperv.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdmSuperv.FlatAppearance.BorderSize = 0;
-            this.btnAdmSuperv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnAdmSuperv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmSuperv.IconChar = FontAwesome.Sharp.IconChar.UserTie;
-            this.btnAdmSuperv.IconColor = System.Drawing.Color.Black;
-            this.btnAdmSuperv.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdmSuperv.IconSize = 30;
-            this.btnAdmSuperv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmSuperv.Location = new System.Drawing.Point(0, 258);
-            this.btnAdmSuperv.Name = "btnAdmSuperv";
-            this.btnAdmSuperv.Size = new System.Drawing.Size(180, 56);
-            this.btnAdmSuperv.TabIndex = 20;
-            this.btnAdmSuperv.Text = "Supervisores";
-            this.btnAdmSuperv.UseVisualStyleBackColor = false;
-            this.btnAdmSuperv.Click += new System.EventHandler(this.btnAdmSuperv_Click);
-            this.btnAdmSuperv.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
-            this.btnAdmSuperv.MouseEnter += new System.EventHandler(this.btn_MouseHover);
-            // 
-            // btnAdmVendedor
-            // 
-            this.btnAdmVendedor.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAdmVendedor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdmVendedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAdmVendedor.FlatAppearance.BorderSize = 0;
-            this.btnAdmVendedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnAdmVendedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdmVendedor.IconChar = FontAwesome.Sharp.IconChar.UniversalAccess;
-            this.btnAdmVendedor.IconColor = System.Drawing.Color.Black;
-            this.btnAdmVendedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdmVendedor.IconSize = 30;
-            this.btnAdmVendedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmVendedor.Location = new System.Drawing.Point(0, 202);
-            this.btnAdmVendedor.Name = "btnAdmVendedor";
-            this.btnAdmVendedor.Size = new System.Drawing.Size(180, 56);
-            this.btnAdmVendedor.TabIndex = 16;
-            this.btnAdmVendedor.Text = "Vendedores";
-            this.btnAdmVendedor.UseVisualStyleBackColor = false;
-            this.btnAdmVendedor.Click += new System.EventHandler(this.btnAdmVendedor_Click);
-            this.btnAdmVendedor.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
-            this.btnAdmVendedor.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
             // btnAdmUsuarios
             // 
@@ -263,7 +215,7 @@
             this.btnAdmUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmUsuarios.IconSize = 30;
             this.btnAdmUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmUsuarios.Location = new System.Drawing.Point(0, 146);
+            this.btnAdmUsuarios.Location = new System.Drawing.Point(0, 202);
             this.btnAdmUsuarios.Name = "btnAdmUsuarios";
             this.btnAdmUsuarios.Size = new System.Drawing.Size(180, 56);
             this.btnAdmUsuarios.TabIndex = 22;
@@ -272,6 +224,29 @@
             this.btnAdmUsuarios.Click += new System.EventHandler(this.btnAdmUsuarios_Click);
             this.btnAdmUsuarios.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnAdmUsuarios.MouseEnter += new System.EventHandler(this.btn_MouseHover);
+            // 
+            // btnAdmInicio
+            // 
+            this.btnAdmInicio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAdmInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdmInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdmInicio.FlatAppearance.BorderSize = 0;
+            this.btnAdmInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnAdmInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdmInicio.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnAdmInicio.IconColor = System.Drawing.Color.Black;
+            this.btnAdmInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdmInicio.IconSize = 30;
+            this.btnAdmInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdmInicio.Location = new System.Drawing.Point(0, 146);
+            this.btnAdmInicio.Name = "btnAdmInicio";
+            this.btnAdmInicio.Size = new System.Drawing.Size(180, 56);
+            this.btnAdmInicio.TabIndex = 23;
+            this.btnAdmInicio.Text = "Inicio";
+            this.btnAdmInicio.UseVisualStyleBackColor = false;
+            this.btnAdmInicio.Click += new System.EventHandler(this.btnAdmInicio_Click);
+            this.btnAdmInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnAdmInicio.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
             // panelInfoUser
             // 
@@ -354,9 +329,7 @@
         private System.Windows.Forms.Panel panelTop;
         private System.Windows.Forms.Panel panelOpciones;
         private System.Windows.Forms.Panel panelInfoUser;
-        private FontAwesome.Sharp.IconButton btnAdmVendedor;
         private FontAwesome.Sharp.IconButton btnAdmProveed;
-        private FontAwesome.Sharp.IconButton btnAdmSuperv;
         private FontAwesome.Sharp.IconButton btnAdmReportes;
         private FontAwesome.Sharp.IconButton btnAdmProduct;
         private FontAwesome.Sharp.IconButton btnAdmLogout;
@@ -368,5 +341,6 @@
         private System.Windows.Forms.Label lblDescSistema;
         private FontAwesome.Sharp.IconButton btnAdmUsuarios;
         private System.Windows.Forms.Panel panelContenedor;
+        private FontAwesome.Sharp.IconButton btnAdmInicio;
     }
 }

@@ -17,6 +17,7 @@ namespace Presentacion
     {
         private static IconButton botonSeleccionado;
         private static UsuarioWS usuarioActual;
+        private frmSupervInicio frmSupervInicioInstance;
         private frmMenuProductos frmMenuProductosInstance;
         private frmMenuReportes frmMenuReportesInstance;
         private frmSupervDevoluciones frmSupervDevolucionesInstance;
@@ -27,6 +28,10 @@ namespace Presentacion
             usuarioActual = objUsuario;
 
             this.lblAdmUser.Text = usuarioActual.NombreUsuario;
+
+            frmSupervInicioInstance = new frmSupervInicio();
+            PresentacionUtils.AbrirForm(btnSupervInicio, frmSupervInicioInstance, panelContenedor);
+            btn_MouseDown(btnSupervInicio, null);
         }
 
         // Método para manejar el evento Hover de los botones
@@ -67,6 +72,20 @@ namespace Presentacion
                 this.Close();
 
                 PresentacionUtils.isFormClosing = false;
+            }
+        }
+
+        private void btnSupervInicio_Click(object sender, EventArgs e)
+        {
+            //Verificar si la instancia ya existe
+            if (frmSupervInicioInstance == null || frmSupervInicioInstance.IsDisposed)
+            {
+                frmSupervInicioInstance = new frmSupervInicio();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmSupervInicioInstance, panelContenedor);
+            }
+            else
+            {
+                PresentacionUtils.AbrirForm((IconButton)sender, frmSupervInicioInstance, panelContenedor);
             }
         }
 
