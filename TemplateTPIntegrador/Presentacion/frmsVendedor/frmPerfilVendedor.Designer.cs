@@ -43,6 +43,7 @@
             this.lblVendUser = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.btnVendClientes = new FontAwesome.Sharp.IconButton();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
@@ -96,6 +97,7 @@
             this.panelOpciones.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelOpciones.Controls.Add(this.btnVendLogout);
             this.panelOpciones.Controls.Add(this.btnVendReportes);
+            this.panelOpciones.Controls.Add(this.btnVendClientes);
             this.panelOpciones.Controls.Add(this.btnVendProduct);
             this.panelOpciones.Controls.Add(this.btnVendVenta);
             this.panelOpciones.Controls.Add(this.panelInfoUser);
@@ -142,7 +144,7 @@
             this.btnVendReportes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVendReportes.IconSize = 30;
             this.btnVendReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendReportes.Location = new System.Drawing.Point(0, 258);
+            this.btnVendReportes.Location = new System.Drawing.Point(0, 314);
             this.btnVendReportes.Name = "btnVendReportes";
             this.btnVendReportes.Size = new System.Drawing.Size(180, 56);
             this.btnVendReportes.TabIndex = 19;
@@ -252,6 +254,27 @@
             this.panelContenedor.Size = new System.Drawing.Size(994, 566);
             this.panelContenedor.TabIndex = 17;
             // 
+            // btnVendClientes
+            // 
+            this.btnVendClientes.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVendClientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVendClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVendClientes.FlatAppearance.BorderSize = 0;
+            this.btnVendClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnVendClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendClientes.IconChar = FontAwesome.Sharp.IconChar.UserTag;
+            this.btnVendClientes.IconColor = System.Drawing.Color.Black;
+            this.btnVendClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVendClientes.IconSize = 30;
+            this.btnVendClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVendClientes.Location = new System.Drawing.Point(0, 258);
+            this.btnVendClientes.Name = "btnVendClientes";
+            this.btnVendClientes.Size = new System.Drawing.Size(180, 56);
+            this.btnVendClientes.TabIndex = 23;
+            this.btnVendClientes.Text = "Clientes";
+            this.btnVendClientes.UseVisualStyleBackColor = false;
+            this.btnVendClientes.Click += new System.EventHandler(this.btnVendClientes_Click);
+            // 
             // frmPerfilVendedor
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -291,5 +314,6 @@
         private System.Windows.Forms.Label lblDescSistema;
         private FontAwesome.Sharp.IconButton btnVendVenta;
         private System.Windows.Forms.Panel panelContenedor;
+        private FontAwesome.Sharp.IconButton btnVendClientes;
     }
 }

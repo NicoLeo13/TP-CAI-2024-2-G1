@@ -43,21 +43,6 @@ namespace Presentacion
             //string supervisoresActivos = usuariosActivos.Where(u => u.Host == 2).Count().ToString();
             //lblProdActivos.Text = supervisoresActivos;
         }
-        
-        private void btnAltaSuperv_Click(object sender, EventArgs e)
-        {
-            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmSupervisoresAlta(), PresentacionUtils.PanelContenedor);
-        }
-
-        private void btnModSuperv_Click(object sender, EventArgs e)
-        {
-            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmSupervisoresModif(), PresentacionUtils.PanelContenedor);
-        }
-        
-        private void btnBajaSuperv_Click(object sender, EventArgs e)
-        {
-            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmSupervisoresBaja(), PresentacionUtils.PanelContenedor);
-        }
 
         private void btnAltaProducto_Click(object sender, EventArgs e)
         {

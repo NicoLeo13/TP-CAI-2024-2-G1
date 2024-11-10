@@ -30,6 +30,11 @@ namespace Presentacion
             this.lblVendUser.Text = usuarioActual.NombreUsuario;
         }
 
+        private void frmPerfilVendedor_Load(object sender, EventArgs e)
+        {
+
+        }
+
         // Método para manejar el evento Hover de los botones
         private void btn_MouseHover(object sender, EventArgs e)
         {
@@ -60,6 +65,19 @@ namespace Presentacion
             botonSeleccionado.ForeColor = Color.WhiteSmoke;
         }
 
+        private void btnVendLogout_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Está seguro que desea Cerrar Sesión?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                PresentacionUtils.isFormClosing = true;
+                this.Close();
+
+                PresentacionUtils.PanelContenedor = null;
+                PresentacionUtils.FormPrevio = null;
+                PresentacionUtils.isFormClosing = false;
+            }
+        }
+
         private void btnVendVenta_Click(object sender, EventArgs e)
         {
             // Verificar si la instancia ya existe
@@ -84,6 +102,11 @@ namespace Presentacion
 
         }
 
+        private void btnVendClientes_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnVendReportes_Click(object sender, EventArgs e)
         {
             if (frmVendReportesInstance == null || frmVendReportesInstance.IsDisposed)
@@ -94,29 +117,6 @@ namespace Presentacion
             else
                 PresentacionUtils.AbrirForm((IconButton)sender, frmVendReportesInstance, panelContenedor);
 
-        }
-
-        private void btnVendLogout_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("¿Está seguro que desea Cerrar Sesión?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                PresentacionUtils.isFormClosing = true;
-                this.Close();
-
-                PresentacionUtils.PanelContenedor = null;
-                PresentacionUtils.FormPrevio = null;
-                PresentacionUtils.isFormClosing = false;
-            }
-        }
-
-        private void frmPerfilVendedor_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

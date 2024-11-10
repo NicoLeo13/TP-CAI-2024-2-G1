@@ -19,6 +19,7 @@ namespace Presentacion
         private static UsuarioWS usuarioActual;
         private frmMenuProductos frmMenuProductosInstance;
         private frmMenuReportes frmMenuReportesInstance;
+        private frmSupervDevoluciones frmSupervDevolucionesInstance;
 
         public frmPerfilSupervisor(UsuarioWS objUsuario)
         {
@@ -85,7 +86,16 @@ namespace Presentacion
 
         private void btnSupDevoluciones_Click(object sender, EventArgs e)
         {
-
+            //Verificar si la instancia ya existe
+            if (frmSupervDevolucionesInstance == null || frmSupervDevolucionesInstance.IsDisposed)
+            {
+                frmSupervDevolucionesInstance = new frmSupervDevoluciones();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmSupervDevolucionesInstance, panelContenedor);
+            }
+            else
+            {
+                PresentacionUtils.AbrirForm((IconButton)sender, frmSupervDevolucionesInstance, panelContenedor);
+            }
         }
 
         private void btnSupReportes_Click(object sender, EventArgs e)
