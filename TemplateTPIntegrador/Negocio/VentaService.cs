@@ -23,5 +23,16 @@ namespace Negocio
             var ventaWS = new VentaWS();
             return ventaWS.ObtenerVentaPorId(idVenta);
         }
+
+        private readonly VentaBuscar _ventaBuscar;
+
+        public VentaService()
+        {
+            _ventaBuscar = new VentaBuscar();
+        }
+        public async Task<List<Venta>> BuscarVentasCliente(int clienteId, string empresa, DateTime fechaCompra)
+        {
+            return await _ventaBuscar.ObtenerVentasCliente(clienteId, empresa, fechaCompra);
+        }
     }
 }
