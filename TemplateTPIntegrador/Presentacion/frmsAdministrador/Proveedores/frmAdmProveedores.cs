@@ -25,13 +25,9 @@ namespace Presentacion
             _usuarioService = new UsuarioService();
         }
 
-        private async void frmAdmUsuarios_Load(object sender, EventArgs e)
+        private async void frmAdmProveedores_Load(object sender, EventArgs e)
         {
-            var (usuariosActivos, msg) = await _usuarioService.CargarUsuariosActivosAsync();
-            if (msg == null)
-                ActualizarUI(usuariosActivos);
-            else
-                MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
         }
 
         private void ActualizarUI(List<UsuarioWS> usuariosActivos)
@@ -55,5 +51,6 @@ namespace Presentacion
         {
             PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmProveedoresBaja(), PresentacionUtils.PanelContenedor);
         }
+
     }
 }

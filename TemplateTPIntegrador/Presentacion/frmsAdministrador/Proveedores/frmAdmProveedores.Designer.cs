@@ -187,7 +187,7 @@
             this.Name = "frmAdmProveedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Panel Proveedores - Administrador";
-            this.Load += new System.EventHandler(this.frmAdmUsuarios_Load);
+            this.Load += new System.EventHandler(this.frmAdmProveedores_Load);
             this.panelAdmvend.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -36,13 +36,13 @@
             this.panelOpciones = new System.Windows.Forms.Panel();
             this.btnSupLogout = new FontAwesome.Sharp.IconButton();
             this.btnSupReportes = new FontAwesome.Sharp.IconButton();
+            this.btnSupDevoluciones = new FontAwesome.Sharp.IconButton();
             this.btnSupProduct = new FontAwesome.Sharp.IconButton();
             this.panelInfoUser = new System.Windows.Forms.Panel();
             this.lblSupRol = new System.Windows.Forms.Label();
             this.lblAdmUser = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnSupDevoluciones = new FontAwesome.Sharp.IconButton();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
@@ -52,7 +52,7 @@
             // 
             // panelTop
             // 
-            this.panelTop.BackColor = System.Drawing.Color.LightGreen;
+            this.panelTop.BackColor = System.Drawing.Color.MediumAquamarine;
             this.panelTop.Controls.Add(this.lblDescSistema);
             this.panelTop.Controls.Add(this.lblTopTitulo);
             this.panelTop.Controls.Add(this.guna2PictureBox1);
@@ -152,6 +152,29 @@
             this.btnSupReportes.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnSupReportes.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
+            // btnSupDevoluciones
+            // 
+            this.btnSupDevoluciones.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSupDevoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSupDevoluciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSupDevoluciones.FlatAppearance.BorderSize = 0;
+            this.btnSupDevoluciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnSupDevoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSupDevoluciones.IconChar = FontAwesome.Sharp.IconChar.RotateBackward;
+            this.btnSupDevoluciones.IconColor = System.Drawing.Color.Black;
+            this.btnSupDevoluciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSupDevoluciones.IconSize = 30;
+            this.btnSupDevoluciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSupDevoluciones.Location = new System.Drawing.Point(0, 202);
+            this.btnSupDevoluciones.Name = "btnSupDevoluciones";
+            this.btnSupDevoluciones.Size = new System.Drawing.Size(180, 56);
+            this.btnSupDevoluciones.TabIndex = 22;
+            this.btnSupDevoluciones.Text = "Devoluciones";
+            this.btnSupDevoluciones.UseVisualStyleBackColor = false;
+            this.btnSupDevoluciones.Click += new System.EventHandler(this.btnSupDevoluciones_Click);
+            this.btnSupDevoluciones.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnSupDevoluciones.MouseEnter += new System.EventHandler(this.btn_MouseHover);
+            // 
             // btnSupProduct
             // 
             this.btnSupProduct.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -228,29 +251,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(994, 566);
             this.panelContenedor.TabIndex = 17;
-            // 
-            // btnSupDevoluciones
-            // 
-            this.btnSupDevoluciones.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSupDevoluciones.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSupDevoluciones.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSupDevoluciones.FlatAppearance.BorderSize = 0;
-            this.btnSupDevoluciones.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnSupDevoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSupDevoluciones.IconChar = FontAwesome.Sharp.IconChar.RotateBackward;
-            this.btnSupDevoluciones.IconColor = System.Drawing.Color.Black;
-            this.btnSupDevoluciones.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSupDevoluciones.IconSize = 30;
-            this.btnSupDevoluciones.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSupDevoluciones.Location = new System.Drawing.Point(0, 202);
-            this.btnSupDevoluciones.Name = "btnSupDevoluciones";
-            this.btnSupDevoluciones.Size = new System.Drawing.Size(180, 56);
-            this.btnSupDevoluciones.TabIndex = 22;
-            this.btnSupDevoluciones.Text = "Devoluciones";
-            this.btnSupDevoluciones.UseVisualStyleBackColor = false;
-            this.btnSupDevoluciones.Click += new System.EventHandler(this.btnSupDevoluciones_Click);
-            this.btnSupDevoluciones.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
-            this.btnSupDevoluciones.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
             // frmPerfilSupervisor
             // 

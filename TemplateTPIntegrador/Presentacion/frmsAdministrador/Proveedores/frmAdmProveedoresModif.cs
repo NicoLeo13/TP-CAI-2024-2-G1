@@ -25,10 +25,6 @@ namespace Presentacion
         }
 
 
-        private void frmAdmUsuariosModif_Load(object sender, EventArgs e)
-        {
-        }
-
 
         private void btnVolver_Click(object sender, EventArgs e)
         {

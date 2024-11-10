@@ -389,7 +389,6 @@
             this.Name = "frmAdmVendedoresAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosAlta";
-            this.Load += new System.EventHandler(this.frmAdmUsuariosAlta_Load);
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.grpDatosUser.ResumeLayout(false);

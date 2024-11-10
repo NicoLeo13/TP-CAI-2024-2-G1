@@ -41,15 +41,15 @@
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpDatosUser = new System.Windows.Forms.GroupBox();
+            this.rbInactivo = new System.Windows.Forms.RadioButton();
+            this.rbActivo = new System.Windows.Forms.RadioButton();
+            this.lblEstado = new System.Windows.Forms.Label();
             this.txtBoxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtBoxDni = new System.Windows.Forms.TextBox();
             this.txtBoxApellido = new System.Windows.Forms.TextBox();
             this.txtBoxNombre = new System.Windows.Forms.TextBox();
             this.lblCuit = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.rbActivo = new System.Windows.Forms.RadioButton();
-            this.rbInactivo = new System.Windows.Forms.RadioButton();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.grpDatosUser.SuspendLayout();
@@ -229,6 +229,48 @@
             this.grpDatosUser.TabStop = false;
             this.grpDatosUser.Text = "Datos de Usuario";
             // 
+            // rbInactivo
+            // 
+            this.rbInactivo.AutoSize = true;
+            this.rbInactivo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.rbInactivo.Enabled = false;
+            this.rbInactivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbInactivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbInactivo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.rbInactivo.Location = new System.Drawing.Point(291, 232);
+            this.rbInactivo.Name = "rbInactivo";
+            this.rbInactivo.Size = new System.Drawing.Size(69, 21);
+            this.rbInactivo.TabIndex = 56;
+            this.rbInactivo.TabStop = true;
+            this.rbInactivo.Text = "Inactivo";
+            this.rbInactivo.UseVisualStyleBackColor = false;
+            // 
+            // rbActivo
+            // 
+            this.rbActivo.AutoSize = true;
+            this.rbActivo.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.rbActivo.Enabled = false;
+            this.rbActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rbActivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbActivo.Location = new System.Drawing.Point(131, 232);
+            this.rbActivo.Name = "rbActivo";
+            this.rbActivo.Size = new System.Drawing.Size(60, 21);
+            this.rbActivo.TabIndex = 55;
+            this.rbActivo.TabStop = true;
+            this.rbActivo.Text = "Activo";
+            this.rbActivo.UseVisualStyleBackColor = false;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstado.Location = new System.Drawing.Point(7, 228);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(105, 25);
+            this.lblEstado.TabIndex = 53;
+            this.lblEstado.Text = "Estado";
+            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // txtBoxEmail
             // 
             this.txtBoxEmail.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -292,48 +334,6 @@
             this.lblCuit.Text = "CUIT";
             this.lblCuit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblEstado
-            // 
-            this.lblEstado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(7, 228);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(105, 25);
-            this.lblEstado.TabIndex = 53;
-            this.lblEstado.Text = "Estado";
-            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // rbActivo
-            // 
-            this.rbActivo.AutoSize = true;
-            this.rbActivo.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.rbActivo.Enabled = false;
-            this.rbActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbActivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbActivo.Location = new System.Drawing.Point(131, 232);
-            this.rbActivo.Name = "rbActivo";
-            this.rbActivo.Size = new System.Drawing.Size(60, 21);
-            this.rbActivo.TabIndex = 55;
-            this.rbActivo.TabStop = true;
-            this.rbActivo.Text = "Activo";
-            this.rbActivo.UseVisualStyleBackColor = false;
-            // 
-            // rbInactivo
-            // 
-            this.rbInactivo.AutoSize = true;
-            this.rbInactivo.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.rbInactivo.Enabled = false;
-            this.rbInactivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbInactivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbInactivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rbInactivo.Location = new System.Drawing.Point(291, 232);
-            this.rbInactivo.Name = "rbInactivo";
-            this.rbInactivo.Size = new System.Drawing.Size(69, 21);
-            this.rbInactivo.TabIndex = 56;
-            this.rbInactivo.TabStop = true;
-            this.rbInactivo.Text = "Inactivo";
-            this.rbInactivo.UseVisualStyleBackColor = false;
-            // 
             // frmAdmProveedoresModif
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -349,7 +349,6 @@
             this.Name = "frmAdmProveedoresModif";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosAlta";
-            this.Load += new System.EventHandler(this.frmAdmUsuariosModif_Load);
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();

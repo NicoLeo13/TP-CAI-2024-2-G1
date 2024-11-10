@@ -38,11 +38,6 @@ namespace Presentacion
 
         }
 
-        private void frmAdmUsuariosAlta_Load(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btnGuardarVendedor_Click(object sender, EventArgs e)
         {
 

@@ -24,12 +24,6 @@ namespace Presentacion
             InitializeComponent();
         }
 
-
-        private void frmAdmUsuariosBaja_Load(object sender, EventArgs e)
-        {
-        }
-
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
