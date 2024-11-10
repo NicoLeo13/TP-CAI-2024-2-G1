@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class frmAdmProductosAlta
+    partial class frmProductosAlta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmProductosAlta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductosAlta));
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.btnGuardarProducto = new FontAwesome.Sharp.IconButton();

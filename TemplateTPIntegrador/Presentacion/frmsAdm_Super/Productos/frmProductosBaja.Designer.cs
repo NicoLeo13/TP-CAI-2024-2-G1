@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class frmAdmProveedoresBaja
+    partial class frmProductosBaja
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmProveedoresBaja));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductosBaja));
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.txtBoxUsuario = new System.Windows.Forms.TextBox();
+            this.txtBoxNombreProd = new System.Windows.Forms.TextBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.lblInfoDatosVend = new System.Windows.Forms.Label();
             this.btnEliminarProvee = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpProducto = new System.Windows.Forms.GroupBox();
             this.lblContFechaAlta = new System.Windows.Forms.Label();
             this.lblFechaAlta = new System.Windows.Forms.Label();
-            this.lblContEmail = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblContCuit = new System.Windows.Forms.Label();
-            this.lblCuit = new System.Windows.Forms.Label();
+            this.lblContPrecio = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblContHost = new System.Windows.Forms.Label();
+            this.lblProvee = new System.Windows.Forms.Label();
             this.lblContEstado = new System.Windows.Forms.Label();
-            this.lblContApellido = new System.Windows.Forms.Label();
             this.lblContNombre = new System.Windows.Forms.Label();
+            this.lblContCategoria = new System.Windows.Forms.Label();
+            this.lblContStock = new System.Windows.Forms.Label();
+            this.lblStock = new System.Windows.Forms.Label();
+            this.lblContIdProd = new System.Windows.Forms.Label();
+            this.lblIdProd = new System.Windows.Forms.Label();
+            this.lblContIdProv = new System.Windows.Forms.Label();
+            this.lblIdProv = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.grpProducto.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
@@ -72,7 +78,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Proveedores - Eliminar Proveedores";
+            this.lblTop.Text = "Panel de Productos - Eliminar Productos";
             // 
             // panelSide
             // 
@@ -83,40 +89,40 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // txtBoxUsuario
+            // txtBoxNombreProd
             // 
-            this.txtBoxUsuario.Location = new System.Drawing.Point(47, 68);
-            this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(206, 25);
-            this.txtBoxUsuario.TabIndex = 24;
+            this.txtBoxNombreProd.Location = new System.Drawing.Point(47, 68);
+            this.txtBoxNombreProd.Name = "txtBoxNombreProd";
+            this.txtBoxNombreProd.Size = new System.Drawing.Size(206, 25);
+            this.txtBoxNombreProd.TabIndex = 24;
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.Location = new System.Drawing.Point(6, 94);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(105, 25);
+            this.lblCategoria.TabIndex = 9;
+            this.lblCategoria.Text = "Categoria";
+            this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblNombre
             // 
             this.lblNombre.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(7, 47);
+            this.lblNombre.Location = new System.Drawing.Point(6, 141);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(105, 25);
-            this.lblNombre.TabIndex = 9;
+            this.lblNombre.TabIndex = 12;
             this.lblNombre.Text = "Nombre";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblApellido
-            // 
-            this.lblApellido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(6, 114);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(105, 25);
-            this.lblApellido.TabIndex = 12;
-            this.lblApellido.Text = "Apellido";
-            this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblEstado
             // 
             this.lblEstado.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(552, 190);
+            this.lblEstado.Location = new System.Drawing.Point(553, 188);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(105, 25);
             this.lblEstado.TabIndex = 32;
@@ -130,9 +136,9 @@
             this.lblInfoDatosVend.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoDatosVend.Location = new System.Drawing.Point(23, 33);
             this.lblInfoDatosVend.Name = "lblInfoDatosVend";
-            this.lblInfoDatosVend.Size = new System.Drawing.Size(346, 21);
+            this.lblInfoDatosVend.Size = new System.Drawing.Size(343, 21);
             this.lblInfoDatosVend.TabIndex = 22;
-            this.lblInfoDatosVend.Text = "Ingrese el Usuario del Proveedor a dar de Baja";
+            this.lblInfoDatosVend.Text = "Ingrese el Nombre del Producto a dar de Baja";
             this.lblInfoDatosVend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnEliminarProvee
@@ -202,45 +208,51 @@
             this.btnBuscar.TabIndex = 34;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarProveedor_click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarProducto_click);
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelContenedor.Controls.Add(this.groupBox1);
+            this.panelContenedor.Controls.Add(this.grpProducto);
             this.panelContenedor.Controls.Add(this.btnBuscar);
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnEliminarProvee);
             this.panelContenedor.Controls.Add(this.lblInfoDatosVend);
-            this.panelContenedor.Controls.Add(this.txtBoxUsuario);
+            this.panelContenedor.Controls.Add(this.txtBoxNombreProd);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(976, 510);
             this.panelContenedor.TabIndex = 33;
             // 
-            // groupBox1
+            // grpProducto
             // 
-            this.groupBox1.Controls.Add(this.lblContFechaAlta);
-            this.groupBox1.Controls.Add(this.lblFechaAlta);
-            this.groupBox1.Controls.Add(this.lblContEmail);
-            this.groupBox1.Controls.Add(this.lblEmail);
-            this.groupBox1.Controls.Add(this.lblContCuit);
-            this.groupBox1.Controls.Add(this.lblCuit);
-            this.groupBox1.Controls.Add(this.lblContEstado);
-            this.groupBox1.Controls.Add(this.lblContApellido);
-            this.groupBox1.Controls.Add(this.lblContNombre);
-            this.groupBox1.Controls.Add(this.lblNombre);
-            this.groupBox1.Controls.Add(this.lblApellido);
-            this.groupBox1.Controls.Add(this.lblEstado);
-            this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(27, 131);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(920, 236);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos de Usuario";
+            this.grpProducto.Controls.Add(this.lblContIdProv);
+            this.grpProducto.Controls.Add(this.lblIdProv);
+            this.grpProducto.Controls.Add(this.lblContIdProd);
+            this.grpProducto.Controls.Add(this.lblContStock);
+            this.grpProducto.Controls.Add(this.lblStock);
+            this.grpProducto.Controls.Add(this.lblIdProd);
+            this.grpProducto.Controls.Add(this.lblContFechaAlta);
+            this.grpProducto.Controls.Add(this.lblFechaAlta);
+            this.grpProducto.Controls.Add(this.lblContPrecio);
+            this.grpProducto.Controls.Add(this.lblPrecio);
+            this.grpProducto.Controls.Add(this.lblContHost);
+            this.grpProducto.Controls.Add(this.lblProvee);
+            this.grpProducto.Controls.Add(this.lblContEstado);
+            this.grpProducto.Controls.Add(this.lblContNombre);
+            this.grpProducto.Controls.Add(this.lblContCategoria);
+            this.grpProducto.Controls.Add(this.lblCategoria);
+            this.grpProducto.Controls.Add(this.lblNombre);
+            this.grpProducto.Controls.Add(this.lblEstado);
+            this.grpProducto.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpProducto.Location = new System.Drawing.Point(27, 131);
+            this.grpProducto.Name = "grpProducto";
+            this.grpProducto.Size = new System.Drawing.Size(920, 293);
+            this.grpProducto.TabIndex = 35;
+            this.grpProducto.TabStop = false;
+            this.grpProducto.Text = "Datos de Producto";
             // 
             // lblContFechaAlta
             // 
@@ -249,7 +261,7 @@
             this.lblContFechaAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblContFechaAlta.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContFechaAlta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblContFechaAlta.Location = new System.Drawing.Point(675, 114);
+            this.lblContFechaAlta.Location = new System.Drawing.Point(676, 141);
             this.lblContFechaAlta.Name = "lblContFechaAlta";
             this.lblContFechaAlta.Size = new System.Drawing.Size(230, 25);
             this.lblContFechaAlta.TabIndex = 41;
@@ -259,58 +271,58 @@
             // 
             this.lblFechaAlta.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblFechaAlta.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaAlta.Location = new System.Drawing.Point(552, 114);
+            this.lblFechaAlta.Location = new System.Drawing.Point(553, 141);
             this.lblFechaAlta.Name = "lblFechaAlta";
             this.lblFechaAlta.Size = new System.Drawing.Size(105, 25);
             this.lblFechaAlta.TabIndex = 40;
             this.lblFechaAlta.Text = "Fecha de Alta";
             this.lblFechaAlta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblContEmail
+            // lblContPrecio
             // 
-            this.lblContEmail.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContEmail.Location = new System.Drawing.Point(130, 190);
-            this.lblContEmail.Name = "lblContEmail";
-            this.lblContEmail.Size = new System.Drawing.Size(230, 25);
-            this.lblContEmail.TabIndex = 39;
-            this.lblContEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblContPrecio.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContPrecio.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContPrecio.Location = new System.Drawing.Point(129, 188);
+            this.lblContPrecio.Name = "lblContPrecio";
+            this.lblContPrecio.Size = new System.Drawing.Size(230, 25);
+            this.lblContPrecio.TabIndex = 39;
+            this.lblContPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblEmail
+            // lblPrecio
             // 
-            this.lblEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(7, 190);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(105, 25);
-            this.lblEmail.TabIndex = 38;
-            this.lblEmail.Text = "Email";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPrecio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(6, 188);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(105, 25);
+            this.lblPrecio.TabIndex = 38;
+            this.lblPrecio.Text = "Precio";
+            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblContCuit
+            // lblContHost
             // 
-            this.lblContCuit.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContCuit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContCuit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContCuit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContCuit.Location = new System.Drawing.Point(674, 47);
-            this.lblContCuit.Name = "lblContCuit";
-            this.lblContCuit.Size = new System.Drawing.Size(230, 25);
-            this.lblContCuit.TabIndex = 37;
-            this.lblContCuit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblContHost.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContHost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContHost.Location = new System.Drawing.Point(675, 94);
+            this.lblContHost.Name = "lblContHost";
+            this.lblContHost.Size = new System.Drawing.Size(230, 25);
+            this.lblContHost.TabIndex = 37;
+            this.lblContHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblCuit
+            // lblProvee
             // 
-            this.lblCuit.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCuit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuit.Location = new System.Drawing.Point(552, 47);
-            this.lblCuit.Name = "lblCuit";
-            this.lblCuit.Size = new System.Drawing.Size(105, 25);
-            this.lblCuit.TabIndex = 36;
-            this.lblCuit.Text = "CUIT";
-            this.lblCuit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblProvee.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblProvee.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProvee.Location = new System.Drawing.Point(553, 94);
+            this.lblProvee.Name = "lblProvee";
+            this.lblProvee.Size = new System.Drawing.Size(105, 25);
+            this.lblProvee.TabIndex = 36;
+            this.lblProvee.Text = "Proveedor";
+            this.lblProvee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblContEstado
             // 
@@ -318,23 +330,11 @@
             this.lblContEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblContEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblContEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContEstado.Location = new System.Drawing.Point(675, 190);
+            this.lblContEstado.Location = new System.Drawing.Point(676, 188);
             this.lblContEstado.Name = "lblContEstado";
             this.lblContEstado.Size = new System.Drawing.Size(230, 25);
             this.lblContEstado.TabIndex = 35;
             this.lblContEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContApellido
-            // 
-            this.lblContApellido.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContApellido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContApellido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContApellido.Location = new System.Drawing.Point(129, 114);
-            this.lblContApellido.Name = "lblContApellido";
-            this.lblContApellido.Size = new System.Drawing.Size(230, 25);
-            this.lblContApellido.TabIndex = 34;
-            this.lblContApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblContNombre
             // 
@@ -342,13 +342,94 @@
             this.lblContNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblContNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblContNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContNombre.Location = new System.Drawing.Point(129, 47);
+            this.lblContNombre.Location = new System.Drawing.Point(129, 141);
             this.lblContNombre.Name = "lblContNombre";
             this.lblContNombre.Size = new System.Drawing.Size(230, 25);
-            this.lblContNombre.TabIndex = 33;
+            this.lblContNombre.TabIndex = 34;
             this.lblContNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // frmAdmProveedoresBaja
+            // lblContCategoria
+            // 
+            this.lblContCategoria.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContCategoria.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContCategoria.Location = new System.Drawing.Point(129, 94);
+            this.lblContCategoria.Name = "lblContCategoria";
+            this.lblContCategoria.Size = new System.Drawing.Size(230, 25);
+            this.lblContCategoria.TabIndex = 33;
+            this.lblContCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContStock
+            // 
+            this.lblContStock.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContStock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContStock.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContStock.Location = new System.Drawing.Point(129, 235);
+            this.lblContStock.Name = "lblContStock";
+            this.lblContStock.Size = new System.Drawing.Size(230, 25);
+            this.lblContStock.TabIndex = 43;
+            this.lblContStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblStock
+            // 
+            this.lblStock.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblStock.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStock.Location = new System.Drawing.Point(6, 235);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(105, 25);
+            this.lblStock.TabIndex = 42;
+            this.lblStock.Text = "Stock";
+            this.lblStock.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContIdProd
+            // 
+            this.lblContIdProd.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContIdProd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContIdProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContIdProd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContIdProd.Location = new System.Drawing.Point(129, 47);
+            this.lblContIdProd.Name = "lblContIdProd";
+            this.lblContIdProd.Size = new System.Drawing.Size(230, 25);
+            this.lblContIdProd.TabIndex = 45;
+            this.lblContIdProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblIdProd
+            // 
+            this.lblIdProd.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIdProd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdProd.Location = new System.Drawing.Point(6, 47);
+            this.lblIdProd.Name = "lblIdProd";
+            this.lblIdProd.Size = new System.Drawing.Size(105, 25);
+            this.lblIdProd.TabIndex = 44;
+            this.lblIdProd.Text = "ID Producto";
+            this.lblIdProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContIdProv
+            // 
+            this.lblContIdProv.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContIdProv.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContIdProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContIdProv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContIdProv.Location = new System.Drawing.Point(675, 47);
+            this.lblContIdProv.Name = "lblContIdProv";
+            this.lblContIdProv.Size = new System.Drawing.Size(230, 25);
+            this.lblContIdProv.TabIndex = 47;
+            this.lblContIdProv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblIdProv
+            // 
+            this.lblIdProv.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIdProv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdProv.Location = new System.Drawing.Point(553, 47);
+            this.lblIdProv.Name = "lblIdProv";
+            this.lblIdProv.Size = new System.Drawing.Size(105, 25);
+            this.lblIdProv.TabIndex = 46;
+            this.lblIdProv.Text = "ID Proveedor";
+            this.lblIdProv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // frmProductosBaja
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -360,13 +441,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmAdmProveedoresBaja";
+            this.Name = "frmProductosBaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosAlta";
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
+            this.grpProducto.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -375,24 +456,30 @@
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.TextBox txtBoxUsuario;
+        private System.Windows.Forms.TextBox txtBoxNombreProd;
+        private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblInfoDatosVend;
         private FontAwesome.Sharp.IconButton btnEliminarProvee;
         private FontAwesome.Sharp.IconButton btnVolver;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpProducto;
         private System.Windows.Forms.Label lblContEstado;
-        private System.Windows.Forms.Label lblContApellido;
         private System.Windows.Forms.Label lblContNombre;
+        private System.Windows.Forms.Label lblContCategoria;
         private System.Windows.Forms.Label lblContFechaAlta;
         private System.Windows.Forms.Label lblFechaAlta;
-        private System.Windows.Forms.Label lblContEmail;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblContCuit;
-        private System.Windows.Forms.Label lblCuit;
+        private System.Windows.Forms.Label lblContPrecio;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblContHost;
+        private System.Windows.Forms.Label lblProvee;
+        private System.Windows.Forms.Label lblContStock;
+        private System.Windows.Forms.Label lblStock;
+        private System.Windows.Forms.Label lblContIdProv;
+        private System.Windows.Forms.Label lblIdProv;
+        private System.Windows.Forms.Label lblContIdProd;
+        private System.Windows.Forms.Label lblIdProd;
     }
 }

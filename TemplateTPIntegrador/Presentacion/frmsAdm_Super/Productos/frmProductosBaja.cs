@@ -15,16 +15,14 @@ using Persistencia;
 
 namespace Presentacion
 {
-    public partial class frmAdmProveedoresBaja : Form
+    public partial class frmProductosBaja : Form
     {
         public UsuarioWS usuario;
         
-        public frmAdmProveedoresBaja()
+        public frmProductosBaja()
         {
             InitializeComponent();
         }
-
-
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -43,21 +41,21 @@ namespace Presentacion
 
         public void LimpiarCamposBaja()
         {
-            txtBoxUsuario.Text = "";
+            txtBoxNombreProd.Text = "";
+            lblContCategoria.Text = "";
             lblContNombre.Text = "";
-            lblContApellido.Text = "";
-            lblContEmail.Text = "";
-            lblContCuit.Text = "";
+            lblContPrecio.Text = "";
+            lblContHost.Text = "";
             lblContFechaAlta.Text = "";
             lblContEstado.Text = "";
         }
 
-        private void btnBuscarProveedor_click(object sender, EventArgs e)
+        private void btnEliminarProveedor_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnEliminarProveedor_Click(object sender, EventArgs e)
+        private void btnBuscarProducto_click(object sender, EventArgs e)
         {
 
         }

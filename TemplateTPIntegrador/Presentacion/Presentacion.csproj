@@ -65,6 +65,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmsAdm_Super\Productos\frmProductosBaja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdm_Super\Productos\frmProductosBaja.Designer.cs">
+      <DependentUpon>frmProductosBaja.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmsAdm_Super\Productos\frmMenuProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,11 +125,17 @@
     <Compile Include="frmsAdministrador\Proveedores\frmAdmProveedoresModif.Designer.cs">
       <DependentUpon>frmAdmProveedoresModif.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsAdm_Super\Productos\frmAdmProductosAlta.cs">
+    <Compile Include="frmsAdm_Super\Productos\frmProductosAlta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsAdm_Super\Productos\frmAdmProductosAlta.Designer.cs">
-      <DependentUpon>frmAdmProductosAlta.cs</DependentUpon>
+    <Compile Include="frmsAdm_Super\Productos\frmProductosAlta.Designer.cs">
+      <DependentUpon>frmProductosAlta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsAdm_Super\Productos\frmProductosModif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdm_Super\Productos\frmProductosModif.Designer.cs">
+      <DependentUpon>frmProductosModif.cs</DependentUpon>
     </Compile>
     <Compile Include="frmsSupervisor\frmPerfilSupervisor.cs">
       <SubType>Form</SubType>
@@ -166,12 +178,6 @@
     </Compile>
     <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosBaja.Designer.cs">
       <DependentUpon>frmAdmUsuariosBaja.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmsAdm_Super\Productos\frmAltaProducto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmsAdm_Super\Productos\frmAltaProducto.Designer.cs">
-      <DependentUpon>frmAltaProducto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuarios.cs">
       <SubType>Form</SubType>
@@ -243,6 +249,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\PresentacionUtils.cs" />
     <Compile Include="Utils\PresentValidaciones.cs" />
+    <EmbeddedResource Include="frmsAdm_Super\Productos\frmProductosBaja.resx">
+      <DependentUpon>frmProductosBaja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmsAdm_Super\Productos\frmMenuProductos.resx">
       <DependentUpon>frmMenuProductos.cs</DependentUpon>
     </EmbeddedResource>
@@ -270,8 +279,11 @@
     <EmbeddedResource Include="frmsAdministrador\Proveedores\frmAdmProveedoresModif.resx">
       <DependentUpon>frmAdmProveedoresModif.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdm_Super\Productos\frmAdmProductosAlta.resx">
-      <DependentUpon>frmAdmProductosAlta.cs</DependentUpon>
+    <EmbeddedResource Include="frmsAdm_Super\Productos\frmProductosAlta.resx">
+      <DependentUpon>frmProductosAlta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdm_Super\Productos\frmProductosModif.resx">
+      <DependentUpon>frmProductosModif.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsSupervisor\frmPerfilSupervisor.resx">
       <DependentUpon>frmPerfilSupervisor.cs</DependentUpon>
@@ -293,9 +305,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmsAdministrador\Usuarios\frmAdmUsuariosBaja.resx">
       <DependentUpon>frmAdmUsuariosBaja.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmsAdm_Super\Productos\frmAltaProducto.resx">
-      <DependentUpon>frmAltaProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsAdministrador\Usuarios\frmAdmUsuarios.resx">
       <DependentUpon>frmAdmUsuarios.cs</DependentUpon>

@@ -61,17 +61,17 @@ namespace Presentacion
 
         private void btnAltaProducto_Click(object sender, EventArgs e)
         {
-            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmProductosAlta(usuarioActual), PresentacionUtils.PanelContenedor);
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmProductosAlta(usuarioActual), PresentacionUtils.PanelContenedor);
         }
 
         private void btnModProducto_Click(object sender, EventArgs e)
         {
-
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmProductosModif(), PresentacionUtils.PanelContenedor);
         }
 
         private void btnBajaProd_Click(object sender, EventArgs e)
         {
-
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmProductosBaja(), PresentacionUtils.PanelContenedor);
         }
 
     }

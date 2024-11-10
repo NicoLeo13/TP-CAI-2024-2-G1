@@ -14,11 +14,11 @@ using Datos;
 
 namespace Presentacion
 {
-    public partial class frmAdmProductosAlta : Form
+    public partial class frmProductosAlta : Form
     {
         private static UsuarioWS usuarioActual;
 
-        public frmAdmProductosAlta(UsuarioWS objUsuario)
+        public frmProductosAlta(UsuarioWS objUsuario)
         {
             InitializeComponent();
             usuarioActual = objUsuario;
