@@ -18,6 +18,7 @@ namespace Presentacion
     public partial class frmAdmUsuarios : Form
     {
         private readonly UsuarioService _usuarioService;
+        private List<UsuarioWS> _usuariosActivos;
 
         public frmAdmUsuarios()
         {
@@ -29,7 +30,10 @@ namespace Presentacion
         {
             var (usuariosActivos, msg) = await _usuarioService.CargarUsuariosActivosAsync();
             if (msg == null)
+            {
                 ActualizarUI(usuariosActivos);
+                _usuariosActivos = usuariosActivos;
+            }
             else
                 MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
         }
@@ -43,7 +47,7 @@ namespace Presentacion
 
         private void btnListarUsuarios_Click(object sender, EventArgs e)
         {
-
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuariosListar(_usuarioService.CargarUsuariosActivosAsync().ContinueWith(t => t.Result.usuariosActivos)), PresentacionUtils.PanelContenedor);
         }
 
         private void btnAltaUsuario_Click(object sender, EventArgs e)
