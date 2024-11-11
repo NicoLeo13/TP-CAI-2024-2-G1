@@ -32,24 +32,25 @@
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.txtBoxUsuario = new System.Windows.Forms.TextBox();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblApellido = new System.Windows.Forms.Label();
+            this.txtBoxCUITProveedor = new System.Windows.Forms.TextBox();
+            this.lblNombreProveedorRellenar = new System.Windows.Forms.Label();
+            this.lblApellidoProveedorRellenar = new System.Windows.Forms.Label();
             this.lblInfoDatosUser = new System.Windows.Forms.Label();
             this.btnModificarProvee = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.btnBuscarProveedor = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpDatosUser = new System.Windows.Forms.GroupBox();
-            this.rbInactivo = new System.Windows.Forms.RadioButton();
-            this.rbActivo = new System.Windows.Forms.RadioButton();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtBoxDni = new System.Windows.Forms.TextBox();
-            this.txtBoxApellido = new System.Windows.Forms.TextBox();
-            this.txtBoxNombre = new System.Windows.Forms.TextBox();
-            this.lblCuit = new System.Windows.Forms.Label();
+            this.txtBoxFechaBajaProveedorRellenar = new System.Windows.Forms.TextBox();
+            this.txtBoxFechaAltaProveedorRellenar = new System.Windows.Forms.TextBox();
+            this.lblFechaBajaProveedorRellenar = new System.Windows.Forms.Label();
+            this.lblFechaAltaProveedorRellenar = new System.Windows.Forms.Label();
+            this.txtBoxEmailProveedorRellenar = new System.Windows.Forms.TextBox();
+            this.lblEmailProveedorRellenar = new System.Windows.Forms.Label();
+            this.txtBoxCuitProveedorRellenar = new System.Windows.Forms.TextBox();
+            this.txtBoxApellidoProveedorRellenar = new System.Windows.Forms.TextBox();
+            this.txtBoxNombreProveedorRellenar = new System.Windows.Forms.TextBox();
+            this.lblCuitProveedorRellenar = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.grpDatosUser.SuspendLayout();
@@ -82,34 +83,34 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // txtBoxUsuario
+            // txtBoxCUITProveedor
             // 
-            this.txtBoxUsuario.Location = new System.Drawing.Point(47, 68);
-            this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(206, 25);
-            this.txtBoxUsuario.TabIndex = 24;
+            this.txtBoxCUITProveedor.Location = new System.Drawing.Point(47, 68);
+            this.txtBoxCUITProveedor.Name = "txtBoxCUITProveedor";
+            this.txtBoxCUITProveedor.Size = new System.Drawing.Size(206, 25);
+            this.txtBoxCUITProveedor.TabIndex = 24;
             // 
-            // lblNombre
+            // lblNombreProveedorRellenar
             // 
-            this.lblNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(7, 38);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(105, 25);
-            this.lblNombre.TabIndex = 9;
-            this.lblNombre.Text = "Nombre";
-            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNombreProveedorRellenar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNombreProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreProveedorRellenar.Location = new System.Drawing.Point(7, 38);
+            this.lblNombreProveedorRellenar.Name = "lblNombreProveedorRellenar";
+            this.lblNombreProveedorRellenar.Size = new System.Drawing.Size(105, 25);
+            this.lblNombreProveedorRellenar.TabIndex = 9;
+            this.lblNombreProveedorRellenar.Text = "Nombre";
+            this.lblNombreProveedorRellenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblApellido
+            // lblApellidoProveedorRellenar
             // 
-            this.lblApellido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(7, 85);
-            this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(105, 25);
-            this.lblApellido.TabIndex = 12;
-            this.lblApellido.Text = "Apellido";
-            this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblApellidoProveedorRellenar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblApellidoProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellidoProveedorRellenar.Location = new System.Drawing.Point(7, 85);
+            this.lblApellidoProveedorRellenar.Name = "lblApellidoProveedorRellenar";
+            this.lblApellidoProveedorRellenar.Size = new System.Drawing.Size(105, 25);
+            this.lblApellidoProveedorRellenar.TabIndex = 12;
+            this.lblApellidoProveedorRellenar.Text = "Apellido";
+            this.lblApellidoProveedorRellenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblInfoDatosUser
             // 
@@ -169,39 +170,39 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // btnBuscar
+            // btnBuscarProveedor
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscar.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 30;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(279, 62);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(133, 34);
-            this.btnBuscar.TabIndex = 34;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarProveedor_click);
+            this.btnBuscarProveedor.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarProveedor.FlatAppearance.BorderSize = 0;
+            this.btnBuscarProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnBuscarProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnBuscarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProveedor.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarProveedor.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBuscarProveedor.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscarProveedor.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBuscarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarProveedor.IconSize = 30;
+            this.btnBuscarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarProveedor.Location = new System.Drawing.Point(279, 62);
+            this.btnBuscarProveedor.Name = "btnBuscarProveedor";
+            this.btnBuscarProveedor.Size = new System.Drawing.Size(133, 34);
+            this.btnBuscarProveedor.TabIndex = 34;
+            this.btnBuscarProveedor.Text = "Buscar";
+            this.btnBuscarProveedor.UseVisualStyleBackColor = false;
+            this.btnBuscarProveedor.Click += new System.EventHandler(this.btnBuscarProveedor_Click);
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelContenedor.Controls.Add(this.grpDatosUser);
-            this.panelContenedor.Controls.Add(this.btnBuscar);
+            this.panelContenedor.Controls.Add(this.btnBuscarProveedor);
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnModificarProvee);
             this.panelContenedor.Controls.Add(this.lblInfoDatosUser);
-            this.panelContenedor.Controls.Add(this.txtBoxUsuario);
+            this.panelContenedor.Controls.Add(this.txtBoxCUITProveedor);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -210,129 +211,130 @@
             // 
             // grpDatosUser
             // 
-            this.grpDatosUser.Controls.Add(this.rbInactivo);
-            this.grpDatosUser.Controls.Add(this.rbActivo);
-            this.grpDatosUser.Controls.Add(this.lblEstado);
-            this.grpDatosUser.Controls.Add(this.txtBoxEmail);
-            this.grpDatosUser.Controls.Add(this.lblEmail);
-            this.grpDatosUser.Controls.Add(this.txtBoxDni);
-            this.grpDatosUser.Controls.Add(this.txtBoxApellido);
-            this.grpDatosUser.Controls.Add(this.txtBoxNombre);
-            this.grpDatosUser.Controls.Add(this.lblCuit);
-            this.grpDatosUser.Controls.Add(this.lblNombre);
-            this.grpDatosUser.Controls.Add(this.lblApellido);
+            this.grpDatosUser.Controls.Add(this.txtBoxFechaBajaProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.txtBoxFechaAltaProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.lblFechaBajaProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.lblFechaAltaProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.txtBoxEmailProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.lblEmailProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.txtBoxCuitProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.txtBoxApellidoProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.txtBoxNombreProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.lblCuitProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.lblNombreProveedorRellenar);
+            this.grpDatosUser.Controls.Add(this.lblApellidoProveedorRellenar);
             this.grpDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDatosUser.Location = new System.Drawing.Point(528, 33);
             this.grpDatosUser.Name = "grpDatosUser";
-            this.grpDatosUser.Size = new System.Drawing.Size(395, 293);
+            this.grpDatosUser.Size = new System.Drawing.Size(395, 345);
             this.grpDatosUser.TabIndex = 35;
             this.grpDatosUser.TabStop = false;
             this.grpDatosUser.Text = "Datos de Proveedor";
             // 
-            // rbInactivo
+            // txtBoxFechaBajaProveedorRellenar
             // 
-            this.rbInactivo.AutoSize = true;
-            this.rbInactivo.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.rbInactivo.Enabled = false;
-            this.rbInactivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbInactivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbInactivo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.rbInactivo.Location = new System.Drawing.Point(291, 232);
-            this.rbInactivo.Name = "rbInactivo";
-            this.rbInactivo.Size = new System.Drawing.Size(69, 21);
-            this.rbInactivo.TabIndex = 56;
-            this.rbInactivo.TabStop = true;
-            this.rbInactivo.Text = "Inactivo";
-            this.rbInactivo.UseVisualStyleBackColor = false;
+            this.txtBoxFechaBajaProveedorRellenar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxFechaBajaProveedorRellenar.Enabled = false;
+            this.txtBoxFechaBajaProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxFechaBajaProveedorRellenar.Location = new System.Drawing.Point(130, 282);
+            this.txtBoxFechaBajaProveedorRellenar.Name = "txtBoxFechaBajaProveedorRellenar";
+            this.txtBoxFechaBajaProveedorRellenar.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxFechaBajaProveedorRellenar.TabIndex = 56;
             // 
-            // rbActivo
+            // txtBoxFechaAltaProveedorRellenar
             // 
-            this.rbActivo.AutoSize = true;
-            this.rbActivo.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.rbActivo.Enabled = false;
-            this.rbActivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rbActivo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbActivo.Location = new System.Drawing.Point(131, 232);
-            this.rbActivo.Name = "rbActivo";
-            this.rbActivo.Size = new System.Drawing.Size(60, 21);
-            this.rbActivo.TabIndex = 55;
-            this.rbActivo.TabStop = true;
-            this.rbActivo.Text = "Activo";
-            this.rbActivo.UseVisualStyleBackColor = false;
+            this.txtBoxFechaAltaProveedorRellenar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxFechaAltaProveedorRellenar.Enabled = false;
+            this.txtBoxFechaAltaProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxFechaAltaProveedorRellenar.Location = new System.Drawing.Point(130, 233);
+            this.txtBoxFechaAltaProveedorRellenar.Name = "txtBoxFechaAltaProveedorRellenar";
+            this.txtBoxFechaAltaProveedorRellenar.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxFechaAltaProveedorRellenar.TabIndex = 55;
             // 
-            // lblEstado
+            // lblFechaBajaProveedorRellenar
             // 
-            this.lblEstado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(7, 228);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(105, 25);
-            this.lblEstado.TabIndex = 53;
-            this.lblEstado.Text = "Estado";
-            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblFechaBajaProveedorRellenar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblFechaBajaProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaBajaProveedorRellenar.Location = new System.Drawing.Point(7, 281);
+            this.lblFechaBajaProveedorRellenar.Name = "lblFechaBajaProveedorRellenar";
+            this.lblFechaBajaProveedorRellenar.Size = new System.Drawing.Size(105, 25);
+            this.lblFechaBajaProveedorRellenar.TabIndex = 54;
+            this.lblFechaBajaProveedorRellenar.Text = "Fecha de baja";
+            this.lblFechaBajaProveedorRellenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtBoxEmail
+            // lblFechaAltaProveedorRellenar
             // 
-            this.txtBoxEmail.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxEmail.Enabled = false;
-            this.txtBoxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEmail.Location = new System.Drawing.Point(130, 134);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxEmail.TabIndex = 52;
+            this.lblFechaAltaProveedorRellenar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblFechaAltaProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaAltaProveedorRellenar.Location = new System.Drawing.Point(7, 232);
+            this.lblFechaAltaProveedorRellenar.Name = "lblFechaAltaProveedorRellenar";
+            this.lblFechaAltaProveedorRellenar.Size = new System.Drawing.Size(105, 25);
+            this.lblFechaAltaProveedorRellenar.TabIndex = 53;
+            this.lblFechaAltaProveedorRellenar.Text = "Fecha de alta";
+            this.lblFechaAltaProveedorRellenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblEmail
+            // txtBoxEmailProveedorRellenar
             // 
-            this.lblEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(7, 133);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(105, 25);
-            this.lblEmail.TabIndex = 51;
-            this.lblEmail.Text = "Email";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtBoxEmailProveedorRellenar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxEmailProveedorRellenar.Enabled = false;
+            this.txtBoxEmailProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxEmailProveedorRellenar.Location = new System.Drawing.Point(130, 134);
+            this.txtBoxEmailProveedorRellenar.Name = "txtBoxEmailProveedorRellenar";
+            this.txtBoxEmailProveedorRellenar.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxEmailProveedorRellenar.TabIndex = 52;
             // 
-            // txtBoxDni
+            // lblEmailProveedorRellenar
             // 
-            this.txtBoxDni.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxDni.Enabled = false;
-            this.txtBoxDni.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxDni.Location = new System.Drawing.Point(130, 182);
-            this.txtBoxDni.Name = "txtBoxDni";
-            this.txtBoxDni.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxDni.TabIndex = 43;
+            this.lblEmailProveedorRellenar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblEmailProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailProveedorRellenar.Location = new System.Drawing.Point(7, 133);
+            this.lblEmailProveedorRellenar.Name = "lblEmailProveedorRellenar";
+            this.lblEmailProveedorRellenar.Size = new System.Drawing.Size(105, 25);
+            this.lblEmailProveedorRellenar.TabIndex = 51;
+            this.lblEmailProveedorRellenar.Text = "Email";
+            this.lblEmailProveedorRellenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtBoxApellido
+            // txtBoxCuitProveedorRellenar
             // 
-            this.txtBoxApellido.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxApellido.Enabled = false;
-            this.txtBoxApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxApellido.Location = new System.Drawing.Point(131, 86);
-            this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxApellido.TabIndex = 42;
+            this.txtBoxCuitProveedorRellenar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxCuitProveedorRellenar.Enabled = false;
+            this.txtBoxCuitProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxCuitProveedorRellenar.Location = new System.Drawing.Point(130, 182);
+            this.txtBoxCuitProveedorRellenar.Name = "txtBoxCuitProveedorRellenar";
+            this.txtBoxCuitProveedorRellenar.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxCuitProveedorRellenar.TabIndex = 43;
             // 
-            // txtBoxNombre
+            // txtBoxApellidoProveedorRellenar
             // 
-            this.txtBoxNombre.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxNombre.Enabled = false;
-            this.txtBoxNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNombre.Location = new System.Drawing.Point(130, 38);
-            this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxNombre.TabIndex = 2;
-            this.txtBoxNombre.TextChanged += new System.EventHandler(this.txtBoxNombre_TextChanged);
+            this.txtBoxApellidoProveedorRellenar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxApellidoProveedorRellenar.Enabled = false;
+            this.txtBoxApellidoProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxApellidoProveedorRellenar.Location = new System.Drawing.Point(131, 86);
+            this.txtBoxApellidoProveedorRellenar.Name = "txtBoxApellidoProveedorRellenar";
+            this.txtBoxApellidoProveedorRellenar.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxApellidoProveedorRellenar.TabIndex = 42;
             // 
-            // lblCuit
+            // txtBoxNombreProveedorRellenar
             // 
-            this.lblCuit.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCuit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuit.Location = new System.Drawing.Point(7, 181);
-            this.lblCuit.Name = "lblCuit";
-            this.lblCuit.Size = new System.Drawing.Size(105, 25);
-            this.lblCuit.TabIndex = 38;
-            this.lblCuit.Text = "CUIT";
-            this.lblCuit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtBoxNombreProveedorRellenar.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxNombreProveedorRellenar.Enabled = false;
+            this.txtBoxNombreProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNombreProveedorRellenar.Location = new System.Drawing.Point(130, 38);
+            this.txtBoxNombreProveedorRellenar.Name = "txtBoxNombreProveedorRellenar";
+            this.txtBoxNombreProveedorRellenar.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxNombreProveedorRellenar.TabIndex = 2;
+            this.txtBoxNombreProveedorRellenar.TextChanged += new System.EventHandler(this.txtBoxNombre_TextChanged);
+            // 
+            // lblCuitProveedorRellenar
+            // 
+            this.lblCuitProveedorRellenar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCuitProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuitProveedorRellenar.Location = new System.Drawing.Point(7, 181);
+            this.lblCuitProveedorRellenar.Name = "lblCuitProveedorRellenar";
+            this.lblCuitProveedorRellenar.Size = new System.Drawing.Size(105, 25);
+            this.lblCuitProveedorRellenar.TabIndex = 38;
+            this.lblCuitProveedorRellenar.Text = "CUIT";
+            this.lblCuitProveedorRellenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmAdmProveedoresModif
             // 
@@ -362,23 +364,24 @@
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.TextBox txtBoxUsuario;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblApellido;
+        private System.Windows.Forms.TextBox txtBoxCUITProveedor;
+        private System.Windows.Forms.Label lblNombreProveedorRellenar;
+        private System.Windows.Forms.Label lblApellidoProveedorRellenar;
         private System.Windows.Forms.Label lblInfoDatosUser;
         private FontAwesome.Sharp.IconButton btnModificarProvee;
         private FontAwesome.Sharp.IconButton btnVolver;
-        private FontAwesome.Sharp.IconButton btnBuscar;
+        private FontAwesome.Sharp.IconButton btnBuscarProveedor;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.GroupBox grpDatosUser;
-        private System.Windows.Forms.Label lblCuit;
-        private System.Windows.Forms.TextBox txtBoxDni;
-        private System.Windows.Forms.TextBox txtBoxApellido;
-        private System.Windows.Forms.TextBox txtBoxNombre;
-        private System.Windows.Forms.TextBox txtBoxEmail;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.RadioButton rbInactivo;
-        private System.Windows.Forms.RadioButton rbActivo;
+        private System.Windows.Forms.Label lblCuitProveedorRellenar;
+        private System.Windows.Forms.TextBox txtBoxCuitProveedorRellenar;
+        private System.Windows.Forms.TextBox txtBoxApellidoProveedorRellenar;
+        private System.Windows.Forms.TextBox txtBoxNombreProveedorRellenar;
+        private System.Windows.Forms.TextBox txtBoxEmailProveedorRellenar;
+        private System.Windows.Forms.Label lblEmailProveedorRellenar;
+        private System.Windows.Forms.TextBox txtBoxFechaBajaProveedorRellenar;
+        private System.Windows.Forms.TextBox txtBoxFechaAltaProveedorRellenar;
+        private System.Windows.Forms.Label lblFechaBajaProveedorRellenar;
+        private System.Windows.Forms.Label lblFechaAltaProveedorRellenar;
     }
 }
