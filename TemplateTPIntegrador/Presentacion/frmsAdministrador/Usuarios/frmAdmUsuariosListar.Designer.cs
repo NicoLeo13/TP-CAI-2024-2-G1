@@ -36,15 +36,15 @@
             this.lblTop = new System.Windows.Forms.Label();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.panelSide = new System.Windows.Forms.Panel();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.lblUsuariosTotales = new System.Windows.Forms.Label();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Host = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSide = new System.Windows.Forms.Panel();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -104,14 +104,16 @@
             this.panelContenedor.Size = new System.Drawing.Size(976, 510);
             this.panelContenedor.TabIndex = 33;
             // 
-            // panelSide
+            // lblUsuariosTotales
             // 
-            this.panelSide.BackColor = System.Drawing.Color.Teal;
-            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSide.Location = new System.Drawing.Point(0, 0);
-            this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(18, 566);
-            this.panelSide.TabIndex = 34;
+            this.lblUsuariosTotales.AutoSize = true;
+            this.lblUsuariosTotales.BackColor = System.Drawing.Color.LightGray;
+            this.lblUsuariosTotales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuariosTotales.Location = new System.Drawing.Point(784, 434);
+            this.lblUsuariosTotales.Name = "lblUsuariosTotales";
+            this.lblUsuariosTotales.Size = new System.Drawing.Size(52, 21);
+            this.lblUsuariosTotales.TabIndex = 33;
+            this.lblUsuariosTotales.Text = "Total:";
             // 
             // dgvUsuarios
             // 
@@ -121,7 +123,7 @@
             this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -150,16 +152,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(966, 401);
             this.dgvUsuarios.TabIndex = 32;
             this.dgvUsuarios.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsuarios_ColumnHeaderMouseClick);
-            // 
-            // lblUsuariosTotales
-            // 
-            this.lblUsuariosTotales.AutoSize = true;
-            this.lblUsuariosTotales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuariosTotales.Location = new System.Drawing.Point(784, 434);
-            this.lblUsuariosTotales.Name = "lblUsuariosTotales";
-            this.lblUsuariosTotales.Size = new System.Drawing.Size(52, 21);
-            this.lblUsuariosTotales.TabIndex = 33;
-            this.lblUsuariosTotales.Text = "Total:";
             // 
             // ID
             // 
@@ -213,6 +205,15 @@
             this.Host.Name = "Host";
             this.Host.ReadOnly = true;
             this.Host.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // panelSide
+            // 
+            this.panelSide.BackColor = System.Drawing.Color.Teal;
+            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSide.Location = new System.Drawing.Point(0, 0);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(18, 566);
+            this.panelSide.TabIndex = 34;
             // 
             // frmAdmUsuariosListar
             // 
