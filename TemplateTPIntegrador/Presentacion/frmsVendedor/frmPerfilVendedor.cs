@@ -22,6 +22,7 @@ namespace Presentacion
         private frmVendNuevaVenta frmVendVentaInstance;
         private frmVendProductos frmVendProductosInstance;
         private frmVendReportes frmVendReportesInstance;
+        private frmVendClientes frmVendClientesInstance;
 
         public frmPerfilVendedor(UsuarioWS objUsuario)
         {
@@ -121,6 +122,14 @@ namespace Presentacion
 
         private void btnVendClientes_Click(object sender, EventArgs e)
         {
+            if (frmVendClientesInstance == null || frmVendClientesInstance.IsDisposed)
+            {
+                frmVendClientesInstance = new frmVendClientes();
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendClientesInstance, panelContenedor);
+            }
+            else
+                PresentacionUtils.AbrirForm((IconButton)sender, frmVendClientesInstance, panelContenedor);
+
 
         }
 

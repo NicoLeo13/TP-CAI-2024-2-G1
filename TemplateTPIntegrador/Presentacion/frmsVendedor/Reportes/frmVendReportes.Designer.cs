@@ -52,6 +52,7 @@
             this.lblUnitarioDetalle = new System.Windows.Forms.Label();
             this.lblTotalDetalle = new System.Windows.Forms.Label();
             this.BoxDetalle = new System.Windows.Forms.ListBox();
+            this.btnVentaComprob = new FontAwesome.Sharp.IconButton();
             this.panelAdmUsersAlta.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,7 +147,7 @@
             // 
             // btnBuscarVenta
             // 
-            this.btnBuscarVenta.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnBuscarVenta.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnBuscarVenta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarVenta.FlatAppearance.BorderSize = 0;
             this.btnBuscarVenta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
@@ -164,7 +165,7 @@
             this.btnBuscarVenta.Name = "btnBuscarVenta";
             this.btnBuscarVenta.Size = new System.Drawing.Size(195, 41);
             this.btnBuscarVenta.TabIndex = 75;
-            this.btnBuscarVenta.Text = "Buscar";
+            this.btnBuscarVenta.Text = "Buscar Venta";
             this.btnBuscarVenta.UseVisualStyleBackColor = false;
             this.btnBuscarVenta.Click += new System.EventHandler(this.btnBuscarVenta_Click);
             // 
@@ -311,11 +312,35 @@
             this.BoxDetalle.Size = new System.Drawing.Size(500, 228);
             this.BoxDetalle.TabIndex = 90;
             // 
+            // btnVentaComprob
+            // 
+            this.btnVentaComprob.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnVentaComprob.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVentaComprob.FlatAppearance.BorderSize = 0;
+            this.btnVentaComprob.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkGreen;
+            this.btnVentaComprob.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LimeGreen;
+            this.btnVentaComprob.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVentaComprob.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVentaComprob.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVentaComprob.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
+            this.btnVentaComprob.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVentaComprob.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVentaComprob.IconSize = 30;
+            this.btnVentaComprob.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVentaComprob.Location = new System.Drawing.Point(432, 515);
+            this.btnVentaComprob.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVentaComprob.Name = "btnVentaComprob";
+            this.btnVentaComprob.Size = new System.Drawing.Size(185, 41);
+            this.btnVentaComprob.TabIndex = 91;
+            this.btnVentaComprob.Text = "Comprobante";
+            this.btnVentaComprob.UseVisualStyleBackColor = false;
+            // 
             // frmVendReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1283, 557);
+            this.Controls.Add(this.btnVentaComprob);
             this.Controls.Add(this.BoxDetalle);
             this.Controls.Add(this.lblTotalDetalle);
             this.Controls.Add(this.lblUnitarioDetalle);
@@ -374,5 +399,6 @@
         private System.Windows.Forms.Label lblUnitarioDetalle;
         private System.Windows.Forms.Label lblTotalDetalle;
         private System.Windows.Forms.ListBox BoxDetalle;
+        private FontAwesome.Sharp.IconButton btnVentaComprob;
     }
 }

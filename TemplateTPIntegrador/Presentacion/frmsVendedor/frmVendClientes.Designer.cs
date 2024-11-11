@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.frmsVendedor
 {
-    partial class frmVendProductos
+    partial class frmVendClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.panelSide = new System.Windows.Forms.Panel();
-            this.lblTop = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.VendProductos = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panelAdmUsersAlta.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,17 +43,17 @@
             this.panelSide.Margin = new System.Windows.Forms.Padding(2);
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(14, 450);
-            this.panelSide.TabIndex = 64;
+            this.panelSide.TabIndex = 65;
             // 
-            // lblTop
+            // listBox1
             // 
-            this.lblTop.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTop.Location = new System.Drawing.Point(18, 9);
-            this.lblTop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(427, 32);
-            this.lblTop.TabIndex = 65;
-            this.lblTop.Text = "Panel de Vendedor - Ingrese nueva venta\r\n";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(22, 64);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(398, 356);
+            this.listBox1.TabIndex = 70;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // panelAdmUsersAlta
             // 
@@ -64,7 +63,7 @@
             this.panelAdmUsersAlta.Margin = new System.Windows.Forms.Padding(2);
             this.panelAdmUsersAlta.Name = "panelAdmUsersAlta";
             this.panelAdmUsersAlta.Size = new System.Drawing.Size(786, 46);
-            this.panelAdmUsersAlta.TabIndex = 66;
+            this.panelAdmUsersAlta.TabIndex = 69;
             // 
             // VendProductos
             // 
@@ -74,29 +73,18 @@
             this.VendProductos.Name = "VendProductos";
             this.VendProductos.Size = new System.Drawing.Size(566, 32);
             this.VendProductos.TabIndex = 7;
-            this.VendProductos.Text = "Panel de Vendedor - Explore productos";
-            this.VendProductos.Click += new System.EventHandler(this.label1_Click);
+            this.VendProductos.Text = "Panel de Vendedor - Clientes";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(24, 66);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(450, 324);
-            this.listBox1.TabIndex = 67;
-            // 
-            // frmVendProductos
+            // frmVendClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.panelAdmUsersAlta);
-            this.Controls.Add(this.lblTop);
             this.Controls.Add(this.panelSide);
-            this.Name = "frmVendProductos";
-            this.Text = "frmVendProductos";
+            this.Name = "frmVendClientes";
+            this.Text = "frmVendClientes";
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -105,9 +93,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.Label lblTop;
+        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label VendProductos;
-        private System.Windows.Forms.ListBox listBox1;
     }
 }

@@ -74,7 +74,7 @@
             this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCampos.IconSize = 30;
             this.btnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(82, 514);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(708, 517);
             this.btnLimpiarCampos.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(195, 41);
@@ -98,7 +98,7 @@
             this.btnCargarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCargarVenta.IconSize = 30;
             this.btnCargarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCargarVenta.Location = new System.Drawing.Point(707, 514);
+            this.btnCargarVenta.Location = new System.Drawing.Point(707, 456);
             this.btnCargarVenta.Margin = new System.Windows.Forms.Padding(2);
             this.btnCargarVenta.Name = "btnCargarVenta";
             this.btnCargarVenta.Size = new System.Drawing.Size(195, 41);
