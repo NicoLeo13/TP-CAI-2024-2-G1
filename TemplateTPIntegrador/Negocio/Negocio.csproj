@@ -54,6 +54,7 @@
     <Compile Include="LoginUsuario.cs" />
     <Compile Include="ProductoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProveedorService.cs" />
     <Compile Include="SugerenciaService.cs" />
     <Compile Include="UsuarioService.cs" />
     <Compile Include="Utils\NegoValidaciones.cs" />

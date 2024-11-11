@@ -59,7 +59,7 @@ namespace Persistencia
         }
         public Venta ObtenerVentaPorId(Guid idVenta)
         {
-            string url = $"https://api.swaggerendpoint.com/ventas/{idVenta}";
+            string url = $"Venta/GetVenta?id={idVenta}";
             HttpResponseMessage response = WebHelper.GetAsync(url).Result;
 
             if (response.IsSuccessStatusCode)

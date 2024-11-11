@@ -19,7 +19,25 @@ namespace Persistencia.Utils
         {
             var uri = rutaBase + url + adminId;
 
-            HttpResponseMessage response = httpClient.GetAsync(uri).Result;  // Blocking call!
+            HttpResponseMessage response = httpClient.GetAsync(uri).Result;
+
+            return response;
+        }
+
+        public static HttpResponseMessage GetCustomId(string url)
+        {
+            var uri = rutaBase + url;
+
+            HttpResponseMessage response = httpClient.GetAsync(uri).Result;  
+
+            return response;
+        }
+
+        public static HttpResponseMessage GetSinAdminId(string url)
+        {
+            var uri = rutaBase + url;
+
+            HttpResponseMessage response = httpClient.GetAsync(uri).Result;
 
             return response;
         }
@@ -169,6 +187,8 @@ namespace Persistencia.Utils
         {
             var uri = rutaBase + url;
 
+            Console.WriteLine($"DeleteWithBody - Body: {jsonRequest}");
+
             HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Delete,
@@ -179,6 +199,7 @@ namespace Persistencia.Utils
 
             return response;
         }
+
 
         public static async Task<HttpResponseMessage> DeleteWithBodyAsync(string url, string jsonRequest)
         {
