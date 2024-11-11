@@ -15,11 +15,11 @@ namespace Persistencia.Utils
         private static String rutaBase = "https://cai-tp.azurewebsites.net/api/";
         private static String adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
 
-        public static HttpResponseMessage Get(string url)
+        public static HttpResponseMessage GetCustomId(string url)
         {
-            var uri = rutaBase + url + adminId;
+            var uri = rutaBase + url;
 
-            HttpResponseMessage response = httpClient.GetAsync(uri).Result;  // Blocking call!
+            HttpResponseMessage response = httpClient.GetAsync(uri).Result;  
 
             return response;
         }
