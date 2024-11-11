@@ -41,6 +41,11 @@ namespace Presentacion
             lblVendActivos.Text = usuariosActivos.Where(u => u.Host == 1).Count().ToString();
         }
 
+        private void btnListarUsuarios_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAltaUsuario_Click(object sender, EventArgs e)
         {
             PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuariosAlta(), PresentacionUtils.PanelContenedor);

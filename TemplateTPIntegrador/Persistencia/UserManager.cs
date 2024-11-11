@@ -194,7 +194,9 @@ namespace Persistencia
 
             Console.WriteLine("\n jsonData /Usuario/CambiarContraseña: " + jsonData);
 
-            HttpResponseMessage response = WebHelper.Patch("Usuario/CambiarContraseña", jsonData);
+            //HttpResponseMessage response = WebHelper.Patch("Usuario/CambiarContraseña", jsonData);
+            HttpResponseMessage response = WebHelper.PatchNoAdmin("Usuario/CambiarContraseña", jsonData);
+
 
             Console.WriteLine("\n response Usuario/AgregarUsuario: " + response);
 
@@ -209,7 +211,7 @@ namespace Persistencia
             {
                 var errorContent = response.Content.ReadAsStringAsync().Result;
                 Console.WriteLine($"Error: {errorContent}");
-                throw new Exception("Error al cambiar la contraseña." + response.ReasonPhrase);
+                throw new Exception("Error al cambiar la contraseña:\n" + errorContent);
             }
 
             return result;

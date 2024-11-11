@@ -133,7 +133,58 @@ namespace Presentacion.Utils
                     LimpiarControles(control);      // Recursividad para limpiar controles del control actual
                 }
             }
+        }
 
+        public static void HabilitarControles(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.Enabled = true;
+                    textBox.BackColor = System.Drawing.Color.White;
+                }
+                else if (control is ComboBox comboBox)
+                {
+                    comboBox.Enabled = true;
+                    comboBox.BackColor = System.Drawing.Color.White;
+                }
+                else if (control is DateTimePicker dtmPicker)
+                {
+                    dtmPicker.Enabled = true;
+                    dtmPicker.BackColor = System.Drawing.Color.White;
+                }
+                else if (control.HasChildren)
+                {
+                    HabilitarControles(control);      // Recursividad para habilitar controles del control actual
+                }
+            }
+        }
+
+        public static void DeshabilitarControles(Control parent)
+        {
+            foreach (Control control in parent.Controls)
+            {
+                if (control is TextBox textBox)
+                {
+                    textBox.Enabled = false;
+                    textBox.BackColor = System.Drawing.SystemColors.ControlDark;
+                }
+                else if (control is ComboBox comboBox)
+                {
+                    comboBox.Enabled = false;
+                    comboBox.BackColor = System.Drawing.SystemColors.ControlDark;
+                }
+                else if (control is DateTimePicker dtmPicker)
+                {
+                    dtmPicker.Enabled = false;
+                    dtmPicker.BackColor = System.Drawing.SystemColors.ControlDark;
+                }
+                else if (control.HasChildren)
+                {
+                    DeshabilitarControles(control);      // Recursividad para deshabilitar controles del control actual
+                }
+            }
         }
 
         public static string HostToString(int host)

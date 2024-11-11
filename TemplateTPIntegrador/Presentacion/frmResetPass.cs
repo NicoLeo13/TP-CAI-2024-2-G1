@@ -36,7 +36,6 @@ namespace Presentacion
             string nombreUsuario = "johndoe1";
 
             NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
-
             string resultValidarPass = negocioValidaciones.ValidarPass(nombreUsuario, contraseñaActual, nuevaContraseña, reingresoNuevaContraseña);
 
             MessageBox.Show(resultValidarPass);

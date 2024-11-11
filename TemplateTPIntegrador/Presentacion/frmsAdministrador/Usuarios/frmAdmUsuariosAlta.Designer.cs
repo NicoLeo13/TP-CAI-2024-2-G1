@@ -53,15 +53,15 @@
             this.btnLimpiarCampos = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.grpDatosUser = new System.Windows.Forms.GroupBox();
+            this.grpDatosPers = new System.Windows.Forms.GroupBox();
             this.lblFechaNacimiento = new System.Windows.Forms.Label();
             this.dtpFechaNac = new System.Windows.Forms.DateTimePicker();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.grpDatosPers = new System.Windows.Forms.GroupBox();
-            this.grpDatosUser = new System.Windows.Forms.GroupBox();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            this.grpDatosPers.SuspendLayout();
             this.grpDatosUser.SuspendLayout();
+            this.grpDatosPers.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
@@ -95,16 +95,18 @@
             // 
             // txtBoxNombre
             // 
+            this.txtBoxNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNombre.Location = new System.Drawing.Point(144, 35);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxNombre.Size = new System.Drawing.Size(257, 25);
             this.txtBoxNombre.TabIndex = 10;
             // 
             // txtBoxApellido
             // 
+            this.txtBoxApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApellido.Location = new System.Drawing.Point(144, 85);
             this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxApellido.Size = new System.Drawing.Size(257, 25);
             this.txtBoxApellido.TabIndex = 13;
             // 
             // lblApellido
@@ -120,9 +122,10 @@
             // 
             // txtBoxDireccion
             // 
+            this.txtBoxDireccion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDireccion.Location = new System.Drawing.Point(144, 135);
             this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 25);
             this.txtBoxDireccion.TabIndex = 15;
             // 
             // lblDireccion
@@ -138,9 +141,10 @@
             // 
             // txtBoxDni
             // 
+            this.txtBoxDni.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDni.Location = new System.Drawing.Point(144, 285);
             this.txtBoxDni.Name = "txtBoxDni";
-            this.txtBoxDni.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxDni.Size = new System.Drawing.Size(257, 25);
             this.txtBoxDni.TabIndex = 17;
             // 
             // lblDni
@@ -156,9 +160,10 @@
             // 
             // txtBoxEmail
             // 
+            this.txtBoxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(145, 235);
             this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxEmail.Size = new System.Drawing.Size(257, 25);
             this.txtBoxEmail.TabIndex = 19;
             // 
             // lblEmail
@@ -174,9 +179,10 @@
             // 
             // txtBoxTelefono
             // 
+            this.txtBoxTelefono.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxTelefono.Location = new System.Drawing.Point(146, 185);
             this.txtBoxTelefono.Name = "txtBoxTelefono";
-            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 25);
             this.txtBoxTelefono.TabIndex = 21;
             // 
             // lblTelefono
@@ -192,9 +198,10 @@
             // 
             // txtBoxUsuario
             // 
+            this.txtBoxUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxUsuario.Location = new System.Drawing.Point(116, 36);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 25);
             this.txtBoxUsuario.TabIndex = 24;
             // 
             // lblUsuario
@@ -210,9 +217,10 @@
             // 
             // txtBoxContraseña
             // 
+            this.txtBoxContraseña.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxContraseña.Location = new System.Drawing.Point(116, 85);
             this.txtBoxContraseña.Name = "txtBoxContraseña";
-            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 29);
+            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 25);
             this.txtBoxContraseña.TabIndex = 26;
             // 
             // lblContraseña
@@ -329,6 +337,46 @@
             this.panelContenedor.Size = new System.Drawing.Size(976, 510);
             this.panelContenedor.TabIndex = 33;
             // 
+            // grpDatosUser
+            // 
+            this.grpDatosUser.Controls.Add(this.lblUsuario);
+            this.grpDatosUser.Controls.Add(this.txtBoxUsuario);
+            this.grpDatosUser.Controls.Add(this.lblContraseña);
+            this.grpDatosUser.Controls.Add(this.txtBoxContraseña);
+            this.grpDatosUser.Controls.Add(this.cmbHost);
+            this.grpDatosUser.Controls.Add(this.lblHost);
+            this.grpDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDatosUser.Location = new System.Drawing.Point(538, 26);
+            this.grpDatosUser.Name = "grpDatosUser";
+            this.grpDatosUser.Size = new System.Drawing.Size(410, 209);
+            this.grpDatosUser.TabIndex = 35;
+            this.grpDatosUser.TabStop = false;
+            this.grpDatosUser.Text = "Datos de Usuario";
+            // 
+            // grpDatosPers
+            // 
+            this.grpDatosPers.Controls.Add(this.lblNombre);
+            this.grpDatosPers.Controls.Add(this.txtBoxNombre);
+            this.grpDatosPers.Controls.Add(this.lblApellido);
+            this.grpDatosPers.Controls.Add(this.txtBoxApellido);
+            this.grpDatosPers.Controls.Add(this.lblDireccion);
+            this.grpDatosPers.Controls.Add(this.txtBoxDireccion);
+            this.grpDatosPers.Controls.Add(this.lblTelefono);
+            this.grpDatosPers.Controls.Add(this.txtBoxTelefono);
+            this.grpDatosPers.Controls.Add(this.lblFechaNacimiento);
+            this.grpDatosPers.Controls.Add(this.lblEmail);
+            this.grpDatosPers.Controls.Add(this.lblDni);
+            this.grpDatosPers.Controls.Add(this.txtBoxEmail);
+            this.grpDatosPers.Controls.Add(this.dtpFechaNac);
+            this.grpDatosPers.Controls.Add(this.txtBoxDni);
+            this.grpDatosPers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDatosPers.Location = new System.Drawing.Point(27, 26);
+            this.grpDatosPers.Name = "grpDatosPers";
+            this.grpDatosPers.Size = new System.Drawing.Size(454, 395);
+            this.grpDatosPers.TabIndex = 34;
+            this.grpDatosPers.TabStop = false;
+            this.grpDatosPers.Text = "Datos Personales";
+            // 
             // lblFechaNacimiento
             // 
             this.lblFechaNacimiento.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -360,46 +408,6 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // grpDatosPers
-            // 
-            this.grpDatosPers.Controls.Add(this.lblNombre);
-            this.grpDatosPers.Controls.Add(this.txtBoxNombre);
-            this.grpDatosPers.Controls.Add(this.lblApellido);
-            this.grpDatosPers.Controls.Add(this.txtBoxApellido);
-            this.grpDatosPers.Controls.Add(this.lblDireccion);
-            this.grpDatosPers.Controls.Add(this.txtBoxDireccion);
-            this.grpDatosPers.Controls.Add(this.lblTelefono);
-            this.grpDatosPers.Controls.Add(this.txtBoxTelefono);
-            this.grpDatosPers.Controls.Add(this.lblFechaNacimiento);
-            this.grpDatosPers.Controls.Add(this.lblEmail);
-            this.grpDatosPers.Controls.Add(this.lblDni);
-            this.grpDatosPers.Controls.Add(this.txtBoxEmail);
-            this.grpDatosPers.Controls.Add(this.dtpFechaNac);
-            this.grpDatosPers.Controls.Add(this.txtBoxDni);
-            this.grpDatosPers.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDatosPers.Location = new System.Drawing.Point(27, 26);
-            this.grpDatosPers.Name = "grpDatosPers";
-            this.grpDatosPers.Size = new System.Drawing.Size(454, 395);
-            this.grpDatosPers.TabIndex = 34;
-            this.grpDatosPers.TabStop = false;
-            this.grpDatosPers.Text = "Datos Personales";
-            // 
-            // grpDatosUser
-            // 
-            this.grpDatosUser.Controls.Add(this.lblUsuario);
-            this.grpDatosUser.Controls.Add(this.txtBoxUsuario);
-            this.grpDatosUser.Controls.Add(this.lblContraseña);
-            this.grpDatosUser.Controls.Add(this.txtBoxContraseña);
-            this.grpDatosUser.Controls.Add(this.cmbHost);
-            this.grpDatosUser.Controls.Add(this.lblHost);
-            this.grpDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDatosUser.Location = new System.Drawing.Point(538, 26);
-            this.grpDatosUser.Name = "grpDatosUser";
-            this.grpDatosUser.Size = new System.Drawing.Size(410, 209);
-            this.grpDatosUser.TabIndex = 35;
-            this.grpDatosUser.TabStop = false;
-            this.grpDatosUser.Text = "Datos de Usuario";
-            // 
             // frmAdmUsuariosAlta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -418,10 +426,10 @@
             this.Load += new System.EventHandler(this.frmAdmUsuariosAlta_Load);
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
-            this.grpDatosPers.ResumeLayout(false);
-            this.grpDatosPers.PerformLayout();
             this.grpDatosUser.ResumeLayout(false);
             this.grpDatosUser.PerformLayout();
+            this.grpDatosPers.ResumeLayout(false);
+            this.grpDatosPers.PerformLayout();
             this.ResumeLayout(false);
 
         }

@@ -27,19 +27,8 @@ namespace Presentacion
 
         private void frmAdmUsuariosModif_Load(object sender, EventArgs e)
         {
-            Dictionary<int, string> hosts = new Dictionary<int, string>
-            {
-                { 1, "Vendedor" },
-                { 2, "Supervisor" },
-                { 3, "Administrador" }
-            };
 
-            cmbHost.DataSource = new BindingSource(hosts, null);
-            cmbHost.DisplayMember = "Value";
-            cmbHost.ValueMember = "Key";
-            cmbHost.SelectedIndex = -1;
         }
-
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
@@ -63,12 +52,13 @@ namespace Presentacion
                     return;
                 }
 
-                //lblContNombre.Text = usuario.Nombre;
-                //lblContApellido.Text = usuario.Apellido;
-                //lblContDni.Text = usuario.Dni.ToString();
-                //lblContHost.Text = PresentacionUtils.HostToString(usuario.Host);
-                //lblContIdUser.Text = usuario.Id.ToString();
-                //lblContEstado.Text = "Activo";       //  Revisar ya que del web service de algun lado deberiamos recibir si esta activo o no (CONSULTAR!!)
+                PresentacionUtils.HabilitarControles(this.grpDatosModif);
+                txtBoxNombre.Text = usuario.Nombre;
+                txtBoxApellido.Text = usuario.Apellido;
+                txtBoxDni.Text = usuario.Dni.ToString();
+                txtBoxUserId.Text = usuario.Id.ToString();
+                txtBoxHost.Text = usuario.Host.ToString();
+
             }
             catch (Exception ex)
             {
@@ -77,20 +67,52 @@ namespace Presentacion
             }
         }
 
-        public void LimpiarCamposBaja()
-        {
-            //txtBoxUsuario.Text = "";
-            //lblContNombre.Text = "";
-            //lblContApellido.Text = "";
-            //lblContDni.Text = "";
-            //lblContHost.Text = "";
-            //lblContIdUser.Text = "";
-            //lblContEstado.Text = "";
-        }
-
         private void btnModificarUsuario_Click(object sender, EventArgs e)
         {
+            string contraseñaActual = txtBoxContraActual.Text;
+            string contraseñaNueva = txtBoxNuevaContra.Text;
+            string confirmarContraseña = txtBoxConfrimNuevaContra.Text;
 
+            PresentacionValidaciones validaciones = new PresentacionValidaciones();
+
+            if (usuario == null)
+            {
+                MessageBox.Show("Busque un usuario antes de modificar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(!validaciones.ValidarControles(this.grpDatosModif, out string mensajeError))
+            {
+                MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            else if (contraseñaNueva != confirmarContraseña)
+            {
+                MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(contraseñaActual == contraseñaNueva)
+            {
+                MessageBox.Show("La nueva contraseña no puede ser igual a la actual", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                UsuarioService usuarioService = new UsuarioService();
+                usuarioService.ModificarUsuario(usuario.NombreUsuario, contraseñaActual, contraseñaNueva);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show($"Error en el formato de los datos: {ex.Message} - {ex.Source}", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show($"Error interno:\n{ex.Message} - {ex.Source}", "Error programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void txtBoxNombre_TextChanged(object sender, EventArgs e)

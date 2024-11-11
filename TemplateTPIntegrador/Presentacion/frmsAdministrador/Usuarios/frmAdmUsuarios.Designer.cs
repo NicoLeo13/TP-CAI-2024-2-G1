@@ -46,6 +46,7 @@
             this.btnAltaUsuario = new FontAwesome.Sharp.IconButton();
             this.btnModificarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnEliminarUsuario = new FontAwesome.Sharp.IconButton();
+            this.btnListarUsuarios = new FontAwesome.Sharp.IconButton();
             this.panelAdmUsers.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -219,7 +220,7 @@
             this.btnAltaUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAltaUsuario.IconSize = 30;
             this.btnAltaUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAltaUsuario.Location = new System.Drawing.Point(387, 237);
+            this.btnAltaUsuario.Location = new System.Drawing.Point(387, 296);
             this.btnAltaUsuario.Name = "btnAltaUsuario";
             this.btnAltaUsuario.Size = new System.Drawing.Size(220, 56);
             this.btnAltaUsuario.TabIndex = 18;
@@ -241,11 +242,12 @@
             this.btnModificarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarUsuario.IconSize = 30;
             this.btnModificarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarUsuario.Location = new System.Drawing.Point(387, 340);
+            this.btnModificarUsuario.Location = new System.Drawing.Point(387, 381);
             this.btnModificarUsuario.Name = "btnModificarUsuario";
             this.btnModificarUsuario.Size = new System.Drawing.Size(220, 56);
             this.btnModificarUsuario.TabIndex = 19;
-            this.btnModificarUsuario.Text = "Modificar Usuarios";
+            this.btnModificarUsuario.Text = "Modificar Contraseña de Usuario";
+            this.btnModificarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnModificarUsuario.UseVisualStyleBackColor = false;
             this.btnModificarUsuario.Click += new System.EventHandler(this.btnModUsuario_Click);
             // 
@@ -263,7 +265,7 @@
             this.btnEliminarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarUsuario.IconSize = 30;
             this.btnEliminarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(387, 443);
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(387, 466);
             this.btnEliminarUsuario.Name = "btnEliminarUsuario";
             this.btnEliminarUsuario.Size = new System.Drawing.Size(220, 56);
             this.btnEliminarUsuario.TabIndex = 20;
@@ -271,11 +273,34 @@
             this.btnEliminarUsuario.UseVisualStyleBackColor = false;
             this.btnEliminarUsuario.Click += new System.EventHandler(this.btnBajaUsuario_Click);
             // 
+            // btnListarUsuarios
+            // 
+            this.btnListarUsuarios.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnListarUsuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListarUsuarios.FlatAppearance.BorderSize = 0;
+            this.btnListarUsuarios.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnListarUsuarios.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnListarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarUsuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarUsuarios.IconChar = FontAwesome.Sharp.IconChar.PersonCircleQuestion;
+            this.btnListarUsuarios.IconColor = System.Drawing.Color.Black;
+            this.btnListarUsuarios.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnListarUsuarios.IconSize = 30;
+            this.btnListarUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListarUsuarios.Location = new System.Drawing.Point(387, 211);
+            this.btnListarUsuarios.Name = "btnListarUsuarios";
+            this.btnListarUsuarios.Size = new System.Drawing.Size(220, 56);
+            this.btnListarUsuarios.TabIndex = 21;
+            this.btnListarUsuarios.Text = "Listar Usuarios";
+            this.btnListarUsuarios.UseVisualStyleBackColor = false;
+            this.btnListarUsuarios.Click += new System.EventHandler(this.btnListarUsuarios_Click);
+            // 
             // frmAdmUsuarios
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
+            this.Controls.Add(this.btnListarUsuarios);
             this.Controls.Add(this.btnEliminarUsuario);
             this.Controls.Add(this.btnModificarUsuario);
             this.Controls.Add(this.btnAltaUsuario);
@@ -322,5 +347,6 @@
         private FontAwesome.Sharp.IconButton btnAltaUsuario;
         private FontAwesome.Sharp.IconButton btnModificarUsuario;
         private FontAwesome.Sharp.IconButton btnEliminarUsuario;
+        private FontAwesome.Sharp.IconButton btnListarUsuarios;
     }
 }

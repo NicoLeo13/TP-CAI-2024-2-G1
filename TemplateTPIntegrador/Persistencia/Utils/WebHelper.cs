@@ -107,6 +107,29 @@ namespace Persistencia.Utils
             return response;
         }
 
+        public static HttpResponseMessage PatchNoAdmin(string url, string jsonRequest)
+        {
+            var uri = rutaBase + url;
+
+            Console.WriteLine("\n Veamos que tiene el URI: " + uri);
+            Console.WriteLine("\n Veamos que tiene el jsonRequest: " + jsonRequest);
+
+            var data = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
+
+            HttpRequestMessage request = new HttpRequestMessage
+            {
+                Method = new HttpMethod("PATCH"),
+                RequestUri = new Uri(uri),
+                Content = data
+            };
+
+            HttpResponseMessage response = httpClient.SendAsync(request).Result;
+            string responseContent = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine("\n Contenido de la respuesta: " + responseContent);
+
+            return response;
+        }
+
         public static async Task<HttpResponseMessage> PatchAsync(string url, string jsonRequest)
         {
             var uri = rutaBase + url + adminId;

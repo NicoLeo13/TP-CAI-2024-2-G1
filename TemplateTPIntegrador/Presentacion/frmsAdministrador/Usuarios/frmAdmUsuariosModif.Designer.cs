@@ -35,31 +35,31 @@
             this.txtBoxUsuario = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.lblNombUser = new System.Windows.Forms.Label();
             this.lblInfoDatosUser = new System.Windows.Forms.Label();
             this.btnModificarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpDatosUser = new System.Windows.Forms.GroupBox();
-            this.cmbHost = new System.Windows.Forms.ComboBox();
-            this.txtBoxEstado = new System.Windows.Forms.TextBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.txtBoxEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtBoxTelefono = new System.Windows.Forms.TextBox();
-            this.lblTelefono = new System.Windows.Forms.Label();
-            this.txtBoxDireccion = new System.Windows.Forms.TextBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.txtBoxNombUser = new System.Windows.Forms.TextBox();
             this.txtBoxDni = new System.Windows.Forms.TextBox();
             this.txtBoxApellido = new System.Windows.Forms.TextBox();
             this.txtBoxNombre = new System.Windows.Forms.TextBox();
             this.lblDni = new System.Windows.Forms.Label();
-            this.lblHost = new System.Windows.Forms.Label();
+            this.lblIdUser = new System.Windows.Forms.Label();
+            this.txtBoxUserId = new System.Windows.Forms.TextBox();
+            this.txtBoxHost = new System.Windows.Forms.TextBox();
+            this.lblPerfil = new System.Windows.Forms.Label();
+            this.grpDatosModif = new System.Windows.Forms.GroupBox();
+            this.txtBoxConfrimNuevaContra = new System.Windows.Forms.TextBox();
+            this.txtBoxNuevaContra = new System.Windows.Forms.TextBox();
+            this.txtBoxContraActual = new System.Windows.Forms.TextBox();
+            this.lblConfirmaContra = new System.Windows.Forms.Label();
+            this.lblContraActual = new System.Windows.Forms.Label();
+            this.lblNuevaContra = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             this.grpDatosUser.SuspendLayout();
+            this.grpDatosModif.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
@@ -76,9 +76,9 @@
             this.lblTop.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTop.Location = new System.Drawing.Point(3, 9);
             this.lblTop.Name = "lblTop";
-            this.lblTop.Size = new System.Drawing.Size(409, 39);
+            this.lblTop.Size = new System.Drawing.Size(473, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Usuarios - Modificar Usuario";
+            this.lblTop.Text = "Panel de Usuarios - Modificar Contraseña Usuario";
             // 
             // panelSide
             // 
@@ -118,17 +118,6 @@
             this.lblApellido.Text = "Apellido";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblNombUser
-            // 
-            this.lblNombUser.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNombUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombUser.Location = new System.Drawing.Point(529, 86);
-            this.lblNombUser.Name = "lblNombUser";
-            this.lblNombUser.Size = new System.Drawing.Size(127, 25);
-            this.lblNombUser.TabIndex = 32;
-            this.lblNombUser.Text = "Nombre de Usuario";
-            this.lblNombUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lblInfoDatosUser
             // 
             this.lblInfoDatosUser.AutoSize = true;
@@ -156,7 +145,7 @@
             this.btnModificarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarUsuario.IconSize = 30;
             this.btnModificarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarUsuario.Location = new System.Drawing.Point(736, 455);
+            this.btnModificarUsuario.Location = new System.Drawing.Point(756, 455);
             this.btnModificarUsuario.Name = "btnModificarUsuario";
             this.btnModificarUsuario.Size = new System.Drawing.Size(195, 41);
             this.btnModificarUsuario.TabIndex = 29;
@@ -214,6 +203,7 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelContenedor.Controls.Add(this.grpDatosModif);
             this.panelContenedor.Controls.Add(this.grpDatosUser);
             this.panelContenedor.Controls.Add(this.btnBuscar);
             this.panelContenedor.Controls.Add(this.btnVolver);
@@ -228,136 +218,23 @@
             // 
             // grpDatosUser
             // 
-            this.grpDatosUser.Controls.Add(this.cmbHost);
-            this.grpDatosUser.Controls.Add(this.txtBoxEstado);
-            this.grpDatosUser.Controls.Add(this.lblEstado);
-            this.grpDatosUser.Controls.Add(this.txtBoxEmail);
-            this.grpDatosUser.Controls.Add(this.lblEmail);
-            this.grpDatosUser.Controls.Add(this.txtBoxTelefono);
-            this.grpDatosUser.Controls.Add(this.lblTelefono);
-            this.grpDatosUser.Controls.Add(this.txtBoxDireccion);
-            this.grpDatosUser.Controls.Add(this.lblHost);
-            this.grpDatosUser.Controls.Add(this.lblDireccion);
-            this.grpDatosUser.Controls.Add(this.txtBoxNombUser);
+            this.grpDatosUser.Controls.Add(this.txtBoxHost);
+            this.grpDatosUser.Controls.Add(this.lblPerfil);
+            this.grpDatosUser.Controls.Add(this.txtBoxUserId);
+            this.grpDatosUser.Controls.Add(this.lblIdUser);
             this.grpDatosUser.Controls.Add(this.txtBoxDni);
             this.grpDatosUser.Controls.Add(this.txtBoxApellido);
             this.grpDatosUser.Controls.Add(this.txtBoxNombre);
             this.grpDatosUser.Controls.Add(this.lblDni);
             this.grpDatosUser.Controls.Add(this.lblNombre);
             this.grpDatosUser.Controls.Add(this.lblApellido);
-            this.grpDatosUser.Controls.Add(this.lblNombUser);
             this.grpDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDatosUser.Location = new System.Drawing.Point(27, 111);
             this.grpDatosUser.Name = "grpDatosUser";
-            this.grpDatosUser.Size = new System.Drawing.Size(920, 318);
+            this.grpDatosUser.Size = new System.Drawing.Size(385, 318);
             this.grpDatosUser.TabIndex = 35;
             this.grpDatosUser.TabStop = false;
-            this.grpDatosUser.Text = "Datos de Usuario";
-            // 
-            // cmbHost
-            // 
-            this.cmbHost.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.cmbHost.Enabled = false;
-            this.cmbHost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbHost.FormattingEnabled = true;
-            this.cmbHost.Location = new System.Drawing.Point(674, 33);
-            this.cmbHost.Name = "cmbHost";
-            this.cmbHost.Size = new System.Drawing.Size(230, 29);
-            this.cmbHost.TabIndex = 55;
-            // 
-            // txtBoxEstado
-            // 
-            this.txtBoxEstado.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxEstado.Enabled = false;
-            this.txtBoxEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEstado.Location = new System.Drawing.Point(674, 134);
-            this.txtBoxEstado.Name = "txtBoxEstado";
-            this.txtBoxEstado.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxEstado.TabIndex = 54;
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(532, 133);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(124, 25);
-            this.lblEstado.TabIndex = 53;
-            this.lblEstado.Text = "Estado";
-            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtBoxEmail
-            // 
-            this.txtBoxEmail.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxEmail.Enabled = false;
-            this.txtBoxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEmail.Location = new System.Drawing.Point(130, 278);
-            this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxEmail.TabIndex = 52;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(7, 277);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(105, 25);
-            this.lblEmail.TabIndex = 51;
-            this.lblEmail.Text = "Email";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtBoxTelefono
-            // 
-            this.txtBoxTelefono.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxTelefono.Enabled = false;
-            this.txtBoxTelefono.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxTelefono.Location = new System.Drawing.Point(130, 230);
-            this.txtBoxTelefono.Name = "txtBoxTelefono";
-            this.txtBoxTelefono.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxTelefono.TabIndex = 50;
-            // 
-            // lblTelefono
-            // 
-            this.lblTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblTelefono.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(7, 230);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(105, 25);
-            this.lblTelefono.TabIndex = 49;
-            this.lblTelefono.Text = "Telefono";
-            this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtBoxDireccion
-            // 
-            this.txtBoxDireccion.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxDireccion.Enabled = false;
-            this.txtBoxDireccion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxDireccion.Location = new System.Drawing.Point(130, 182);
-            this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxDireccion.TabIndex = 48;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblDireccion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDireccion.Location = new System.Drawing.Point(7, 182);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(105, 25);
-            this.lblDireccion.TabIndex = 47;
-            this.lblDireccion.Text = "Direccion";
-            this.lblDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtBoxNombUser
-            // 
-            this.txtBoxNombUser.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxNombUser.Enabled = false;
-            this.txtBoxNombUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNombUser.Location = new System.Drawing.Point(674, 86);
-            this.txtBoxNombUser.Name = "txtBoxNombUser";
-            this.txtBoxNombUser.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxNombUser.TabIndex = 46;
+            this.grpDatosUser.Text = "Informacion de Usuario";
             // 
             // txtBoxDni
             // 
@@ -401,16 +278,126 @@
             this.lblDni.Text = "DNI";
             this.lblDni.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblHost
+            // lblIdUser
             // 
-            this.lblHost.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHost.Location = new System.Drawing.Point(532, 37);
-            this.lblHost.Name = "lblHost";
-            this.lblHost.Size = new System.Drawing.Size(124, 25);
-            this.lblHost.TabIndex = 36;
-            this.lblHost.Text = "Perfil";
-            this.lblHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblIdUser.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIdUser.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdUser.Location = new System.Drawing.Point(7, 182);
+            this.lblIdUser.Name = "lblIdUser";
+            this.lblIdUser.Size = new System.Drawing.Size(105, 25);
+            this.lblIdUser.TabIndex = 56;
+            this.lblIdUser.Text = "ID Usuario";
+            this.lblIdUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtBoxUserId
+            // 
+            this.txtBoxUserId.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxUserId.Enabled = false;
+            this.txtBoxUserId.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxUserId.Location = new System.Drawing.Point(131, 185);
+            this.txtBoxUserId.Name = "txtBoxUserId";
+            this.txtBoxUserId.Size = new System.Drawing.Size(230, 22);
+            this.txtBoxUserId.TabIndex = 57;
+            // 
+            // txtBoxHost
+            // 
+            this.txtBoxHost.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxHost.Enabled = false;
+            this.txtBoxHost.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxHost.Location = new System.Drawing.Point(130, 236);
+            this.txtBoxHost.Name = "txtBoxHost";
+            this.txtBoxHost.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxHost.TabIndex = 59;
+            // 
+            // lblPerfil
+            // 
+            this.lblPerfil.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPerfil.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPerfil.Location = new System.Drawing.Point(7, 236);
+            this.lblPerfil.Name = "lblPerfil";
+            this.lblPerfil.Size = new System.Drawing.Size(105, 25);
+            this.lblPerfil.TabIndex = 58;
+            this.lblPerfil.Text = "Perfil";
+            this.lblPerfil.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // grpDatosModif
+            // 
+            this.grpDatosModif.Controls.Add(this.txtBoxConfrimNuevaContra);
+            this.grpDatosModif.Controls.Add(this.txtBoxNuevaContra);
+            this.grpDatosModif.Controls.Add(this.txtBoxContraActual);
+            this.grpDatosModif.Controls.Add(this.lblConfirmaContra);
+            this.grpDatosModif.Controls.Add(this.lblContraActual);
+            this.grpDatosModif.Controls.Add(this.lblNuevaContra);
+            this.grpDatosModif.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDatosModif.Location = new System.Drawing.Point(524, 111);
+            this.grpDatosModif.Name = "grpDatosModif";
+            this.grpDatosModif.Size = new System.Drawing.Size(427, 208);
+            this.grpDatosModif.TabIndex = 60;
+            this.grpDatosModif.TabStop = false;
+            this.grpDatosModif.Text = "Modificar Contraseña de Usuario";
+            // 
+            // txtBoxConfrimNuevaContra
+            // 
+            this.txtBoxConfrimNuevaContra.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxConfrimNuevaContra.Enabled = false;
+            this.txtBoxConfrimNuevaContra.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxConfrimNuevaContra.Location = new System.Drawing.Point(171, 134);
+            this.txtBoxConfrimNuevaContra.Name = "txtBoxConfrimNuevaContra";
+            this.txtBoxConfrimNuevaContra.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxConfrimNuevaContra.TabIndex = 43;
+            // 
+            // txtBoxNuevaContra
+            // 
+            this.txtBoxNuevaContra.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxNuevaContra.Enabled = false;
+            this.txtBoxNuevaContra.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxNuevaContra.Location = new System.Drawing.Point(171, 85);
+            this.txtBoxNuevaContra.Name = "txtBoxNuevaContra";
+            this.txtBoxNuevaContra.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxNuevaContra.TabIndex = 42;
+            // 
+            // txtBoxContraActual
+            // 
+            this.txtBoxContraActual.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.txtBoxContraActual.Enabled = false;
+            this.txtBoxContraActual.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxContraActual.Location = new System.Drawing.Point(171, 38);
+            this.txtBoxContraActual.Name = "txtBoxContraActual";
+            this.txtBoxContraActual.Size = new System.Drawing.Size(230, 25);
+            this.txtBoxContraActual.TabIndex = 2;
+            // 
+            // lblConfirmaContra
+            // 
+            this.lblConfirmaContra.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblConfirmaContra.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmaContra.Location = new System.Drawing.Point(7, 134);
+            this.lblConfirmaContra.Name = "lblConfirmaContra";
+            this.lblConfirmaContra.Size = new System.Drawing.Size(142, 25);
+            this.lblConfirmaContra.TabIndex = 38;
+            this.lblConfirmaContra.Text = "Repita Contraseña";
+            this.lblConfirmaContra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContraActual
+            // 
+            this.lblContraActual.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblContraActual.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContraActual.Location = new System.Drawing.Point(7, 38);
+            this.lblContraActual.Name = "lblContraActual";
+            this.lblContraActual.Size = new System.Drawing.Size(142, 25);
+            this.lblContraActual.TabIndex = 9;
+            this.lblContraActual.Text = "Contraseña Actual";
+            this.lblContraActual.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblNuevaContra
+            // 
+            this.lblNuevaContra.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblNuevaContra.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNuevaContra.Location = new System.Drawing.Point(7, 85);
+            this.lblNuevaContra.Name = "lblNuevaContra";
+            this.lblNuevaContra.Size = new System.Drawing.Size(142, 25);
+            this.lblNuevaContra.TabIndex = 12;
+            this.lblNuevaContra.Text = "Nueva Contraseña";
+            this.lblNuevaContra.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // frmAdmUsuariosModif
             // 
@@ -433,6 +420,8 @@
             this.panelContenedor.PerformLayout();
             this.grpDatosUser.ResumeLayout(false);
             this.grpDatosUser.PerformLayout();
+            this.grpDatosModif.ResumeLayout(false);
+            this.grpDatosModif.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -444,7 +433,6 @@
         private System.Windows.Forms.TextBox txtBoxUsuario;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblNombUser;
         private System.Windows.Forms.Label lblInfoDatosUser;
         private FontAwesome.Sharp.IconButton btnModificarUsuario;
         private FontAwesome.Sharp.IconButton btnVolver;
@@ -452,19 +440,19 @@
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.GroupBox grpDatosUser;
         private System.Windows.Forms.Label lblDni;
-        private System.Windows.Forms.Label lblHost;
         private System.Windows.Forms.TextBox txtBoxDni;
         private System.Windows.Forms.TextBox txtBoxApellido;
         private System.Windows.Forms.TextBox txtBoxNombre;
-        private System.Windows.Forms.TextBox txtBoxNombUser;
-        private System.Windows.Forms.TextBox txtBoxTelefono;
-        private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.TextBox txtBoxDireccion;
-        private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.TextBox txtBoxEmail;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtBoxEstado;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.ComboBox cmbHost;
+        private System.Windows.Forms.GroupBox grpDatosModif;
+        private System.Windows.Forms.TextBox txtBoxConfrimNuevaContra;
+        private System.Windows.Forms.TextBox txtBoxNuevaContra;
+        private System.Windows.Forms.TextBox txtBoxContraActual;
+        private System.Windows.Forms.Label lblConfirmaContra;
+        private System.Windows.Forms.Label lblContraActual;
+        private System.Windows.Forms.Label lblNuevaContra;
+        private System.Windows.Forms.TextBox txtBoxHost;
+        private System.Windows.Forms.Label lblPerfil;
+        private System.Windows.Forms.TextBox txtBoxUserId;
+        private System.Windows.Forms.Label lblIdUser;
     }
 }

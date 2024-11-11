@@ -12,6 +12,7 @@ namespace Negocio
 {
     public class UsuarioService
     {
+        private const string adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
         private readonly UserManager _userManager;
         private DateTime fechaAlta = DateTime.Now;
 
@@ -48,8 +49,6 @@ namespace Negocio
         public void AgregarUsuario(Guid idUsuario, string nombre, string apellido, string direccion, string telefono, string email, DateTime fechaNacimiento, string nombreUsuario, int host, int dni, string contraseña, DateTime? fechaAlta = null, DateTime? fechaBaja = null)
         /*Uso de parámetros opcionales para las fechas de alta y baja. Hago los campos nullable para poder asignarles valores por defecto en caso de que no se proporcionen*/
         {
-            //Preguntar si esta bien que haya que usar admin o hay un error
-            const string adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
             Guid adminGuid = Guid.Parse(adminId);
 
             try
@@ -79,27 +78,28 @@ namespace Negocio
             }
         }
 
-
-
-        //public string AgregarUsuario(UsuarioLocal usuarioLocal)
-        //{
-        //    // Lógica de negocio para agregar un usuario
-        //    // Validaciones, transformaciones, etc.
-        //    // Llamada a la capa de persistencia para guardar el usuario
-
-        //    Persistencia.UserManager persistencia = new Persistencia.UserManager();
-        //    return persistencia.AgregarUsuario2(usuarioLocal);
-        //}
-
-
-        public string ModificarUsuario(UsuarioLocal usuarioLocal)
+        public void ModificarUsuario(string nombreUsuario, string contraseña, string contraseñaNueva)
         {
             // Lógica de negocio para agregar un usuario
             // Validaciones, transformaciones, etc.
             // Llamar a la capa de persistencia para actualizar el usuario
-            UserManager persistencia = new UserManager();
-            //return persistencia.ModificarUsuario(usuarioLocal);
-            return "No implementado";
+            Guid adminGuid = Guid.Parse(adminId);
+
+            try
+            {
+                UserManager persistencia = new UserManager();
+                persistencia.CambiarContraseñaUsuario(nombreUsuario, contraseña, contraseñaNueva);
+            }
+            catch(HttpRequestException ex)
+            {
+                Console.WriteLine($"\nError de WS: {ex.ToString()}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError Inesperado: {ex.ToString()}");
+                throw;
+            }
         }
 
 
