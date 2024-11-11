@@ -11,9 +11,10 @@ namespace Persistencia
 {
     public class ProveedorManager
     {
+        private const String adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
         private static void LoguearRequest(HttpResponseMessage response)
         {
-            Console.WriteLine($"\nRequest efectuada: \n[\n {response.RequestMessage} \n\n {response.ReasonPhrase} \n]\n");
+            Console.WriteLine($"\nRequest efectuada: \n[\n {response.RequestMessage} \n\n {response.ReasonPhrase}  \n\n {response.StatusCode} \n]\n");
         }
 
         public List<Proveedor> TraerProveedores()
@@ -44,15 +45,15 @@ namespace Persistencia
 
             try
             {
-                // Llama al método que trae los usuarios activos
+                // Llama al método que trae todos los proveedores
                 List<Proveedor> proveedores = proveedorManager.TraerProveedores();
 
-                // Busca el usuario con LINQ
+                // Busca al proveedor puntual con LINQ
                 var proveedorEncontrado = proveedores.FirstOrDefault(u => u.CUIT == cuitProveedor);
 
                 if (proveedorEncontrado != null)
                 {
-                    Console.WriteLine($"\nProveedor encontrado: {proveedorEncontrado.Nombre} {proveedorEncontrado.Apellido} - {proveedorEncontrado.CUIT}");
+                    Console.WriteLine($"\nProveedor encontrado: {proveedorEncontrado.Nombre} {proveedorEncontrado.Apellido} - {proveedorEncontrado.CUIT} - {proveedorEncontrado.Id}");
                     return proveedorEncontrado;
                 }
 
@@ -75,6 +76,27 @@ namespace Persistencia
 
             return null;
 
+        }
+
+        public void EliminarProveedor(Proveedor proveedor)
+        {
+            Dictionary<String, object> datos = new Dictionary<String, object>();
+
+            datos.Add("id", proveedor.Id);
+            datos.Add("idUsuario", adminId);
+
+            var jsonData = JsonConvert.SerializeObject(datos);
+
+            HttpResponseMessage response = WebHelper.DeleteWithBody("Proveedor/BajaProveedor", jsonData);
+
+            LoguearRequest(response);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {errorContent}");
+                throw new HttpRequestException($"Error al eliminar el proveedor:\n{errorContent}");
+            }
         }
     }
 }

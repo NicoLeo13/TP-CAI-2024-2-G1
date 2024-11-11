@@ -8,7 +8,7 @@ namespace Datos
 {
     public class Proveedor
     {
-        private Guid _idproveedor;
+        private Guid _id;
         private string _nombre;
         private string _apellido;
         private string _email;
@@ -17,7 +17,7 @@ namespace Datos
         private DateTime? _fechaBaja;
 
 
-        public Guid IdProveedor { get { return _idproveedor; } set { _idproveedor = value; } }
+        public Guid Id { get { return _id; } set { _id = value; } }
         public string Nombre { get { return _nombre; } set { _nombre = value; } }
         public string Apellido { get { return _apellido; } set { _apellido = value; } }
         public string Email { get { return _email; } set { _email = value; } }
@@ -25,9 +25,9 @@ namespace Datos
         public DateTime FechaAlta { get { return _fechaAlta; } set { _fechaAlta = value; } }
         public DateTime? FechaBaja { get { return _fechaBaja; } set { _fechaBaja = value; } }
 
-        public Proveedor(Guid idProveedor, string nombre, string apellido, string email, string cuit, DateTime fechaAlta, DateTime? fechaBaja)
+        public Proveedor(Guid id, string nombre, string apellido, string email, string cuit, DateTime fechaAlta, DateTime? fechaBaja)
         {
-            this.IdProveedor= idProveedor;
+            this.Id= id;
             this.Nombre = nombre;
             this.Apellido = apellido;
             this.Email = email;

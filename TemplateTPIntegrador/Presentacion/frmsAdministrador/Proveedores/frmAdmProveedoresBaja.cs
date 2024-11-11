@@ -24,21 +24,9 @@ namespace Presentacion
             InitializeComponent();
         }
 
-
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
-        }
-        
-        private void btnBuscarVendedor_click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminarVendedor_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void LimpiarCamposBaja()
@@ -71,8 +59,8 @@ namespace Presentacion
                     MessageBox.Show("El proveedor de CUIT: " + txtBoxCUITProveedor.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
-                txtBoxFechaAltaProveedorRellenar.Text = proveedor.IdProveedor.ToString();
+                // ID del proveedor si hiciera falta
+                //txtBox ??? = proveedor.Id.ToString();
                 txtBoxNombreProveedorRellenar.Text = proveedor.Nombre;
                 txtBoxApellidoProveedorRellenar.Text = proveedor.Apellido;
                 txtBoxEmailProveedorRellenar.Text = proveedor.Email;
@@ -90,7 +78,36 @@ namespace Presentacion
 
         private void btnEliminarProveedor_Click(object sender, EventArgs e)
         {
+            if (txtBoxCuitProveedorRellenar.Text == null)
+            {
+                MessageBox.Show("El proveedor no tiene un CUIT válido para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+
+            try
+            {
+                // Condicional con mensaje de confirmación para eliminar un proveedor
+                DialogResult dialogResult = MessageBox.Show($"¿Está seguro que desea eliminar al proveedor: {proveedor.Nombre} {proveedor.Apellido} - CUIT: {proveedor.CUIT}?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogResult == DialogResult.No)
+                    return;
+
+                ProveedorService proveedorService = new ProveedorService();
+
+                proveedorService.EliminarProveedor(proveedor);
+
+                LimpiarCamposBaja();
+
+                MessageBox.Show($"Proveedor: {proveedor.Nombre} {proveedor.Apellido} - CUIT: {proveedor.CUIT} eliminado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                proveedor = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al eliminar el proveedor: {ex.Message}");
+            }
         }
     }
 }

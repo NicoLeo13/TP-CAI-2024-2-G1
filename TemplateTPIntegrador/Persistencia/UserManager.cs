@@ -69,8 +69,8 @@ namespace Persistencia
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error insesperado al obtener usuarios activos:\n" + ex.Message);
-                return (null, $"Error insesperado al obtener usuarios activos: - {ex.Message}");
+                Console.WriteLine("Error inesperado al obtener usuarios activos:\n" + ex.Message);
+                return (null, $"Error inesperado al obtener usuarios activos: - {ex.Message}");
             }
         }
 
