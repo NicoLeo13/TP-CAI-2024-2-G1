@@ -15,6 +15,15 @@ namespace Persistencia.Utils
         private static String rutaBase = "https://cai-tp.azurewebsites.net/api/";
         private static String adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
 
+        public static HttpResponseMessage Get(string url)
+        {
+            var uri = rutaBase + url + adminId;
+
+            HttpResponseMessage response = httpClient.GetAsync(uri).Result;
+
+            return response;
+        }
+
         public static HttpResponseMessage GetCustomId(string url)
         {
             var uri = rutaBase + url;
@@ -155,6 +164,8 @@ namespace Persistencia.Utils
         {
             var uri = rutaBase + url;
 
+            Console.WriteLine($"DeleteWithBody - Body: {jsonRequest}");
+
             HttpRequestMessage request = new HttpRequestMessage
             {
                 Method = HttpMethod.Delete,
@@ -165,6 +176,7 @@ namespace Persistencia.Utils
 
             return response;
         }
+
 
         public static async Task<HttpResponseMessage> DeleteWithBodyAsync(string url, string jsonRequest)
         {
