@@ -17,8 +17,8 @@ namespace Presentacion
 {
     public partial class frmAdmProveedoresModif : Form
     {
-        public UsuarioWS usuario;
-        
+        private Proveedor proveedor;
+
         public frmAdmProveedoresModif()
         {
             InitializeComponent();
@@ -52,9 +52,44 @@ namespace Presentacion
 
         }
 
-        private void btnBuscarProveedor_click(object sender, EventArgs e)
+        private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
 
+            if (txtBoxCUITProveedor.Text == "")
+            {
+                MessageBox.Show("Por favor ingrese un CUIT de proveedor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                proveedor = ProveedorService.BuscarProveedor(txtBoxCUITProveedor.Text);
+
+                // usuario = UsuarioService.BuscarUsuario(txtBoxCUITProveedor.Text);
+                if (proveedor == null)
+                {
+                    MessageBox.Show("El proveedor de CUIT: " + txtBoxCUITProveedor.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Tenemos el ID si lo necesitáramos.
+                // lbl.??? = proveedor.IdProveedor.ToString(); 
+                txtBoxNombreProveedorRellenar.Text = proveedor.Nombre;
+                txtBoxApellidoProveedorRellenar.Text = proveedor.Apellido;
+                txtBoxEmailProveedorRellenar.Text = proveedor.Email;
+                txtBoxCuitProveedorRellenar.Text = proveedor.CUIT;
+                txtBoxFechaAltaProveedorRellenar.Text = proveedor.FechaAlta.ToString("dd/MM/yyyy");
+                txtBoxFechaBajaProveedorRellenar.Text = proveedor.FechaBaja?.ToString("dd/MM/yyyy") ?? "N/A";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el proveedor de CUIT: " + txtBoxCUITProveedor.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al buscar el proveedor de CUIT: {txtBoxCUITProveedor.Text} - {ex.Message}");
+            }
+
+
         }
+
     }
 }

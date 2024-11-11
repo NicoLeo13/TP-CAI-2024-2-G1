@@ -17,8 +17,8 @@ namespace Presentacion
 {
     public partial class frmAdmProveedoresBaja : Form
     {
-        public UsuarioWS usuario;
-        
+        private Proveedor proveedor;
+
         public frmAdmProveedoresBaja()
         {
             InitializeComponent();
@@ -43,18 +43,49 @@ namespace Presentacion
 
         public void LimpiarCamposBaja()
         {
-            txtBoxUsuario.Text = "";
-            lblContNombre.Text = "";
-            lblContApellido.Text = "";
-            lblContEmail.Text = "";
-            lblContCuit.Text = "";
-            lblContFechaAlta.Text = "";
-            lblContEstado.Text = "";
+            txtBoxCUITProveedor.Text = "";
+            txtBoxNombreProveedorRellenar.Text = "";
+            txtBoxApellidoProveedorRellenar.Text = "";
+            txtBoxEmailProveedorRellenar.Text = "";
+            txtBoxCuitProveedorRellenar.Text = "";
+            txtBoxFechaAltaProveedorRellenar.Text = "";
+            txtBoxFechaBajaProveedorRellenar.Text = "";
         }
 
-        private void btnBuscarProveedor_click(object sender, EventArgs e)
+        private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
 
+            if (txtBoxCUITProveedor.Text == "")
+            {
+                MessageBox.Show("Por favor ingrese un CUIT de proveedor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                proveedor = ProveedorService.BuscarProveedor(txtBoxCUITProveedor.Text);
+
+                // usuario = UsuarioService.BuscarUsuario(txtBoxCUITProveedor.Text);
+                if (proveedor == null)
+                {
+                    MessageBox.Show("El proveedor de CUIT: " + txtBoxCUITProveedor.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                txtBoxFechaAltaProveedorRellenar.Text = proveedor.IdProveedor.ToString();
+                txtBoxNombreProveedorRellenar.Text = proveedor.Nombre;
+                txtBoxApellidoProveedorRellenar.Text = proveedor.Apellido;
+                txtBoxEmailProveedorRellenar.Text = proveedor.Email;
+                txtBoxCuitProveedorRellenar.Text = proveedor.CUIT;
+                txtBoxFechaAltaProveedorRellenar.Text = proveedor.FechaAlta.ToString("dd/MM/yyyy");
+                txtBoxFechaBajaProveedorRellenar.Text = proveedor.FechaBaja?.ToString("dd/MM/yyyy") ?? "N/A";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el proveedor de CUIT: " + txtBoxCUITProveedor.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al buscar el proveedor de CUIT: {txtBoxCUITProveedor.Text} - {ex.Message}");
+            }
         }
 
         private void btnEliminarProveedor_Click(object sender, EventArgs e)

@@ -24,6 +24,15 @@ namespace Persistencia.Utils
             return response;
         }
 
+        public static HttpResponseMessage GetSinAdminId(string url)
+        {
+            var uri = rutaBase + url;
+
+            HttpResponseMessage response = httpClient.GetAsync(uri).Result;
+
+            return response;
+        }
+
         public static async Task<HttpResponseMessage> GetAsync(string url)
         {
             var uri = rutaBase + url + adminId;
