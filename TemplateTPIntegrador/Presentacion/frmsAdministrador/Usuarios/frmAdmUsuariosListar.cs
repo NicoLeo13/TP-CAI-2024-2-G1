@@ -18,6 +18,9 @@ namespace Presentacion
     {
         private List<UsuarioWS> usuariosActivos;
         private BindingSource bindingSource;
+        private bool sortAscending = true;
+        private DataGridViewColumn prevColumn = null;
+        private DataGridViewColumn sortedColumn = null;
 
         public frmAdmUsuariosListar(Task<List<UsuarioWS>> usuariosActivosTask)
         {
@@ -35,19 +38,11 @@ namespace Presentacion
         private void ConfigurarDataGridView()
         {
             lblUsuariosTotales.Text = $"Total: {usuariosActivos.Count.ToString()}";
-            // Configurar columnas manualmente
-            //dgvUsuarios.AutoGenerateColumns = false;
-            //dgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "ID", DataPropertyName = "ID" });
-            //dgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Nombre", DataPropertyName = "Nombre" });
-            //dgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Apellido", DataPropertyName = "Apellido" });
-            //dgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "DNI", DataPropertyName = "DNI" });
-            //dgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Nombre de Usuario", DataPropertyName = "NombreUsuario" });
-            //dgvUsuarios.Columns.Add(new DataGridViewTextBoxColumn { HeaderText = "Host", DataPropertyName = "Host" });
 
             // Habilitar ordenamiento
             foreach (DataGridViewColumn column in dgvUsuarios.Columns)
             {
-                column.SortMode = DataGridViewColumnSortMode.Automatic;
+                column.SortMode = DataGridViewColumnSortMode.Programmatic;
             }
         }
 
@@ -68,14 +63,31 @@ namespace Presentacion
             dgvUsuarios.DataSource = bindingSource;
         }
 
-        //private void btnFiltrar_Click(object sender, EventArgs e)
-        //{
-        //    // Aplicar filtro
-        //    string filtro = txtFiltro.Text;
-        //    bindingSource.Filter = $"Nombre LIKE '%{filtro}%' OR Apellido LIKE '%{filtro}%'";
-        //}
+        private void dgvUsuarios_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewColumn newColumn = dgvUsuarios.Columns[e.ColumnIndex];
+            string columnName = dgvUsuarios.Columns[e.ColumnIndex].DataPropertyName;
 
+            if(newColumn != sortedColumn)
+                sortAscending = true;
 
+            if (sortAscending)
+                usuariosActivos = usuariosActivos.OrderBy(u => u.GetType().GetProperty(columnName).GetValue(u, null)).ToList();
+            else
+                usuariosActivos = usuariosActivos.OrderByDescending(u => u.GetType().GetProperty(columnName).GetValue(u, null)).ToList();
+
+            sortAscending = !sortAscending;
+            LlenarDataGridView();
+
+            // Actualizar el indicador visual
+            sortedColumn = dgvUsuarios.Columns[e.ColumnIndex];
+            foreach (DataGridViewColumn column in dgvUsuarios.Columns)
+            {
+                if (column != sortedColumn)
+                    column.HeaderCell.SortGlyphDirection = SortOrder.None;
+            }
+            sortedColumn.HeaderCell.SortGlyphDirection = sortAscending ? SortOrder.Ascending : SortOrder.Descending;
+        }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {

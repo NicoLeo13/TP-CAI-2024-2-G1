@@ -149,6 +149,7 @@
             this.dgvUsuarios.Name = "dgvUsuarios";
             this.dgvUsuarios.Size = new System.Drawing.Size(966, 401);
             this.dgvUsuarios.TabIndex = 32;
+            this.dgvUsuarios.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsuarios_ColumnHeaderMouseClick);
             // 
             // lblUsuariosTotales
             // 
@@ -166,6 +167,7 @@
             this.ID.HeaderText = "ID";
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.ID.Width = 160;
             // 
             // Nombre
@@ -174,6 +176,7 @@
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
             this.Nombre.ReadOnly = true;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.Nombre.Width = 120;
             // 
             // Apellido
@@ -182,6 +185,7 @@
             this.Apellido.HeaderText = "Apellido";
             this.Apellido.Name = "Apellido";
             this.Apellido.ReadOnly = true;
+            this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.Apellido.Width = 120;
             // 
             // DNI
@@ -190,6 +194,7 @@
             this.DNI.HeaderText = "DNI";
             this.DNI.Name = "DNI";
             this.DNI.ReadOnly = true;
+            this.DNI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.DNI.Width = 110;
             // 
             // NombreUsuario
@@ -198,6 +203,7 @@
             this.NombreUsuario.HeaderText = "Nombre de Usuario";
             this.NombreUsuario.Name = "NombreUsuario";
             this.NombreUsuario.ReadOnly = true;
+            this.NombreUsuario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.NombreUsuario.Width = 160;
             // 
             // Host
@@ -206,6 +212,7 @@
             this.Host.HeaderText = "Host";
             this.Host.Name = "Host";
             this.Host.ReadOnly = true;
+            this.Host.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // frmAdmUsuariosListar
             // 
