@@ -49,7 +49,7 @@ namespace Presentacion
             txtBoxPrecio.TabIndex = 2;
             txtBoxStock.TabIndex = 3;
             txtBoxProvCuit.TabIndex = 4;
-            btnBuscarProv.TabIndex = 5;
+            btnProdBuscarProv.TabIndex = 5;
             btnGuardarProducto.TabIndex = 6;
             btnLimpiarCampos.TabIndex = 7;
             btnVolver.TabIndex = 8;
@@ -65,13 +65,24 @@ namespace Presentacion
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
         }
 
-        private void btnBuscarProv_Click(object sender, EventArgs e)
+        private void btnProdBuscarProv_Click(object sender, EventArgs e)
         {
-
+            if (txtBoxProvCuit.Text == "")
+            {
+                MessageBox.Show("Ingrese un CUIT de Proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
         {
+            PresentacionValidaciones validaciones = new PresentacionValidaciones();
+            if (!validaciones.ValidarControles(this, out string mensajeError))
+            {
+                MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int idcategoria = (int)cmbCategoria.SelectedValue;
             //Guid idusuario = usuarioActual.Id;
             Guid idusuario = Guid.Parse("7a06c9f0-8887-4b4f-b635-1ef5fe4d116f");        //Hardcode para probar (borrar despues)
@@ -88,5 +99,6 @@ namespace Presentacion
 
             MessageBox.Show("Se guardo el producto correctamente" + respuestaAltaProducto);
         }
+
     }
 }

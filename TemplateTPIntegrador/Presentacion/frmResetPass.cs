@@ -1,4 +1,6 @@
-﻿using Negocio.Utils;
+﻿using FontAwesome.Sharp;
+using Negocio.Utils;
+using Presentacion.Utils;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,13 +21,15 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        private void labelContraseña_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
+            PresentacionValidaciones validaciones = new PresentacionValidaciones();
+            if (!validaciones.ValidarControles(this, out string mensajeError))
+            {
+                MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
             string contraseñaActual = txtBoxContraseñaActual.Text;
             string nuevaContraseña = txtBoxNuevaContraseña.Text;
@@ -50,6 +54,11 @@ namespace Presentacion
             //    MessageBox.Show("Se ha generado una nueva contraseña");
             //}
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

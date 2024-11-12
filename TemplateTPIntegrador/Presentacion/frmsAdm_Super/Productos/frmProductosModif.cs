@@ -18,7 +18,8 @@ namespace Presentacion
     public partial class frmProductosModif : Form
     {
         public UsuarioWS usuario;
-        
+        public ProductoWS producto;
+
         public frmProductosModif()
         {
             InitializeComponent();
@@ -57,19 +58,22 @@ namespace Presentacion
             //lblContEstado.Text = "";
         }
 
-        private void txtBoxNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuscarProducto_click(object sender, EventArgs e)
         {
-
+            if (txtBoxNombreProd.Text == "")
+            {
+                MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void btnModificarProducto_Click(object sender, EventArgs e)
         {
-
+            if (producto == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningun producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

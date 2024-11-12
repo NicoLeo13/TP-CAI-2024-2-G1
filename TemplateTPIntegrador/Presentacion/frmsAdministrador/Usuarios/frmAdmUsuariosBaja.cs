@@ -68,7 +68,7 @@ namespace Presentacion
 
         private void btnEliminarUsuario_Click(object sender, EventArgs e)
         {
-            if (lblContNombre.Text == null || lblContApellido.Text == null)
+            if (usuario == null)
             {
                 MessageBox.Show("No se ha seleccionado un usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

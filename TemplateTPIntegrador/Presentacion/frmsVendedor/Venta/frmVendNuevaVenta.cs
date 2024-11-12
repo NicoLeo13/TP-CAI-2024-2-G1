@@ -59,6 +59,13 @@ namespace Presentacion
         private void btnGuardarVenta_Click(object sender, EventArgs e)
         {
 
+            PresentacionValidaciones validaciones = new PresentacionValidaciones();
+            if (!validaciones.ValidarControles(this, out string mensajeError))
+            {
+                MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             Guid idVenta = Guid.NewGuid();
             Guid idCliente;
             Guid idUsuario;
@@ -83,30 +90,6 @@ namespace Presentacion
             string respuestaNuevaVenta = ventaService.AgregarVenta(venta);
 
             MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");
-        }
-
-        // Método para limpiar controles
-        private void LimpiarControles(Control parent)
-        {
-            foreach (Control control in parent.Controls)
-            {
-                if (control is TextBox)
-                {
-                    ((TextBox)control).Clear();
-                }
-                else if (control is ComboBox)
-                {
-                    ((ComboBox)control).SelectedIndex = -1;
-                }
-                else if (control is DateTimePicker)
-                {
-                    ((DateTimePicker)control).Value = DateTime.Now;
-                }
-                else if (control.HasChildren)
-                {
-                    LimpiarControles(control);
-                }
-            }
         }
 
         private void lblTop_Click(object sender, EventArgs e)

@@ -39,12 +39,12 @@
             this.btnVendClientes = new FontAwesome.Sharp.IconButton();
             this.btnVendProduct = new FontAwesome.Sharp.IconButton();
             this.btnVendVenta = new FontAwesome.Sharp.IconButton();
+            this.btnVendInicio = new FontAwesome.Sharp.IconButton();
             this.panelInfoUser = new System.Windows.Forms.Panel();
             this.lblVendRol = new System.Windows.Forms.Label();
             this.lblVendUser = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.btnVendInicio = new FontAwesome.Sharp.IconButton();
             this.panelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.panelOpciones.SuspendLayout();
@@ -225,6 +225,29 @@
             this.btnVendVenta.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
             this.btnVendVenta.MouseEnter += new System.EventHandler(this.btn_MouseHover);
             // 
+            // btnVendInicio
+            // 
+            this.btnVendInicio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnVendInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVendInicio.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVendInicio.FlatAppearance.BorderSize = 0;
+            this.btnVendInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnVendInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendInicio.IconChar = FontAwesome.Sharp.IconChar.House;
+            this.btnVendInicio.IconColor = System.Drawing.Color.Black;
+            this.btnVendInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVendInicio.IconSize = 30;
+            this.btnVendInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVendInicio.Location = new System.Drawing.Point(0, 146);
+            this.btnVendInicio.Name = "btnVendInicio";
+            this.btnVendInicio.Size = new System.Drawing.Size(180, 56);
+            this.btnVendInicio.TabIndex = 24;
+            this.btnVendInicio.Text = "Inicio";
+            this.btnVendInicio.UseVisualStyleBackColor = false;
+            this.btnVendInicio.Click += new System.EventHandler(this.btnVendInicio_Click);
+            this.btnVendInicio.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_MouseDown);
+            this.btnVendInicio.MouseEnter += new System.EventHandler(this.btn_MouseHover);
+            // 
             // panelInfoUser
             // 
             this.panelInfoUser.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -278,27 +301,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(994, 566);
             this.panelContenedor.TabIndex = 17;
-            // 
-            // btnVendInicio
-            // 
-            this.btnVendInicio.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnVendInicio.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnVendInicio.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVendInicio.FlatAppearance.BorderSize = 0;
-            this.btnVendInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
-            this.btnVendInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendInicio.IconChar = FontAwesome.Sharp.IconChar.House;
-            this.btnVendInicio.IconColor = System.Drawing.Color.Black;
-            this.btnVendInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnVendInicio.IconSize = 30;
-            this.btnVendInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendInicio.Location = new System.Drawing.Point(0, 146);
-            this.btnVendInicio.Name = "btnVendInicio";
-            this.btnVendInicio.Size = new System.Drawing.Size(180, 56);
-            this.btnVendInicio.TabIndex = 24;
-            this.btnVendInicio.Text = "Inicio";
-            this.btnVendInicio.UseVisualStyleBackColor = false;
-            this.btnVendInicio.Click += new System.EventHandler(this.btnVendInicio_Click);
             // 
             // frmPerfilVendedor
             // 

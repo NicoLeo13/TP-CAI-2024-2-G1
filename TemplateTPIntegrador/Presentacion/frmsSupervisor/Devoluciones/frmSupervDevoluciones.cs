@@ -18,20 +18,11 @@ namespace Presentacion
     public partial class frmSupervDevoluciones : Form
     {
         public UsuarioWS usuario;
+        public VentaWS venta;
         
         public frmSupervDevoluciones()
         {
             InitializeComponent();
-        }
-        
-        private void btnBuscarVendedor_click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminarVendedor_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void LimpiarCamposBaja()
@@ -49,19 +40,22 @@ namespace Presentacion
             lblContClienteEmail.Text = "";
         }
 
-        private void btnEliminarProveedor_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuscarVenta_click(object sender, EventArgs e)
         {
-
+            if (txtBoxIdVenta.Text == "")
+            {
+                MessageBox.Show("Ingrese el ID de la Venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
 
         private void btnDevolverVenta_Click(object sender, EventArgs e)
         {
-
+            if (venta == null)
+            {
+                MessageBox.Show("No se ha seleccionado ninguna venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

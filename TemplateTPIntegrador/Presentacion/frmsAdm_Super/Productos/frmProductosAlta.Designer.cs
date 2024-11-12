@@ -36,7 +36,7 @@
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpDatosProvee = new System.Windows.Forms.GroupBox();
-            this.btnBuscarProv = new FontAwesome.Sharp.IconButton();
+            this.btnProdBuscarProv = new FontAwesome.Sharp.IconButton();
             this.lblContProvEmail = new System.Windows.Forms.Label();
             this.lblProvEmail = new System.Windows.Forms.Label();
             this.lblContProvApellido = new System.Windows.Forms.Label();
@@ -167,7 +167,7 @@
             // 
             // grpDatosProvee
             // 
-            this.grpDatosProvee.Controls.Add(this.btnBuscarProv);
+            this.grpDatosProvee.Controls.Add(this.btnProdBuscarProv);
             this.grpDatosProvee.Controls.Add(this.lblContProvEmail);
             this.grpDatosProvee.Controls.Add(this.lblProvEmail);
             this.grpDatosProvee.Controls.Add(this.lblContProvApellido);
@@ -184,28 +184,28 @@
             this.grpDatosProvee.TabStop = false;
             this.grpDatosProvee.Text = "Datos de Proveedor";
             // 
-            // btnBuscarProv
+            // btnProdBuscarProv
             // 
-            this.btnBuscarProv.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBuscarProv.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscarProv.FlatAppearance.BorderSize = 0;
-            this.btnBuscarProv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnBuscarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.btnBuscarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarProv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarProv.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscarProv.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscarProv.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscarProv.IconSize = 30;
-            this.btnBuscarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarProv.Location = new System.Drawing.Point(240, 243);
-            this.btnBuscarProv.Name = "btnBuscarProv";
-            this.btnBuscarProv.Size = new System.Drawing.Size(133, 34);
-            this.btnBuscarProv.TabIndex = 43;
-            this.btnBuscarProv.Text = "Buscar";
-            this.btnBuscarProv.UseVisualStyleBackColor = false;
-            this.btnBuscarProv.Click += new System.EventHandler(this.btnBuscarProv_Click);
+            this.btnProdBuscarProv.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnProdBuscarProv.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProdBuscarProv.FlatAppearance.BorderSize = 0;
+            this.btnProdBuscarProv.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnProdBuscarProv.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnProdBuscarProv.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProdBuscarProv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProdBuscarProv.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnProdBuscarProv.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnProdBuscarProv.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnProdBuscarProv.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnProdBuscarProv.IconSize = 30;
+            this.btnProdBuscarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProdBuscarProv.Location = new System.Drawing.Point(240, 243);
+            this.btnProdBuscarProv.Name = "btnProdBuscarProv";
+            this.btnProdBuscarProv.Size = new System.Drawing.Size(133, 34);
+            this.btnProdBuscarProv.TabIndex = 43;
+            this.btnProdBuscarProv.Text = "Buscar";
+            this.btnProdBuscarProv.UseVisualStyleBackColor = false;
+            this.btnProdBuscarProv.Click += new System.EventHandler(this.btnProdBuscarProv_Click);
             // 
             // lblContProvEmail
             // 
@@ -423,7 +423,7 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // frmAdmProductosAlta
+            // frmProductosAlta
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -435,7 +435,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmAdmProductosAlta";
+            this.Name = "frmProductosAlta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosAlta";
             this.Load += new System.EventHandler(this.frmProductosAlta_Load);
@@ -474,7 +474,7 @@
         private System.Windows.Forms.Label lblContProvApellido;
         private System.Windows.Forms.Label lblProvApellido;
         private System.Windows.Forms.Label lblContProvNombre;
-        private FontAwesome.Sharp.IconButton btnBuscarProv;
+        private FontAwesome.Sharp.IconButton btnProdBuscarProv;
         private System.Windows.Forms.ComboBox cmbCategoria;
         private System.Windows.Forms.Label lblProv;
         private System.Windows.Forms.TextBox txtBoxIDProveedor;

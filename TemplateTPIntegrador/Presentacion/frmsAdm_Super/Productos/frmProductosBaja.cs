@@ -18,7 +18,8 @@ namespace Presentacion
     public partial class frmProductosBaja : Form
     {
         public UsuarioWS usuario;
-        
+        public ProductoWS producto;
+
         public frmProductosBaja()
         {
             InitializeComponent();
@@ -27,16 +28,6 @@ namespace Presentacion
         private void btnVolver_Click(object sender, EventArgs e)
         {
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
-        }
-        
-        private void btnBuscarVendedor_click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnEliminarVendedor_Click(object sender, EventArgs e)
-        {
-
         }
 
         public void LimpiarCamposBaja()
@@ -50,14 +41,22 @@ namespace Presentacion
             lblContEstado.Text = "";
         }
 
-        private void btnEliminarProveedor_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBuscarProducto_click(object sender, EventArgs e)
         {
+            if (txtBoxNombreProd.Text == "")
+            {
+                MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
 
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            if (producto == null)
+            {
+                MessageBox.Show("No se ha seleccionado ningun producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
         }
     }
 }

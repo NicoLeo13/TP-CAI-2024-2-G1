@@ -60,32 +60,34 @@
             // labelUsuario
             // 
             this.labelUsuario.AutoSize = true;
-            this.labelUsuario.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUsuario.Location = new System.Drawing.Point(354, 126);
             this.labelUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelUsuario.Name = "labelUsuario";
-            this.labelUsuario.Size = new System.Drawing.Size(59, 20);
+            this.labelUsuario.Size = new System.Drawing.Size(62, 20);
             this.labelUsuario.TabIndex = 3;
             this.labelUsuario.Text = "Usuario";
             // 
             // labelContraseña
             // 
             this.labelContraseña.AutoSize = true;
-            this.labelContraseña.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelContraseña.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelContraseña.Location = new System.Drawing.Point(354, 206);
             this.labelContraseña.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelContraseña.Name = "labelContraseña";
-            this.labelContraseña.Size = new System.Drawing.Size(83, 20);
+            this.labelContraseña.Size = new System.Drawing.Size(86, 20);
             this.labelContraseña.TabIndex = 4;
             this.labelContraseña.Text = "Contraseña";
             // 
             // btnIniciarSesion
             // 
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.DarkGreen;
             this.btnIniciarSesion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIniciarSesion.ForeColor = System.Drawing.SystemColors.Control;
             this.btnIniciarSesion.IconChar = FontAwesome.Sharp.IconChar.DoorOpen;
-            this.btnIniciarSesion.IconColor = System.Drawing.Color.Black;
+            this.btnIniciarSesion.IconColor = System.Drawing.SystemColors.Control;
             this.btnIniciarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnIniciarSesion.IconSize = 21;
             this.btnIniciarSesion.Location = new System.Drawing.Point(359, 288);
@@ -96,7 +98,7 @@
             this.btnIniciarSesion.Text = "Iniciar sesión";
             this.btnIniciarSesion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnIniciarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.UseVisualStyleBackColor = false;
             this.btnIniciarSesion.Click += new System.EventHandler(this.buttonIniciarSesion_Click);
             // 
             // linkLabelForgotPass

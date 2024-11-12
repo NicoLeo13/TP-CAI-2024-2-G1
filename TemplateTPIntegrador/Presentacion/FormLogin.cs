@@ -12,6 +12,7 @@ using Datos;
 using Negocio;
 using Presentacion.Utils;
 using Persistencia;
+using FontAwesome.Sharp;
 
 namespace Presentacion
 {
@@ -190,7 +191,8 @@ namespace Presentacion
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            MessageBox.Show("Implementar logica");
+            frmResetPass formResetPass = new frmResetPass();
+            formResetPass.ShowDialog();
         }
         private void txtBoxUser_Focus(object sender, EventArgs e)
         {

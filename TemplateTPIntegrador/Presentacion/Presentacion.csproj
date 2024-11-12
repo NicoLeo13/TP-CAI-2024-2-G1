@@ -71,10 +71,10 @@
     <Compile Include="frmsAdministrador\Usuarios\frmAdmUsuariosListar.Designer.cs">
       <DependentUpon>frmAdmUsuariosListar.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmsVendedor\frmVendClientes.cs">
+    <Compile Include="frmsVendedor\Clientes\frmVendClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmsVendedor\frmVendClientes.Designer.cs">
+    <Compile Include="frmsVendedor\Clientes\frmVendClientes.Designer.cs">
       <DependentUpon>frmVendClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="frmsVendedor\Inicio\frmVendInicio.cs">
@@ -234,7 +234,7 @@
     <EmbeddedResource Include="frmsAdministrador\Usuarios\frmAdmUsuariosListar.resx">
       <DependentUpon>frmAdmUsuariosListar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmsVendedor\frmVendClientes.resx">
+    <EmbeddedResource Include="frmsVendedor\Clientes\frmVendClientes.resx">
       <DependentUpon>frmVendClientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsVendedor\Inicio\frmVendInicio.resx">
@@ -355,7 +355,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="frmsAdm_Super_Vend\" />
-    <Folder Include="frmsVendedor\Clientes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
