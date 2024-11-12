@@ -237,5 +237,24 @@ namespace Persistencia
             }
         }
 
+        public void ReactivarUsuario(Guid idUsuarioReactivar)
+        {
+            Dictionary<String, object> datos = new Dictionary<String, object>();
+
+            datos.Add("id", idUsuarioReactivar);
+            datos.Add("idUsuario", adminId);
+
+            var jsonData = JsonConvert.SerializeObject(datos);
+
+            HttpResponseMessage response = WebHelper.Patch("Usuario/ReactivarUsuario", jsonData);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {errorContent}");
+                throw new HttpRequestException($"Error al reactivar el usuario:\n{errorContent}");
+            }
+        }
+
     }
 }

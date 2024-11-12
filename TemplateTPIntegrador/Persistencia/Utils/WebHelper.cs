@@ -105,7 +105,7 @@ namespace Persistencia.Utils
 
         public static HttpResponseMessage Patch(string url, string jsonRequest)
         {
-            var uri = rutaBase + url + adminId;
+            var uri = rutaBase + url;
 
             Console.WriteLine("\n Veamos que tiene el URI: " + uri);
 
@@ -121,6 +121,7 @@ namespace Persistencia.Utils
                 };
 
             HttpResponseMessage response = httpClient.SendAsync(request).Result;
+            string responseContent = response.Content.ReadAsStringAsync().Result;
 
             return response;
         }

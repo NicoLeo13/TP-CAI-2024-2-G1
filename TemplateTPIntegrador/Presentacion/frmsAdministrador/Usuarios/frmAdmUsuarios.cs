@@ -64,5 +64,10 @@ namespace Presentacion
         {
             PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuariosBaja(), PresentacionUtils.PanelContenedor);
         }
+
+        private void btnReactivarUsuario_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmUsuariosReactivar(), PresentacionUtils.PanelContenedor);
+        }
     }
 }

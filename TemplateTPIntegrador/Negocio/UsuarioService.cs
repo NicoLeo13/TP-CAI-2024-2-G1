@@ -53,7 +53,7 @@ namespace Negocio
 
             try
             {
-                UsuarioLocal usuarioLocal = new UsuarioLocal(adminGuid, nombre, apellido, direccion, telefono, email, fechaAlta?? DateTime.Now, fechaNacimiento, fechaBaja?? DateTime.MinValue, nombreUsuario, host, dni, contraseña);
+                UsuarioLocal usuarioLocal = new UsuarioLocal(adminGuid, nombre, apellido, direccion, telefono, email, fechaAlta ?? DateTime.Now, fechaNacimiento, fechaBaja ?? DateTime.MinValue, nombreUsuario, host, dni, contraseña);
                 /*Uso operadores ternarios para asignar la fecha actual si no se proporciona una fecha de alta y la fecha mínima si no se proporciona una fecha de baja. Coallesce operator para asignar valores por defecto*/
 
                 //Castear el usuario a un usuarioWS
@@ -90,7 +90,7 @@ namespace Negocio
                 UserManager persistencia = new UserManager();
                 persistencia.CambiarContraseñaUsuario(nombreUsuario, contraseña, contraseñaNueva);
             }
-            catch(HttpRequestException ex)
+            catch (HttpRequestException ex)
             {
                 Console.WriteLine($"\nError de WS: {ex.ToString()}");
                 throw;
@@ -127,5 +127,24 @@ namespace Negocio
             //return "No implementado";
         }
 
+        public void ReactivarUsuario(Guid idUsuarioReactivar)
+        {
+            try
+            {
+                UserManager persistencia = new UserManager();
+                persistencia.ReactivarUsuario(idUsuarioReactivar);
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"\nError de WS: {ex.ToString()}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError Inesperado: {ex.ToString()}");
+                throw;
+            }
+
+        }
     }
 }

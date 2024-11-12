@@ -362,7 +362,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmAdmUsuariosBaja";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAdmUsuariosAlta";
+            this.Text = "frmAdmUsuariosBaja";
             this.Load += new System.EventHandler(this.frmAdmUsuariosBaja_Load);
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
