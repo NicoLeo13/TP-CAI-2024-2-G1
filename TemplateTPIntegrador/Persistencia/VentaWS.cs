@@ -13,32 +13,34 @@ namespace Persistencia
 {
     public class VentaWS
     {
-        public int idVenta { get; set; }
-        public int idUsuario { get; set; }
-        public int idCliente { get; set; }
-        public int idProducto { get; set; }
-        public int cantidad { get; set; }
-        public DateTime fechaAlta { get; set; }
-
-        private readonly HttpClient _httpClient;
-
-        public VentaWS(HttpClient httpClient)
-        {
-            _httpClient = httpClient;
-        }
-
-        public async Task<bool> DevolverVenta(int id, int idUsuario)
+        public async Task<List<Venta>> DevolverVenta(int id, Guid idUsuario)
         {
             var patchData = new { id = id, idUsuario = idUsuario };
             try
             {
                 var response = await WebHelper.PatchAsync("/api/Venta/DevolverVenta", JsonConvert.SerializeObject(patchData));
-                return response.IsSuccessStatusCode;
+
+                List<Venta> result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    result = JsonConvert.DeserializeObject<List<Venta>>(reader.ReadToEnd());
+                }
+                else
+                {
+                    var errorResult = response.Content.ReadAsStringAsync().Result;
+                    Console.WriteLine($"Error: {errorResult}");
+                    throw new Exception("Error al guardar producto." + response.ReasonPhrase);
+                }
+
+                return result;
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error al realizar la solicitud PATCH: {ex.Message}");
-                return false;
+                return null;
             }
         }
         public string AgregarVenta(Venta venta)

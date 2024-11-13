@@ -12,18 +12,19 @@ namespace Negocio
 {
     public class VentaService
     {
-        
+
         public string AgregarVenta(Venta venta)
         {
-            
-            var ventaWS = new VentaWS();
-            return ventaWS.AgregarVenta(venta);
+
+            var ventaWs = new VentaWS();
+            return ventaWs.AgregarVenta(venta);
 
         }
-        public Datos.Venta ObtenerVentaPorVenta(Guid idVenta)
+        public string ObtenerVentaPorVenta(Guid idVenta)
         {
-            var ventaWS = new VentaWS();
-            return ventaWS.ObtenerVentaPorId(idVenta);
+            var ventaWs = new VentaWS();
+            var venta = ventaWs.ObtenerVentaPorId(idVenta);
+            return venta != null ? venta.ToString() : string.Empty;
         }
 
         private readonly VentaBuscar _ventaBuscar;
@@ -36,19 +37,15 @@ namespace Negocio
         {
             return await _ventaBuscar.ObtenerVentasCliente(clienteId, empresa, fechaCompra);
         }
-        public class VentaNegocio
+
+
+        public async Task<bool> DevolverVenta(int id, Guid idUsuario)
         {
-            private readonly VentaDatos _ventaDatos;
-
-            public VentaNegocio(VentaDatos ventaDatos)
-            {
-                _ventaDatos = ventaDatos;
-            }
-
-            public async Task<bool> DevolverVenta(int id, int idUsuario)
-            {
-                return await _ventaDatos.DevolverVenta(id, idUsuario);
-            }
+            var ventaWs = new VentaWS();
+            var result = await ventaWs.DevolverVenta(id, idUsuario);
+            return result != null && result.Count > 0;
         }
+
+
     }
 }

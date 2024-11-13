@@ -66,8 +66,8 @@ namespace Presentacion
             }
 
             int id = int.Parse(txtBoxIdVenta.Text); 
-            int idUsuario = usuario.Id;
-            VentaNegocio ventaNegocio = new VentaNegocio(new VentaDatos(new HttpClient()));
+            Guid idUsuario = usuario.Id;
+            VentaService ventaNegocio = new VentaService();
             bool result = await ventaNegocio.DevolverVenta(id, idUsuario);
             if (result)
             {
