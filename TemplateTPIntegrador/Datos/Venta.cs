@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+
 
 
 namespace Datos
@@ -27,5 +29,25 @@ namespace Datos
             Estado = estado;
             IdUsuario = idUsuario;
         }
+
+    }
+    public class VentaDatos
+    {
+        private readonly HttpClient _httpClient;
+
+        public VentaDatos(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+        public async Task<bool> DevolverVenta(int id, int idUsuario)
+        {
+            var patchData = new { id, idUsuario };
+
+            var response = await WebHelper.PatchAsync("/api/Venta/DevolverVenta", patchData);
+            return response.IsSuccessStatusCode;
+        }
+
+
+
     }
 }

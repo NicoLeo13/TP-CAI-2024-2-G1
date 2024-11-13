@@ -19,6 +19,28 @@ namespace Persistencia
         public int idProducto { get; set; }
         public int cantidad { get; set; }
         public DateTime fechaAlta { get; set; }
+
+        private readonly HttpClient _httpClient;
+
+        public VentaWS(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+
+        public async Task<bool> DevolverVenta(int id, int idUsuario)
+        {
+            var patchData = new { id = id, idUsuario = idUsuario };
+            try
+            {
+                var response = await WebHelper.PatchAsync("/api/Venta/DevolverVenta", JsonConvert.SerializeObject(patchData));
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al realizar la solicitud PATCH: {ex.Message}");
+                return false;
+            }
+        }
         public string AgregarVenta(Venta venta)
         {
 
@@ -74,4 +96,6 @@ namespace Persistencia
         }
     }
 }
+
+
 
