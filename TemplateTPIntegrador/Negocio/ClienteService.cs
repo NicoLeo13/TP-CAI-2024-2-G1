@@ -11,17 +11,86 @@ namespace Negocio
 {
     public class ClienteService
     {
-        public async Task<Cliente> BuscarCliente(int dni)
+        public static Cliente BuscarCliente(int dniCliente)
         {
-            ClienteWS persistencia = new ClienteWS();
-            return await persistencia.BuscarCliente(dni);
+            try
+            {
+                return ClienteWS.TraerCliente(dniCliente);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar usuario: {ex.Message}");
+                throw;
+            }
         }
-        public async Task EliminarCliente(int idCliente)
+
+        public void CrearCliente(Guid id, string nombre, int dni, string apellido, string direccion, string telefono, string email, DateTime fechaNacimiento, DateTime? fechaAlta = null, DateTime? fechaBaja = null, string host)
+        {
+            try
+            {
+                Cliente cliente = new Cliente(id, nombre, apellido, dni, direccion, telefono, email, fechaNacimiento, fechaAlta, fechaBaja, host);
+
+                ClienteWS persistencia = new ClienteWS();
+
+                persistencia.AgregarCliente(cliente);
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"\nError del WS: {ex.ToString()}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError inesperado: {ex.ToString()}");
+                throw;
+            }
+        }
+
+        public void ModificarCliente(Guid id, string direccion, string telefono, string email)
         {
             try
             {
                 ClienteWS persistencia = new ClienteWS();
-                await persistencia.EliminarCliente(idCliente);
+
+                persistencia.ModificarCliente(id, direccion, telefono, email);
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"\nError del WS: {ex.ToString()}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError inesperado: {ex.ToString()}");
+                throw;
+            }
+        }
+
+        public void EliminarCliente(Guid idClienteAEliminar)
+        {
+            try
+            {
+                ClienteWS persistencia = new ClienteWS();
+                persistencia.BajaCliente(idClienteAEliminar);
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"\nError de WS: {ex.ToString()}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError Inesperado: {ex.ToString()}");
+                throw;
+            }
+        }
+
+        public void ReactivarCliente(Guid idClienteReactivar)
+        {
+            try
+            {
+                ClienteWS persistencia = new ClienteWS();
+                persistencia.ReactivarCliente(idClienteReactivar);
             }
             catch (HttpRequestException ex)
             {
@@ -34,7 +103,6 @@ namespace Negocio
                 throw;
             }
 
-            //return "No implementado";
         }
     }
 }
