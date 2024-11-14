@@ -36,15 +36,20 @@
             this.lblTop = new System.Windows.Forms.Label();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
+            this.txtBoxFiltro = new System.Windows.Forms.TextBox();
             this.lblUsuariosTotales = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Host = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelSide = new System.Windows.Forms.Panel();
+            this.cmbFiltros = new System.Windows.Forms.ComboBox();
+            this.lblFiltro = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRefrescar = new FontAwesome.Sharp.IconButton();
+            this.Host = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -95,6 +100,11 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelContenedor.Controls.Add(this.btnRefrescar);
+            this.panelContenedor.Controls.Add(this.label1);
+            this.panelContenedor.Controls.Add(this.lblFiltro);
+            this.panelContenedor.Controls.Add(this.cmbFiltros);
+            this.panelContenedor.Controls.Add(this.txtBoxFiltro);
             this.panelContenedor.Controls.Add(this.lblUsuariosTotales);
             this.panelContenedor.Controls.Add(this.dgvUsuarios);
             this.panelContenedor.Controls.Add(this.btnVolver);
@@ -104,12 +114,20 @@
             this.panelContenedor.Size = new System.Drawing.Size(976, 510);
             this.panelContenedor.TabIndex = 33;
             // 
+            // txtBoxFiltro
+            // 
+            this.txtBoxFiltro.Location = new System.Drawing.Point(509, 5);
+            this.txtBoxFiltro.Name = "txtBoxFiltro";
+            this.txtBoxFiltro.Size = new System.Drawing.Size(208, 25);
+            this.txtBoxFiltro.TabIndex = 34;
+            this.txtBoxFiltro.TextChanged += new System.EventHandler(this.txtBoxFiltro_TextChanged);
+            // 
             // lblUsuariosTotales
             // 
             this.lblUsuariosTotales.AutoSize = true;
             this.lblUsuariosTotales.BackColor = System.Drawing.Color.LightGray;
             this.lblUsuariosTotales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuariosTotales.Location = new System.Drawing.Point(784, 434);
+            this.lblUsuariosTotales.Location = new System.Drawing.Point(810, 455);
             this.lblUsuariosTotales.Name = "lblUsuariosTotales";
             this.lblUsuariosTotales.Size = new System.Drawing.Size(52, 21);
             this.lblUsuariosTotales.TabIndex = 33;
@@ -119,6 +137,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
             this.dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -147,64 +166,11 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvUsuarios.Location = new System.Drawing.Point(3, 21);
+            this.dgvUsuarios.Location = new System.Drawing.Point(4, 46);
             this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(966, 401);
+            this.dgvUsuarios.Size = new System.Drawing.Size(966, 389);
             this.dgvUsuarios.TabIndex = 32;
             this.dgvUsuarios.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsuarios_ColumnHeaderMouseClick);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "Id";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.ID.Width = 160;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Nombre.Width = 120;
-            // 
-            // Apellido
-            // 
-            this.Apellido.DataPropertyName = "Apellido";
-            this.Apellido.HeaderText = "Apellido";
-            this.Apellido.Name = "Apellido";
-            this.Apellido.ReadOnly = true;
-            this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Apellido.Width = 120;
-            // 
-            // DNI
-            // 
-            this.DNI.DataPropertyName = "Dni";
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.ReadOnly = true;
-            this.DNI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.DNI.Width = 110;
-            // 
-            // NombreUsuario
-            // 
-            this.NombreUsuario.DataPropertyName = "NombreUsuario";
-            this.NombreUsuario.HeaderText = "Nombre de Usuario";
-            this.NombreUsuario.Name = "NombreUsuario";
-            this.NombreUsuario.ReadOnly = true;
-            this.NombreUsuario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.NombreUsuario.Width = 160;
-            // 
-            // Host
-            // 
-            this.Host.DataPropertyName = "Host";
-            this.Host.HeaderText = "Host";
-            this.Host.Name = "Host";
-            this.Host.ReadOnly = true;
-            this.Host.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // panelSide
             // 
@@ -214,6 +180,111 @@
             this.panelSide.Name = "panelSide";
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
+            // 
+            // cmbFiltros
+            // 
+            this.cmbFiltros.FormattingEnabled = true;
+            this.cmbFiltros.Location = new System.Drawing.Point(105, 5);
+            this.cmbFiltros.Name = "cmbFiltros";
+            this.cmbFiltros.Size = new System.Drawing.Size(193, 25);
+            this.cmbFiltros.TabIndex = 35;
+            this.cmbFiltros.SelectedIndexChanged += new System.EventHandler(this.cmbFiltros_SelectedIndexChanged);
+            // 
+            // lblFiltro
+            // 
+            this.lblFiltro.AutoSize = true;
+            this.lblFiltro.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltro.Location = new System.Drawing.Point(17, 6);
+            this.lblFiltro.Name = "lblFiltro";
+            this.lblFiltro.Size = new System.Drawing.Size(82, 20);
+            this.lblFiltro.TabIndex = 36;
+            this.lblFiltro.Text = "Filtrar Por:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(328, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(175, 20);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Ingrese el valor buscado";
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnRefrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRefrescar.FlatAppearance.BorderSize = 0;
+            this.btnRefrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DimGray;
+            this.btnRefrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
+            this.btnRefrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefrescar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRefrescar.IconChar = FontAwesome.Sharp.IconChar.RotateForward;
+            this.btnRefrescar.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRefrescar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRefrescar.IconSize = 30;
+            this.btnRefrescar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefrescar.Location = new System.Drawing.Point(921, 6);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(41, 34);
+            this.btnRefrescar.TabIndex = 38;
+            this.btnRefrescar.UseVisualStyleBackColor = false;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
+            // Host
+            // 
+            this.Host.DataPropertyName = "Host";
+            this.Host.FillWeight = 45.68528F;
+            this.Host.HeaderText = "Host";
+            this.Host.Name = "Host";
+            this.Host.ReadOnly = true;
+            this.Host.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // NombreUsuario
+            // 
+            this.NombreUsuario.DataPropertyName = "NombreUsuario";
+            this.NombreUsuario.FillWeight = 110.8629F;
+            this.NombreUsuario.HeaderText = "Nombre de Usuario";
+            this.NombreUsuario.Name = "NombreUsuario";
+            this.NombreUsuario.ReadOnly = true;
+            this.NombreUsuario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // DNI
+            // 
+            this.DNI.DataPropertyName = "Dni";
+            this.DNI.FillWeight = 110.8629F;
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.ReadOnly = true;
+            this.DNI.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.FillWeight = 110.8629F;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.FillWeight = 110.8629F;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "Id";
+            this.ID.FillWeight = 110.8629F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
             // frmAdmUsuariosListar
             // 
@@ -246,6 +317,11 @@
         private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.DataGridView dgvUsuarios;
         private System.Windows.Forms.Label lblUsuariosTotales;
+        private System.Windows.Forms.TextBox txtBoxFiltro;
+        private System.Windows.Forms.Label lblFiltro;
+        private System.Windows.Forms.ComboBox cmbFiltros;
+        private FontAwesome.Sharp.IconButton btnRefrescar;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;

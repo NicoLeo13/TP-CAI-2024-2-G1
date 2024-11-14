@@ -15,7 +15,7 @@ namespace Negocio
         private const string adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
         private readonly UserManager _userManager;
         private DateTime fechaAlta = DateTime.Now;
-
+        
         public UsuarioService()
         {
             _userManager = new UserManager();

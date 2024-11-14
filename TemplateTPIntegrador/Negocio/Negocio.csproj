@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataGridService.cs" />
     <Compile Include="LoginUsuario.cs" />
     <Compile Include="ProductoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
