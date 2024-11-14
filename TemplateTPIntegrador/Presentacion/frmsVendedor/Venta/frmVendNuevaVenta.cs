@@ -11,11 +11,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Persistencia;
 
 namespace Presentacion
 {
+    
     public partial class frmVendNuevaVenta : Form
     {
+        private Producto productoBusqueda;
+
         public frmVendNuevaVenta()
         {
             InitializeComponent();
@@ -99,8 +103,45 @@ namespace Presentacion
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //Buscar producto por Nombre
-            ProductoService productoService = new ProductoService();
-            //Producto producto = productoService.BuscarProductoPorNombre(txtDescripcion.Text);
+            if (txtBoxNombreProd.Text == "")
+            {
+                MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                productoBusqueda = ProductoService.BuscarProducto(txtBoxNombreProd.Text);
+
+                if (productoBusqueda == null)
+                {
+                    MessageBox.Show("El producto de nombre: " + txtBoxNombreProd.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                // ID del proveedor si hiciera falta
+                //txtBox ??? = proveedor.Id.ToString();
+
+                lblContIdProd.Text = productoBusqueda.Id.ToString();
+                lblContPrecio.Text = productoBusqueda.Precio.ToString();
+                lblContStock.Text = productoBusqueda.Stock.ToString();
+
+                PresentacionUtils.HabilitarControles(this.grpVenta);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el producto de nombre: " + txtBoxNombreProd.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al buscar el producto de nombre: {txtBoxNombreProd.Text} - {ex.Message}");
+            }
+        }
+
+        private void btnCancelarOperacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEliminarDelCarrito_Click(object sender, EventArgs e)
+        {
+
         }
 
 
