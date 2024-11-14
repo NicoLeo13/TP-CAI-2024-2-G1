@@ -155,7 +155,11 @@ namespace Persistencia
 
             var jsonData = JsonConvert.SerializeObject(datos);
 
+            Console.WriteLine("jsonData Cliente/BajaCliente: " + jsonData);
+
             HttpResponseMessage response = WebHelper.DeleteWithBody("Cliente/BajaCliente", jsonData);
+
+            Console.WriteLine("response Cliente/BajaCliente: " + response);
 
             if (!response.IsSuccessStatusCode)
             {
@@ -173,7 +177,11 @@ namespace Persistencia
 
             var jsonData = JsonConvert.SerializeObject(datos);
 
+            Console.WriteLine("jsonData Cliente/ReactivarCliente: " + jsonData);
+
             HttpResponseMessage response = WebHelper.Patch("Cliente/ReactivarCliente", jsonData);
+
+            Console.WriteLine("response Cliente/ReactivarCliente: " + response);
 
             if (!response.IsSuccessStatusCode)
             {
