@@ -24,7 +24,7 @@ namespace Negocio
             }
         }
 
-        public void CrearCliente(Guid id, string nombre, int dni, string apellido, string direccion, string telefono, string email, DateTime fechaNacimiento, DateTime? fechaAlta = null, DateTime? fechaBaja = null, string host)
+        public void CrearCliente(Guid id, string nombre, int dni, string apellido, string direccion, string telefono, string email, DateTime fechaNacimiento, string host, DateTime? fechaAlta = null, DateTime? fechaBaja = null)
         {
             try
             {
