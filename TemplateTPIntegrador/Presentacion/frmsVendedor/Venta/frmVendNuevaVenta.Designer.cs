@@ -148,7 +148,7 @@
             this.lblInfoDatosUser.Location = new System.Drawing.Point(598, 77);
             this.lblInfoDatosUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInfoDatosUser.Name = "lblInfoDatosUser";
-            this.lblInfoDatosUser.Size = new System.Drawing.Size(168, 28);
+            this.lblInfoDatosUser.Size = new System.Drawing.Size(134, 21);
             this.lblInfoDatosUser.TabIndex = 53;
             this.lblInfoDatosUser.Text = "Datos de Usuario";
             this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,7 +227,7 @@
             this.lblInfoDatosPers.Location = new System.Drawing.Point(62, 77);
             this.lblInfoDatosPers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInfoDatosPers.Name = "lblInfoDatosPers";
-            this.lblInfoDatosPers.Size = new System.Drawing.Size(167, 28);
+            this.lblInfoDatosPers.Size = new System.Drawing.Size(133, 21);
             this.lblInfoDatosPers.TabIndex = 42;
             this.lblInfoDatosPers.Text = "Datos Personales";
             this.lblInfoDatosPers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,7 +238,7 @@
             this.cmbHost.Location = new System.Drawing.Point(708, 209);
             this.cmbHost.Margin = new System.Windows.Forms.Padding(2);
             this.cmbHost.Name = "cmbHost";
-            this.cmbHost.Size = new System.Drawing.Size(194, 29);
+            this.cmbHost.Size = new System.Drawing.Size(194, 25);
             this.cmbHost.TabIndex = 59;
             // 
             // txtBoxContraseña
@@ -246,7 +246,7 @@
             this.txtBoxContraseña.Location = new System.Drawing.Point(708, 164);
             this.txtBoxContraseña.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxContraseña.Name = "txtBoxContraseña";
-            this.txtBoxContraseña.Size = new System.Drawing.Size(194, 29);
+            this.txtBoxContraseña.Size = new System.Drawing.Size(194, 25);
             this.txtBoxContraseña.TabIndex = 57;
             // 
             // txtBoxUsuario
@@ -254,7 +254,7 @@
             this.txtBoxUsuario.Location = new System.Drawing.Point(708, 117);
             this.txtBoxUsuario.Margin = new System.Windows.Forms.Padding(2);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(194, 29);
+            this.txtBoxUsuario.Size = new System.Drawing.Size(194, 25);
             this.txtBoxUsuario.TabIndex = 55;
             // 
             // txtEstado
@@ -262,7 +262,7 @@
             this.txtEstado.Location = new System.Drawing.Point(177, 348);
             this.txtEstado.Margin = new System.Windows.Forms.Padding(2);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(193, 29);
+            this.txtEstado.Size = new System.Drawing.Size(193, 25);
             this.txtEstado.TabIndex = 48;
             // 
             // txtCantidad
@@ -270,7 +270,7 @@
             this.txtCantidad.Location = new System.Drawing.Point(175, 302);
             this.txtCantidad.Margin = new System.Windows.Forms.Padding(2);
             this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Size = new System.Drawing.Size(193, 29);
+            this.txtCantidad.Size = new System.Drawing.Size(193, 25);
             this.txtCantidad.TabIndex = 50;
             // 
             // txtDescripcion
@@ -278,7 +278,7 @@
             this.txtDescripcion.Location = new System.Drawing.Point(177, 256);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(193, 29);
+            this.txtDescripcion.Size = new System.Drawing.Size(193, 25);
             this.txtDescripcion.TabIndex = 52;
             // 
             // txtProductoID
@@ -286,7 +286,7 @@
             this.txtProductoID.Location = new System.Drawing.Point(177, 210);
             this.txtProductoID.Margin = new System.Windows.Forms.Padding(2);
             this.txtProductoID.Name = "txtProductoID";
-            this.txtProductoID.Size = new System.Drawing.Size(193, 29);
+            this.txtProductoID.Size = new System.Drawing.Size(193, 25);
             this.txtProductoID.TabIndex = 46;
             // 
             // txtClienteID
@@ -294,7 +294,7 @@
             this.txtClienteID.Location = new System.Drawing.Point(177, 164);
             this.txtClienteID.Margin = new System.Windows.Forms.Padding(2);
             this.txtClienteID.Name = "txtClienteID";
-            this.txtClienteID.Size = new System.Drawing.Size(193, 29);
+            this.txtClienteID.Size = new System.Drawing.Size(193, 25);
             this.txtClienteID.TabIndex = 44;
             // 
             // panelSide
@@ -304,17 +304,17 @@
             this.panelSide.Location = new System.Drawing.Point(0, 0);
             this.panelSide.Margin = new System.Windows.Forms.Padding(2);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(14, 566);
+            this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 63;
             // 
             // panelAdmUsersAlta
             // 
             this.panelAdmUsersAlta.Controls.Add(this.lblTop);
             this.panelAdmUsersAlta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAdmUsersAlta.Location = new System.Drawing.Point(14, 0);
+            this.panelAdmUsersAlta.Location = new System.Drawing.Point(18, 0);
             this.panelAdmUsersAlta.Margin = new System.Windows.Forms.Padding(2);
             this.panelAdmUsersAlta.Name = "panelAdmUsersAlta";
-            this.panelAdmUsersAlta.Size = new System.Drawing.Size(980, 46);
+            this.panelAdmUsersAlta.Size = new System.Drawing.Size(976, 46);
             this.panelAdmUsersAlta.TabIndex = 64;
             // 
             // lblTop
@@ -333,7 +333,7 @@
             this.dtpFechaVenta.Location = new System.Drawing.Point(177, 394);
             this.dtpFechaVenta.Margin = new System.Windows.Forms.Padding(2);
             this.dtpFechaVenta.Name = "dtpFechaVenta";
-            this.dtpFechaVenta.Size = new System.Drawing.Size(193, 29);
+            this.dtpFechaVenta.Size = new System.Drawing.Size(193, 25);
             this.dtpFechaVenta.TabIndex = 65;
             // 
             // lblFechaVenta
@@ -352,7 +352,7 @@
             this.txtVentaID.Location = new System.Drawing.Point(175, 117);
             this.txtVentaID.Margin = new System.Windows.Forms.Padding(2);
             this.txtVentaID.Name = "txtVentaID";
-            this.txtVentaID.Size = new System.Drawing.Size(193, 29);
+            this.txtVentaID.Size = new System.Drawing.Size(193, 25);
             this.txtVentaID.TabIndex = 68;
             // 
             // frmVendNuevaVenta

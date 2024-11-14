@@ -35,9 +35,15 @@
             this.lblProdActivos = new System.Windows.Forms.Label();
             this.lblTopProdActivos = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox4 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblClientesActivos = new System.Windows.Forms.Label();
+            this.lblDescClientesActivos = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelAdmUsers.SuspendLayout();
             this.pnlProductos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAdmUsers
@@ -63,7 +69,7 @@
             this.pnlProductos.Controls.Add(this.lblProdActivos);
             this.pnlProductos.Controls.Add(this.lblTopProdActivos);
             this.pnlProductos.Controls.Add(this.guna2CirclePictureBox4);
-            this.pnlProductos.Location = new System.Drawing.Point(387, 62);
+            this.pnlProductos.Location = new System.Drawing.Point(731, 62);
             this.pnlProductos.Name = "pnlProductos";
             this.pnlProductos.Size = new System.Drawing.Size(220, 119);
             this.pnlProductos.TabIndex = 10;
@@ -102,11 +108,56 @@
             this.guna2CirclePictureBox4.TabIndex = 13;
             this.guna2CirclePictureBox4.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.lblClientesActivos);
+            this.panel1.Controls.Add(this.lblDescClientesActivos);
+            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.panel1.Location = new System.Drawing.Point(40, 62);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(220, 119);
+            this.panel1.TabIndex = 71;
+            // 
+            // lblClientesActivos
+            // 
+            this.lblClientesActivos.AutoSize = true;
+            this.lblClientesActivos.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClientesActivos.Location = new System.Drawing.Point(116, 49);
+            this.lblClientesActivos.Name = "lblClientesActivos";
+            this.lblClientesActivos.Size = new System.Drawing.Size(32, 15);
+            this.lblClientesActivos.TabIndex = 11;
+            this.lblClientesActivos.Text = "Total";
+            this.lblClientesActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblDescClientesActivos
+            // 
+            this.lblDescClientesActivos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescClientesActivos.Location = new System.Drawing.Point(70, 26);
+            this.lblDescClientesActivos.Name = "lblDescClientesActivos";
+            this.lblDescClientesActivos.Size = new System.Drawing.Size(136, 23);
+            this.lblDescClientesActivos.TabIndex = 10;
+            this.lblDescClientesActivos.Text = "Clientes Activos";
+            this.lblDescClientesActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(3, 26);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 10;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
             // frmVendInicio
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlProductos);
             this.Controls.Add(this.panelAdmUsers);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +171,9 @@
             this.pnlProductos.ResumeLayout(false);
             this.pnlProductos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox4)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -131,5 +185,9 @@
         private System.Windows.Forms.Label lblProdActivos;
         private System.Windows.Forms.Label lblTopProdActivos;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblClientesActivos;
+        private System.Windows.Forms.Label lblDescClientesActivos;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
     }
 }

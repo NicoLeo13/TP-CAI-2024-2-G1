@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Presentacion.Utils;
+using FontAwesome.Sharp;
 
 namespace Presentacion.frmsVendedor
 {
@@ -17,9 +19,29 @@ namespace Presentacion.frmsVendedor
             InitializeComponent();
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnListarClientes_Click(object sender, EventArgs e)
         {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmVendProductos(), PresentacionUtils.PanelContenedor);
+        }
 
+        private void btnReactivarCliente_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmVendClientesReactivar(), PresentacionUtils.PanelContenedor);
+        }
+
+        private void btnAltaCliente_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmVendClientesAlta(), PresentacionUtils.PanelContenedor);
+        }
+
+        private void btnModificarCliente_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmVendClientesModif(), PresentacionUtils.PanelContenedor);
+        }
+
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmVendClientesBaja(), PresentacionUtils.PanelContenedor);
         }
     }
 }

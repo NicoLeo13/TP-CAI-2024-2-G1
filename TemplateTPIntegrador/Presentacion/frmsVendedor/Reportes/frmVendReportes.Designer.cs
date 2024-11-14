@@ -64,17 +64,17 @@
             this.panelSide.Location = new System.Drawing.Point(0, 0);
             this.panelSide.Margin = new System.Windows.Forms.Padding(2);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(14, 527);
+            this.panelSide.Size = new System.Drawing.Size(18, 527);
             this.panelSide.TabIndex = 65;
             // 
             // panelAdmUsersAlta
             // 
             this.panelAdmUsersAlta.Controls.Add(this.VendReportes);
             this.panelAdmUsersAlta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelAdmUsersAlta.Location = new System.Drawing.Point(14, 0);
+            this.panelAdmUsersAlta.Location = new System.Drawing.Point(18, 0);
             this.panelAdmUsersAlta.Margin = new System.Windows.Forms.Padding(2);
             this.panelAdmUsersAlta.Name = "panelAdmUsersAlta";
-            this.panelAdmUsersAlta.Size = new System.Drawing.Size(964, 37);
+            this.panelAdmUsersAlta.Size = new System.Drawing.Size(960, 37);
             this.panelAdmUsersAlta.TabIndex = 67;
             // 
             // VendReportes
@@ -309,7 +309,7 @@
             this.BoxDetalle.FormattingEnabled = true;
             this.BoxDetalle.ItemHeight = 17;
             this.BoxDetalle.Location = new System.Drawing.Point(471, 134);
-            this.BoxDetalle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BoxDetalle.Margin = new System.Windows.Forms.Padding(2);
             this.BoxDetalle.Name = "BoxDetalle";
             this.BoxDetalle.Size = new System.Drawing.Size(376, 174);
             this.BoxDetalle.TabIndex = 90;
@@ -368,7 +368,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVendReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendedor - Reportes";

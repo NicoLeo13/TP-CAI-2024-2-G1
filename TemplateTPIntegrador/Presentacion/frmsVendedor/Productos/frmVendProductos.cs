@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Presentacion.Utils;
+using FontAwesome.Sharp;
 
 namespace Presentacion.frmsVendedor
 {
@@ -17,9 +19,9 @@ namespace Presentacion.frmsVendedor
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnListarProductos_Click(object sender, EventArgs e)
         {
-
+            PresentacionUtils.AbrirForm(btnListarProductos, new frmVendProductosListar(), PresentacionUtils.PanelContenedor);
         }
     }
 }
