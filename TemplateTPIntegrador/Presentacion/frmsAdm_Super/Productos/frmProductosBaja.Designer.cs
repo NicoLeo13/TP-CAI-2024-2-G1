@@ -208,7 +208,7 @@
             this.btnBuscar.TabIndex = 34;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarProducto_click);
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // panelContenedor
             // 

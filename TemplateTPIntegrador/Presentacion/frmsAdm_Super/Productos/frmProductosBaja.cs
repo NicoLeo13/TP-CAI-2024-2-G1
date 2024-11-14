@@ -41,7 +41,7 @@ namespace Presentacion
             lblContEstado.Text = "";
         }
 
-        private void btnBuscarProducto_click(object sender, EventArgs e)
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             if (txtBoxNombreProd.Text == "")
             {

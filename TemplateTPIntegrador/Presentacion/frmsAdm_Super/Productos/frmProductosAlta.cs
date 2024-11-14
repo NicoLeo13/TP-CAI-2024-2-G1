@@ -90,8 +90,10 @@ namespace Presentacion
             string nombre = txtBoxNombre.Text;
             int precio = int.Parse(txtBoxPrecio.Text);
             int stock = int.Parse(txtBoxStock.Text);
+            DateTime fechaalta = DateTime.Now;
+            DateTime? fechabaja = null;
 
-            Producto producto = new Producto(idcategoria, idusuario, idproveedor, nombre, precio, stock);
+            Producto producto = new Producto(idcategoria, idusuario, idproveedor, nombre, precio, stock, fechaalta,fechabaja);
             ProductoService productoService = new ProductoService();
 
             string respuestaAltaProducto = productoService.AgregarProducto(producto);

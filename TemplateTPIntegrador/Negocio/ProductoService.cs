@@ -18,6 +18,22 @@ namespace Negocio
 
             return respuestaAgregarProducto;
         }
+
+        public void EliminarProducto(Producto producto)
+        {
+            try
+            {
+                //ProveedorManager persistencia = new ProveedorManager();
+                ProductoWS persistencia = new ProductoWS();
+                persistencia.EliminarProducto(producto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar el producto: {ex.Message}");
+                throw;
+            }
+
+        }
     }
 } 
 
