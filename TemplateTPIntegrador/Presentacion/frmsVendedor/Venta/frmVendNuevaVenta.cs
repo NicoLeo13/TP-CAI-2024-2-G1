@@ -19,6 +19,7 @@ namespace Presentacion
     public partial class frmVendNuevaVenta : Form
     {
         private Producto productoBusqueda;
+        //private Cliente clienteBusqueda;
 
         public frmVendNuevaVenta()
         {
@@ -43,66 +44,22 @@ namespace Presentacion
             //btnLimpiarCampos.TabIndex = 11;
         }
 
-        private void btnVolver_Click(object sender, EventArgs e)
-        {
-
-            PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
-        }
-        private void btnLimpiarCampos_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                PresentacionUtils.LimpiarControles(this); 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error: {ex.Message}");
-            }
-        }
-
-        private void btnGuardarVenta_Click(object sender, EventArgs e)
-        {
-            //PresentacionValidaciones validaciones = new PresentacionValidaciones();
-            //if (!validaciones.ValidarControles(this, out string mensajeError))
-            //{
-            //    MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            //Guid idVenta = Guid.NewGuid();
-            //Guid idCliente;
-            //Guid idUsuario;
-            //Guid idProducto;
-
-            //Guid.TryParse(txtClienteID.Text, out idCliente);
-            //Guid.TryParse(txtProductoID.Text, out idProducto);
-            //Guid.TryParse(txtBoxUsuario.Text, out idUsuario);
-
-            ////TODO: Añadir metodo validar int de cantidad y estado
-            //int cantidad;
-            //int.TryParse(txtCantidad.Text, out cantidad);
-
-            //int estado;
-            //int.TryParse(txtEstado.Text, out estado);
-
-            //DateTime fechaAlta = dtpFechaVenta.Value;
-
-            //Venta venta = new Venta(idVenta, idCliente, idProducto, cantidad, fechaAlta, estado, idUsuario);
-            //VentaService ventaService = new VentaService();
-
-            //string respuestaNuevaVenta = ventaService.AgregarVenta(venta);
-
-            //MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");
-        }
-
-        private void lblTop_Click(object sender, EventArgs e)
-        {
-
-        }
+        //private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        PresentacionUtils.LimpiarControles(this); 
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Error: {ex.Message}");
+        //    }
+        //}
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             //Buscar producto por Nombre
+            LimpiarCamposProducto();
             if (txtBoxNombreProd.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -118,14 +75,20 @@ namespace Presentacion
                     MessageBox.Show("El producto de nombre: " + txtBoxNombreProd.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                // ID del proveedor si hiciera falta
-                //txtBox ??? = proveedor.Id.ToString();
+                
+                if (productoBusqueda.Stock == 0)
+                {
+                    MessageBox.Show("El producto seleccionado no tiene stock disponible", "Falta de Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
                 lblContIdProd.Text = productoBusqueda.Id.ToString();
                 lblContPrecio.Text = productoBusqueda.Precio.ToString();
                 lblContStock.Text = productoBusqueda.Stock.ToString();
 
+                LlenarComboBoxCantidad();
                 PresentacionUtils.HabilitarControles(this.grpVenta);
+
             }
             catch (Exception ex)
             {
@@ -134,8 +97,60 @@ namespace Presentacion
             }
         }
 
-        private void btnCancelarOperacion_Click(object sender, EventArgs e)
+        private void LimpiarCamposProducto()
         {
+            cmbCantidad.Items.Clear();
+            cmbCantidad.Text = "";
+            cmbCantidad.SelectedIndex = -1;
+            lblContIdProd.Text = "";
+            lblContPrecio.Text = "";
+            lblContStock.Text = "";
+        }
+
+        //Llenar combobox dependiendo del stock del producto
+        private void LlenarComboBoxCantidad()
+        {
+            cmbCantidad.Items.Clear();
+            cmbCantidad.Text = "";
+            cmbCantidad.SelectedIndex = -1;
+
+            int stock = productoBusqueda.Stock;
+
+            for (int i = 1; i <= stock; i++)
+                cmbCantidad.Items.Add(i);
+        }
+
+        private void btnBuscarCliente_Click(object sender, EventArgs e)
+        {
+            LimpiarCamposCliente();
+        }
+
+        private void LimpiarCamposCliente()
+        {
+            lblContNombreApellido.Text = "";
+            lblContClienteDireccion.Text = "";
+            lblContClienteTelefono.Text = "";
+        }
+
+        private void btnAgregarAlCarrito_Click(object sender, EventArgs e)
+        {
+            if(productoBusqueda == null)
+            {
+                MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(cmbCantidad.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Seleccione una cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            //else if(clienteBusqueda == null)
+            //{
+            //    MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+
+
 
         }
 
@@ -143,11 +158,6 @@ namespace Presentacion
         {
 
         }
-
-
-
-
-
 
         //private void btnAgregarAlCarrito_Click(object sender, EventArgs e)
         //{
@@ -185,5 +195,47 @@ namespace Presentacion
         //    carrito.LimpiarCarrito();
         //    ActualizarVistaCarrito();
         //}
+
+        private void btnGuardarVenta_Click(object sender, EventArgs e)
+        {
+            //PresentacionValidaciones validaciones = new PresentacionValidaciones();
+            //if (!validaciones.ValidarControles(this, out string mensajeError))
+            //{
+            //    MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+
+            //Guid idVenta = Guid.NewGuid();
+            //Guid idCliente;
+            //Guid idUsuario;
+            //Guid idProducto;
+
+            //Guid.TryParse(txtClienteID.Text, out idCliente);
+            //Guid.TryParse(txtProductoID.Text, out idProducto);
+            //Guid.TryParse(txtBoxUsuario.Text, out idUsuario);
+
+            ////TODO: Añadir metodo validar int de cantidad y estado
+            //int cantidad;
+            //int.TryParse(txtCantidad.Text, out cantidad);
+
+            //int estado;
+            //int.TryParse(txtEstado.Text, out estado);
+
+            //DateTime fechaAlta = dtpFechaVenta.Value;
+
+            //Venta venta = new Venta(idVenta, idCliente, idProducto, cantidad, fechaAlta, estado, idUsuario);
+            //VentaService ventaService = new VentaService();
+
+            //string respuestaNuevaVenta = ventaService.AgregarVenta(venta);
+
+            //MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");
+        }
+
+        private void btnCancelarOperacion_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
