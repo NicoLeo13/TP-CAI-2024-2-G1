@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CarritoManager.cs" />
+    <Compile Include="ClienteWS.cs" />
     <Compile Include="Exceptions\HttpResponseMessageException.cs" />
     <Compile Include="LoginDB.cs" />
     <Compile Include="LoginWS.cs" />

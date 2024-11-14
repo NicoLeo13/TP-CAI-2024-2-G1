@@ -396,5 +396,8 @@
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.Label lblContFechaAlta;
         private System.Windows.Forms.Label lblFechaAlta;
+        private System.Windows.Forms.TextBox txtDni;
+
+
     }
 }
