@@ -132,7 +132,8 @@ namespace Persistencia
 
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("id", adminId);
+          
+            datos.Add("idUsuario", adminId);
             datos.Add("nombre", proveedor.Nombre);
             datos.Add("apellido", proveedor.Apellido);
             datos.Add("email", proveedor.Email);
