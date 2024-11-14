@@ -17,8 +17,8 @@ namespace Presentacion
 {
     public partial class frmProductosBaja : Form
     {
-        public UsuarioWS usuario;
-        public ProductoWS producto;
+        //public UsuarioWS usuario;
+        public Producto producto;
 
         public frmProductosBaja()
         {
@@ -48,15 +48,48 @@ namespace Presentacion
                 MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-        }
 
-        private void btnEliminarProducto_Click(object sender, EventArgs e)
-        {
-            if (producto == null)
+            try
             {
-                MessageBox.Show("No se ha seleccionado ningun producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                //proveedor = ProveedorService.BuscarProveedor(txtBoxCUITProveedor.Text);
+                producto = ProductoService.BuscarProducto(txtBoxNombreProd.Text);
+
+                // usuario = UsuarioService.BuscarUsuario(txtBoxCUITProveedor.Text);
+                if (producto == null)
+                {
+                    MessageBox.Show("El producto de nombre: " + txtBoxNombreProd.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                // ID del proveedor si hiciera falta
+                //txtBox ??? = proveedor.Id.ToString();
+
+                //lblContIdProd = producto.
+                lblContCategoria.Text = producto.idCategoria.ToString();
+                lblContNombre.Text = producto.nombre;
+                lblContPrecio.Text = producto.precio.ToString();
+                lblContStock.Text = producto.stock.ToString();
+                lblContFechaAlta.Text = producto.FechaAlta.ToString();
+                lblContIdProd.Text= producto.idCategoria.ToString();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el producto de nombre: " + txtBoxNombreProd.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al buscar el producto de nombre: {txtBoxNombreProd.Text} - {ex.Message}");
             }
         }
     }
+
+        //private void btnEliminarProd_Click(object sender, EventArgs e)
+        //{
+            //if (producto == null)
+            //{
+                //MessageBox.Show("No se ha seleccionado ningun producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //return;
+            //}
+        //}
+    
 }
+
