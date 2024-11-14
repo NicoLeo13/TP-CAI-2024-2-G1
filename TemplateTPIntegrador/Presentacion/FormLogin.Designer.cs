@@ -36,11 +36,11 @@
             this.btnIniciarSesion = new FontAwesome.Sharp.IconButton();
             this.linkLabelForgotPass = new System.Windows.Forms.LinkLabel();
             this.guna2CustomGradientLeftLogin = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.lblTopText = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblSistema = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
+            this.lblSistema = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblTopText = new System.Windows.Forms.Label();
             this.guna2CustomGradientLeftLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -143,40 +143,17 @@
             this.guna2CustomGradientLeftLogin.Size = new System.Drawing.Size(506, 530);
             this.guna2CustomGradientLeftLogin.TabIndex = 7;
             // 
-            // lblTopText
+            // lblVersion
             // 
-            this.lblTopText.BackColor = System.Drawing.Color.Transparent;
-            this.lblTopText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTopText.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblTopText.Location = new System.Drawing.Point(600, 97);
-            this.lblTopText.Name = "lblTopText";
-            this.lblTopText.Size = new System.Drawing.Size(187, 41);
-            this.lblTopText.TabIndex = 8;
-            this.lblTopText.Text = "Inicio de Sesion";
-            this.lblTopText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblName
-            // 
-            this.lblName.BackColor = System.Drawing.Color.Transparent;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblName.Location = new System.Drawing.Point(63, 23);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(357, 115);
-            this.lblName.TabIndex = 0;
-            this.lblName.Text = "Bienvenido a ElectroHogar S.A";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(177, 173);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(144, 123);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
+            this.lblVersion.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVersion.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblVersion.Location = new System.Drawing.Point(418, 505);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(85, 21);
+            this.lblVersion.TabIndex = 3;
+            this.lblVersion.Text = "V1.0";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblSistema
             // 
@@ -190,21 +167,45 @@
             this.lblSistema.Text = "Sistema de Gestion";
             this.lblSistema.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblVersion
+            // pictureBox1
             // 
-            this.lblVersion.BackColor = System.Drawing.Color.Transparent;
-            this.lblVersion.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVersion.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblVersion.Location = new System.Drawing.Point(418, 505);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(85, 21);
-            this.lblVersion.TabIndex = 3;
-            this.lblVersion.Text = "V1.0";
-            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(177, 173);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(144, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblName
+            // 
+            this.lblName.BackColor = System.Drawing.Color.Transparent;
+            this.lblName.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblName.Location = new System.Drawing.Point(63, 23);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(357, 115);
+            this.lblName.TabIndex = 0;
+            this.lblName.Text = "Bienvenido a ElectroHogar S.A";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTopText
+            // 
+            this.lblTopText.BackColor = System.Drawing.Color.Transparent;
+            this.lblTopText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTopText.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblTopText.Location = new System.Drawing.Point(600, 97);
+            this.lblTopText.Name = "lblTopText";
+            this.lblTopText.Size = new System.Drawing.Size(187, 41);
+            this.lblTopText.TabIndex = 8;
+            this.lblTopText.Text = "Inicio de Sesion";
+            this.lblTopText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(890, 530);
