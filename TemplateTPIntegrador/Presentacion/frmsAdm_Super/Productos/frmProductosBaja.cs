@@ -64,12 +64,12 @@ namespace Presentacion
                 //txtBox ??? = proveedor.Id.ToString();
 
                 //lblContIdProd = producto.
-                lblContCategoria.Text = producto.idCategoria.ToString();
-                lblContNombre.Text = producto.nombre;
-                lblContPrecio.Text = producto.precio.ToString();
-                lblContStock.Text = producto.stock.ToString();
+                lblContCategoria.Text = producto.IdCategoria.ToString();
+                lblContNombre.Text = producto.Nombre;
+                lblContPrecio.Text = producto.Precio.ToString();
+                lblContStock.Text = producto.Stock.ToString();
                 lblContFechaAlta.Text = producto.FechaAlta.ToString();
-                lblContIdProd.Text= producto.idCategoria.ToString();
+                lblContIdProd.Text= producto.IdCategoria.ToString();
 
 
 
