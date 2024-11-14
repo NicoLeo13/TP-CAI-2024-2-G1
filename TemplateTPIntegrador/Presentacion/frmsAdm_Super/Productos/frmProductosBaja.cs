@@ -51,19 +51,15 @@ namespace Presentacion
 
             try
             {
-                //proveedor = ProveedorService.BuscarProveedor(txtBoxCUITProveedor.Text);
+                
                 producto = ProductoService.BuscarProducto(txtBoxNombreProd.Text);
 
-                // usuario = UsuarioService.BuscarUsuario(txtBoxCUITProveedor.Text);
                 if (producto == null)
                 {
                     MessageBox.Show("El producto de nombre: " + txtBoxNombreProd.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                // ID del proveedor si hiciera falta
-                //txtBox ??? = proveedor.Id.ToString();
-
-                //lblContIdProd = producto.
+                
                 lblContCategoria.Text = producto.idCategoria.ToString();
                 lblContNombre.Text = producto.nombre;
                 lblContPrecio.Text = producto.precio.ToString();
@@ -80,16 +76,46 @@ namespace Presentacion
                 Console.WriteLine($"\nError al buscar el producto de nombre: {txtBoxNombreProd.Text} - {ex.Message}");
             }
         }
+
+        private void btnEliminarProd_Click(object sender, EventArgs e)
+        {
+            if (txtBoxNombreProd.Text == null)
+            {
+                MessageBox.Show("El producto no tiene un nombre válido para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            try
+            {
+                // Condicional con mensaje de confirmación para eliminar un producto
+                DialogResult dialogResult = MessageBox.Show($"¿Está seguro que desea eliminar al producto: {producto.nombre}?", "Confirmacion",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (dialogResult == DialogResult.No)
+                    return;
+
+                ProductoService productoService = new ProductoService();
+
+                productoService.EliminarProducto(producto);
+
+                LimpiarCamposBaja();
+
+                MessageBox.Show($"Producto: {producto.nombre}  eliminado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                producto = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al eliminar el producto: {ex.Message}");
+            }
+        }
     }
 
-        //private void btnEliminarProd_Click(object sender, EventArgs e)
-        //{
-            //if (producto == null)
-            //{
-                //MessageBox.Show("No se ha seleccionado ningun producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //return;
-            //}
-        //}
+    
+        
     
 }
+    
+
 
