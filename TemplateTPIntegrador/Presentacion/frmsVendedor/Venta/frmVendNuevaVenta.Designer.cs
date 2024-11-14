@@ -57,7 +57,7 @@
             this.lblCantidad = new System.Windows.Forms.Label();
             this.btnBuscarCliente = new FontAwesome.Sharp.IconButton();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxDniCliente = new System.Windows.Forms.TextBox();
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
             this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -415,12 +415,12 @@
             this.lblCliente.Text = "Ingrese el DNI del Cliente";
             this.lblCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // txtBoxDniCliente
             // 
-            this.textBox1.Location = new System.Drawing.Point(611, 96);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 25);
-            this.textBox1.TabIndex = 3;
+            this.txtBoxDniCliente.Location = new System.Drawing.Point(611, 96);
+            this.txtBoxDniCliente.Name = "txtBoxDniCliente";
+            this.txtBoxDniCliente.Size = new System.Drawing.Size(206, 25);
+            this.txtBoxDniCliente.TabIndex = 3;
             // 
             // dgvCarrito
             // 
@@ -645,7 +645,7 @@
             this.Controls.Add(this.dgvCarrito);
             this.Controls.Add(this.btnBuscarCliente);
             this.Controls.Add(this.lblCliente);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxDniCliente);
             this.Controls.Add(this.grpVenta);
             this.Controls.Add(this.grpDatosStock);
             this.Controls.Add(this.btnBuscar);
@@ -690,7 +690,7 @@
         private System.Windows.Forms.Label lblCantidad;
         private FontAwesome.Sharp.IconButton btnBuscarCliente;
         private System.Windows.Forms.Label lblCliente;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxDniCliente;
         private FontAwesome.Sharp.IconButton btnAgregarAlCarrito;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPrecioFinal;

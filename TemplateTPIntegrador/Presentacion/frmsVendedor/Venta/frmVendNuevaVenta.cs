@@ -19,7 +19,8 @@ namespace Presentacion
     public partial class frmVendNuevaVenta : Form
     {
         private Producto productoBusqueda;
-        //private Cliente clienteBusqueda;
+        private Cliente clienteBusqueda;
+        private CarritoService carrito;
 
         public frmVendNuevaVenta()
         {
@@ -60,6 +61,13 @@ namespace Presentacion
         {
             //Buscar producto por Nombre
             LimpiarCamposProducto();
+
+            if(clienteBusqueda == null)
+            {
+                MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (txtBoxNombreProd.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,6 +131,35 @@ namespace Presentacion
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
             LimpiarCamposCliente();
+
+            if (txtBoxDniCliente.Text == "")
+            {
+                MessageBox.Show("Ingrese el DNI del cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                clienteBusqueda = ClienteService.BuscarCliente(int.Parse(txtBoxDniCliente.Text));
+
+                if (clienteBusqueda == null)
+                {
+                    MessageBox.Show("El cliente con DNI: " + txtBoxDniCliente.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                lblContNombreApellido.Text = clienteBusqueda.Nombre + " " + clienteBusqueda.Apellido;
+                lblContClienteDireccion.Text = clienteBusqueda.Direccion;
+                lblContClienteTelefono.Text = clienteBusqueda.Telefono;
+
+                PresentacionUtils.DeshabilitarControles(txtBoxDniCliente);
+                btnBuscarCliente.Enabled = false;   //Deshabilitar boton de busqueda de cliente una vez encontrado y operando con el mismo
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el cliente con DNI: " + txtBoxDniCliente.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al buscar el cliente con DNI: {txtBoxDniCliente.Text} - {ex.Message}");
+            }
         }
 
         private void LimpiarCamposCliente()
@@ -144,12 +181,13 @@ namespace Presentacion
                 MessageBox.Show("Seleccione una cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            //else if(clienteBusqueda == null)
-            //{
-            //    MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+            else if (clienteBusqueda == null)
+            {
+                MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            
 
 
         }
@@ -233,7 +271,22 @@ namespace Presentacion
 
         private void btnCancelarOperacion_Click(object sender, EventArgs e)
         {
+            //Message box para confirmar cancelacion de operacion
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea cancelar la operación?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.No)
+                return;
 
+            //Cancelar operacion y limpiar controles
+            txtBoxNombreProd.Text = "";
+            LimpiarCamposProducto();
+            txtBoxDniCliente.Text = "";
+            LimpiarCamposCliente();
+            carrito = null;
+            productoBusqueda = null;
+            clienteBusqueda = null;
+
+            PresentacionUtils.HabilitarControles(txtBoxDniCliente);
+            btnBuscarCliente.Enabled = true;
         }
 
 
