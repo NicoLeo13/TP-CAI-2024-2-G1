@@ -33,13 +33,14 @@ namespace Presentacion
 
         public void LimpiarCamposBaja()
         {
-            //txtBoxUsuario.Text = "";
-            //lblContNombre.Text = "";
-            //lblContApellido.Text = "";
-            //lblContDni.Text = "";
-            //lblContHost.Text = "";
-            //lblContIdUser.Text = "";
-            //lblContEstado.Text = "";
+            txtBoxCUITProveedor.Text = "";
+
+            txtBoxNombreProveedorRellenar.Text = "";
+            txtBoxApellidoProveedorRellenar.Text = "";
+            txtBoxEmailProveedorRellenar.Text = "";
+            txtBoxCuitProveedorRellenar.Text = "";
+            txtBoxFechaAltaProveedorRellenar.Text = "";
+            txtBoxFechaBajaProveedorRellenar.Text = "";
         }
 
         private void txtBoxNombre_TextChanged(object sender, EventArgs e)
@@ -49,6 +50,49 @@ namespace Presentacion
 
         private void btnModificarProveedor_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // Recibo los nuevos valores que editó el usuario.
+
+                string nombre = txtBoxNombreProveedorRellenar.Text;
+                string apellido = txtBoxApellidoProveedorRellenar.Text;
+                string email = txtBoxEmailProveedorRellenar.Text;
+                string cuit = txtBoxCuitProveedorRellenar.Text;
+
+                // El WS no recibe las fechas, no son modificables.
+
+                //DateTime fechaAlta = Convert.ToDateTime(txtBoxFechaAltaProveedorRellenar.Text);
+                //DateTime? fechaBaja = txtBoxFechaBajaProveedorRellenar.Text == "N/A" ? (DateTime?)null : Convert.ToDateTime(txtBoxFechaBajaProveedorRellenar.Text);
+
+
+                // Verificación de que, si NO MODIFIQUÉ ningún campo, no se haga la llamada al WS.
+
+
+                // Creo un nuevo objeto Proveedor con los nuevos valores.
+
+                proveedor.Nombre = nombre;
+                proveedor.Apellido = apellido;
+                proveedor.Email = email;
+                proveedor.CUIT = cuit;
+                //proveedor.FechaAlta = fechaAlta;
+                //proveedor.FechaBaja = fechaBaja;
+
+                ProveedorService proveedorService = new ProveedorService();
+
+                proveedorService.ModificarProveedor(proveedor);
+
+                LimpiarCamposBaja();
+
+                MessageBox.Show($"El proveedor fue editado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                proveedor = null;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al modificar el proveedor: {ex.Message}");
+            }
+
 
         }
 
@@ -72,8 +116,10 @@ namespace Presentacion
                     return;
                 }
 
+                PresentacionUtils.HabilitarControles(this.grpDatosProveedor);
+
                 // Tenemos el ID si lo necesitáramos.
-                // lbl.??? = proveedor.IdProveedor.ToString(); 
+                // lbl.??? = proveedor.Id.ToString(); 
                 txtBoxNombreProveedorRellenar.Text = proveedor.Nombre;
                 txtBoxApellidoProveedorRellenar.Text = proveedor.Apellido;
                 txtBoxEmailProveedorRellenar.Text = proveedor.Email;

@@ -33,5 +33,19 @@ namespace Negocio
                 throw;
             }
         }
+
+        public void ModificarProveedor(Proveedor proveedor)
+        {
+            try
+            {
+                ProveedorManager persistencia = new ProveedorManager();
+                persistencia.ModificarProveedor(proveedor);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar el proveedor: {ex.Message}");
+                throw;
+            }
+        }
     }
 }

@@ -36,11 +36,11 @@
             this.lblNombreProveedorRellenar = new System.Windows.Forms.Label();
             this.lblApellidoProveedorRellenar = new System.Windows.Forms.Label();
             this.lblInfoDatosUser = new System.Windows.Forms.Label();
-            this.btnModificarProvee = new FontAwesome.Sharp.IconButton();
+            this.btnModificarProveedor = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.btnBuscarProveedor = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.grpDatosUser = new System.Windows.Forms.GroupBox();
+            this.grpDatosProveedor = new System.Windows.Forms.GroupBox();
             this.txtBoxFechaBajaProveedorRellenar = new System.Windows.Forms.TextBox();
             this.txtBoxFechaAltaProveedorRellenar = new System.Windows.Forms.TextBox();
             this.lblFechaBajaProveedorRellenar = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@
             this.lblCuitProveedorRellenar = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            this.grpDatosUser.SuspendLayout();
+            this.grpDatosProveedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
@@ -124,28 +124,28 @@
             this.lblInfoDatosUser.Text = "Ingrese el CUIT del Proveedor a Modificar";
             this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnModificarProvee
+            // btnModificarProveedor
             // 
-            this.btnModificarProvee.BackColor = System.Drawing.Color.Orange;
-            this.btnModificarProvee.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModificarProvee.FlatAppearance.BorderSize = 0;
-            this.btnModificarProvee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
-            this.btnModificarProvee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
-            this.btnModificarProvee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarProvee.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarProvee.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarProvee.IconChar = FontAwesome.Sharp.IconChar.FilePen;
-            this.btnModificarProvee.IconColor = System.Drawing.Color.Black;
-            this.btnModificarProvee.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnModificarProvee.IconSize = 30;
-            this.btnModificarProvee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarProvee.Location = new System.Drawing.Point(728, 455);
-            this.btnModificarProvee.Name = "btnModificarProvee";
-            this.btnModificarProvee.Size = new System.Drawing.Size(195, 41);
-            this.btnModificarProvee.TabIndex = 29;
-            this.btnModificarProvee.Text = "Modificar Proveedor";
-            this.btnModificarProvee.UseVisualStyleBackColor = false;
-            this.btnModificarProvee.Click += new System.EventHandler(this.btnModificarProveedor_Click);
+            this.btnModificarProveedor.BackColor = System.Drawing.Color.Orange;
+            this.btnModificarProveedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnModificarProveedor.FlatAppearance.BorderSize = 0;
+            this.btnModificarProveedor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.SaddleBrown;
+            this.btnModificarProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Coral;
+            this.btnModificarProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificarProveedor.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarProveedor.ForeColor = System.Drawing.Color.Black;
+            this.btnModificarProveedor.IconChar = FontAwesome.Sharp.IconChar.FilePen;
+            this.btnModificarProveedor.IconColor = System.Drawing.Color.Black;
+            this.btnModificarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnModificarProveedor.IconSize = 30;
+            this.btnModificarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnModificarProveedor.Location = new System.Drawing.Point(728, 455);
+            this.btnModificarProveedor.Name = "btnModificarProveedor";
+            this.btnModificarProveedor.Size = new System.Drawing.Size(195, 41);
+            this.btnModificarProveedor.TabIndex = 29;
+            this.btnModificarProveedor.Text = "Modificar Proveedor";
+            this.btnModificarProveedor.UseVisualStyleBackColor = false;
+            this.btnModificarProveedor.Click += new System.EventHandler(this.btnModificarProveedor_Click);
             // 
             // btnVolver
             // 
@@ -197,10 +197,10 @@
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panelContenedor.Controls.Add(this.grpDatosUser);
+            this.panelContenedor.Controls.Add(this.grpDatosProveedor);
             this.panelContenedor.Controls.Add(this.btnBuscarProveedor);
             this.panelContenedor.Controls.Add(this.btnVolver);
-            this.panelContenedor.Controls.Add(this.btnModificarProvee);
+            this.panelContenedor.Controls.Add(this.btnModificarProveedor);
             this.panelContenedor.Controls.Add(this.lblInfoDatosUser);
             this.panelContenedor.Controls.Add(this.txtBoxCUITProveedor);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
@@ -209,27 +209,27 @@
             this.panelContenedor.Size = new System.Drawing.Size(976, 510);
             this.panelContenedor.TabIndex = 33;
             // 
-            // grpDatosUser
+            // grpDatosProveedor
             // 
-            this.grpDatosUser.Controls.Add(this.txtBoxFechaBajaProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.txtBoxFechaAltaProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.lblFechaBajaProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.lblFechaAltaProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.txtBoxEmailProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.lblEmailProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.txtBoxCuitProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.txtBoxApellidoProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.txtBoxNombreProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.lblCuitProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.lblNombreProveedorRellenar);
-            this.grpDatosUser.Controls.Add(this.lblApellidoProveedorRellenar);
-            this.grpDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDatosUser.Location = new System.Drawing.Point(528, 33);
-            this.grpDatosUser.Name = "grpDatosUser";
-            this.grpDatosUser.Size = new System.Drawing.Size(395, 345);
-            this.grpDatosUser.TabIndex = 35;
-            this.grpDatosUser.TabStop = false;
-            this.grpDatosUser.Text = "Datos de Proveedor";
+            this.grpDatosProveedor.Controls.Add(this.txtBoxFechaBajaProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.txtBoxFechaAltaProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.lblFechaBajaProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.lblFechaAltaProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.txtBoxEmailProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.lblEmailProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.txtBoxCuitProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.txtBoxApellidoProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.txtBoxNombreProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.lblCuitProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.lblNombreProveedorRellenar);
+            this.grpDatosProveedor.Controls.Add(this.lblApellidoProveedorRellenar);
+            this.grpDatosProveedor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpDatosProveedor.Location = new System.Drawing.Point(528, 33);
+            this.grpDatosProveedor.Name = "grpDatosProveedor";
+            this.grpDatosProveedor.Size = new System.Drawing.Size(395, 345);
+            this.grpDatosProveedor.TabIndex = 35;
+            this.grpDatosProveedor.TabStop = false;
+            this.grpDatosProveedor.Text = "Datos de Proveedor";
             // 
             // txtBoxFechaBajaProveedorRellenar
             // 
@@ -354,8 +354,8 @@
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
-            this.grpDatosUser.ResumeLayout(false);
-            this.grpDatosUser.PerformLayout();
+            this.grpDatosProveedor.ResumeLayout(false);
+            this.grpDatosProveedor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -368,11 +368,11 @@
         private System.Windows.Forms.Label lblNombreProveedorRellenar;
         private System.Windows.Forms.Label lblApellidoProveedorRellenar;
         private System.Windows.Forms.Label lblInfoDatosUser;
-        private FontAwesome.Sharp.IconButton btnModificarProvee;
+        private FontAwesome.Sharp.IconButton btnModificarProveedor;
         private FontAwesome.Sharp.IconButton btnVolver;
         private FontAwesome.Sharp.IconButton btnBuscarProveedor;
         private System.Windows.Forms.Panel panelContenedor;
-        private System.Windows.Forms.GroupBox grpDatosUser;
+        private System.Windows.Forms.GroupBox grpDatosProveedor;
         private System.Windows.Forms.Label lblCuitProveedorRellenar;
         private System.Windows.Forms.TextBox txtBoxCuitProveedorRellenar;
         private System.Windows.Forms.TextBox txtBoxApellidoProveedorRellenar;

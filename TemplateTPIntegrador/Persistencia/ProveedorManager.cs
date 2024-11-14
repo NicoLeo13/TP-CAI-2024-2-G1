@@ -98,5 +98,30 @@ namespace Persistencia
                 throw new HttpRequestException($"Error al eliminar el proveedor:\n{errorContent}");
             }
         }
+
+        public void ModificarProveedor(Proveedor proveedor)
+        {
+            Dictionary<String, object> datos = new Dictionary<String, object>();
+
+            datos.Add("id", proveedor.Id);
+            datos.Add("idUsuario", adminId);
+            datos.Add("nombre", proveedor.Nombre);
+            datos.Add("apellido", proveedor.Apellido);
+            datos.Add("email", proveedor.Email);
+            datos.Add("cuit", proveedor.CUIT);
+
+            var jsonData = JsonConvert.SerializeObject(datos);
+
+            HttpResponseMessage response = WebHelper.PatchNoAdmin("Proveedor/ModificarProveedor", jsonData);
+
+            LoguearRequest(response);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {errorContent}");
+                throw new HttpRequestException($"Error al modificar el proveedor:\n{errorContent}");
+            }
+        }
     }
 }
