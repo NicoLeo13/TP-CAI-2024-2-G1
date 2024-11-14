@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Negocio;
 using Datos;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Net;
+using System.Web;
 
 namespace Presentacion
 {
@@ -53,9 +56,48 @@ namespace Presentacion
             PresentacionUtils.LimpiarControles(this);
         }
 
-        private void btnGuardarCliente_Click(object sender, EventArgs e)
+        private async void btnGuardarCliente_Click(object sender, EventArgs e)
         {
+            try
+            {
+                //validar campos
+                PresentacionValidaciones validaciones = new PresentacionValidaciones();
+                if (!validaciones.ValidarControles(this, out string mensajeError))
+                {
+                    MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
 
+
+                Guid id = Guid.NewGuid();
+                string nombre = txtBoxNombre.Text;
+                string apellido = txtBoxApellido.Text;
+                string direccion = txtBoxDireccion.Text;
+                string telefono = txtBoxTelefono.Text;
+                string email = txtBoxEmail.Text;
+                int dni = int.Parse(txtBoxDni.Text);
+                DateTime fechaNacimiento = dtpFechaNac.Value;
+                DateTime? fechaAlta = null;
+                DateTime? fechaBaja = null;
+                string host = "10";
+
+                ClienteService clienteService = new ClienteService();
+                clienteService.CrearCliente(id,nombre, dni, apellido, direccion, telefono, email, fechaNacimiento, host, fechaAlta, fechaBaja);
+
+                MessageBox.Show($"Cliente {nombre} {apellido} - {dni} agregado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show($"Error en el formato de los datos: {ex.Message} - {ex.Source}", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show($"Error interno:\n{ex.Message} - {ex.Source}", "Error programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
