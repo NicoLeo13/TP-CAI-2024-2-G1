@@ -246,6 +246,10 @@ namespace Presentacion
                 const String userPrueba = "ff738cd6-cc08-42e9-b15f-1f258084b0f9";
                 Guid idUserPrueba = Guid.Parse(userPrueba);
 
+                DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea guardar la venta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.No)
+                    return;
+
                 VentaService ventaService = new VentaService();
                 List<ItemCarrito> itemsCarrito = carritoService.ObtenerItemsCarrito();
                 foreach (ItemCarrito item in itemsCarrito)
