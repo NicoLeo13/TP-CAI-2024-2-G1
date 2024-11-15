@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Negocio;
 using Datos;
+using Negocio.Utils;
 
 namespace Presentacion
 {
@@ -74,12 +75,26 @@ namespace Presentacion
             string email = txtBoxEmail.Text;    
             string cuit = txtBoxCuit.Text;
 
+            NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
+            if (negocioValidaciones.CorreoValido(email) == false)
+            {
+                MessageBox.Show("El campo 'Email' debe contener un '@'. ");
+                return;
+            }
+
             Proveedor proveedor = new Proveedor(id, nombre, apellido, email, cuit, fechaalta, fechabaja);
             ProveedorService proveedorService = new ProveedorService();
 
             string respuestaAltaProveedor = proveedorService.AgregarProveedor(proveedor);
 
             MessageBox.Show("Se guardo el proveedor correctamente" + respuestaAltaProveedor);
+        }
+
+        private void txtBoxEmail_TextChanged(object sender, EventArgs e)
+        {
+            
+            
+            
         }
     }
     

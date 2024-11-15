@@ -16,6 +16,7 @@ namespace Negocio.Utils
         string apellido;
         string contraseña;
         string contraseñanueva;
+        string correo;
 
         //IndexOf devuelve el índice de la primera aparición de una subcadena en otra, y con StringComparison.OrdinalIgnoreCase ignora las diferencias entre mayúsculas y minúsculas. Si no se encuentra la subcadena, devuelve -1. Por eso verificamos si es mayor o igual a 0.
         public bool ValidarUsuario(string usuario, string nombre, string apellido)
@@ -52,6 +53,20 @@ namespace Negocio.Utils
 
             return respuestaCambioContraseña;
 
+        }
+
+        public bool CorreoValido(string email)
+        {
+            // Verificar si el string contiene el carácter '@'
+
+            if (email.Contains("@")) 
+            { 
+                return true; 
+            } 
+            else 
+            { 
+                return false; 
+            }
         }
     }
 }
