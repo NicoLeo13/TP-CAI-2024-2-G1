@@ -119,9 +119,9 @@
             this.lblInfoDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoDatosUser.Location = new System.Drawing.Point(23, 33);
             this.lblInfoDatosUser.Name = "lblInfoDatosUser";
-            this.lblInfoDatosUser.Size = new System.Drawing.Size(316, 21);
+            this.lblInfoDatosUser.Size = new System.Drawing.Size(230, 21);
             this.lblInfoDatosUser.TabIndex = 22;
-            this.lblInfoDatosUser.Text = "Ingrese el CUIT del Proveedor a Modificar";
+            this.lblInfoDatosUser.Text = "Ingrese el CUIT del proveedor";
             this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnModificarProveedor
@@ -139,11 +139,11 @@
             this.btnModificarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarProveedor.IconSize = 30;
             this.btnModificarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarProveedor.Location = new System.Drawing.Point(728, 455);
+            this.btnModificarProveedor.Location = new System.Drawing.Point(755, 455);
             this.btnModificarProveedor.Name = "btnModificarProveedor";
             this.btnModificarProveedor.Size = new System.Drawing.Size(195, 41);
             this.btnModificarProveedor.TabIndex = 29;
-            this.btnModificarProveedor.Text = "Modificar Proveedor";
+            this.btnModificarProveedor.Text = "Modificar proveedor";
             this.btnModificarProveedor.UseVisualStyleBackColor = false;
             this.btnModificarProveedor.Click += new System.EventHandler(this.btnModificarProveedor_Click);
             // 
@@ -229,7 +229,7 @@
             this.grpDatosProveedor.Size = new System.Drawing.Size(395, 345);
             this.grpDatosProveedor.TabIndex = 35;
             this.grpDatosProveedor.TabStop = false;
-            this.grpDatosProveedor.Text = "Datos de Proveedor";
+            this.grpDatosProveedor.Text = "Datos del proveedor";
             // 
             // txtBoxFechaBajaProveedorRellenar
             // 

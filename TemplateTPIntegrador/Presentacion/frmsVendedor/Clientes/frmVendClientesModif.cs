@@ -33,7 +33,7 @@ namespace Presentacion
 
         public void LimpiarCampos()
         {
-            txtBoxIdCliente.Text = "";
+            txtBoxDNICliente.Text = "";
 
             txtBoxDireccion.Text = "";
             txtBoxTelefono.Text = "";

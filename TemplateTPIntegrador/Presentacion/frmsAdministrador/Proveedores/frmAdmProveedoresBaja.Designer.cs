@@ -150,7 +150,7 @@
             this.btnEliminarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarProveedor.IconSize = 30;
             this.btnEliminarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarProveedor.Location = new System.Drawing.Point(737, 455);
+            this.btnEliminarProveedor.Location = new System.Drawing.Point(752, 455);
             this.btnEliminarProveedor.Name = "btnEliminarProveedor";
             this.btnEliminarProveedor.Size = new System.Drawing.Size(195, 41);
             this.btnEliminarProveedor.TabIndex = 29;

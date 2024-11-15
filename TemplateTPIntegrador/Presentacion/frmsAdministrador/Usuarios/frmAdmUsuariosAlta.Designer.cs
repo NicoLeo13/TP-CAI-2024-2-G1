@@ -102,7 +102,7 @@
             this.txtBoxNombre.Location = new System.Drawing.Point(180, 44);
             this.txtBoxNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(320, 29);
+            this.txtBoxNombre.Size = new System.Drawing.Size(257, 29);
             this.txtBoxNombre.TabIndex = 10;
             // 
             // txtBoxApellido
@@ -111,7 +111,7 @@
             this.txtBoxApellido.Location = new System.Drawing.Point(180, 106);
             this.txtBoxApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(320, 29);
+            this.txtBoxApellido.Size = new System.Drawing.Size(257, 29);
             this.txtBoxApellido.TabIndex = 13;
             // 
             // lblApellido
@@ -132,7 +132,7 @@
             this.txtBoxDireccion.Location = new System.Drawing.Point(180, 169);
             this.txtBoxDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.Size = new System.Drawing.Size(320, 29);
+            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 29);
             this.txtBoxDireccion.TabIndex = 15;
             // 
             // lblDireccion
@@ -153,7 +153,7 @@
             this.txtBoxDni.Location = new System.Drawing.Point(180, 356);
             this.txtBoxDni.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxDni.Name = "txtBoxDni";
-            this.txtBoxDni.Size = new System.Drawing.Size(320, 29);
+            this.txtBoxDni.Size = new System.Drawing.Size(257, 29);
             this.txtBoxDni.TabIndex = 17;
             // 
             // lblDni
@@ -174,7 +174,7 @@
             this.txtBoxEmail.Location = new System.Drawing.Point(181, 294);
             this.txtBoxEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(320, 29);
+            this.txtBoxEmail.Size = new System.Drawing.Size(257, 29);
             this.txtBoxEmail.TabIndex = 19;
             // 
             // lblEmail
@@ -195,7 +195,7 @@
             this.txtBoxTelefono.Location = new System.Drawing.Point(182, 231);
             this.txtBoxTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxTelefono.Name = "txtBoxTelefono";
-            this.txtBoxTelefono.Size = new System.Drawing.Size(320, 29);
+            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 29);
             this.txtBoxTelefono.TabIndex = 21;
             // 
             // lblTelefono
@@ -216,7 +216,7 @@
             this.txtBoxUsuario.Location = new System.Drawing.Point(145, 45);
             this.txtBoxUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(320, 29);
+            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 29);
             this.txtBoxUsuario.TabIndex = 24;
             // 
             // lblUsuario
@@ -237,7 +237,7 @@
             this.txtBoxContraseña.Location = new System.Drawing.Point(145, 106);
             this.txtBoxContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBoxContraseña.Name = "txtBoxContraseña";
-            this.txtBoxContraseña.Size = new System.Drawing.Size(320, 29);
+            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 29);
             this.txtBoxContraseña.TabIndex = 26;
             // 
             // lblContraseña
@@ -270,7 +270,7 @@
             this.cmbHost.Location = new System.Drawing.Point(145, 175);
             this.cmbHost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbHost.Name = "cmbHost";
-            this.cmbHost.Size = new System.Drawing.Size(320, 36);
+            this.cmbHost.Size = new System.Drawing.Size(257, 36);
             this.cmbHost.TabIndex = 28;
             // 
             // btnGuardarUsuario
@@ -288,8 +288,7 @@
             this.btnGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarUsuario.IconSize = 30;
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(958, 498);
-            this.btnGuardarUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(766, 401);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(244, 51);
             this.btnGuardarUsuario.TabIndex = 29;
@@ -425,7 +424,7 @@
             this.dtpFechaNac.Location = new System.Drawing.Point(181, 419);
             this.dtpFechaNac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(320, 29);
+            this.dtpFechaNac.Size = new System.Drawing.Size(257, 29);
             this.dtpFechaNac.TabIndex = 33;
             this.dtpFechaNac.ValueChanged += new System.EventHandler(this.dtpFechaNac_ValueChanged);
             // 

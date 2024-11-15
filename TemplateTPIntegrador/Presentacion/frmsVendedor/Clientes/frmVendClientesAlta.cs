@@ -11,6 +11,10 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Negocio;
 using Datos;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Net;
+using System.Web;
+using System.Security.Policy;
 
 namespace Presentacion
 {
@@ -53,9 +57,102 @@ namespace Presentacion
             PresentacionUtils.LimpiarControles(this);
         }
 
-        private void btnGuardarCliente_Click(object sender, EventArgs e)
+        private async void btnGuardarCliente_Click(object sender, EventArgs e)
         {
+            try
+            {
+                PresentacionValidaciones validaciones = new PresentacionValidaciones();
+                if (!validaciones.ValidarControles(this, out string mensajeError))
+                {
+                    MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                Guid id = Guid.NewGuid();
+                string nombre = txtBoxNombre.Text;
+                string apellido = txtBoxApellido.Text;
+                string direccion = txtBoxDireccion.Text;
+                string telefono = txtBoxTelefono.Text;
+                string email = txtBoxEmail.Text;
+                int dni = int.Parse(txtBoxDni.Text);
+                DateTime fechaNacimiento = dtpFechaNac.Value;
+                DateTime? fechaAlta = null;
+                DateTime? fechaBaja = null;
+                string host = "10";
 
+                //Validaciones
+                if (!string.IsNullOrWhiteSpace(nombre) && nombre.Length <= 30 &&!string.IsNullOrWhiteSpace(apellido) && apellido.Length <= 30)
+                {
+                    // Los campos son válidos: no están vacíos y tienen hasta 30 caracteres
+                }
+                else
+                {
+                    MessageBox.Show("El nombre y/o el apellido NO es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (!string.IsNullOrWhiteSpace(direccion) && direccion.Length <= 50)
+                {
+                    // La dirección es válida: no está vacía y tiene hasta 50 caracteres
+                }
+                else
+                {
+                    MessageBox.Show("La dirección no es válida.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (!string.IsNullOrWhiteSpace(telefono) && telefono.Length <= 20 && telefono.All(char.IsDigit))
+                {
+                    // El teléfono es válido: contiene solo dígitos y tiene hasta 20 caracteres
+                }
+                else
+                {
+                    MessageBox.Show("El teléfono debe contener solo números y tener hasta 20 dígitos.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                if (!string.IsNullOrWhiteSpace(email) && email.Length <= 50 && email.Contains("@"))
+                {
+                    // El email es válido: es un string con hasta 50 caracteres y contiene el símbolo '@'
+                }
+                else
+                {
+                    MessageBox.Show("El email NO es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if (int.TryParse(txtBoxDni.Text, out dni) && dni > 0 && txtBoxDni.Text.Length == 8)
+                {
+                    // El DNI es válido: número positivo y de 8 dígitos
+                }
+                else
+                {
+                    MessageBox.Show("El DNI debe ser un número positivo de 8 dígitos.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                DateTime fechaActual = DateTime.Now;
+                int edad = fechaActual.Year - fechaNacimiento.Year;
+                if (fechaNacimiento.Date > fechaActual.AddYears(-edad).Date)
+                {
+                    edad--;
+                }
+                if (edad >= 18 && edad <= 130)
+                {
+                    // La edad es válida, está dentro del rango
+                }
+                else
+                {
+                    MessageBox.Show("Debe ser mayor de edad.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                ClienteService clienteService = new ClienteService();
+                clienteService.CrearCliente(id,nombre, dni, apellido, direccion, telefono, email, fechaNacimiento, host, fechaAlta, fechaBaja);
+
+                MessageBox.Show($"Cliente {nombre} {apellido} - {dni} agregado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (FormatException ex)
+            {
+                MessageBox.Show($"Error en el formato de los datos: {ex.Message} - {ex.Source}", "Error de Formato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show($"Error interno:\n{ex.Message} - {ex.Source}", "Error programa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

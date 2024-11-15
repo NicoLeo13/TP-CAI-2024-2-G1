@@ -72,7 +72,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Clientes - Lista de Clientes";
+            this.lblTop.Text = "Productos - Listado de productos";
             // 
             // btnVolver
             // 
@@ -153,9 +153,9 @@
             this.lblFiltro.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.Location = new System.Drawing.Point(17, 6);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(82, 20);
+            this.lblFiltro.Size = new System.Drawing.Size(83, 20);
             this.lblFiltro.TabIndex = 36;
-            this.lblFiltro.Text = "Filtrar Por:";
+            this.lblFiltro.Text = "Filtrar por:";
             // 
             // cmbFiltros
             // 
