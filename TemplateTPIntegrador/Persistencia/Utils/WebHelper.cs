@@ -175,6 +175,17 @@ namespace Persistencia.Utils
             return response;
         }
 
+        public static HttpResponseMessage DeleteSinAdminId(string url, Guid idABorrar)
+        {
+            var uri = $"{rutaBase}{url}?id={idABorrar}";
+
+            Console.WriteLine($"DeleteWithBody - uri: {uri}");
+
+            HttpResponseMessage response = httpClient.DeleteAsync(uri).Result;
+
+            return response;
+        }
+
         public static async Task<HttpResponseMessage> DeleteAsync(string url)
         {
             var uri = rutaBase + url + adminId;

@@ -67,7 +67,11 @@ namespace Presentacion
                     MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+
+                // Seteo un GUID random para que no perturbe a Cliente.cs en el futuro.
+
                 Guid id = Guid.NewGuid();
+
                 string nombre = txtBoxNombre.Text;
                 string apellido = txtBoxApellido.Text;
                 string direccion = txtBoxDireccion.Text;
@@ -75,8 +79,13 @@ namespace Presentacion
                 string email = txtBoxEmail.Text;
                 int dni = int.Parse(txtBoxDni.Text);
                 DateTime fechaNacimiento = dtpFechaNac.Value;
+
+                // La fecha alta la va a setear el WS, y la de baja se dará cuando lo den de baja...
+
                 DateTime? fechaAlta = null;
                 DateTime? fechaBaja = null;
+
+                // Asignamos cualquier host, simplemente porque lo pide. Pero no es admin, ni supervisor, ni vendedor...
                 string host = "10";
 
                 //Validaciones

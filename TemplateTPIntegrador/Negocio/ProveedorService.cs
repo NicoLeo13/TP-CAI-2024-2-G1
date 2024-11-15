@@ -51,14 +51,18 @@ namespace Negocio
             }
         }
 
-        public string AgregarProveedor(Proveedor proveedor)
+        public void AgregarProveedor(Proveedor proveedor)
         {
-
-            ProveedorManager persistencia = new ProveedorManager();
-            string respuestaAgregarProveedor = persistencia.AgregarProveedor(proveedor);
-
-            return respuestaAgregarProveedor;
+            try
+            {
+                ProveedorManager persistencia = new ProveedorManager();
+                persistencia.AgregarProveedor(proveedor);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar el proveedor: {ex.Message}");
+                throw;
+            }
         }
-
     }
 }

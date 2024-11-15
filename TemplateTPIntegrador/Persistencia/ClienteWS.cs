@@ -149,16 +149,16 @@ namespace Persistencia
 
         public void BajaCliente(Guid idClienteBaja)
         {
-            Dictionary<String, object> datos = new Dictionary<String, object>();
+            //Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("id", idClienteBaja);
+            //datos.Add("id", idClienteBaja);
 
-            var jsonData = JsonConvert.SerializeObject(datos);
+            //var jsonData = JsonConvert.SerializeObject(datos);
 
 
-            Console.WriteLine("jsonData Cliente/BajaCliente: " + jsonData);
+            Console.WriteLine("jsonData Cliente/BajaCliente: " + idClienteBaja);
 
-            HttpResponseMessage response = WebHelper.DeleteWithBody("Cliente/BajaCliente", jsonData);
+            HttpResponseMessage response = WebHelper.DeleteSinAdminId("Cliente/BajaCliente", idClienteBaja);
 
             Console.WriteLine("response Cliente/BajaCliente: " + response);
 

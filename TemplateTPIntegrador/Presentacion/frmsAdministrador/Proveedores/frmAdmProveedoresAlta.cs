@@ -35,14 +35,7 @@ namespace Presentacion
             btnGuardarProveedor.TabIndex = 4;
             btnLimpiarCampos.TabIndex = 5;
             btnVolver.TabIndex = 6;
-
         }
-
-        private void btnGuardarVendedor_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
@@ -63,23 +56,34 @@ namespace Presentacion
                 return;
             }
 
+            if (!validaciones.ValidarCuit(txtBoxCuit.Text))
+            {
+                MessageBox.Show("El CUIT debe ser numerico, contener 11 caracteres y no contener guiones", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-            //Guid idproveedor = Guid.Parse(""); //no esta en el form para agregar el id
-            DateTime fechaalta = DateTime.Now;
-            DateTime? fechabaja = null;
-            Guid id = Guid.Empty;
+            try
+            {
+                DateTime fechaalta = DateTime.Now;
+                DateTime? fechabaja = null;
+                Guid id = Guid.Empty;
 
-            string nombre = txtBoxNombre.Text;
-            string apellido = txtBoxApellido.Text;
-            string email = txtBoxEmail.Text;    
-            string cuit = txtBoxCuit.Text;
+                string nombre = txtBoxNombre.Text;
+                string apellido = txtBoxApellido.Text;
+                string email = txtBoxEmail.Text;    
+                string cuit = txtBoxCuit.Text;
 
-            Proveedor proveedor = new Proveedor(id, nombre, apellido, email, cuit, fechaalta, fechabaja);
-            ProveedorService proveedorService = new ProveedorService();
+                Proveedor proveedor = new Proveedor(id, nombre, apellido, email, cuit, fechaalta, fechabaja);
+                ProveedorService proveedorService = new ProveedorService();
 
-            string respuestaAltaProveedor = proveedorService.AgregarProveedor(proveedor);
+                proveedorService.AgregarProveedor(proveedor);
 
-            MessageBox.Show("Se guardo el proveedor correctamente" + respuestaAltaProveedor);
+                MessageBox.Show($"Se guardo el proveedor correctamente: {txtBoxNombre.Text} {txtBoxApellido.Text}\nCUIT: {txtBoxCuit.Text}", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
     

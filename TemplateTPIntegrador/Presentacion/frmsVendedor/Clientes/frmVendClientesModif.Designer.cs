@@ -32,7 +32,7 @@
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.txtBoxDNICliente = new System.Windows.Forms.TextBox();
+            this.txtBoxBuscarClientePorDNI = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblInfoDatosCliente = new System.Windows.Forms.Label();
@@ -77,12 +77,12 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // txtBoxDNICliente
+            // txtBoxBuscarClientePorDNI
             // 
-            this.txtBoxDNICliente.Location = new System.Drawing.Point(47, 68);
-            this.txtBoxDNICliente.Name = "txtBoxDNICliente";
-            this.txtBoxDNICliente.Size = new System.Drawing.Size(206, 25);
-            this.txtBoxDNICliente.TabIndex = 24;
+            this.txtBoxBuscarClientePorDNI.Location = new System.Drawing.Point(47, 68);
+            this.txtBoxBuscarClientePorDNI.Name = "txtBoxBuscarClientePorDNI";
+            this.txtBoxBuscarClientePorDNI.Size = new System.Drawing.Size(206, 25);
+            this.txtBoxBuscarClientePorDNI.TabIndex = 24;
             // 
             // lblDireccion
             // 
@@ -196,7 +196,7 @@
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnModificarCliente);
             this.panelContenedor.Controls.Add(this.lblInfoDatosCliente);
-            this.panelContenedor.Controls.Add(this.txtBoxDNICliente);
+            this.panelContenedor.Controls.Add(this.txtBoxBuscarClientePorDNI);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -289,7 +289,7 @@
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.TextBox txtBoxDNICliente;
+        private System.Windows.Forms.TextBox txtBoxBuscarClientePorDNI;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblInfoDatosCliente;

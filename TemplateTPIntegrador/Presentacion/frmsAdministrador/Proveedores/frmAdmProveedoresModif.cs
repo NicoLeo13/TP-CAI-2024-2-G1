@@ -24,8 +24,6 @@ namespace Presentacion
             InitializeComponent();
         }
 
-
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
@@ -39,13 +37,6 @@ namespace Presentacion
             txtBoxApellidoProveedorRellenar.Text = "";
             txtBoxEmailProveedorRellenar.Text = "";
             txtBoxCuitProveedorRellenar.Text = "";
-            txtBoxFechaAltaProveedorRellenar.Text = "";
-            txtBoxFechaBajaProveedorRellenar.Text = "";
-        }
-
-        private void txtBoxNombre_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnModificarProveedor_Click(object sender, EventArgs e)
@@ -53,47 +44,38 @@ namespace Presentacion
             try
             {
                 // Recibo los nuevos valores que editó el usuario.
+                Proveedor proveedorOld = proveedor;
 
                 string nombre = txtBoxNombreProveedorRellenar.Text;
                 string apellido = txtBoxApellidoProveedorRellenar.Text;
                 string email = txtBoxEmailProveedorRellenar.Text;
                 string cuit = txtBoxCuitProveedorRellenar.Text;
 
-                // El WS no recibe las fechas, no son modificables.
-
-                //DateTime fechaAlta = Convert.ToDateTime(txtBoxFechaAltaProveedorRellenar.Text);
-                //DateTime? fechaBaja = txtBoxFechaBajaProveedorRellenar.Text == "N/A" ? (DateTime?)null : Convert.ToDateTime(txtBoxFechaBajaProveedorRellenar.Text);
-
-
-                // Verificación de que, si NO MODIFIQUÉ ningún campo, no se haga la llamada al WS.
-
-
-                // Creo un nuevo objeto Proveedor con los nuevos valores.
-
                 proveedor.Nombre = nombre;
                 proveedor.Apellido = apellido;
                 proveedor.Email = email;
                 proveedor.CUIT = cuit;
-                //proveedor.FechaAlta = fechaAlta;
-                //proveedor.FechaBaja = fechaBaja;
+
+                if(proveedorOld == proveedor)
+                {
+                    MessageBox.Show("No se realizaron cambios en el proveedor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 ProveedorService proveedorService = new ProveedorService();
-
                 proveedorService.ModificarProveedor(proveedor);
 
-                LimpiarCamposBaja();
-
                 MessageBox.Show($"El proveedor fue editado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LimpiarCamposBaja();
+                PresentacionUtils.DeshabilitarControles(this.grpDatosProveedor);
 
                 proveedor = null;
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al modificar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al modificar el proveedor:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine($"\nError al modificar el proveedor: {ex.Message}");
             }
-
-
         }
 
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
@@ -124,8 +106,6 @@ namespace Presentacion
                 txtBoxApellidoProveedorRellenar.Text = proveedor.Apellido;
                 txtBoxEmailProveedorRellenar.Text = proveedor.Email;
                 txtBoxCuitProveedorRellenar.Text = proveedor.CUIT;
-                txtBoxFechaAltaProveedorRellenar.Text = proveedor.FechaAlta.ToString("dd/MM/yyyy");
-                txtBoxFechaBajaProveedorRellenar.Text = proveedor.FechaBaja?.ToString("dd/MM/yyyy") ?? "N/A";
 
             }
             catch (Exception ex)

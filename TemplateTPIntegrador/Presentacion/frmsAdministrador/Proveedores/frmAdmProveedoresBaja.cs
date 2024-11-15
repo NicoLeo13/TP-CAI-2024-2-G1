@@ -18,6 +18,7 @@ namespace Presentacion
     public partial class frmAdmProveedoresBaja : Form
     {
         private Proveedor proveedor;
+        PresentacionValidaciones validaciones = new PresentacionValidaciones();
 
         public frmAdmProveedoresBaja()
         {
@@ -42,10 +43,14 @@ namespace Presentacion
 
         private void btnBuscarProveedor_Click(object sender, EventArgs e)
         {
-
             if (txtBoxCUITProveedor.Text == "")
             {
                 MessageBox.Show("Por favor ingrese un CUIT de proveedor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if(!validaciones.ValidarCuit(txtBoxCUITProveedor.Text))
+            {
+                MessageBox.Show("El CUIT debe ser numerico, contener 11 caracteres y no contener guiones", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -59,8 +64,7 @@ namespace Presentacion
                     MessageBox.Show("El proveedor de CUIT: " + txtBoxCUITProveedor.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                // ID del proveedor si hiciera falta
-                //txtBox ??? = proveedor.Id.ToString();
+
                 txtBoxNombreProveedorRellenar.Text = proveedor.Nombre;
                 txtBoxApellidoProveedorRellenar.Text = proveedor.Apellido;
                 txtBoxEmailProveedorRellenar.Text = proveedor.Email;
@@ -78,12 +82,11 @@ namespace Presentacion
 
         private void btnEliminarProveedor_Click(object sender, EventArgs e)
         {
-            if (txtBoxCuitProveedorRellenar.Text == null)
+            if (proveedor == null)
             {
-                MessageBox.Show("El proveedor no tiene un CUIT válido para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se ha seleccionado un proveedor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
 
             try
             {
@@ -105,7 +108,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al eliminar el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al eliminar el proveedor:\n {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Console.WriteLine($"\nError al eliminar el proveedor: {ex.Message}");
             }
         }

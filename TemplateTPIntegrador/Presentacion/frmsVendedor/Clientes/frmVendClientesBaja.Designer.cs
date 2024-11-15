@@ -32,13 +32,13 @@
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.txtBoxCliente = new System.Windows.Forms.TextBox();
+            this.txtBoxBuscarClientePorDNI = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblInfoDatosCliente = new System.Windows.Forms.Label();
             this.btnEliminarCliente = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
-            this.btnBuscar = new FontAwesome.Sharp.IconButton();
+            this.btnBuscarCliente = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpCliente = new System.Windows.Forms.GroupBox();
             this.lblContDni = new System.Windows.Forms.Label();
@@ -79,12 +79,12 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // txtBoxCliente
+            // txtBoxBuscarClientePorDNI
             // 
-            this.txtBoxCliente.Location = new System.Drawing.Point(47, 68);
-            this.txtBoxCliente.Name = "txtBoxCliente";
-            this.txtBoxCliente.Size = new System.Drawing.Size(206, 25);
-            this.txtBoxCliente.TabIndex = 24;
+            this.txtBoxBuscarClientePorDNI.Location = new System.Drawing.Point(47, 68);
+            this.txtBoxBuscarClientePorDNI.Name = "txtBoxBuscarClientePorDNI";
+            this.txtBoxBuscarClientePorDNI.Size = new System.Drawing.Size(206, 25);
+            this.txtBoxBuscarClientePorDNI.TabIndex = 24;
             // 
             // lblNombre
             // 
@@ -166,39 +166,39 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // btnBuscar
+            // btnBuscarCliente
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.FlatAppearance.BorderSize = 0;
-            this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
-            this.btnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscar.IconColor = System.Drawing.Color.WhiteSmoke;
-            this.btnBuscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBuscar.IconSize = 30;
-            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(279, 62);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(133, 34);
-            this.btnBuscar.TabIndex = 34;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarCliente_click);
+            this.btnBuscarCliente.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnBuscarCliente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarCliente.FlatAppearance.BorderSize = 0;
+            this.btnBuscarCliente.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
+            this.btnBuscarCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.SteelBlue;
+            this.btnBuscarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarCliente.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBuscarCliente.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btnBuscarCliente.IconColor = System.Drawing.Color.WhiteSmoke;
+            this.btnBuscarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBuscarCliente.IconSize = 30;
+            this.btnBuscarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscarCliente.Location = new System.Drawing.Point(279, 62);
+            this.btnBuscarCliente.Name = "btnBuscarCliente";
+            this.btnBuscarCliente.Size = new System.Drawing.Size(133, 34);
+            this.btnBuscarCliente.TabIndex = 34;
+            this.btnBuscarCliente.Text = "Buscar";
+            this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // panelContenedor
             // 
             this.panelContenedor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panelContenedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panelContenedor.Controls.Add(this.grpCliente);
-            this.panelContenedor.Controls.Add(this.btnBuscar);
+            this.panelContenedor.Controls.Add(this.btnBuscarCliente);
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnEliminarCliente);
             this.panelContenedor.Controls.Add(this.lblInfoDatosCliente);
-            this.panelContenedor.Controls.Add(this.txtBoxCliente);
+            this.panelContenedor.Controls.Add(this.txtBoxBuscarClientePorDNI);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -322,13 +322,13 @@
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.TextBox txtBoxCliente;
+        private System.Windows.Forms.TextBox txtBoxBuscarClientePorDNI;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblInfoDatosCliente;
         private FontAwesome.Sharp.IconButton btnEliminarCliente;
         private FontAwesome.Sharp.IconButton btnVolver;
-        private FontAwesome.Sharp.IconButton btnBuscar;
+        private FontAwesome.Sharp.IconButton btnBuscarCliente;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.GroupBox grpCliente;
         private System.Windows.Forms.Label lblContApellido;
