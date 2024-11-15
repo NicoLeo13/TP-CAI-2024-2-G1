@@ -47,12 +47,6 @@ namespace Presentacion
                 carritoService = new CarritoService();
         }
 
-        //private void InstanciarDataGridCarrito()
-        //{
-        //    if (dataGridCarrito == null)
-        //        dataGridCarrito = new CarritoService();
-        //}
-
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             //Buscar producto por Nombre
@@ -61,12 +55,14 @@ namespace Presentacion
             if (clienteBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxDniCliente.Focus();
                 return;
             }
 
             if (txtBoxNombreProd.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxNombreProd.Focus();
                 return;
             }
 
@@ -179,11 +175,13 @@ namespace Presentacion
             if (clienteBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxDniCliente.Focus();
                 return;
             }
             else if (productoBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxNombreProd.Focus();
                 return;
             }
             else if (cmbCantidad.SelectedIndex <= -1)
@@ -228,11 +226,13 @@ namespace Presentacion
             if (clienteBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxDniCliente.Focus();
                 return;
             }
             else if (productoBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxNombreProd.Focus();
                 return;
             }
             else if (carritoService == null || carritoService.CantidadProductosEnCarrito() == 0)

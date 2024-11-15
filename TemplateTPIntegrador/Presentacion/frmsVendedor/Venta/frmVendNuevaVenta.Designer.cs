@@ -60,11 +60,6 @@
             this.lblCliente = new System.Windows.Forms.Label();
             this.txtBoxDniCliente = new System.Windows.Forms.TextBox();
             this.dgvCarrito = new System.Windows.Forms.DataGridView();
-            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpCliente = new System.Windows.Forms.GroupBox();
             this.lblContNombreApellido = new System.Windows.Forms.Label();
             this.lblNombreApellido = new System.Windows.Forms.Label();
@@ -75,6 +70,11 @@
             this.btnEliminarDelCarrito = new FontAwesome.Sharp.IconButton();
             this.btnCancelarOperacion = new FontAwesome.Sharp.IconButton();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioFinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAdmUsersAlta.SuspendLayout();
             this.grpDatosStock.SuspendLayout();
             this.grpVenta.SuspendLayout();
@@ -154,7 +154,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(304, 90);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(133, 34);
-            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscarProducto_Click);
@@ -176,7 +176,7 @@
             this.txtBoxNombreProd.Location = new System.Drawing.Point(72, 96);
             this.txtBoxNombreProd.Name = "txtBoxNombreProd";
             this.txtBoxNombreProd.Size = new System.Drawing.Size(206, 25);
-            this.txtBoxNombreProd.TabIndex = 1;
+            this.txtBoxNombreProd.TabIndex = 3;
             // 
             // grpDatosStock
             // 
@@ -401,7 +401,7 @@
             this.btnBuscarCliente.Location = new System.Drawing.Point(843, 90);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(133, 34);
-            this.btnBuscarCliente.TabIndex = 4;
+            this.btnBuscarCliente.TabIndex = 2;
             this.btnBuscarCliente.Text = "Buscar";
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
             this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
@@ -424,7 +424,7 @@
             this.txtBoxDniCliente.Location = new System.Drawing.Point(611, 96);
             this.txtBoxDniCliente.Name = "txtBoxDniCliente";
             this.txtBoxDniCliente.Size = new System.Drawing.Size(206, 25);
-            this.txtBoxDniCliente.TabIndex = 3;
+            this.txtBoxDniCliente.TabIndex = 1;
             // 
             // dgvCarrito
             // 
@@ -461,63 +461,6 @@
             this.dgvCarrito.Size = new System.Drawing.Size(478, 176);
             this.dgvCarrito.TabIndex = 85;
             this.dgvCarrito.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCarrito_ColumnHeaderMouseClick);
-            // 
-            // categoria
-            // 
-            this.categoria.DataPropertyName = "Categoria";
-            this.categoria.FillWeight = 72.75491F;
-            this.categoria.HeaderText = "Categoria";
-            this.categoria.Name = "categoria";
-            this.categoria.ReadOnly = true;
-            this.categoria.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.categoria.Width = 50;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Descripcion";
-            this.Nombre.FillWeight = 126.0259F;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.Nombre.Width = 113;
-            // 
-            // cantidad
-            // 
-            this.cantidad.DataPropertyName = "Cantidad";
-            this.cantidad.FillWeight = 68.26125F;
-            this.cantidad.HeaderText = "Cantidad";
-            this.cantidad.Name = "cantidad";
-            this.cantidad.ReadOnly = true;
-            this.cantidad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.cantidad.Width = 65;
-            // 
-            // precioUnitario
-            // 
-            this.precioUnitario.DataPropertyName = "PrecioUnitario";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.Format = "C2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.precioUnitario.DefaultCellStyle = dataGridViewCellStyle3;
-            this.precioUnitario.FillWeight = 108.684F;
-            this.precioUnitario.HeaderText = "Precio Unitario";
-            this.precioUnitario.Name = "precioUnitario";
-            this.precioUnitario.ReadOnly = true;
-            this.precioUnitario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.precioUnitario.Width = 110;
-            // 
-            // precioFinal
-            // 
-            this.precioFinal.DataPropertyName = "Subtotal";
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.precioFinal.DefaultCellStyle = dataGridViewCellStyle4;
-            this.precioFinal.FillWeight = 113.4107F;
-            this.precioFinal.HeaderText = "Precio Final";
-            this.precioFinal.Name = "precioFinal";
-            this.precioFinal.ReadOnly = true;
-            this.precioFinal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.precioFinal.Width = 98;
             // 
             // grpCliente
             // 
@@ -653,6 +596,62 @@
             this.lblTotal.TabIndex = 81;
             this.lblTotal.Text = "Total: $ 0";
             // 
+            // categoria
+            // 
+            this.categoria.DataPropertyName = "Categoria";
+            this.categoria.FillWeight = 72.75491F;
+            this.categoria.HeaderText = "Categoria";
+            this.categoria.Name = "categoria";
+            this.categoria.ReadOnly = true;
+            this.categoria.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.categoria.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Descripcion";
+            this.Nombre.FillWeight = 126.0259F;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Nombre.Width = 113;
+            // 
+            // cantidad
+            // 
+            this.cantidad.DataPropertyName = "Cantidad";
+            this.cantidad.FillWeight = 68.26125F;
+            this.cantidad.HeaderText = "Cantidad";
+            this.cantidad.Name = "cantidad";
+            this.cantidad.ReadOnly = true;
+            this.cantidad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.cantidad.Width = 65;
+            // 
+            // precioUnitario
+            // 
+            this.precioUnitario.DataPropertyName = "PrecioUnitario";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.precioUnitario.DefaultCellStyle = dataGridViewCellStyle3;
+            this.precioUnitario.FillWeight = 108.684F;
+            this.precioUnitario.HeaderText = "Precio Unitario";
+            this.precioUnitario.Name = "precioUnitario";
+            this.precioUnitario.ReadOnly = true;
+            this.precioUnitario.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.precioUnitario.Width = 110;
+            // 
+            // precioFinal
+            // 
+            this.precioFinal.DataPropertyName = "Subtotal";
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.precioFinal.DefaultCellStyle = dataGridViewCellStyle4;
+            this.precioFinal.FillWeight = 113.4107F;
+            this.precioFinal.HeaderText = "Precio Final";
+            this.precioFinal.Name = "precioFinal";
+            this.precioFinal.ReadOnly = true;
+            this.precioFinal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.precioFinal.Width = 98;
+            // 
             // frmVendNuevaVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -728,11 +727,11 @@
         private FontAwesome.Sharp.IconButton btnEliminarDelCarrito;
         private FontAwesome.Sharp.IconButton btnCancelarOperacion;
         private System.Windows.Forms.ComboBox cmbCantidad;
+        private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn precioFinal;
-        private System.Windows.Forms.Label lblTotal;
     }
 }
