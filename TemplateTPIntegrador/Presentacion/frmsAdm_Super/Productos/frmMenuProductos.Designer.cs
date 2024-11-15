@@ -38,6 +38,7 @@
             this.btnAltaProducto = new FontAwesome.Sharp.IconButton();
             this.btnModificarProducto = new FontAwesome.Sharp.IconButton();
             this.btnEliminarProducto = new FontAwesome.Sharp.IconButton();
+            this.btnListarProductos = new FontAwesome.Sharp.IconButton();
             this.panelAdmvend.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
@@ -119,7 +120,7 @@
             this.btnAltaProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAltaProducto.IconSize = 30;
             this.btnAltaProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAltaProducto.Location = new System.Drawing.Point(387, 237);
+            this.btnAltaProducto.Location = new System.Drawing.Point(387, 297);
             this.btnAltaProducto.Name = "btnAltaProducto";
             this.btnAltaProducto.Size = new System.Drawing.Size(220, 56);
             this.btnAltaProducto.TabIndex = 18;
@@ -141,7 +142,7 @@
             this.btnModificarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarProducto.IconSize = 30;
             this.btnModificarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarProducto.Location = new System.Drawing.Point(387, 340);
+            this.btnModificarProducto.Location = new System.Drawing.Point(387, 393);
             this.btnModificarProducto.Name = "btnModificarProducto";
             this.btnModificarProducto.Size = new System.Drawing.Size(220, 56);
             this.btnModificarProducto.TabIndex = 19;
@@ -163,7 +164,7 @@
             this.btnEliminarProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarProducto.IconSize = 30;
             this.btnEliminarProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(387, 443);
+            this.btnEliminarProducto.Location = new System.Drawing.Point(387, 489);
             this.btnEliminarProducto.Name = "btnEliminarProducto";
             this.btnEliminarProducto.Size = new System.Drawing.Size(220, 56);
             this.btnEliminarProducto.TabIndex = 20;
@@ -171,11 +172,34 @@
             this.btnEliminarProducto.UseVisualStyleBackColor = false;
             this.btnEliminarProducto.Click += new System.EventHandler(this.btnBajaProd_Click);
             // 
+            // btnListarProductos
+            // 
+            this.btnListarProductos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnListarProductos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListarProductos.FlatAppearance.BorderSize = 0;
+            this.btnListarProductos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnListarProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnListarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarProductos.IconChar = FontAwesome.Sharp.IconChar.ClipboardQuestion;
+            this.btnListarProductos.IconColor = System.Drawing.Color.Black;
+            this.btnListarProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnListarProductos.IconSize = 30;
+            this.btnListarProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListarProductos.Location = new System.Drawing.Point(390, 201);
+            this.btnListarProductos.Name = "btnListarProductos";
+            this.btnListarProductos.Size = new System.Drawing.Size(220, 56);
+            this.btnListarProductos.TabIndex = 69;
+            this.btnListarProductos.Text = "Listar Productos";
+            this.btnListarProductos.UseVisualStyleBackColor = false;
+            this.btnListarProductos.Click += new System.EventHandler(this.btnListarProductos_Click);
+            // 
             // frmMenuProductos
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
+            this.Controls.Add(this.btnListarProductos);
             this.Controls.Add(this.btnEliminarProducto);
             this.Controls.Add(this.btnModificarProducto);
             this.Controls.Add(this.btnAltaProducto);
@@ -206,5 +230,6 @@
         private FontAwesome.Sharp.IconButton btnAltaProducto;
         private FontAwesome.Sharp.IconButton btnModificarProducto;
         private FontAwesome.Sharp.IconButton btnEliminarProducto;
+        private FontAwesome.Sharp.IconButton btnListarProductos;
     }
 }

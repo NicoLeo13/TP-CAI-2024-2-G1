@@ -59,5 +59,9 @@ namespace Presentacion
             PresentacionUtils.AbrirForm((IconButton)sender, new frmProductosBaja(), PresentacionUtils.PanelContenedor);
         }
 
+        private void btnListarProductos_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm(btnListarProductos, new frmProductosListar(), PresentacionUtils.PanelContenedor);
+        }
     }
 }

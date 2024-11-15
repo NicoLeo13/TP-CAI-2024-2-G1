@@ -15,14 +15,14 @@ using Persistencia;
 
 namespace Presentacion
 {
-    public partial class frmVendProductosListar : Form
+    public partial class frmProductosListar : Form
     {
         private DataGridService dataGridService;
         private BindingSource bindingSource;
         private bool sortAscending = true;
         private DataGridViewColumn sortedColumn = null;
 
-        public frmVendProductosListar()
+        public frmProductosListar()
         {
             InitializeComponent();
             dataGridService = new DataGridService();

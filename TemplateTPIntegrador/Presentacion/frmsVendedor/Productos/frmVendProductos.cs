@@ -21,7 +21,7 @@ namespace Presentacion.frmsVendedor
 
         private void btnListarProductos_Click(object sender, EventArgs e)
         {
-            PresentacionUtils.AbrirForm(btnListarProductos, new frmVendProductosListar(), PresentacionUtils.PanelContenedor);
+            PresentacionUtils.AbrirForm(btnListarProductos, new frmProductosListar(), PresentacionUtils.PanelContenedor);
         }
     }
 }

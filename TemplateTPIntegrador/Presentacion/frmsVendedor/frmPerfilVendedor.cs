@@ -137,7 +137,7 @@ namespace Presentacion
         {
             if (frmVendReportesInstance == null || frmVendReportesInstance.IsDisposed)
             {
-                frmVendReportesInstance = new frmVendReportes();
+                frmVendReportesInstance = new frmVendReportes(usuarioActual);
                 PresentacionUtils.AbrirForm((IconButton)sender, frmVendReportesInstance, panelContenedor);
             }
             else

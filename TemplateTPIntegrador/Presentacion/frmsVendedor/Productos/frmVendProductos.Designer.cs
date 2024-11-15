@@ -81,7 +81,7 @@
             this.btnListarProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
             this.btnListarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListarProductos.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListarProductos.IconChar = FontAwesome.Sharp.IconChar.Cubes;
+            this.btnListarProductos.IconChar = FontAwesome.Sharp.IconChar.ClipboardQuestion;
             this.btnListarProductos.IconColor = System.Drawing.Color.Black;
             this.btnListarProductos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnListarProductos.IconSize = 30;
