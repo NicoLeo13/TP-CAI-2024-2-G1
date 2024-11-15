@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using FontAwesome.Sharp;
 using Negocio;
 using Datos;
+using Negocio.Utils;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Presentacion
 {
@@ -61,9 +63,13 @@ namespace Presentacion
             try
             {
                 // Llamo al método de agregar usuario de la capa de negocio
+
                 string nombreUsuario = txtBoxUsuario.Text;
+                string telefono = txtBoxTelefono.Text;
 
                 PresentacionValidaciones validaciones = new PresentacionValidaciones();
+                
+
                 if (!validaciones.ValidarControles(this, out string mensajeError))
                 {
                     MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -81,6 +87,10 @@ namespace Presentacion
                     MessageBox.Show("El email no es válido. Debe contener el símbolo '@' y tener hasta 50 caracteres.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+               
+
+
                 DateTime fechaNacimiento = dtpFechaNac.Value;
                 int edad = DateTime.Now.Year - fechaNacimiento.Year;
                 if (fechaNacimiento.Date > DateTime.Now.AddYears(-edad).Date) edad--;

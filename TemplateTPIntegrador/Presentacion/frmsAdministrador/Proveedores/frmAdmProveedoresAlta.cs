@@ -76,6 +76,7 @@ namespace Presentacion
             string cuit = txtBoxCuit.Text;
 
             NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
+
             if (negocioValidaciones.CorreoValido(email) == false)
             {
                 MessageBox.Show("El campo 'Email' debe contener un '@'. ");

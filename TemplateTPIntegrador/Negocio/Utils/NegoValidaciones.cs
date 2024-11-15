@@ -68,5 +68,19 @@ namespace Negocio.Utils
                 return false; 
             }
         }
-    }
+
+        public bool ValidarNumeroTelefono(string telefono)
+        { // Verificar si el número telefónico tiene un máximo de 20 caracteres
+          if (telefono.Length <= 20) 
+          { 
+                return true; 
+            
+          } 
+          else 
+          { 
+                return false; 
+            
+          } 
+        }
+     }
 }
