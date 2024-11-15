@@ -72,7 +72,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Clientes - Agregar Cliente";
+            this.lblTop.Text = "Clientes - Agregar cliente";
             // 
             // lblNombre
             // 
@@ -203,11 +203,11 @@
             this.btnGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarUsuario.IconSize = 30;
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(742, 373);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(746, 432);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(195, 41);
             this.btnGuardarUsuario.TabIndex = 29;
-            this.btnGuardarUsuario.Text = "Guardar";
+            this.btnGuardarUsuario.Text = "Agregar";
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
             this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarCliente_Click);
             // 
@@ -226,11 +226,11 @@
             this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCampos.IconSize = 30;
             this.btnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(742, 455);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(746, 19);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(195, 41);
             this.btnLimpiarCampos.TabIndex = 30;
-            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.Text = "Limpiar campos";
             this.btnLimpiarCampos.UseVisualStyleBackColor = false;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
@@ -293,7 +293,7 @@
             this.grpDatosCliente.Size = new System.Drawing.Size(454, 395);
             this.grpDatosCliente.TabIndex = 34;
             this.grpDatosCliente.TabStop = false;
-            this.grpDatosCliente.Text = "Datos de Cliente";
+            this.grpDatosCliente.Text = "Datos de cliente";
             // 
             // lblFechaNacimiento
             // 

@@ -51,9 +51,7 @@ namespace Presentacion
             lblContNombre.Text = "";
             lblContApellido.Text = "";
             lblContDni.Text = "";
-            lblContIdCliente.Text = "";
             lblContFechaAlta.Text = "";
-            lblContEstado.Text = "";
         }
 
         private async void btnBuscarCliente_click(object sender, EventArgs e)

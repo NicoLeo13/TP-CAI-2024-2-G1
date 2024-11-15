@@ -32,7 +32,7 @@
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.txtBoxIdCliente = new System.Windows.Forms.TextBox();
+            this.txtBoxDNICliente = new System.Windows.Forms.TextBox();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblInfoDatosCliente = new System.Windows.Forms.Label();
@@ -66,7 +66,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Clientes - Modificar Clientes";
+            this.lblTop.Text = "Clientes - Modificar cliente";
             // 
             // panelSide
             // 
@@ -77,12 +77,12 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // txtBoxIdCliente
+            // txtBoxDNICliente
             // 
-            this.txtBoxIdCliente.Location = new System.Drawing.Point(47, 68);
-            this.txtBoxIdCliente.Name = "txtBoxIdCliente";
-            this.txtBoxIdCliente.Size = new System.Drawing.Size(206, 25);
-            this.txtBoxIdCliente.TabIndex = 24;
+            this.txtBoxDNICliente.Location = new System.Drawing.Point(47, 68);
+            this.txtBoxDNICliente.Name = "txtBoxDNICliente";
+            this.txtBoxDNICliente.Size = new System.Drawing.Size(206, 25);
+            this.txtBoxDNICliente.TabIndex = 24;
             // 
             // lblDireccion
             // 
@@ -92,7 +92,7 @@
             this.lblDireccion.Name = "lblDireccion";
             this.lblDireccion.Size = new System.Drawing.Size(105, 25);
             this.lblDireccion.TabIndex = 9;
-            this.lblDireccion.Text = "Direccion";
+            this.lblDireccion.Text = "Dirección";
             this.lblDireccion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblTelefono
@@ -103,7 +103,7 @@
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(105, 25);
             this.lblTelefono.TabIndex = 12;
-            this.lblTelefono.Text = "Telefono";
+            this.lblTelefono.Text = "Teléfono";
             this.lblTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblInfoDatosCliente
@@ -113,9 +113,9 @@
             this.lblInfoDatosCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoDatosCliente.Location = new System.Drawing.Point(23, 33);
             this.lblInfoDatosCliente.Name = "lblInfoDatosCliente";
-            this.lblInfoDatosCliente.Size = new System.Drawing.Size(271, 21);
+            this.lblInfoDatosCliente.Size = new System.Drawing.Size(280, 21);
             this.lblInfoDatosCliente.TabIndex = 22;
-            this.lblInfoDatosCliente.Text = "Ingrese el ID del Cliente a Modificar";
+            this.lblInfoDatosCliente.Text = "Ingrese el DNI del cliente a modificar";
             this.lblInfoDatosCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnModificarCliente
@@ -137,7 +137,7 @@
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(195, 41);
             this.btnModificarCliente.TabIndex = 29;
-            this.btnModificarCliente.Text = "Modificar Cliente";
+            this.btnModificarCliente.Text = "Modificar";
             this.btnModificarCliente.UseVisualStyleBackColor = false;
             this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
@@ -196,7 +196,7 @@
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnModificarCliente);
             this.panelContenedor.Controls.Add(this.lblInfoDatosCliente);
-            this.panelContenedor.Controls.Add(this.txtBoxIdCliente);
+            this.panelContenedor.Controls.Add(this.txtBoxDNICliente);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -214,10 +214,10 @@
             this.grpDatosCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDatosCliente.Location = new System.Drawing.Point(528, 33);
             this.grpDatosCliente.Name = "grpDatosCliente";
-            this.grpDatosCliente.Size = new System.Drawing.Size(395, 211);
+            this.grpDatosCliente.Size = new System.Drawing.Size(395, 186);
             this.grpDatosCliente.TabIndex = 35;
             this.grpDatosCliente.TabStop = false;
-            this.grpDatosCliente.Text = "Datos de Cliente";
+            this.grpDatosCliente.Text = "Datos modificables del cliente";
             // 
             // txtBoxEmail
             // 
@@ -288,7 +288,7 @@
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.TextBox txtBoxIdCliente;
+        private System.Windows.Forms.TextBox txtBoxDNICliente;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblTelefono;
         private System.Windows.Forms.Label lblInfoDatosCliente;

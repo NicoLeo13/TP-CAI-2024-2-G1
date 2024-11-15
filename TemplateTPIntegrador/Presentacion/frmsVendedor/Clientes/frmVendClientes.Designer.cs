@@ -83,7 +83,7 @@
             this.btnReactivarCliente.Name = "btnReactivarCliente";
             this.btnReactivarCliente.Size = new System.Drawing.Size(220, 56);
             this.btnReactivarCliente.TabIndex = 75;
-            this.btnReactivarCliente.Text = "Reactivar Clientes";
+            this.btnReactivarCliente.Text = "Reactivar clientes";
             this.btnReactivarCliente.UseVisualStyleBackColor = false;
             this.btnReactivarCliente.Click += new System.EventHandler(this.btnReactivarCliente_Click);
             // 
@@ -105,7 +105,7 @@
             this.btnListarClientes.Name = "btnListarClientes";
             this.btnListarClientes.Size = new System.Drawing.Size(220, 56);
             this.btnListarClientes.TabIndex = 74;
-            this.btnListarClientes.Text = "Listar Clientes";
+            this.btnListarClientes.Text = "Listar clientes";
             this.btnListarClientes.UseVisualStyleBackColor = false;
             this.btnListarClientes.Click += new System.EventHandler(this.btnListarClientes_Click);
             // 
@@ -127,7 +127,7 @@
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(220, 56);
             this.btnEliminarCliente.TabIndex = 73;
-            this.btnEliminarCliente.Text = "Eliminar Clientes";
+            this.btnEliminarCliente.Text = "Dar de baja clientes";
             this.btnEliminarCliente.UseVisualStyleBackColor = false;
             this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
@@ -149,7 +149,7 @@
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(220, 56);
             this.btnModificarCliente.TabIndex = 72;
-            this.btnModificarCliente.Text = "Modificar Clientes";
+            this.btnModificarCliente.Text = "Modificar clientes";
             this.btnModificarCliente.UseVisualStyleBackColor = false;
             this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
             // 
@@ -171,7 +171,7 @@
             this.btnAltaCliente.Name = "btnAltaCliente";
             this.btnAltaCliente.Size = new System.Drawing.Size(220, 56);
             this.btnAltaCliente.TabIndex = 71;
-            this.btnAltaCliente.Text = "Agregar Clientes";
+            this.btnAltaCliente.Text = "Agregar clientes";
             this.btnAltaCliente.UseVisualStyleBackColor = false;
             this.btnAltaCliente.Click += new System.EventHandler(this.btnAltaCliente_Click);
             // 
