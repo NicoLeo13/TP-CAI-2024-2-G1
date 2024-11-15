@@ -208,5 +208,15 @@ namespace Presentacion
         {
 
         }
+
+        private void lblName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTopText_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
