@@ -1,6 +1,9 @@
 ﻿using Datos;
 using Persistencia;
+using Persistencia.Utils;
 using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 
 namespace Negocio
@@ -47,5 +50,15 @@ namespace Negocio
                 throw;
             }
         }
+
+        public string AgregarProveedor(Proveedor proveedor)
+        {
+
+            ProveedorManager persistencia = new ProveedorManager();
+            string respuestaAgregarProveedor = persistencia.AgregarProveedor(proveedor);
+
+            return respuestaAgregarProveedor;
+        }
+
     }
 }

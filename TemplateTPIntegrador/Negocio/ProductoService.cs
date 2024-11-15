@@ -36,7 +36,6 @@ namespace Negocio
         {
             try
             {
-                //ProveedorManager persistencia = new ProveedorManager();
                 ProductoWS persistencia = new ProductoWS();
                 persistencia.EliminarProducto(producto);
             }
