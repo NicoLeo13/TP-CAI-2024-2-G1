@@ -66,7 +66,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Proveedores - Agregar Proveedores";
+            this.lblTop.Text = "Proveedores - Agregar proveedores";
             // 
             // panelSide
             // 
@@ -92,11 +92,11 @@
             this.btnGuardarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarProveedor.IconSize = 30;
             this.btnGuardarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarProveedor.Location = new System.Drawing.Point(530, 346);
+            this.btnGuardarProveedor.Location = new System.Drawing.Point(752, 457);
             this.btnGuardarProveedor.Name = "btnGuardarProveedor";
             this.btnGuardarProveedor.Size = new System.Drawing.Size(195, 41);
             this.btnGuardarProveedor.TabIndex = 29;
-            this.btnGuardarProveedor.Text = "Guardar";
+            this.btnGuardarProveedor.Text = "Agregar";
             this.btnGuardarProveedor.UseVisualStyleBackColor = false;
             this.btnGuardarProveedor.Click += new System.EventHandler(this.btnGuardarProveedor_Click);
             // 
@@ -115,7 +115,7 @@
             this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCampos.IconSize = 30;
             this.btnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(769, 460);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(530, 457);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(195, 41);
             this.btnLimpiarCampos.TabIndex = 30;
@@ -175,13 +175,13 @@
             this.grpDatosPers.Size = new System.Drawing.Size(488, 264);
             this.grpDatosPers.TabIndex = 35;
             this.grpDatosPers.TabStop = false;
-            this.grpDatosPers.Text = "Datos Personales";
+            this.grpDatosPers.Text = "Datos del proveedor";
             // 
             // lblNombre
             // 
             this.lblNombre.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(33, 35);
+            this.lblNombre.Location = new System.Drawing.Point(33, 39);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(105, 25);
             this.lblNombre.TabIndex = 9;
@@ -199,7 +199,7 @@
             // 
             this.lblApellido.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido.Location = new System.Drawing.Point(33, 84);
+            this.lblApellido.Location = new System.Drawing.Point(33, 89);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(105, 25);
             this.lblApellido.TabIndex = 12;
@@ -217,7 +217,7 @@
             // 
             this.lblEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(33, 134);
+            this.lblEmail.Location = new System.Drawing.Point(33, 139);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(105, 25);
             this.lblEmail.TabIndex = 18;
@@ -228,7 +228,7 @@
             // 
             this.lblCuit.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblCuit.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuit.Location = new System.Drawing.Point(33, 185);
+            this.lblCuit.Location = new System.Drawing.Point(33, 189);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(105, 25);
             this.lblCuit.TabIndex = 16;
@@ -251,7 +251,8 @@
             // 
             // frmAdmProveedoresAlta
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
             this.Controls.Add(this.panelContenedor);

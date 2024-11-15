@@ -43,7 +43,6 @@
             this.txtBoxFiltro = new System.Windows.Forms.TextBox();
             this.lblClientesTotales = new System.Windows.Forms.Label();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.panelSide = new System.Windows.Forms.Panel();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +50,7 @@
             this.fechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSide = new System.Windows.Forms.Panel();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
@@ -72,7 +72,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Clientes - Lista de Clientes";
+            this.lblTop.Text = "Productos - Listado de productos";
             // 
             // btnVolver
             // 
@@ -153,9 +153,9 @@
             this.lblFiltro.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltro.Location = new System.Drawing.Point(17, 6);
             this.lblFiltro.Name = "lblFiltro";
-            this.lblFiltro.Size = new System.Drawing.Size(82, 20);
+            this.lblFiltro.Size = new System.Drawing.Size(83, 20);
             this.lblFiltro.TabIndex = 36;
-            this.lblFiltro.Text = "Filtrar Por:";
+            this.lblFiltro.Text = "Filtrar por:";
             // 
             // cmbFiltros
             // 
@@ -225,15 +225,6 @@
             this.dgvUsuarios.TabIndex = 32;
             this.dgvUsuarios.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsuarios_ColumnHeaderMouseClick);
             // 
-            // panelSide
-            // 
-            this.panelSide.BackColor = System.Drawing.Color.Teal;
-            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSide.Location = new System.Drawing.Point(0, 0);
-            this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(18, 566);
-            this.panelSide.TabIndex = 34;
-            // 
             // ID
             // 
             this.ID.DataPropertyName = "Id";
@@ -297,9 +288,19 @@
             this.stock.ReadOnly = true;
             this.stock.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             // 
+            // panelSide
+            // 
+            this.panelSide.BackColor = System.Drawing.Color.Teal;
+            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSide.Location = new System.Drawing.Point(0, 0);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(18, 566);
+            this.panelSide.TabIndex = 34;
+            // 
             // frmVendProductosListar
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
             this.Controls.Add(this.panelContenedor);

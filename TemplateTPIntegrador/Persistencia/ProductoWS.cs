@@ -25,12 +25,12 @@ namespace Persistencia
 
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("idCategoria", producto.idCategoria);
-            datos.Add("idUsuario", producto.idUsuario);
-            datos.Add("idProveedor", producto.idProveedor);
-            datos.Add("nombre", producto.nombre);
-            datos.Add("precio", producto.precio);
-            datos.Add("stock", producto.stock);
+            datos.Add("idCategoria", producto.IdCategoria);
+            datos.Add("idUsuario", producto.IdUsuario);
+            datos.Add("idProveedor", producto.IdProveedor);
+            datos.Add("nombre", producto.Nombre);
+            datos.Add("precio", producto.Precio);
+            datos.Add("stock", producto.Stock);
 
             //Convert the data to a JSON string
             var jsonData = JsonConvert.SerializeObject(datos);
@@ -60,8 +60,6 @@ namespace Persistencia
 
         public List<Producto> TraerProductos()
         {
-            List<Producto> productos = new List<Producto>();
-
             HttpResponseMessage response = WebHelper.GetSinAdminId("Producto/TraerProductos");
 
             LoguearRequest(response);
@@ -81,25 +79,20 @@ namespace Persistencia
 
 
         public static Producto TraerProducto(string nombre)
-
         {
-
             ProductoWS productoWS = new ProductoWS();
-
-            //@@ -44,15 +45,15 @@ namespace Persistencia
 
             try
             {
-
                 // Llama al método que trae el producto
                 List<Producto> producto = productoWS.TraerProductos();
 
                 // Busca el producto por nombre
-                var productoencontrado = producto.FirstOrDefault(u => u.nombre == nombre);
+                var productoencontrado = producto.FirstOrDefault(u => u.Nombre == nombre);
 
                 if (productoencontrado != null)
                 {
-                    Console.WriteLine($"\nProducto encontrado: {productoencontrado.nombre} {productoencontrado.idCategoria} - {productoencontrado.precio}");
+                    Console.WriteLine($"\nProducto encontrado: {productoencontrado.Nombre} {productoencontrado.IdCategoria} - {productoencontrado.Precio}");
                     return productoencontrado;
                 }
                 else
@@ -133,7 +126,7 @@ namespace Persistencia
         {
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("nombre", producto.nombre);
+            datos.Add("nombre", producto.Nombre);
 
             var jsonData = JsonConvert.SerializeObject(datos);
 

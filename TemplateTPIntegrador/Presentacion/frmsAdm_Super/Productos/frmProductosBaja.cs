@@ -110,12 +110,7 @@ namespace Presentacion
                 Console.WriteLine($"\nError al eliminar el producto: {ex.Message}");
             }
         }
-    }
-
-    
-        
+    }      
     
 }
     
-
-

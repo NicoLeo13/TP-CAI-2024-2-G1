@@ -35,20 +35,16 @@
             this.txtBoxCliente = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
             this.lblInfoDatosCliente = new System.Windows.Forms.Label();
             this.btnEliminarCliente = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpCliente = new System.Windows.Forms.GroupBox();
-            this.lblContIdCliente = new System.Windows.Forms.Label();
-            this.lblIdCliente = new System.Windows.Forms.Label();
             this.lblContDni = new System.Windows.Forms.Label();
             this.lblDni = new System.Windows.Forms.Label();
             this.lblContFechaAlta = new System.Windows.Forms.Label();
             this.lblFechaAlta = new System.Windows.Forms.Label();
-            this.lblContEstado = new System.Windows.Forms.Label();
             this.lblContApellido = new System.Windows.Forms.Label();
             this.lblContNombre = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
@@ -72,7 +68,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Clientes - Eliminar Cliente";
+            this.lblTop.Text = "Clientes - Baja cliente";
             // 
             // panelSide
             // 
@@ -112,17 +108,6 @@
             this.lblApellido.Text = "Apellido";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblEstado
-            // 
-            this.lblEstado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(552, 189);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(105, 25);
-            this.lblEstado.TabIndex = 32;
-            this.lblEstado.Text = "Estado";
-            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lblInfoDatosCliente
             // 
             this.lblInfoDatosCliente.AutoSize = true;
@@ -132,7 +117,7 @@
             this.lblInfoDatosCliente.Name = "lblInfoDatosCliente";
             this.lblInfoDatosCliente.Size = new System.Drawing.Size(291, 21);
             this.lblInfoDatosCliente.TabIndex = 22;
-            this.lblInfoDatosCliente.Text = "Ingrese el DNI del cliente a dar de Baja";
+            this.lblInfoDatosCliente.Text = "Ingrese el DNI del cliente a dar de baja";
             this.lblInfoDatosCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnEliminarCliente
@@ -150,11 +135,11 @@
             this.btnEliminarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarCliente.IconSize = 30;
             this.btnEliminarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarCliente.Location = new System.Drawing.Point(737, 455);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(757, 455);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(195, 41);
             this.btnEliminarCliente.TabIndex = 29;
-            this.btnEliminarCliente.Text = "Eliminar Cliente";
+            this.btnEliminarCliente.Text = "Baja";
             this.btnEliminarCliente.UseVisualStyleBackColor = false;
             this.btnEliminarCliente.Click += new System.EventHandler(this.btnEliminarCliente_Click);
             // 
@@ -222,49 +207,21 @@
             // 
             // grpCliente
             // 
-            this.grpCliente.Controls.Add(this.lblContIdCliente);
-            this.grpCliente.Controls.Add(this.lblIdCliente);
             this.grpCliente.Controls.Add(this.lblContDni);
             this.grpCliente.Controls.Add(this.lblDni);
             this.grpCliente.Controls.Add(this.lblContFechaAlta);
             this.grpCliente.Controls.Add(this.lblFechaAlta);
-            this.grpCliente.Controls.Add(this.lblContEstado);
             this.grpCliente.Controls.Add(this.lblContApellido);
             this.grpCliente.Controls.Add(this.lblContNombre);
             this.grpCliente.Controls.Add(this.lblNombre);
             this.grpCliente.Controls.Add(this.lblApellido);
-            this.grpCliente.Controls.Add(this.lblEstado);
             this.grpCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpCliente.Location = new System.Drawing.Point(27, 131);
+            this.grpCliente.Location = new System.Drawing.Point(516, 33);
             this.grpCliente.Name = "grpCliente";
-            this.grpCliente.Size = new System.Drawing.Size(920, 236);
+            this.grpCliente.Size = new System.Drawing.Size(436, 287);
             this.grpCliente.TabIndex = 35;
             this.grpCliente.TabStop = false;
-            this.grpCliente.Text = "Datos de Cliente";
-            // 
-            // lblContIdCliente
-            // 
-            this.lblContIdCliente.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContIdCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContIdCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContIdCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContIdCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblContIdCliente.Location = new System.Drawing.Point(675, 118);
-            this.lblContIdCliente.Name = "lblContIdCliente";
-            this.lblContIdCliente.Size = new System.Drawing.Size(230, 25);
-            this.lblContIdCliente.TabIndex = 41;
-            this.lblContIdCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblIdCliente
-            // 
-            this.lblIdCliente.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblIdCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdCliente.Location = new System.Drawing.Point(552, 118);
-            this.lblIdCliente.Name = "lblIdCliente";
-            this.lblIdCliente.Size = new System.Drawing.Size(105, 25);
-            this.lblIdCliente.TabIndex = 40;
-            this.lblIdCliente.Text = "ID Cliente";
-            this.lblIdCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.grpCliente.Text = "Datos del cliente";
             // 
             // lblContDni
             // 
@@ -295,7 +252,7 @@
             this.lblContFechaAlta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblContFechaAlta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblContFechaAlta.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContFechaAlta.Location = new System.Drawing.Point(674, 47);
+            this.lblContFechaAlta.Location = new System.Drawing.Point(130, 250);
             this.lblContFechaAlta.Name = "lblContFechaAlta";
             this.lblContFechaAlta.Size = new System.Drawing.Size(230, 25);
             this.lblContFechaAlta.TabIndex = 37;
@@ -305,24 +262,12 @@
             // 
             this.lblFechaAlta.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblFechaAlta.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaAlta.Location = new System.Drawing.Point(552, 47);
+            this.lblFechaAlta.Location = new System.Drawing.Point(7, 250);
             this.lblFechaAlta.Name = "lblFechaAlta";
             this.lblFechaAlta.Size = new System.Drawing.Size(105, 25);
             this.lblFechaAlta.TabIndex = 36;
-            this.lblFechaAlta.Text = "Fecha de Alta";
+            this.lblFechaAlta.Text = "Fecha de alta";
             this.lblFechaAlta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContEstado
-            // 
-            this.lblContEstado.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContEstado.Location = new System.Drawing.Point(675, 189);
-            this.lblContEstado.Name = "lblContEstado";
-            this.lblContEstado.Size = new System.Drawing.Size(230, 25);
-            this.lblContEstado.TabIndex = 35;
-            this.lblContEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblContApellido
             // 
@@ -350,7 +295,8 @@
             // 
             // frmVendClientesBaja
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
             this.Controls.Add(this.panelContenedor);
@@ -379,21 +325,20 @@
         private System.Windows.Forms.TextBox txtBoxCliente;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblInfoDatosCliente;
         private FontAwesome.Sharp.IconButton btnEliminarCliente;
         private FontAwesome.Sharp.IconButton btnVolver;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.GroupBox grpCliente;
-        private System.Windows.Forms.Label lblContEstado;
         private System.Windows.Forms.Label lblContApellido;
         private System.Windows.Forms.Label lblContNombre;
-        private System.Windows.Forms.Label lblContIdCliente;
-        private System.Windows.Forms.Label lblIdCliente;
         private System.Windows.Forms.Label lblContDni;
         private System.Windows.Forms.Label lblDni;
         private System.Windows.Forms.Label lblContFechaAlta;
         private System.Windows.Forms.Label lblFechaAlta;
+        private System.Windows.Forms.TextBox txtDni;
+
+
     }
 }

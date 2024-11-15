@@ -12,12 +12,29 @@ namespace Negocio
 {
     public class VentaService
     {
+        private readonly VentaWS ventaWs;
 
-        public string AgregarVenta(Venta venta)
+        public VentaService()
         {
+            ventaWs = new VentaWS();
+        }
 
-            var ventaWs = new VentaWS();
-            return ventaWs.AgregarVenta(venta);
+        public void AgregarVenta(Venta venta)
+        {
+            try
+            {
+                ventaWs.AgregarVenta(venta);
+            }
+            catch (HttpRequestException ex)
+            {
+                Console.WriteLine($"\nError de WS: {ex.ToString()}");
+                throw;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError Inesperado: {ex.ToString()}");
+                throw;
+            }
 
         }
         public string ObtenerVentaPorVenta(Guid idVenta)
@@ -27,16 +44,11 @@ namespace Negocio
             return venta != null ? venta.ToString() : string.Empty;
         }
 
-        private readonly VentaBuscar _ventaBuscar;
-
-        public VentaService()
-        {
-            _ventaBuscar = new VentaBuscar();
-        }
-        public async Task<List<Venta>> BuscarVentasCliente(int clienteId, string empresa, DateTime fechaCompra)
-        {
-            return await _ventaBuscar.ObtenerVentasCliente(clienteId, empresa, fechaCompra);
-        }
+        //private readonly VentaBuscar _ventaBuscar;
+        //public async Task<List<Venta>> BuscarVentasCliente(int clienteId, string empresa, DateTime fechaCompra)
+        //{
+        //    return await _ventaBuscar.ObtenerVentasCliente(clienteId, empresa, fechaCompra);
+        //}
 
 
         public async Task<bool> DevolverVenta(int id, Guid idUsuario)
