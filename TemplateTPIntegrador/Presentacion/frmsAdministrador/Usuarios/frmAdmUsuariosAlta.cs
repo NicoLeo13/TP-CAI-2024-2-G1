@@ -69,6 +69,26 @@ namespace Presentacion
                     MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                //Validaciones extra
+
+                if (string.IsNullOrWhiteSpace(txtBoxTelefono.Text) || txtBoxTelefono.Text.Length > 20 || !txtBoxTelefono.Text.All(char.IsDigit))
+                {
+                    MessageBox.Show("El teléfono debe contener solo números y tener hasta 20 dígitos.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (string.IsNullOrWhiteSpace(txtBoxEmail.Text) || txtBoxEmail.Text.Length > 50 || !txtBoxEmail.Text.Contains("@"))
+                {
+                    MessageBox.Show("El email no es válido. Debe contener el símbolo '@' y tener hasta 50 caracteres.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                DateTime fechaNacimiento = dtpFechaNac.Value;
+                int edad = DateTime.Now.Year - fechaNacimiento.Year;
+                if (fechaNacimiento.Date > DateTime.Now.AddYears(-edad).Date) edad--;
+                if (edad < 18 || edad > 130)
+                {
+                    MessageBox.Show("Debe ser mayor de edad.", "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 UsuarioService usuarioService = new UsuarioService();
                 usuarioService.AgregarUsuario(
@@ -84,7 +104,7 @@ namespace Presentacion
                     Convert.ToInt32(txtBoxDni.Text),
                     txtBoxContraseña.Text
                 );
-
+                
                 MessageBox.Show($"Usuario {nombreUsuario} agregado exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (FormatException ex)

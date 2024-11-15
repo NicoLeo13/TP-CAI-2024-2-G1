@@ -98,7 +98,7 @@
             this.txtBoxNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxNombre.Location = new System.Drawing.Point(144, 35);
             this.txtBoxNombre.Name = "txtBoxNombre";
-            this.txtBoxNombre.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxNombre.Size = new System.Drawing.Size(257, 29);
             this.txtBoxNombre.TabIndex = 10;
             // 
             // txtBoxApellido
@@ -106,7 +106,7 @@
             this.txtBoxApellido.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxApellido.Location = new System.Drawing.Point(144, 85);
             this.txtBoxApellido.Name = "txtBoxApellido";
-            this.txtBoxApellido.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxApellido.Size = new System.Drawing.Size(257, 29);
             this.txtBoxApellido.TabIndex = 13;
             // 
             // lblApellido
@@ -125,7 +125,7 @@
             this.txtBoxDireccion.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDireccion.Location = new System.Drawing.Point(144, 135);
             this.txtBoxDireccion.Name = "txtBoxDireccion";
-            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxDireccion.Size = new System.Drawing.Size(257, 29);
             this.txtBoxDireccion.TabIndex = 15;
             // 
             // lblDireccion
@@ -144,7 +144,7 @@
             this.txtBoxDni.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxDni.Location = new System.Drawing.Point(144, 285);
             this.txtBoxDni.Name = "txtBoxDni";
-            this.txtBoxDni.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxDni.Size = new System.Drawing.Size(257, 29);
             this.txtBoxDni.TabIndex = 17;
             // 
             // lblDni
@@ -163,7 +163,7 @@
             this.txtBoxEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxEmail.Location = new System.Drawing.Point(145, 235);
             this.txtBoxEmail.Name = "txtBoxEmail";
-            this.txtBoxEmail.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxEmail.Size = new System.Drawing.Size(257, 29);
             this.txtBoxEmail.TabIndex = 19;
             // 
             // lblEmail
@@ -182,7 +182,7 @@
             this.txtBoxTelefono.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxTelefono.Location = new System.Drawing.Point(146, 185);
             this.txtBoxTelefono.Name = "txtBoxTelefono";
-            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxTelefono.Size = new System.Drawing.Size(257, 29);
             this.txtBoxTelefono.TabIndex = 21;
             // 
             // lblTelefono
@@ -201,7 +201,7 @@
             this.txtBoxUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxUsuario.Location = new System.Drawing.Point(116, 36);
             this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxUsuario.Size = new System.Drawing.Size(257, 29);
             this.txtBoxUsuario.TabIndex = 24;
             // 
             // lblUsuario
@@ -220,7 +220,7 @@
             this.txtBoxContraseña.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxContraseña.Location = new System.Drawing.Point(116, 85);
             this.txtBoxContraseña.Name = "txtBoxContraseña";
-            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 25);
+            this.txtBoxContraseña.Size = new System.Drawing.Size(257, 29);
             this.txtBoxContraseña.TabIndex = 26;
             // 
             // lblContraseña
@@ -250,7 +250,7 @@
             this.cmbHost.FormattingEnabled = true;
             this.cmbHost.Location = new System.Drawing.Point(116, 140);
             this.cmbHost.Name = "cmbHost";
-            this.cmbHost.Size = new System.Drawing.Size(257, 29);
+            this.cmbHost.Size = new System.Drawing.Size(257, 36);
             this.cmbHost.TabIndex = 28;
             // 
             // btnGuardarUsuario
@@ -268,7 +268,7 @@
             this.btnGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarUsuario.IconSize = 30;
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(350, 460);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(766, 401);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(195, 41);
             this.btnGuardarUsuario.TabIndex = 29;
@@ -395,7 +395,7 @@
             this.dtpFechaNac.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFechaNac.Location = new System.Drawing.Point(145, 335);
             this.dtpFechaNac.Name = "dtpFechaNac";
-            this.dtpFechaNac.Size = new System.Drawing.Size(257, 25);
+            this.dtpFechaNac.Size = new System.Drawing.Size(257, 29);
             this.dtpFechaNac.TabIndex = 33;
             this.dtpFechaNac.ValueChanged += new System.EventHandler(this.dtpFechaNac_ValueChanged);
             // 
