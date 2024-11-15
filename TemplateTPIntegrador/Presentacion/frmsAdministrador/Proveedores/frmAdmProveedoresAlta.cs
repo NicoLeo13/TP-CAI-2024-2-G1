@@ -65,7 +65,7 @@ namespace Presentacion
             }
 
 
-            //Guid idproveedor = Guid.Parse(""); //no esta en el form para agregar el id
+            //Guid idproveedor = Guid.Parse(""); 
             DateTime fechaalta = DateTime.Now;
             DateTime? fechabaja = null;
             Guid id = Guid.Empty;
@@ -77,11 +77,28 @@ namespace Presentacion
 
             NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
 
+            //Validacion email
+
             if (negocioValidaciones.CorreoValido(email) == false)
             {
-                MessageBox.Show("El campo 'Email' debe contener un '@'. ");
+                MessageBox.Show("El campo 'Email' debe contener un '@'.", "Error de validación");
                 return;
             }
+
+            if (negocioValidaciones.ValidarCUIT (cuit) == false)
+            {
+                MessageBox.Show("El CUIT debe contener 10 digitos.", "Error de validación");
+                return;
+            }
+            if (!string.IsNullOrWhiteSpace(nombre) && nombre.Length <= 30 && !string.IsNullOrWhiteSpace(apellido) && apellido.Length <= 30)
+            {
+                // Los campos son válidos: no están vacíos y tienen hasta 30 caracteres
+            }
+            else
+            {
+                MessageBox.Show("El nombre y/o el apellido NO es válido.", "Error de validación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
 
             Proveedor proveedor = new Proveedor(id, nombre, apellido, email, cuit, fechaalta, fechabaja);
             ProveedorService proveedorService = new ProveedorService();

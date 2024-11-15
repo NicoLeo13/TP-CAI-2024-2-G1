@@ -17,6 +17,7 @@ namespace Negocio.Utils
         string contraseña;
         string contraseñanueva;
         string correo;
+        string cuit;
 
         //IndexOf devuelve el índice de la primera aparición de una subcadena en otra, y con StringComparison.OrdinalIgnoreCase ignora las diferencias entre mayúsculas y minúsculas. Si no se encuentra la subcadena, devuelve -1. Por eso verificamos si es mayor o igual a 0.
         public bool ValidarUsuario(string usuario, string nombre, string apellido)
@@ -81,6 +82,22 @@ namespace Negocio.Utils
                 return false; 
             
           } 
+        }
+
+        public bool ValidarCUIT(string cuit)
+        {
+            // Verifica que el CUIT tenga 10 digitos
+
+            if (cuit.Length <= 10)
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+
+            }
         }
      }
 }
