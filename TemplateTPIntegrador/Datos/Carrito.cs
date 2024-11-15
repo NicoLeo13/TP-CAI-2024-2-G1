@@ -8,11 +8,11 @@ namespace Datos
 {
     public class Carrito
     {
-        public List<Producto> Productos { get; set; }
+        public List<ItemCarrito> Items { get; set; }
 
         public Carrito()
         {
-            Productos = new List<Producto>();
+            Items = new List<ItemCarrito>();
         }
     }
 }

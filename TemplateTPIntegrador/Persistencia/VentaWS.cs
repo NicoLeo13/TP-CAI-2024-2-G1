@@ -43,18 +43,15 @@ namespace Persistencia
                 return null;
             }
         }
-        public string AgregarVenta(Venta venta)
+        public void AgregarVenta(Venta venta)
         {
 
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("IdVenta", venta.IdVenta);
-            datos.Add("IdCliente", venta.IdCliente);
-            datos.Add("IdProducto", venta.IdProducto);
-            datos.Add("Cantidad", venta.Cantidad);
-            datos.Add("FechaAlta", venta.FechaAlta);
-            datos.Add("Estado", venta.Estado);
-            datos.Add("IdUsuario", venta.IdUsuario);
+            datos.Add("idCliente", venta.IdCliente);
+            datos.Add("idUsuario", venta.IdUsuario);
+            datos.Add("idProducto", venta.IdProducto);
+            datos.Add("cantidad", venta.Cantidad);
 
             //Convert the data to a JSON string
             var jsonData = JsonConvert.SerializeObject(datos);
@@ -65,21 +62,13 @@ namespace Persistencia
 
             Console.WriteLine("\n response Venta/AgregarVenta: " + response);
 
-            string result;
-
-            if (response.IsSuccessStatusCode)
+            if (!response.IsSuccessStatusCode)
             {
-                var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
-                result = JsonConvert.DeserializeObject<String>(reader.ReadToEnd());
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {errorContent}");
+                Console.WriteLine($"Venta de producto ID: {venta.IdProducto} - Cantidad:{venta.Cantidad}");
+                throw new HttpRequestException($"Error al agregar la venta:\n{errorContent}");
             }
-            else
-            {
-                result = response.Content.ReadAsStringAsync().Result;
-                Console.WriteLine($"Error: {result}");
-                throw new Exception("Error al guardar producto." + response.ReasonPhrase);
-            }
-
-            return result;
         }
         public Venta ObtenerVentaPorId(Guid idVenta)
         {

@@ -15,54 +15,50 @@ using Persistencia;
 
 namespace Presentacion
 {
-    
+
     public partial class frmVendNuevaVenta : Form
     {
         private Producto productoBusqueda;
         private Cliente clienteBusqueda;
-        private CarritoService carrito;
+        private CarritoService carritoService;
+        /*DataGrid*/
+        private CarritoService dataGridCarrito;
+        private DataGridService dataGridService;
+        private BindingSource bindingSource;
+        private bool sortAscending = true;
+        private DataGridViewColumn sortedColumn = null;
 
         public frmVendNuevaVenta()
         {
             InitializeComponent();
             ConfigurarTabIndex();
+            dataGridService = new DataGridService();
         }
 
         //Metodo para configurar el TabIndex de los controles (txtBox)
         private void ConfigurarTabIndex()
         {
-            //txtVentaID.TabIndex = 0;
-            //txtClienteID.TabIndex = 1;
-            //txtProductoID.TabIndex = 2;
-            //txtDescripcion.TabIndex = 3;
-            //txtCantidad.TabIndex = 4;
-            //txtEstado.TabIndex = 5;
-            //dtpFechaVenta.TabIndex = 6;
-            //txtBoxUsuario.TabIndex = 7;
-            //txtBoxContraseña.TabIndex = 8;
-            //cmbHost.TabIndex = 9;
-            //btnCargarVenta.TabIndex = 10;
-            //btnLimpiarCampos.TabIndex = 11;
+
         }
 
-        //private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        private void InstanciarCarritoService()
+        {
+            if (carritoService == null)
+                carritoService = new CarritoService();
+        }
+
+        //private void InstanciarDataGridCarrito()
         //{
-        //    try
-        //    {
-        //        PresentacionUtils.LimpiarControles(this); 
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show($"Error: {ex.Message}");
-        //    }
+        //    if (dataGridCarrito == null)
+        //        dataGridCarrito = new CarritoService();
         //}
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             //Buscar producto por Nombre
             LimpiarCamposProducto();
 
-            if(clienteBusqueda == null)
+            if (clienteBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -76,6 +72,7 @@ namespace Presentacion
 
             try
             {
+                InstanciarCarritoService();
                 productoBusqueda = ProductoService.BuscarProducto(txtBoxNombreProd.Text);
 
                 if (productoBusqueda == null)
@@ -83,15 +80,21 @@ namespace Presentacion
                     MessageBox.Show("El producto de nombre: " + txtBoxNombreProd.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                
-                if (productoBusqueda.Stock == 0)
+
+                ItemCarrito itemYaEnCarrito = carritoService.ProductoYaAgregadoCarrito(productoBusqueda);
+                if (itemYaEnCarrito != null)
+                {
+                    productoBusqueda.Stock -= itemYaEnCarrito.Cantidad;
+                }
+
+                if (productoBusqueda.Stock <= 0)
                 {
                     MessageBox.Show("El producto seleccionado no tiene stock disponible", "Falta de Stock", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
                 lblContIdProd.Text = productoBusqueda.Id.ToString();
-                lblContPrecio.Text = productoBusqueda.Precio.ToString();
+                lblContPrecio.Text = $"$ {productoBusqueda.Precio}";
                 lblContStock.Text = productoBusqueda.Stock.ToString();
 
                 LlenarComboBoxCantidad();
@@ -113,6 +116,8 @@ namespace Presentacion
             lblContIdProd.Text = "";
             lblContPrecio.Text = "";
             lblContStock.Text = "";
+            lblContPrecioFinal.Text = "";
+            lblContStockFinal.Text = "";
         }
 
         //Llenar combobox dependiendo del stock del producto
@@ -171,102 +176,142 @@ namespace Presentacion
 
         private void btnAgregarAlCarrito_Click(object sender, EventArgs e)
         {
-            if(productoBusqueda == null)
-            {
-                MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if(cmbCantidad.SelectedIndex <= -1)
-            {
-                MessageBox.Show("Seleccione una cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else if (clienteBusqueda == null)
+            if (clienteBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else if (productoBusqueda == null)
+            {
+                MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (cmbCantidad.SelectedIndex <= -1)
+            {
+                MessageBox.Show("Seleccione una cantidad", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            
+            try
+            {
+                InstanciarCarritoService();
+                //InstanciarDataGridCarrito();
+                //Ver para mandarle lo que requiere la API + Datos adicionales para mostrar en datagridview
+                int cantidad = int.Parse(cmbCantidad.Text);
+                carritoService.AgregarProducto(productoBusqueda, cantidad, clienteBusqueda);
+                carritoService.GuardarStockProductoLocal(productoBusqueda, cantidad);
+                txtBoxNombreProd.Text = "";
+                LimpiarCamposProducto();
+                LlenarDataGridView();
+                ActualizarLabelTotal();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al agregar el producto al carrito", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al agregar el producto al carrito - {ex.Message}");
+            }
+        }
 
+        private void ActualizarLabelTotal()
+        {
+            if (carritoService == null || carritoService.CantidadProductosEnCarrito() == 0)
+            {
+                if (lblTotal.Text != "Total: $ 0")
+                    lblTotal.Text = "Total: $ 0";
+                return;
+            }
+            lblTotal.Text = $"Total: $ {carritoService.CalcularTotalCarrito()}";
+        }
 
+        private void btnGuardarVenta_Click(object sender, EventArgs e)
+        {
+            if (clienteBusqueda == null)
+            {
+                MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (productoBusqueda == null)
+            {
+                MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (carritoService == null || carritoService.CantidadProductosEnCarrito() == 0)
+            {
+                MessageBox.Show("El carrito esta vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            try
+            {
+                const String userPrueba = "ff738cd6-cc08-42e9-b15f-1f258084b0f9";
+                Guid idUserPrueba = Guid.Parse(userPrueba);
+
+                VentaService ventaService = new VentaService();
+                List<ItemCarrito> itemsCarrito = carritoService.ObtenerItemsCarrito();
+                foreach (ItemCarrito item in itemsCarrito)
+                {
+                    //Venta venta = new Venta(item.IdCliente, idVendedor, item.IdProducto, item.Cantidad);
+                    Venta venta = new Venta(item.IdCliente, idUserPrueba, item.IdProducto, item.Cantidad);
+                    ventaService.AgregarVenta(venta);
+                }
+
+                MessageBox.Show($"Venta fue agregada exitosamente!\nCliente DNI: {clienteBusqueda.Dni}\nTotal: ${carritoService.CalcularTotalCarrito()}", "Venta", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                FinalizarOperacion();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar la venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al guardar la venta - {ex.Message}");
+            }
         }
 
         private void btnEliminarDelCarrito_Click(object sender, EventArgs e)
         {
+            if (carritoService == null || carritoService.CantidadProductosEnCarrito() == 0)
+            {
+                MessageBox.Show("El carrito esta vacio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (dgvCarrito.CurrentRow == null)
+            {
+                MessageBox.Show("Seleccione un item del carrito", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
+            //Message box para confirmar eliminacion de item
+            DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea eliminar el item del carrito?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (dialogResult == DialogResult.No)
+                return;
+
+            try
+            {
+                //Obtener el item seleccionado
+                ItemCarrito itemSeleccionado = carritoService.ObtenerItemsCarrito().ElementAt(dgvCarrito.CurrentRow.Index);
+                carritoService.EliminarItemCarrito(itemSeleccionado);
+                LlenarDataGridView();
+                ActualizarLabelTotal();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el item del carrito", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al eliminar el item del carrito - {ex.Message}");
+            }
         }
 
-        //private void btnAgregarAlCarrito_Click(object sender, EventArgs e)
-        //{
-        //    Guid idProducto;
-        //    Guid.TryParse(txtProductoID.Text, out idProducto);
-        //    string descripcion = txtDescripcion.Text;
-        //    int cantidad;
-        //    int.TryParse(txtCantidad.Text, out cantidad);
-        //    decimal precioUnitario;
-        //    decimal.TryParse(txtPrecioUnitario.Text, out precioUnitario);
-
-        //    ItemCarrito item = new ItemCarrito(idProducto, descripcion, cantidad, precioUnitario);
-        //    carrito.AgregarItem(item);
-
-        //    ActualizarVistaCarrito();
-        //}
-
-        //private void btnCargarVenta_Click(object sender, EventArgs e)
-        //{
-        //    Guid idVenta = Guid.NewGuid();
-        //    Guid idCliente;
-        //    Guid idUsuario;
-        //    Guid.TryParse(txtClienteID.Text, out idCliente);
-        //    Guid.TryParse(txtBoxUsuario.Text, out idUsuario);
-        //    DateTime fechaAlta = dtpFechaVenta.Value;
-        //    int estado;
-        //    int.TryParse(txtEstado.Text, out estado);
-
-        //    Venta venta = new Venta(idVenta, idCliente, carrito.Items.Select(i => i.IdProducto).ToList(), carrito.Items.Select(i => i.Cantidad).ToList(), fechaAlta, estado, idUsuario);
-        //    VentaService ventaService = new VentaService();
-
-        //    string respuestaNuevaVenta = ventaService.AgregarVenta(venta);
-
-        //    MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");
-        //    carrito.LimpiarCarrito();
-        //    ActualizarVistaCarrito();
-        //}
-
-        private void btnGuardarVenta_Click(object sender, EventArgs e)
+        private void EliminarItemCarrito(ItemCarrito item)
         {
-            //PresentacionValidaciones validaciones = new PresentacionValidaciones();
-            //if (!validaciones.ValidarControles(this, out string mensajeError))
-            //{
-            //    MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            //Guid idVenta = Guid.NewGuid();
-            //Guid idCliente;
-            //Guid idUsuario;
-            //Guid idProducto;
-
-            //Guid.TryParse(txtClienteID.Text, out idCliente);
-            //Guid.TryParse(txtProductoID.Text, out idProducto);
-            //Guid.TryParse(txtBoxUsuario.Text, out idUsuario);
-
-            ////TODO: Añadir metodo validar int de cantidad y estado
-            //int cantidad;
-            //int.TryParse(txtCantidad.Text, out cantidad);
-
-            //int estado;
-            //int.TryParse(txtEstado.Text, out estado);
-
-            //DateTime fechaAlta = dtpFechaVenta.Value;
-
-            //Venta venta = new Venta(idVenta, idCliente, idProducto, cantidad, fechaAlta, estado, idUsuario);
-            //VentaService ventaService = new VentaService();
-
-            //string respuestaNuevaVenta = ventaService.AgregarVenta(venta);
-
-            //MessageBox.Show($"Venta {respuestaNuevaVenta} fue agregada exitosamente!");
+            try
+            {
+                carritoService.EliminarItemCarrito(item);
+                LlenarDataGridView();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al eliminar el item del carrito", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al eliminar el item del carrito - {ex.Message}");
+            }
         }
 
         private void btnCancelarOperacion_Click(object sender, EventArgs e)
@@ -277,18 +322,98 @@ namespace Presentacion
                 return;
 
             //Cancelar operacion y limpiar controles
+            FinalizarOperacion();
+        }
+
+        private void FinalizarOperacion()
+        {
             txtBoxNombreProd.Text = "";
             LimpiarCamposProducto();
             txtBoxDniCliente.Text = "";
             LimpiarCamposCliente();
-            carrito = null;
+            carritoService = null;
             productoBusqueda = null;
             clienteBusqueda = null;
 
             PresentacionUtils.HabilitarControles(txtBoxDniCliente);
             btnBuscarCliente.Enabled = true;
+            ActualizarLabelTotal();
+
+            //Limpiar DataGridView
+            dgvCarrito.DataSource = null;
         }
 
+        /******
+              Logica DataGrid
+        ******/
+        private void ConfigurarDataGridView()
+        {
+            //lblUsuariosTotales.Text = $"Total: {usuariosActivos.Count.ToString()}";
 
+            // Habilitar ordenamiento
+            foreach (DataGridViewColumn column in dgvCarrito.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.Programmatic;
+            }
+        }
+
+        private void LlenarDataGridView()
+        {
+            // Usar BindingSource para permitir filtrado
+            bindingSource = new BindingSource();
+            dataGridCarrito = carritoService;
+
+            bindingSource.DataSource = dataGridCarrito.ObtenerItemsCarrito().Select(item => new
+            {
+                item.Categoria,
+                item.Descripcion,
+                item.Cantidad,
+                item.PrecioUnitario,
+                item.Subtotal
+            }).ToList();
+
+            dgvCarrito.DataSource = bindingSource;
+        }
+
+        private void dgvCarrito_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                DataGridViewColumn newColumn = dgvCarrito.Columns[e.ColumnIndex];
+                if (newColumn != sortedColumn)
+                    sortAscending = true;
+
+                var columna = dgvCarrito.Columns[e.ColumnIndex].DataPropertyName;
+                dataGridCarrito.CarritoManager.carrito.Items = dataGridService.OrdenarCarrito(dataGridCarrito.ObtenerItemsCarrito(), columna, sortAscending);
+
+                sortAscending = !sortAscending;
+                LlenarDataGridView();
+
+                // Actualizar el indicador visual
+                sortedColumn = dgvCarrito.Columns[e.ColumnIndex];
+                foreach (DataGridViewColumn column in dgvCarrito.Columns)
+                {
+                    if (column != sortedColumn)
+                        column.HeaderCell.SortGlyphDirection = SortOrder.None;
+                }
+                sortedColumn.HeaderCell.SortGlyphDirection = sortAscending ? SortOrder.Ascending : SortOrder.Descending;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ordenar la tabla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al ordenar la tabla - {ex.Message}");
+            }
+        }
+
+        private void cmbCantidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (productoBusqueda != null && cmbCantidad.SelectedIndex > -1)
+            {
+                int cantidad = int.Parse(cmbCantidad.Text);
+                lblContPrecioFinal.Text = $"$ {productoBusqueda.Precio * cantidad}";
+
+                lblContStockFinal.Text = (productoBusqueda.Stock - cantidad).ToString();
+            }
+        }
     }
 }

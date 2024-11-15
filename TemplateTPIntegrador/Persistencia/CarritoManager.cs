@@ -9,16 +9,22 @@ namespace Persistencia
 {
     public class CarritoManager
     {
-        private Carrito carrito;
+        public Carrito carrito;
 
         public CarritoManager() 
         {
-            Carrito carrito = new Carrito();
+            carrito = new Carrito();
         }
 
-        public void AgregarProducto(Producto producto)
+        public void AgregarProducto(Producto producto, int cantidad, Cliente cliente)
         {
-            carrito.Productos.Add(producto);
+            if (carrito == null)
+            {
+                carrito = new Carrito();
+            }
+            
+            ItemCarrito Item = new ItemCarrito(producto.Id, producto.Nombre, cantidad, producto.Precio, cliente.Id, producto.IdCategoria);
+            carrito.Items.Add(Item);
         }
     }
 }

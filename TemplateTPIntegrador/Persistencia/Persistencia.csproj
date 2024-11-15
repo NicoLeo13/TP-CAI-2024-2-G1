@@ -64,7 +64,6 @@
     <Compile Include="UserManager.cs" />
     <Compile Include="Utils\DBHelper.cs" />
     <Compile Include="Utils\WebHelper.cs" />
-    <Compile Include="VentaBuscar.cs" />
     <Compile Include="VentaWS.cs" />
   </ItemGroup>
   <ItemGroup>
