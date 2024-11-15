@@ -102,7 +102,7 @@
             this.btnReactivarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReactivarCliente.IconSize = 30;
             this.btnReactivarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReactivarCliente.Location = new System.Drawing.Point(383, 145);
+            this.btnReactivarCliente.Location = new System.Drawing.Point(372, 142);
             this.btnReactivarCliente.Name = "btnReactivarCliente";
             this.btnReactivarCliente.Size = new System.Drawing.Size(206, 41);
             this.btnReactivarCliente.TabIndex = 29;

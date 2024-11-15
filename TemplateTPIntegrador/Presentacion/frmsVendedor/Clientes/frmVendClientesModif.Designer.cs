@@ -133,7 +133,7 @@
             this.btnModificarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarCliente.IconSize = 30;
             this.btnModificarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarCliente.Location = new System.Drawing.Point(728, 455);
+            this.btnModificarCliente.Location = new System.Drawing.Point(758, 455);
             this.btnModificarCliente.Name = "btnModificarCliente";
             this.btnModificarCliente.Size = new System.Drawing.Size(195, 41);
             this.btnModificarCliente.TabIndex = 29;
@@ -212,7 +212,7 @@
             this.grpDatosCliente.Controls.Add(this.lblDireccion);
             this.grpDatosCliente.Controls.Add(this.lblTelefono);
             this.grpDatosCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDatosCliente.Location = new System.Drawing.Point(528, 33);
+            this.grpDatosCliente.Location = new System.Drawing.Point(558, 33);
             this.grpDatosCliente.Name = "grpDatosCliente";
             this.grpDatosCliente.Size = new System.Drawing.Size(395, 186);
             this.grpDatosCliente.TabIndex = 35;

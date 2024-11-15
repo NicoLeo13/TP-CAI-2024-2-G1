@@ -135,7 +135,7 @@
             this.btnEliminarCliente.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarCliente.IconSize = 30;
             this.btnEliminarCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarCliente.Location = new System.Drawing.Point(737, 455);
+            this.btnEliminarCliente.Location = new System.Drawing.Point(757, 455);
             this.btnEliminarCliente.Name = "btnEliminarCliente";
             this.btnEliminarCliente.Size = new System.Drawing.Size(195, 41);
             this.btnEliminarCliente.TabIndex = 29;

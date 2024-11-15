@@ -203,7 +203,7 @@
             this.btnGuardarUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardarUsuario.IconSize = 30;
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(746, 432);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(767, 455);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(195, 41);
             this.btnGuardarUsuario.TabIndex = 29;
@@ -226,7 +226,7 @@
             this.btnLimpiarCampos.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarCampos.IconSize = 30;
             this.btnLimpiarCampos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLimpiarCampos.Location = new System.Drawing.Point(746, 19);
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(519, 455);
             this.btnLimpiarCampos.Name = "btnLimpiarCampos";
             this.btnLimpiarCampos.Size = new System.Drawing.Size(195, 41);
             this.btnLimpiarCampos.TabIndex = 30;
@@ -249,7 +249,7 @@
             this.btnVolver.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnVolver.IconSize = 30;
             this.btnVolver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVolver.Location = new System.Drawing.Point(17, 455);
+            this.btnVolver.Location = new System.Drawing.Point(15, 455);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(112, 41);
             this.btnVolver.TabIndex = 31;
