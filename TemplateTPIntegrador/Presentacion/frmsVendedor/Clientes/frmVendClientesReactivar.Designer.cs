@@ -32,7 +32,7 @@
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.txtBoxDNICliente = new System.Windows.Forms.TextBox();
+            this.txtBoxDNIClienteAReactivar = new System.Windows.Forms.TextBox();
             this.lblInfoDatosCliente = new System.Windows.Forms.Label();
             this.btnReactivarCliente = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
@@ -68,12 +68,12 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // txtBoxDNICliente
+            // txtBoxDNIClienteAReactivar
             // 
-            this.txtBoxDNICliente.Location = new System.Drawing.Point(351, 78);
-            this.txtBoxDNICliente.Name = "txtBoxDNICliente";
-            this.txtBoxDNICliente.Size = new System.Drawing.Size(263, 25);
-            this.txtBoxDNICliente.TabIndex = 24;
+            this.txtBoxDNIClienteAReactivar.Location = new System.Drawing.Point(351, 78);
+            this.txtBoxDNIClienteAReactivar.Name = "txtBoxDNIClienteAReactivar";
+            this.txtBoxDNIClienteAReactivar.Size = new System.Drawing.Size(263, 25);
+            this.txtBoxDNIClienteAReactivar.TabIndex = 24;
             // 
             // lblInfoDatosCliente
             // 
@@ -140,7 +140,7 @@
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnReactivarCliente);
             this.panelContenedor.Controls.Add(this.lblInfoDatosCliente);
-            this.panelContenedor.Controls.Add(this.txtBoxDNICliente);
+            this.panelContenedor.Controls.Add(this.txtBoxDNIClienteAReactivar);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.TextBox txtBoxDNICliente;
+        private System.Windows.Forms.TextBox txtBoxDNIClienteAReactivar;
         private System.Windows.Forms.Label lblInfoDatosCliente;
         private FontAwesome.Sharp.IconButton btnReactivarCliente;
         private FontAwesome.Sharp.IconButton btnVolver;
