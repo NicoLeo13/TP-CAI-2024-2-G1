@@ -104,8 +104,8 @@ namespace Persistencia
         {
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("id", adminId);
-            //datos.Add("idUsuario", adminId);
+            datos.Add("id", proveedor.Id);
+            datos.Add("idUsuario", adminId);
             datos.Add("nombre", proveedor.Nombre);
             datos.Add("apellido", proveedor.Apellido);
             datos.Add("email", proveedor.Email);
@@ -124,47 +124,46 @@ namespace Persistencia
                 throw new HttpRequestException($"Error al modificar el proveedor:\n{errorContent}");
             }
         }
-        public string AgregarProveedor(Proveedor proveedor)
+        public void AgregarProveedor(Proveedor proveedor)
         {
-            //string idUsuario = "";
-            //string responseBody = "";
-            
-
-            Dictionary<String, object> datos = new Dictionary<String, object>();
-
-          
-            datos.Add("idUsuario", adminId);
-            datos.Add("nombre", proveedor.Nombre);
-            datos.Add("apellido", proveedor.Apellido);
-            datos.Add("email", proveedor.Email);
-            datos.Add("cuit", proveedor.CUIT);
-
-            //Convert the data to a JSON string
-            var jsonData = JsonConvert.SerializeObject(datos);
-
-            Console.WriteLine("\n jsonData para Proveedor/AgregarProveedor: " + jsonData);
-
-            HttpResponseMessage response = WebHelper.Post("Proveedor/AgregarProveedor", jsonData);
-
-            Console.WriteLine("\n response Proveedor/AgregarProveedor: " + response);
-
-            string result;
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
-                result = JsonConvert.DeserializeObject<String>(reader.ReadToEnd());
-            }
-            else
-            {
-                result = response.Content.ReadAsStringAsync().Result;
-                Console.WriteLine($"Error: {result}");
-                throw new Exception("Error al guardar proveedor." + response.ReasonPhrase);
-            }
+                Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            return result;
+                datos.Add("idUsuario", adminId);
+                datos.Add("nombre", proveedor.Nombre);
+                datos.Add("apellido", proveedor.Apellido);
+                datos.Add("email", proveedor.Email);
+                datos.Add("cuit", proveedor.CUIT);
+
+                //Convert the data to a JSON string
+                var jsonData = JsonConvert.SerializeObject(datos);
+
+                Console.WriteLine("\n jsonData para Proveedor/AgregarProveedor: " + jsonData);
+
+                HttpResponseMessage response = WebHelper.Post("Proveedor/AgregarProveedor", jsonData);
+
+                Console.WriteLine("\n response Proveedor/AgregarProveedor: " + response);
+
+                string result;
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var reader = new StreamReader(response.Content.ReadAsStreamAsync().Result);
+                    result = JsonConvert.DeserializeObject<String>(reader.ReadToEnd());
+                }
+                else
+                {
+                    var errorContent = response.Content.ReadAsStringAsync().Result;
+                    Console.WriteLine($"Error: {errorContent}");
+                    throw new HttpRequestException($"Error al crear el nuevo usuario:\n{errorContent}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al agregar el proveedor: {ex.Message}");
+                throw;
+            }
         }
-        
-        
     }
 }

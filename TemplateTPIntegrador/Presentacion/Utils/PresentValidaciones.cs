@@ -108,5 +108,16 @@ namespace Presentacion
 
             return camposValidos;
         }
+
+        public bool ValidarCuit(string cuit)
+        {
+            if (cuit.Length != 11)
+                return false;
+
+            if (!long.TryParse(cuit, out long cuitNumerico))
+                return false;
+
+            return true;
+        }
     }
 }

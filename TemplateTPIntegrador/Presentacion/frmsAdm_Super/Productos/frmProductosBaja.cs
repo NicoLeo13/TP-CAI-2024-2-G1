@@ -36,9 +36,7 @@ namespace Presentacion
             lblContCategoria.Text = "";
             lblContNombre.Text = "";
             lblContPrecio.Text = "";
-            lblContHost.Text = "";
             lblContFechaAlta.Text = "";
-            lblContEstado.Text = "";
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
@@ -60,14 +58,13 @@ namespace Presentacion
                     return;
                 }
                 
-                lblContCategoria.Text = producto.idCategoria.ToString();
-                lblContNombre.Text = producto.nombre;
-                lblContPrecio.Text = producto.precio.ToString();
-                lblContStock.Text = producto.stock.ToString();
+                lblContIdProd.Text= producto.Id.ToString();
+                lblContCategoria.Text = producto.IdCategoria.ToString();
+                lblContNombre.Text = producto.Nombre;
+                lblContPrecio.Text = producto.Precio.ToString();
+                lblContStock.Text = producto.Stock.ToString();
                 lblContFechaAlta.Text = producto.FechaAlta.ToString();
-                lblContIdProd.Text= producto.idCategoria.ToString();
-
-
+                lblContFechaBaja.Text = producto.FechaBaja.ToString();
 
             }
             catch (Exception ex)
@@ -89,7 +86,7 @@ namespace Presentacion
             try
             {
                 // Condicional con mensaje de confirmación para eliminar un producto
-                DialogResult dialogResult = MessageBox.Show($"¿Está seguro que desea eliminar al producto: {producto.nombre}?", "Confirmacion",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult dialogResult = MessageBox.Show($"¿Está seguro que desea eliminar al producto: {producto.Nombre}?", "Confirmacion",MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (dialogResult == DialogResult.No)
                     return;
@@ -100,7 +97,7 @@ namespace Presentacion
 
                 LimpiarCamposBaja();
 
-                MessageBox.Show($"Producto: {producto.nombre}  eliminado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Producto: {producto.Nombre}  eliminado con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 producto = null;
             }

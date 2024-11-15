@@ -17,12 +17,15 @@ namespace Presentacion
     public partial class frmProductosAlta : Form
     {
         private static UsuarioWS usuarioActual;
+        private static Proveedor proveedor;
+        private static ProveedorService proveedorService;
 
         public frmProductosAlta(UsuarioWS objUsuario)
         {
             InitializeComponent();
             usuarioActual = objUsuario;
             ConfigurarTabIndex();
+            proveedorService = new ProveedorService();
         }
 
         private void frmProductosAlta_Load(object sender, EventArgs e)
@@ -72,6 +75,27 @@ namespace Presentacion
                 MessageBox.Show("Ingrese un CUIT de Proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            try
+            {
+                proveedor = ProveedorService.BuscarProveedor(txtBoxProvCuit.Text);
+
+                if (proveedor == null)
+                {
+                    MessageBox.Show("No se encontro el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                lblContProvNombre.Text = proveedor.Nombre.ToString();
+                lblContProvApellido.Text = proveedor.Apellido.ToString();
+                lblContProvEmail.Text = proveedor.Email.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el proveedor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
         }
 
         private void btnGuardarProducto_Click(object sender, EventArgs e)
@@ -83,25 +107,32 @@ namespace Presentacion
                 return;
             }
 
-            int idcategoria = (int)cmbCategoria.SelectedValue;
             //Guid idusuario = usuarioActual.Id;
             Guid idusuario = Guid.Parse("7a06c9f0-8887-4b4f-b635-1ef5fe4d116f");        //Hardcode para probar (borrar despues)
-            Guid idproveedor = Guid.Parse(txtBoxIDProveedor.Text);
+            Guid idproveedor = proveedor.Id;
+            int idcategoria = (int)cmbCategoria.SelectedValue;
             string nombre = txtBoxNombre.Text;
             int precio = int.Parse(txtBoxPrecio.Text);
             int stock = int.Parse(txtBoxStock.Text);
             DateTime fechaalta = DateTime.Now;
             DateTime? fechabaja = null;
-            Guid idUsuario = Guid.Empty;
 
             Producto producto = new Producto(idcategoria, idusuario, idproveedor, nombre, precio, stock, fechaalta, fechabaja);
             ProductoService productoService = new ProductoService();
 
             string respuestaAltaProducto = productoService.AgregarProducto(producto);
 
-
-            MessageBox.Show("Se guardo el producto correctamente" + respuestaAltaProducto);
+            MessageBox.Show($"Se guardo el producto correctamente: {txtBoxNombre.Text}", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+            LimpiarCampos();
         }
 
+        private void LimpiarCampos()
+        {
+            PresentacionUtils.LimpiarControles(this);
+            lblContProvNombre.Text = "";
+            lblContProvApellido.Text = "";
+            lblContProvEmail.Text = "";
+        }
     }
 }

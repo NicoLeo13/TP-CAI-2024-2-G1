@@ -41,10 +41,6 @@
             this.btnBuscarProveedor = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpDatosProveedor = new System.Windows.Forms.GroupBox();
-            this.txtBoxFechaBajaProveedorRellenar = new System.Windows.Forms.TextBox();
-            this.txtBoxFechaAltaProveedorRellenar = new System.Windows.Forms.TextBox();
-            this.lblFechaBajaProveedorRellenar = new System.Windows.Forms.Label();
-            this.lblFechaAltaProveedorRellenar = new System.Windows.Forms.Label();
             this.txtBoxEmailProveedorRellenar = new System.Windows.Forms.TextBox();
             this.lblEmailProveedorRellenar = new System.Windows.Forms.Label();
             this.txtBoxCuitProveedorRellenar = new System.Windows.Forms.TextBox();
@@ -211,10 +207,6 @@
             // 
             // grpDatosProveedor
             // 
-            this.grpDatosProveedor.Controls.Add(this.txtBoxFechaBajaProveedorRellenar);
-            this.grpDatosProveedor.Controls.Add(this.txtBoxFechaAltaProveedorRellenar);
-            this.grpDatosProveedor.Controls.Add(this.lblFechaBajaProveedorRellenar);
-            this.grpDatosProveedor.Controls.Add(this.lblFechaAltaProveedorRellenar);
             this.grpDatosProveedor.Controls.Add(this.txtBoxEmailProveedorRellenar);
             this.grpDatosProveedor.Controls.Add(this.lblEmailProveedorRellenar);
             this.grpDatosProveedor.Controls.Add(this.txtBoxCuitProveedorRellenar);
@@ -226,52 +218,10 @@
             this.grpDatosProveedor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDatosProveedor.Location = new System.Drawing.Point(528, 33);
             this.grpDatosProveedor.Name = "grpDatosProveedor";
-            this.grpDatosProveedor.Size = new System.Drawing.Size(395, 345);
+            this.grpDatosProveedor.Size = new System.Drawing.Size(395, 254);
             this.grpDatosProveedor.TabIndex = 35;
             this.grpDatosProveedor.TabStop = false;
             this.grpDatosProveedor.Text = "Datos del proveedor";
-            // 
-            // txtBoxFechaBajaProveedorRellenar
-            // 
-            this.txtBoxFechaBajaProveedorRellenar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxFechaBajaProveedorRellenar.Enabled = false;
-            this.txtBoxFechaBajaProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxFechaBajaProveedorRellenar.Location = new System.Drawing.Point(130, 282);
-            this.txtBoxFechaBajaProveedorRellenar.Name = "txtBoxFechaBajaProveedorRellenar";
-            this.txtBoxFechaBajaProveedorRellenar.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxFechaBajaProveedorRellenar.TabIndex = 56;
-            // 
-            // txtBoxFechaAltaProveedorRellenar
-            // 
-            this.txtBoxFechaAltaProveedorRellenar.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxFechaAltaProveedorRellenar.Enabled = false;
-            this.txtBoxFechaAltaProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxFechaAltaProveedorRellenar.Location = new System.Drawing.Point(130, 233);
-            this.txtBoxFechaAltaProveedorRellenar.Name = "txtBoxFechaAltaProveedorRellenar";
-            this.txtBoxFechaAltaProveedorRellenar.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxFechaAltaProveedorRellenar.TabIndex = 55;
-            // 
-            // lblFechaBajaProveedorRellenar
-            // 
-            this.lblFechaBajaProveedorRellenar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblFechaBajaProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaBajaProveedorRellenar.Location = new System.Drawing.Point(7, 281);
-            this.lblFechaBajaProveedorRellenar.Name = "lblFechaBajaProveedorRellenar";
-            this.lblFechaBajaProveedorRellenar.Size = new System.Drawing.Size(105, 25);
-            this.lblFechaBajaProveedorRellenar.TabIndex = 54;
-            this.lblFechaBajaProveedorRellenar.Text = "Fecha de baja";
-            this.lblFechaBajaProveedorRellenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblFechaAltaProveedorRellenar
-            // 
-            this.lblFechaAltaProveedorRellenar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblFechaAltaProveedorRellenar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaAltaProveedorRellenar.Location = new System.Drawing.Point(7, 232);
-            this.lblFechaAltaProveedorRellenar.Name = "lblFechaAltaProveedorRellenar";
-            this.lblFechaAltaProveedorRellenar.Size = new System.Drawing.Size(105, 25);
-            this.lblFechaAltaProveedorRellenar.TabIndex = 53;
-            this.lblFechaAltaProveedorRellenar.Text = "Fecha de alta";
-            this.lblFechaAltaProveedorRellenar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtBoxEmailProveedorRellenar
             // 
@@ -323,7 +273,6 @@
             this.txtBoxNombreProveedorRellenar.Name = "txtBoxNombreProveedorRellenar";
             this.txtBoxNombreProveedorRellenar.Size = new System.Drawing.Size(230, 25);
             this.txtBoxNombreProveedorRellenar.TabIndex = 2;
-            this.txtBoxNombreProveedorRellenar.TextChanged += new System.EventHandler(this.txtBoxNombre_TextChanged);
             // 
             // lblCuitProveedorRellenar
             // 
@@ -380,9 +329,5 @@
         private System.Windows.Forms.TextBox txtBoxNombreProveedorRellenar;
         private System.Windows.Forms.TextBox txtBoxEmailProveedorRellenar;
         private System.Windows.Forms.Label lblEmailProveedorRellenar;
-        private System.Windows.Forms.TextBox txtBoxFechaBajaProveedorRellenar;
-        private System.Windows.Forms.TextBox txtBoxFechaAltaProveedorRellenar;
-        private System.Windows.Forms.Label lblFechaBajaProveedorRellenar;
-        private System.Windows.Forms.Label lblFechaAltaProveedorRellenar;
     }
 }
