@@ -41,16 +41,16 @@ namespace Presentacion.frmsVendedor
             DateTime fechaCompra = dtpFechaVenta.Value;
 
             var ventaService = new VentaService();
-            var ventas = await ventaService.BuscarVentasCliente(clienteId, empresa, fechaCompra);
+            //var ventas = await ventaService.BuscarVentasCliente(clienteId, empresa, fechaCompra);
 
-            if (ventas != null)
-            {
-                 dgvVentas.DataSource = ventas;
-            }
-            else
-            {
-                MessageBox.Show("No se encontraron ventas para los criterios especificados.");
-            }
+            //if (ventas != null)
+            //{
+            //     dgvVentas.DataSource = ventas;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No se encontraron ventas para los criterios especificados.");
+            //}
 
         }
     }

@@ -155,6 +155,7 @@ namespace Persistencia
 
             var jsonData = JsonConvert.SerializeObject(datos);
 
+
             Console.WriteLine("jsonData Cliente/BajaCliente: " + jsonData);
 
             HttpResponseMessage response = WebHelper.DeleteWithBody("Cliente/BajaCliente", jsonData);
@@ -176,6 +177,7 @@ namespace Persistencia
             datos.Add("id", idClienteReactivar);
 
             var jsonData = JsonConvert.SerializeObject(datos);
+
 
             Console.WriteLine("jsonData Cliente/ReactivarCliente: " + jsonData);
 

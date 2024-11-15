@@ -203,10 +203,5 @@ namespace Presentacion
         {
             this.AcceptButton = btnIniciarSesion;
         }
-
-        private void txtBoxUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

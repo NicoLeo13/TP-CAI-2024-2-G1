@@ -149,8 +149,8 @@
             // 
             // frmResetPass
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(462, 428);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnGuardarUsuario);

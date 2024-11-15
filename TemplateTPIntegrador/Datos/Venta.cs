@@ -30,5 +30,14 @@ namespace Datos
             IdUsuario = idUsuario;
         }
 
+        // Constructor de sobrecarga para agregar una venta vs API
+        public Venta(Guid idCliente, Guid idUsuario, Guid idProducto, int cantidad)
+        {
+            IdCliente = idCliente;
+            IdUsuario = idUsuario;
+            IdProducto = idProducto;
+            Cantidad = cantidad;
+        }
+
     }
 }

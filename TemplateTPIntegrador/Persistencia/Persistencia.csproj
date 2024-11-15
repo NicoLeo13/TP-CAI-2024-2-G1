@@ -53,6 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarritoManager.cs" />
     <Compile Include="ClienteWS.cs" />
     <Compile Include="Exceptions\HttpResponseMessageException.cs" />
     <Compile Include="LoginDB.cs" />
@@ -63,7 +64,6 @@
     <Compile Include="UserManager.cs" />
     <Compile Include="Utils\DBHelper.cs" />
     <Compile Include="Utils\WebHelper.cs" />
-    <Compile Include="VentaBuscar.cs" />
     <Compile Include="VentaWS.cs" />
   </ItemGroup>
   <ItemGroup>

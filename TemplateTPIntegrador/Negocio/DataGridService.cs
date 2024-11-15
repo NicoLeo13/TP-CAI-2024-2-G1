@@ -45,5 +45,20 @@ namespace Negocio
 
             return usuariosOrdenados;
         }
+
+        public List<ItemCarrito> OrdenarCarrito(List<ItemCarrito> items, string column, bool ascending)
+        {
+            if (column != sortedColumn)
+                sortAscending = true;
+
+            List<ItemCarrito> itemsOrdenados = ascending ? items.OrderBy(i => i.GetType().GetProperty(column).GetValue(i, null)).ToList() : items.OrderByDescending(i => i.GetType().GetProperty(column).GetValue(i, null)).ToList();
+
+            sortAscending = !sortAscending;
+            sortedColumn = column;
+
+            return itemsOrdenados;
+        }
+
+
     }
 }

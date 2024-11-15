@@ -118,26 +118,34 @@ namespace Presentacion
 
         private void dgvUsuarios_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            DataGridViewColumn newColumn = dgvUsuarios.Columns[e.ColumnIndex];
-            if (newColumn != sortedColumn)
-                sortAscending = true;
-
-            
-            var columna = dgvUsuarios.Columns[e.ColumnIndex].DataPropertyName;
-            usuariosActivos = dataGridService.OrdenarUsuarios(usuariosActivos, columna, sortAscending);
-            
-            sortAscending = !sortAscending;
-            bindingSource.DataSource = usuariosActivos;
-            dgvUsuarios.DataSource = bindingSource;
-
-            // Actualizar el indicador visual
-            sortedColumn = dgvUsuarios.Columns[e.ColumnIndex];
-            foreach (DataGridViewColumn column in dgvUsuarios.Columns)
+            try
             {
-                if (column != sortedColumn)
-                    column.HeaderCell.SortGlyphDirection = SortOrder.None;
+                DataGridViewColumn newColumn = dgvUsuarios.Columns[e.ColumnIndex];
+                if (newColumn != sortedColumn)
+                    sortAscending = true;
+
+            
+                var columna = dgvUsuarios.Columns[e.ColumnIndex].DataPropertyName;
+                usuariosActivos = dataGridService.OrdenarUsuarios(usuariosActivos, columna, sortAscending);
+            
+                sortAscending = !sortAscending;
+                bindingSource.DataSource = usuariosActivos;
+                dgvUsuarios.DataSource = bindingSource;
+
+                // Actualizar el indicador visual
+                sortedColumn = dgvUsuarios.Columns[e.ColumnIndex];
+                foreach (DataGridViewColumn column in dgvUsuarios.Columns)
+                {
+                    if (column != sortedColumn)
+                        column.HeaderCell.SortGlyphDirection = SortOrder.None;
+                }
+                sortedColumn.HeaderCell.SortGlyphDirection = sortAscending ? SortOrder.Ascending : SortOrder.Descending;
             }
-            sortedColumn.HeaderCell.SortGlyphDirection = sortAscending ? SortOrder.Ascending : SortOrder.Descending;
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al ordenar la tabla", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al ordenar la tabla - {ex.Message}");
+            }
         }
 
         private void txtBoxFiltro_TextChanged(object sender, EventArgs e)

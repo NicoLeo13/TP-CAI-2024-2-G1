@@ -36,7 +36,7 @@
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
-            this.lblInfoDatosVend = new System.Windows.Forms.Label();
+            this.lblInfoDatosProd = new System.Windows.Forms.Label();
             this.btnEliminarProd = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
@@ -129,17 +129,17 @@
             this.lblEstado.Text = "Estado";
             this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblInfoDatosVend
+            // lblInfoDatosProd
             // 
-            this.lblInfoDatosVend.AutoSize = true;
-            this.lblInfoDatosVend.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblInfoDatosVend.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInfoDatosVend.Location = new System.Drawing.Point(23, 33);
-            this.lblInfoDatosVend.Name = "lblInfoDatosVend";
-            this.lblInfoDatosVend.Size = new System.Drawing.Size(343, 21);
-            this.lblInfoDatosVend.TabIndex = 22;
-            this.lblInfoDatosVend.Text = "Ingrese el Nombre del Producto a dar de Baja";
-            this.lblInfoDatosVend.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblInfoDatosProd.AutoSize = true;
+            this.lblInfoDatosProd.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblInfoDatosProd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInfoDatosProd.Location = new System.Drawing.Point(23, 33);
+            this.lblInfoDatosProd.Name = "lblInfoDatosProd";
+            this.lblInfoDatosProd.Size = new System.Drawing.Size(343, 21);
+            this.lblInfoDatosProd.TabIndex = 22;
+            this.lblInfoDatosProd.Text = "Ingrese el Nombre del Producto a dar de Baja";
+            this.lblInfoDatosProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnEliminarProd
             // 
@@ -162,7 +162,7 @@
             this.btnEliminarProd.TabIndex = 29;
             this.btnEliminarProd.Text = "Eliminar Producto";
             this.btnEliminarProd.UseVisualStyleBackColor = false;
-            this.btnEliminarProd.Click += new System.EventHandler(this.btnEliminarProducto_Click);
+            //this.btnEliminarProd.Click += new System.EventHandler(this.btnEliminarProd_Click);
             // 
             // btnVolver
             // 
@@ -218,7 +218,7 @@
             this.panelContenedor.Controls.Add(this.btnBuscar);
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnEliminarProd);
-            this.panelContenedor.Controls.Add(this.lblInfoDatosVend);
+            this.panelContenedor.Controls.Add(this.lblInfoDatosProd);
             this.panelContenedor.Controls.Add(this.txtBoxNombreProd);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
@@ -431,7 +431,8 @@
             // 
             // frmProductosBaja
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
             this.Controls.Add(this.panelContenedor);
@@ -460,7 +461,7 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblInfoDatosVend;
+        private System.Windows.Forms.Label lblInfoDatosProd;
         private FontAwesome.Sharp.IconButton btnEliminarProd;
         private FontAwesome.Sharp.IconButton btnVolver;
         private FontAwesome.Sharp.IconButton btnBuscar;
