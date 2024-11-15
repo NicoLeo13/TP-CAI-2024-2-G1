@@ -32,7 +32,7 @@
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.txtBoxUsuario = new System.Windows.Forms.TextBox();
+            this.txtBoxUsuarioAReactivar = new System.Windows.Forms.TextBox();
             this.lblInfoDatosUser = new System.Windows.Forms.Label();
             this.btnReactivarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
@@ -68,12 +68,12 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // txtBoxUsuario
+            // txtBoxUsuarioAReactivar
             // 
-            this.txtBoxUsuario.Location = new System.Drawing.Point(351, 78);
-            this.txtBoxUsuario.Name = "txtBoxUsuario";
-            this.txtBoxUsuario.Size = new System.Drawing.Size(263, 25);
-            this.txtBoxUsuario.TabIndex = 24;
+            this.txtBoxUsuarioAReactivar.Location = new System.Drawing.Point(351, 78);
+            this.txtBoxUsuarioAReactivar.Name = "txtBoxUsuarioAReactivar";
+            this.txtBoxUsuarioAReactivar.Size = new System.Drawing.Size(263, 25);
+            this.txtBoxUsuarioAReactivar.TabIndex = 24;
             // 
             // lblInfoDatosUser
             // 
@@ -82,9 +82,9 @@
             this.lblInfoDatosUser.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoDatosUser.Location = new System.Drawing.Point(347, 30);
             this.lblInfoDatosUser.Name = "lblInfoDatosUser";
-            this.lblInfoDatosUser.Size = new System.Drawing.Size(267, 21);
+            this.lblInfoDatosUser.Size = new System.Drawing.Size(303, 21);
             this.lblInfoDatosUser.TabIndex = 22;
-            this.lblInfoDatosUser.Text = "Ingrese el ID de Usuario a Reactivar";
+            this.lblInfoDatosUser.Text = "Ingrese el nombre de usuario a reactivar";
             this.lblInfoDatosUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnReactivarUsuario
@@ -106,7 +106,7 @@
             this.btnReactivarUsuario.Name = "btnReactivarUsuario";
             this.btnReactivarUsuario.Size = new System.Drawing.Size(206, 41);
             this.btnReactivarUsuario.TabIndex = 29;
-            this.btnReactivarUsuario.Text = "Reactivar Usuario";
+            this.btnReactivarUsuario.Text = "Reactivar usuario";
             this.btnReactivarUsuario.UseVisualStyleBackColor = false;
             this.btnReactivarUsuario.Click += new System.EventHandler(this.btnReactivarUsuario_Click);
             // 
@@ -140,7 +140,7 @@
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnReactivarUsuario);
             this.panelContenedor.Controls.Add(this.lblInfoDatosUser);
-            this.panelContenedor.Controls.Add(this.txtBoxUsuario);
+            this.panelContenedor.Controls.Add(this.txtBoxUsuarioAReactivar);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.TextBox txtBoxUsuario;
+        private System.Windows.Forms.TextBox txtBoxUsuarioAReactivar;
         private System.Windows.Forms.Label lblInfoDatosUser;
         private FontAwesome.Sharp.IconButton btnReactivarUsuario;
         private FontAwesome.Sharp.IconButton btnVolver;
