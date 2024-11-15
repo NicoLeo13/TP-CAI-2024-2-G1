@@ -53,7 +53,6 @@
             this.txtBoxUser.Name = "txtBoxUser";
             this.txtBoxUser.Size = new System.Drawing.Size(230, 29);
             this.txtBoxUser.TabIndex = 1;
-            this.txtBoxUser.TextChanged += new System.EventHandler(this.txtBoxUser_TextChanged);
             this.txtBoxUser.Enter += new System.EventHandler(this.txtBoxUser_Focus);
             // 
             // txtBoxPass
@@ -194,7 +193,6 @@
             this.lblName.TabIndex = 0;
             this.lblName.Text = "Bienvenido a ElectroHogar S.A.";
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblName.Click += new System.EventHandler(this.lblName_Click);
             // 
             // lblTopText
             // 
@@ -208,7 +206,6 @@
             this.lblTopText.TabIndex = 8;
             this.lblTopText.Text = "Inicio de Sesión";
             this.lblTopText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTopText.Click += new System.EventHandler(this.lblTopText_Click);
             // 
             // FormLogin
             // 

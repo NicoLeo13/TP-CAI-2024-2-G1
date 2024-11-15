@@ -203,20 +203,5 @@ namespace Presentacion
         {
             this.AcceptButton = btnIniciarSesion;
         }
-
-        private void txtBoxUser_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblName_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTopText_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
