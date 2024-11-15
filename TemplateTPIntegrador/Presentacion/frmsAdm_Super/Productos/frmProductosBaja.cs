@@ -37,6 +37,8 @@ namespace Presentacion
             lblContNombre.Text = "";
             lblContPrecio.Text = "";
             lblContFechaAlta.Text = "";
+            lblContIdProd.Text = "";
+            lblContStock.Text = "";
         }
 
         private void btnBuscarProducto_Click(object sender, EventArgs e)
@@ -49,7 +51,6 @@ namespace Presentacion
 
             try
             {
-                
                 producto = ProductoService.BuscarProducto(txtBoxNombreProd.Text);
 
                 if (producto == null)
@@ -64,7 +65,6 @@ namespace Presentacion
                 lblContPrecio.Text = producto.Precio.ToString();
                 lblContStock.Text = producto.Stock.ToString();
                 lblContFechaAlta.Text = producto.FechaAlta.ToString();
-                lblContFechaBaja.Text = producto.FechaBaja.ToString();
 
             }
             catch (Exception ex)
@@ -78,10 +78,9 @@ namespace Presentacion
         {
             if (txtBoxNombreProd.Text == null)
             {
-                MessageBox.Show("El producto no tiene un nombre válido para eliminar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
 
             try
             {
@@ -92,7 +91,6 @@ namespace Presentacion
                     return;
 
                 ProductoService productoService = new ProductoService();
-
                 productoService.EliminarProducto(producto);
 
                 LimpiarCamposBaja();

@@ -88,15 +88,20 @@ namespace Presentacion
             try
             {
                 // Recibo los nuevos valores que editó el usuario.
+                Cliente clienteOld = cliente;
 
                 string direccion = txtBoxDireccion.Text;
                 string telefono = txtBoxTelefono.Text;
                 string email = txtBoxEmail.Text;
 
+                if(clienteOld == cliente)
+                {
+                    MessageBox.Show("No se realizaron cambios en el cliente.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 // Verificación de que, si NO MODIFIQUÉ ningún campo, no se haga la llamada al WS.
-
                 ClienteService clienteService = new ClienteService();
-
                 clienteService.ModificarCliente(cliente.Id, direccion, telefono, email);
 
                 LimpiarCampos();

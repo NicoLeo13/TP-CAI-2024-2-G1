@@ -44,23 +44,21 @@ namespace Presentacion
             try
             {
                 // Recibo los nuevos valores que editó el usuario.
-                Proveedor proveedorOld = proveedor;
-
                 string nombre = txtBoxNombreProveedorRellenar.Text;
                 string apellido = txtBoxApellidoProveedorRellenar.Text;
                 string email = txtBoxEmailProveedorRellenar.Text;
                 string cuit = txtBoxCuitProveedorRellenar.Text;
 
-                proveedor.Nombre = nombre;
-                proveedor.Apellido = apellido;
-                proveedor.Email = email;
-                proveedor.CUIT = cuit;
-
-                if(proveedorOld == proveedor)
+                if(proveedor.Nombre == nombre && proveedor.Apellido == apellido && proveedor.Email == email && proveedor.CUIT == cuit)
                 {
                     MessageBox.Show("No se realizaron cambios en el proveedor.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+
+                proveedor.Nombre = nombre;
+                proveedor.Apellido = apellido;
+                proveedor.Email = email;
+                proveedor.CUIT = cuit;
 
                 ProveedorService proveedorService = new ProveedorService();
                 proveedorService.ModificarProveedor(proveedor);

@@ -14,7 +14,7 @@ namespace Datos
         private Guid _idUsuario;
         private Guid _idProveedor;
         private string _nombre;
-        private int _precio;
+        private double _precio;
         private int _stock;
         private DateTime _fechaAlta;
         private DateTime? _fechaBaja;
@@ -24,7 +24,7 @@ namespace Datos
         public Guid IdUsuario { get { return _idUsuario; } set { _idUsuario = value; } }
         public Guid IdProveedor { get { return _idProveedor; } set { _idProveedor = value; } }
         public string Nombre { get { return _nombre; } set { _nombre = value; } }
-        public int Precio { get { return _precio; } set { _precio = value; } }
+        public double Precio { get { return _precio; } set { _precio = value; } }
         public int Stock { get { return _stock; } set { _stock = value; } }
         public DateTime FechaAlta { get { return _fechaAlta; } set { _fechaAlta = value; } }
         public DateTime? FechaBaja { get { return _fechaBaja; } set { _fechaBaja = value; } }

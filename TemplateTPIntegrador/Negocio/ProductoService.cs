@@ -44,7 +44,20 @@ namespace Negocio
                 Console.WriteLine($"\nError al buscar el producto: {ex.Message}");
                 throw;
             }
+        }
 
+        public void ModificarProducto(Producto producto)
+        {
+            try
+            {
+                ProductoWS persistencia = new ProductoWS();
+                persistencia.ModificarProducto(producto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar el producto: {ex.Message}");
+                throw;
+            }
         }
     }
 } 
