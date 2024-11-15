@@ -20,65 +20,89 @@ namespace Presentacion
     public partial class frmSupervDevoluciones : Form
     {
         public UsuarioWS usuario;
-        public VentaWS venta;
+        public Venta venta;
+        public Guid id;
         
         public frmSupervDevoluciones()
         {
             InitializeComponent();
         }
 
-        public void LimpiarCamposBaja()
+        public void LimpiarCampos()
         {
             txtBoxIdVenta.Text = "";
-            lblContVendId.Text = "";
-            lblContProductoId.Text = "";
-            lblContProducto.Text = "";
-            lblContCantidad.Text = "";
-            lblContPrecio.Text = "";
-            lblContClienteId.Text = "";
-            lblContClienteNombre.Text = "";
-            lblContClienteApellido.Text = "";
-            lblContClienteDni.Text = "";
-            lblContClienteEmail.Text = "";
+
+            lblContEstadoVenta.Text = "";
+            lblContFechaAltaVenta.Text = "";
+            lblContCantidadVenta.Text = "";
         }
 
-        private void btnBuscarVenta_click(object sender, EventArgs e)
+        private void btnBuscarVenta_Click(object sender, EventArgs e)
         {
             if (txtBoxIdVenta.Text == "")
             {
-                MessageBox.Show("Ingrese el ID de la Venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor ingrese un ID de venta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            try
+            {
+                Guid idVenta = Guid.Parse(txtBoxIdVenta.Text);
+
+                VentaService ventaService = new VentaService();
+
+                Dictionary<string, object> venta = ventaService.ObtenerVentaPorVenta(idVenta);
+
+                if (venta == null)
+                {
+                    MessageBox.Show("La venta de ID: " + txtBoxIdVenta.Text + " no fue encontrada.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                id = Guid.Parse(venta["id"].ToString());
+
+                int estado = Convert.ToInt32(venta["estado"]);
+                DateTime fechaAlta = Convert.ToDateTime(venta["fechaAlta"]);
+                int cantidad = Convert.ToInt32(venta["cantidad"]);
+
+                lblContEstadoVenta.Text = estado.ToString();
+                lblContFechaAltaVenta.Text = fechaAlta.ToString();
+                lblContCantidadVenta.Text = cantidad.ToString();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el ID de venta: " + txtBoxIdVenta.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al buscar el ID de venta: {txtBoxIdVenta.Text} - {ex.Message}");
             }
         }
 
         private async void btnDevolverVenta_Click(object sender, EventArgs e)
         {
-            if (venta == null)
+            try
             {
-                MessageBox.Show("No se ha seleccionado ninguna venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                if (txtBoxIdVenta == null)
+                {
+                    MessageBox.Show("No se ha seleccionado ninguna venta", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-            if (usuario == null)  //Para evitar error de referencia nula.
-            {
-                MessageBox.Show("El usuario no está autenticado", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+                id = Guid.Parse(txtBoxIdVenta.Text);
 
-            int id = int.Parse(txtBoxIdVenta.Text); 
-            Guid idUsuario = usuario.Id;
-            VentaService ventaNegocio = new VentaService();
-            bool result = await ventaNegocio.DevolverVenta(id, idUsuario);
-            if (result)
-            {
-                MessageBox.Show("Venta devuelta con éxito.");
-                LimpiarCamposBaja();
+                VentaService ventaNegocio = new VentaService();
+
+                ventaNegocio.DevolverVenta(id);
+
+                MessageBox.Show("La venta fue devuelta con éxito.");
+                LimpiarCampos();
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Error al devolver la venta.");
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al devolver la venta: {ex.Message}");
             }
         }
-        
+
     }
 }

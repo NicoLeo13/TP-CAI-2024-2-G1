@@ -27,12 +27,5 @@ namespace Datos
             this.idProducto = _idProducto;
             this.Cantidad = cantidad;
         }
-
-        public AgregarVenta()
-        {
-            Dictionary<String, object> datos = new Dictionary<String, object>();
-
-            
-        }
     }
 }

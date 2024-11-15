@@ -25,9 +25,11 @@ namespace Persistencia.Utils
             return response;
         }
 
-        public static HttpResponseMessage GetCustomId(string url)
+        public static HttpResponseMessage GetCustomId(string url, Guid id)
         {
-            var uri = rutaBase + url;
+            var uri = rutaBase + url + "?id=" + id;
+
+            Console.WriteLine("\n Veamos que tiene el URI de GetCustomId: " + uri);
 
             HttpResponseMessage response = httpClient.GetAsync(uri).Result;  
 
