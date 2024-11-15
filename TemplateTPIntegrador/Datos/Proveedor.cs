@@ -25,7 +25,7 @@ namespace Datos
         public DateTime FechaAlta { get { return _fechaAlta; } set { _fechaAlta = value; } }
         public DateTime? FechaBaja { get { return _fechaBaja; } set { _fechaBaja = value; } }
 
-        public Proveedor(Guid id, string nombre, string apellido, string email, string cuit, DateTime fechaAlta, DateTime? fechaBaja)
+        public Proveedor(Guid id ,string nombre, string apellido, string email, string cuit, DateTime fechaAlta, DateTime? fechaBaja)
         {
             this.Id= id;
             this.Nombre = nombre;

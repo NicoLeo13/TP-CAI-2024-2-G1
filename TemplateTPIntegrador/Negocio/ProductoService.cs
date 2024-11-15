@@ -19,11 +19,23 @@ namespace Negocio
             return respuestaAgregarProducto;
         }
 
+        public static Producto BuscarProducto(string nombre)
+        {
+            try
+            {
+                return ProductoWS.TraerProducto(nombre);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar el producto: {ex.Message}");
+                throw;
+            }
+        }
+
         public void EliminarProducto(Producto producto)
         {
             try
             {
-                //ProveedorManager persistencia = new ProveedorManager();
                 ProductoWS persistencia = new ProductoWS();
                 persistencia.EliminarProducto(producto);
             }

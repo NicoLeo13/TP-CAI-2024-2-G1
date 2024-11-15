@@ -39,15 +39,6 @@
             this.btnDevolverVenta = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
-            this.grpVenta = new System.Windows.Forms.GroupBox();
-            this.lblContVendId = new System.Windows.Forms.Label();
-            this.lblContCantidad = new System.Windows.Forms.Label();
-            this.lblCantidad = new System.Windows.Forms.Label();
-            this.lblIdVendVenta = new System.Windows.Forms.Label();
-            this.lblContPrecio = new System.Windows.Forms.Label();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblContProducto = new System.Windows.Forms.Label();
-            this.lblContProductoId = new System.Windows.Forms.Label();
             this.grpDatosVentaCliente = new System.Windows.Forms.GroupBox();
             this.lblContClienteId = new System.Windows.Forms.Label();
             this.lblContClienteEmail = new System.Windows.Forms.Label();
@@ -59,10 +50,19 @@
             this.lblContClienteNombre = new System.Windows.Forms.Label();
             this.lblClienteNombre = new System.Windows.Forms.Label();
             this.lblClienteApellido = new System.Windows.Forms.Label();
+            this.grpVenta = new System.Windows.Forms.GroupBox();
+            this.lblContVendId = new System.Windows.Forms.Label();
+            this.lblContCantidad = new System.Windows.Forms.Label();
+            this.lblCantidad = new System.Windows.Forms.Label();
+            this.lblIdVendVenta = new System.Windows.Forms.Label();
+            this.lblContPrecio = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblContProducto = new System.Windows.Forms.Label();
+            this.lblContProductoId = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            this.grpVenta.SuspendLayout();
             this.grpDatosVentaCliente.SuspendLayout();
+            this.grpVenta.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
@@ -194,119 +194,6 @@
             this.panelContenedor.Name = "panelContenedor";
             this.panelContenedor.Size = new System.Drawing.Size(976, 510);
             this.panelContenedor.TabIndex = 33;
-            // 
-            // grpVenta
-            // 
-            this.grpVenta.Controls.Add(this.lblContVendId);
-            this.grpVenta.Controls.Add(this.lblContCantidad);
-            this.grpVenta.Controls.Add(this.lblCantidad);
-            this.grpVenta.Controls.Add(this.lblIdVendVenta);
-            this.grpVenta.Controls.Add(this.lblContPrecio);
-            this.grpVenta.Controls.Add(this.lblPrecio);
-            this.grpVenta.Controls.Add(this.lblContProducto);
-            this.grpVenta.Controls.Add(this.lblContProductoId);
-            this.grpVenta.Controls.Add(this.lblProdId);
-            this.grpVenta.Controls.Add(this.lblNombreProd);
-            this.grpVenta.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpVenta.Location = new System.Drawing.Point(25, 119);
-            this.grpVenta.Name = "grpVenta";
-            this.grpVenta.Size = new System.Drawing.Size(385, 293);
-            this.grpVenta.TabIndex = 35;
-            this.grpVenta.TabStop = false;
-            this.grpVenta.Text = "Datos de Venta";
-            // 
-            // lblContVendId
-            // 
-            this.lblContVendId.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContVendId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContVendId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContVendId.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContVendId.Location = new System.Drawing.Point(129, 47);
-            this.lblContVendId.Name = "lblContVendId";
-            this.lblContVendId.Size = new System.Drawing.Size(230, 25);
-            this.lblContVendId.TabIndex = 45;
-            this.lblContVendId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContCantidad
-            // 
-            this.lblContCantidad.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContCantidad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContCantidad.Location = new System.Drawing.Point(129, 235);
-            this.lblContCantidad.Name = "lblContCantidad";
-            this.lblContCantidad.Size = new System.Drawing.Size(230, 25);
-            this.lblContCantidad.TabIndex = 43;
-            this.lblContCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblCantidad
-            // 
-            this.lblCantidad.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCantidad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidad.Location = new System.Drawing.Point(6, 235);
-            this.lblCantidad.Name = "lblCantidad";
-            this.lblCantidad.Size = new System.Drawing.Size(105, 25);
-            this.lblCantidad.TabIndex = 42;
-            this.lblCantidad.Text = "Cantidad";
-            this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblIdVendVenta
-            // 
-            this.lblIdVendVenta.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblIdVendVenta.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdVendVenta.Location = new System.Drawing.Point(6, 47);
-            this.lblIdVendVenta.Name = "lblIdVendVenta";
-            this.lblIdVendVenta.Size = new System.Drawing.Size(105, 25);
-            this.lblIdVendVenta.TabIndex = 44;
-            this.lblIdVendVenta.Text = "ID Vendedor";
-            this.lblIdVendVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContPrecio
-            // 
-            this.lblContPrecio.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContPrecio.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContPrecio.Location = new System.Drawing.Point(129, 188);
-            this.lblContPrecio.Name = "lblContPrecio";
-            this.lblContPrecio.Size = new System.Drawing.Size(230, 25);
-            this.lblContPrecio.TabIndex = 39;
-            this.lblContPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(6, 188);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(105, 25);
-            this.lblPrecio.TabIndex = 38;
-            this.lblPrecio.Text = "Precio";
-            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContProducto
-            // 
-            this.lblContProducto.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContProducto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContProducto.Location = new System.Drawing.Point(129, 141);
-            this.lblContProducto.Name = "lblContProducto";
-            this.lblContProducto.Size = new System.Drawing.Size(230, 25);
-            this.lblContProducto.TabIndex = 34;
-            this.lblContProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblContProductoId
-            // 
-            this.lblContProductoId.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContProductoId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContProductoId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContProductoId.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContProductoId.Location = new System.Drawing.Point(129, 94);
-            this.lblContProductoId.Name = "lblContProductoId";
-            this.lblContProductoId.Size = new System.Drawing.Size(230, 25);
-            this.lblContProductoId.TabIndex = 33;
-            this.lblContProductoId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // grpDatosVentaCliente
             // 
@@ -443,9 +330,123 @@
             this.lblClienteApellido.Text = "Apellido";
             this.lblClienteApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // grpVenta
+            // 
+            this.grpVenta.Controls.Add(this.lblContVendId);
+            this.grpVenta.Controls.Add(this.lblContCantidad);
+            this.grpVenta.Controls.Add(this.lblCantidad);
+            this.grpVenta.Controls.Add(this.lblIdVendVenta);
+            this.grpVenta.Controls.Add(this.lblContPrecio);
+            this.grpVenta.Controls.Add(this.lblPrecio);
+            this.grpVenta.Controls.Add(this.lblContProducto);
+            this.grpVenta.Controls.Add(this.lblContProductoId);
+            this.grpVenta.Controls.Add(this.lblProdId);
+            this.grpVenta.Controls.Add(this.lblNombreProd);
+            this.grpVenta.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpVenta.Location = new System.Drawing.Point(25, 119);
+            this.grpVenta.Name = "grpVenta";
+            this.grpVenta.Size = new System.Drawing.Size(385, 293);
+            this.grpVenta.TabIndex = 35;
+            this.grpVenta.TabStop = false;
+            this.grpVenta.Text = "Datos de Venta";
+            // 
+            // lblContVendId
+            // 
+            this.lblContVendId.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContVendId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContVendId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContVendId.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContVendId.Location = new System.Drawing.Point(129, 47);
+            this.lblContVendId.Name = "lblContVendId";
+            this.lblContVendId.Size = new System.Drawing.Size(230, 25);
+            this.lblContVendId.TabIndex = 45;
+            this.lblContVendId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContCantidad
+            // 
+            this.lblContCantidad.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContCantidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContCantidad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContCantidad.Location = new System.Drawing.Point(129, 235);
+            this.lblContCantidad.Name = "lblContCantidad";
+            this.lblContCantidad.Size = new System.Drawing.Size(230, 25);
+            this.lblContCantidad.TabIndex = 43;
+            this.lblContCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblCantidad
+            // 
+            this.lblCantidad.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblCantidad.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidad.Location = new System.Drawing.Point(6, 235);
+            this.lblCantidad.Name = "lblCantidad";
+            this.lblCantidad.Size = new System.Drawing.Size(105, 25);
+            this.lblCantidad.TabIndex = 42;
+            this.lblCantidad.Text = "Cantidad";
+            this.lblCantidad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblIdVendVenta
+            // 
+            this.lblIdVendVenta.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblIdVendVenta.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIdVendVenta.Location = new System.Drawing.Point(6, 47);
+            this.lblIdVendVenta.Name = "lblIdVendVenta";
+            this.lblIdVendVenta.Size = new System.Drawing.Size(105, 25);
+            this.lblIdVendVenta.TabIndex = 44;
+            this.lblIdVendVenta.Text = "ID Vendedor";
+            this.lblIdVendVenta.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContPrecio
+            // 
+            this.lblContPrecio.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContPrecio.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContPrecio.Location = new System.Drawing.Point(129, 188);
+            this.lblContPrecio.Name = "lblContPrecio";
+            this.lblContPrecio.Size = new System.Drawing.Size(230, 25);
+            this.lblContPrecio.TabIndex = 39;
+            this.lblContPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblPrecio
+            // 
+            this.lblPrecio.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPrecio.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecio.Location = new System.Drawing.Point(6, 188);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(105, 25);
+            this.lblPrecio.TabIndex = 38;
+            this.lblPrecio.Text = "Precio";
+            this.lblPrecio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContProducto
+            // 
+            this.lblContProducto.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContProducto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContProducto.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContProducto.Location = new System.Drawing.Point(129, 141);
+            this.lblContProducto.Name = "lblContProducto";
+            this.lblContProducto.Size = new System.Drawing.Size(230, 25);
+            this.lblContProducto.TabIndex = 34;
+            this.lblContProducto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblContProductoId
+            // 
+            this.lblContProductoId.BackColor = System.Drawing.Color.DarkGray;
+            this.lblContProductoId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblContProductoId.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblContProductoId.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContProductoId.Location = new System.Drawing.Point(129, 94);
+            this.lblContProductoId.Name = "lblContProductoId";
+            this.lblContProductoId.Size = new System.Drawing.Size(230, 25);
+            this.lblContProductoId.TabIndex = 33;
+            this.lblContProductoId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // frmSupervDevoluciones
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
             this.Controls.Add(this.panelContenedor);
@@ -461,8 +462,8 @@
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
-            this.grpVenta.ResumeLayout(false);
             this.grpDatosVentaCliente.ResumeLayout(false);
+            this.grpVenta.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

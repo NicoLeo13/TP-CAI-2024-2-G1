@@ -51,6 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarritoService.cs" />
+    <Compile Include="ClienteService.cs" />
     <Compile Include="DataGridService.cs" />
     <Compile Include="LoginUsuario.cs" />
     <Compile Include="ProductoService.cs" />

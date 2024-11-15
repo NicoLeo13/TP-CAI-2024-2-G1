@@ -56,7 +56,31 @@ namespace Presentacion
 
         private void btnGuardarProveedor_Click(object sender, EventArgs e)
         {
+            PresentacionValidaciones validaciones = new PresentacionValidaciones();
+            if (!validaciones.ValidarControles(this, out string mensajeError))
+            {
+                MessageBox.Show(mensajeError, "Error de Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+
+            //Guid idproveedor = Guid.Parse(""); //no esta en el form para agregar el id
+            DateTime fechaalta = DateTime.Now;
+            DateTime? fechabaja = null;
+            Guid id = Guid.Empty;
+
+            string nombre = txtBoxNombre.Text;
+            string apellido = txtBoxApellido.Text;
+            string email = txtBoxEmail.Text;    
+            string cuit = txtBoxCuit.Text;
+
+            Proveedor proveedor = new Proveedor(id, nombre, apellido, email, cuit, fechaalta, fechabaja);
+            ProveedorService proveedorService = new ProveedorService();
+
+            string respuestaAltaProveedor = proveedorService.AgregarProveedor(proveedor);
+
+            MessageBox.Show("Se guardo el proveedor correctamente" + respuestaAltaProveedor);
         }
     }
+    
 }

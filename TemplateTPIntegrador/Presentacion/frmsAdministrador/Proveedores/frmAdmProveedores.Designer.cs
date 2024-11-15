@@ -59,7 +59,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(589, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Panel de Proveedores - Seleccione una Acción";
+            this.lblTop.Text = "Proveedores";
             // 
             // panel2
             // 
@@ -89,7 +89,7 @@
             this.lblTopProveActivos.Name = "lblTopProveActivos";
             this.lblTopProveActivos.Size = new System.Drawing.Size(136, 23);
             this.lblTopProveActivos.TabIndex = 12;
-            this.lblTopProveActivos.Text = "Proveedores Activos";
+            this.lblTopProveActivos.Text = "Proveedores activos";
             this.lblTopProveActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CirclePictureBox2
@@ -123,7 +123,7 @@
             this.btnAltaProveedor.Name = "btnAltaProveedor";
             this.btnAltaProveedor.Size = new System.Drawing.Size(220, 56);
             this.btnAltaProveedor.TabIndex = 18;
-            this.btnAltaProveedor.Text = "Agregar Proveedor";
+            this.btnAltaProveedor.Text = "Agregar proveedor";
             this.btnAltaProveedor.UseVisualStyleBackColor = false;
             this.btnAltaProveedor.Click += new System.EventHandler(this.btnAltaProve_Click);
             // 
@@ -145,7 +145,7 @@
             this.btnModificarProveedor.Name = "btnModificarProveedor";
             this.btnModificarProveedor.Size = new System.Drawing.Size(220, 56);
             this.btnModificarProveedor.TabIndex = 19;
-            this.btnModificarProveedor.Text = "Modificar Proveedor";
+            this.btnModificarProveedor.Text = "Modificar proveedor";
             this.btnModificarProveedor.UseVisualStyleBackColor = false;
             this.btnModificarProveedor.Click += new System.EventHandler(this.btnModProve_Click);
             // 
@@ -167,13 +167,14 @@
             this.btnEliminarProveedor.Name = "btnEliminarProveedor";
             this.btnEliminarProveedor.Size = new System.Drawing.Size(220, 56);
             this.btnEliminarProveedor.TabIndex = 20;
-            this.btnEliminarProveedor.Text = "Eliminar Proveedor";
+            this.btnEliminarProveedor.Text = "Eliminar proveedor";
             this.btnEliminarProveedor.UseVisualStyleBackColor = false;
             this.btnEliminarProveedor.Click += new System.EventHandler(this.btnBajaProve_Click);
             // 
             // frmAdmProveedores
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
             this.Controls.Add(this.btnEliminarProveedor);
