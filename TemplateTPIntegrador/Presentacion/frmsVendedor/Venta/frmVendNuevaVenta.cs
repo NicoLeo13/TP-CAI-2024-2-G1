@@ -27,12 +27,14 @@ namespace Presentacion
         private BindingSource bindingSource;
         private bool sortAscending = true;
         private DataGridViewColumn sortedColumn = null;
+        private UsuarioWS usuario;
 
-        public frmVendNuevaVenta()
+        public frmVendNuevaVenta(UsuarioWS usuarioWs)
         {
             InitializeComponent();
             ConfigurarTabIndex();
             dataGridService = new DataGridService();
+            usuario = usuarioWs;
         }
 
         //Metodo para configurar el TabIndex de los controles (txtBox)
@@ -254,8 +256,8 @@ namespace Presentacion
                 List<ItemCarrito> itemsCarrito = carritoService.ObtenerItemsCarrito();
                 foreach (ItemCarrito item in itemsCarrito)
                 {
-                    //Venta venta = new Venta(item.IdCliente, idVendedor, item.IdProducto, item.Cantidad);
-                    Venta venta = new Venta(item.IdCliente, idUserPrueba, item.IdProducto, item.Cantidad);
+                    Venta venta = new Venta(item.IdCliente, usuario.Id, item.IdProducto, item.Cantidad);
+                    //Venta venta = new Venta(item.IdCliente, idUserPrueba, item.IdProducto, item.Cantidad);
                     ventaService.AgregarVenta(venta);
                 }
 

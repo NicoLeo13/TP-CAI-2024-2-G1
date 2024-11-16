@@ -101,7 +101,7 @@ namespace Presentacion
             // Verificar si la instancia ya existe
             if (frmVendVentaInstance == null || frmVendVentaInstance.IsDisposed)
             {
-                frmVendVentaInstance = new frmVendNuevaVenta();
+                frmVendVentaInstance = new frmVendNuevaVenta(usuarioActual);
                 PresentacionUtils.AbrirForm((IconButton)sender, frmVendVentaInstance, panelContenedor);
             }
             else

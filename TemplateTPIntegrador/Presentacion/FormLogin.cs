@@ -21,7 +21,7 @@ namespace Presentacion
         private const string TOOLTIP_OLVIDAR_CONTRASEÑA = "Haz clic aquí si olvidaste tu contraseña.";
         private const string ERROR_SHOW = "Error";
         private const string USER_NOT_FOUND = "Usuario no encontrado";
-        private const bool skipLogin = true;
+        private const bool skipLogin = false;
 
         public FormLogin()
         {
@@ -191,7 +191,12 @@ namespace Presentacion
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmResetPass formResetPass = new frmResetPass();
+            if(txtBoxUser.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un nombre de usuario para recuperar la contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            frmResetPass formResetPass = new frmResetPass(txtBoxUser.Text);
             formResetPass.ShowDialog();
         }
         private void txtBoxUser_Focus(object sender, EventArgs e)
