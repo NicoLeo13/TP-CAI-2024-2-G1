@@ -35,7 +35,6 @@
             this.txtBoxUsuario = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.lblEstado = new System.Windows.Forms.Label();
             this.lblInfoDatosUser = new System.Windows.Forms.Label();
             this.btnEliminarUsuario = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
@@ -48,7 +47,6 @@
             this.lblDni = new System.Windows.Forms.Label();
             this.lblContHost = new System.Windows.Forms.Label();
             this.lblHost = new System.Windows.Forms.Label();
-            this.lblContEstado = new System.Windows.Forms.Label();
             this.lblContApellido = new System.Windows.Forms.Label();
             this.lblContNombre = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
@@ -111,17 +109,6 @@
             this.lblApellido.TabIndex = 12;
             this.lblApellido.Text = "Apellido";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(552, 190);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(105, 25);
-            this.lblEstado.TabIndex = 32;
-            this.lblEstado.Text = "Estado";
-            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblInfoDatosUser
             // 
@@ -228,12 +215,10 @@
             this.groupBox1.Controls.Add(this.lblDni);
             this.groupBox1.Controls.Add(this.lblContHost);
             this.groupBox1.Controls.Add(this.lblHost);
-            this.groupBox1.Controls.Add(this.lblContEstado);
             this.groupBox1.Controls.Add(this.lblContApellido);
             this.groupBox1.Controls.Add(this.lblContNombre);
             this.groupBox1.Controls.Add(this.lblNombre);
             this.groupBox1.Controls.Add(this.lblApellido);
-            this.groupBox1.Controls.Add(this.lblEstado);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(27, 131);
             this.groupBox1.Name = "groupBox1";
@@ -312,18 +297,6 @@
             this.lblHost.Text = "Perfil";
             this.lblHost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // lblContEstado
-            // 
-            this.lblContEstado.BackColor = System.Drawing.Color.DarkGray;
-            this.lblContEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblContEstado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblContEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContEstado.Location = new System.Drawing.Point(675, 190);
-            this.lblContEstado.Name = "lblContEstado";
-            this.lblContEstado.Size = new System.Drawing.Size(230, 25);
-            this.lblContEstado.TabIndex = 35;
-            this.lblContEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // lblContApellido
             // 
             this.lblContApellido.BackColor = System.Drawing.Color.DarkGray;
@@ -380,14 +353,12 @@
         private System.Windows.Forms.TextBox txtBoxUsuario;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.Label lblInfoDatosUser;
         private FontAwesome.Sharp.IconButton btnEliminarUsuario;
         private FontAwesome.Sharp.IconButton btnVolver;
         private FontAwesome.Sharp.IconButton btnBuscar;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblContEstado;
         private System.Windows.Forms.Label lblContApellido;
         private System.Windows.Forms.Label lblContNombre;
         private System.Windows.Forms.Label lblContIdUser;

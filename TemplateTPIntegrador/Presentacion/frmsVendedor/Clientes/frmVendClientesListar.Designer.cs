@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class frmVendProductosListar
+    partial class frmVendClientesListar
     {
         /// <summary>
         /// Required designer variable.
@@ -30,8 +30,9 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendProductosListar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVendClientesListar));
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
@@ -41,19 +42,18 @@
             this.lblFiltro = new System.Windows.Forms.Label();
             this.cmbFiltros = new System.Windows.Forms.ComboBox();
             this.txtBoxFiltro = new System.Windows.Forms.TextBox();
-            this.lblClientesTotales = new System.Windows.Forms.Label();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblProveedoresTotales = new System.Windows.Forms.Label();
+            this.dgvProveedores = new System.Windows.Forms.DataGridView();
             this.panelSide = new System.Windows.Forms.Panel();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Dni = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Host = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
@@ -72,7 +72,7 @@
             this.lblTop.Name = "lblTop";
             this.lblTop.Size = new System.Drawing.Size(409, 39);
             this.lblTop.TabIndex = 7;
-            this.lblTop.Text = "Productos - Listado de productos";
+            this.lblTop.Text = "Proveedores - Listado de productos";
             // 
             // btnVolver
             // 
@@ -106,8 +106,8 @@
             this.panelContenedor.Controls.Add(this.lblFiltro);
             this.panelContenedor.Controls.Add(this.cmbFiltros);
             this.panelContenedor.Controls.Add(this.txtBoxFiltro);
-            this.panelContenedor.Controls.Add(this.lblClientesTotales);
-            this.panelContenedor.Controls.Add(this.dgvUsuarios);
+            this.panelContenedor.Controls.Add(this.lblProveedoresTotales);
+            this.panelContenedor.Controls.Add(this.dgvProveedores);
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
@@ -174,24 +174,24 @@
             this.txtBoxFiltro.TabIndex = 34;
             this.txtBoxFiltro.TextChanged += new System.EventHandler(this.txtBoxFiltro_TextChanged);
             // 
-            // lblClientesTotales
+            // lblProveedoresTotales
             // 
-            this.lblClientesTotales.AutoSize = true;
-            this.lblClientesTotales.BackColor = System.Drawing.Color.LightGray;
-            this.lblClientesTotales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientesTotales.Location = new System.Drawing.Point(810, 455);
-            this.lblClientesTotales.Name = "lblClientesTotales";
-            this.lblClientesTotales.Size = new System.Drawing.Size(52, 21);
-            this.lblClientesTotales.TabIndex = 33;
-            this.lblClientesTotales.Text = "Total:";
+            this.lblProveedoresTotales.AutoSize = true;
+            this.lblProveedoresTotales.BackColor = System.Drawing.Color.LightGray;
+            this.lblProveedoresTotales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedoresTotales.Location = new System.Drawing.Point(810, 455);
+            this.lblProveedoresTotales.Name = "lblProveedoresTotales";
+            this.lblProveedoresTotales.Size = new System.Drawing.Size(52, 21);
+            this.lblProveedoresTotales.TabIndex = 33;
+            this.lblProveedoresTotales.Text = "Total:";
             // 
-            // dgvUsuarios
+            // dgvProveedores
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProveedores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProveedores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,94 +199,30 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuarios.ColumnHeadersHeight = 25;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.idCategoria,
+            this.dgvProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProveedores.ColumnHeadersHeight = 25;
+            this.dgvProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProveedores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
-            this.FechaAlta,
-            this.fechaBaja,
-            this.precio,
-            this.stock});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvUsuarios.Location = new System.Drawing.Point(4, 46);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(966, 389);
-            this.dgvUsuarios.TabIndex = 32;
-            this.dgvUsuarios.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsuarios_ColumnHeaderMouseClick);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "Id";
-            this.ID.FillWeight = 117.2541F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // idCategoria
-            // 
-            this.idCategoria.DataPropertyName = "idCategoria";
-            this.idCategoria.FillWeight = 117.2541F;
-            this.idCategoria.HeaderText = "ID Categoria";
-            this.idCategoria.Name = "idCategoria";
-            this.idCategoria.ReadOnly = true;
-            this.idCategoria.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.FillWeight = 117.2541F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // FechaAlta
-            // 
-            this.FechaAlta.DataPropertyName = "fechaAlta";
-            this.FechaAlta.FillWeight = 117.2541F;
-            this.FechaAlta.HeaderText = "Fecha de Alta";
-            this.FechaAlta.Name = "FechaAlta";
-            this.FechaAlta.ReadOnly = true;
-            this.FechaAlta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // fechaBaja
-            // 
-            this.fechaBaja.DataPropertyName = "fechaBaja";
-            this.fechaBaja.FillWeight = 117.2541F;
-            this.fechaBaja.HeaderText = "Fecha de Baja";
-            this.fechaBaja.Name = "fechaBaja";
-            this.fechaBaja.ReadOnly = true;
-            this.fechaBaja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "precio";
-            this.precio.FillWeight = 78.19613F;
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // stock
-            // 
-            this.stock.DataPropertyName = "stock";
-            this.stock.FillWeight = 35.53299F;
-            this.stock.HeaderText = "Stock";
-            this.stock.Name = "stock";
-            this.stock.ReadOnly = true;
-            this.stock.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.Apellido,
+            this.Dni,
+            this.Email,
+            this.Host,
+            this.FechaAlta});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProveedores.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvProveedores.EnableHeadersVisualStyles = false;
+            this.dgvProveedores.Location = new System.Drawing.Point(4, 46);
+            this.dgvProveedores.Name = "dgvProveedores";
+            this.dgvProveedores.Size = new System.Drawing.Size(966, 389);
+            this.dgvProveedores.TabIndex = 32;
+            this.dgvProveedores.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProveedores_ColumnHeaderMouseClick);
             // 
             // panelSide
             // 
@@ -297,7 +233,63 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // frmVendProductosListar
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "Nombre";
+            this.nombre.FillWeight = 96.07409F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Apellido
+            // 
+            this.Apellido.DataPropertyName = "Apellido";
+            this.Apellido.FillWeight = 106.9235F;
+            this.Apellido.HeaderText = "Apellido";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            this.Apellido.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Dni
+            // 
+            this.Dni.DataPropertyName = "Dni";
+            this.Dni.FillWeight = 88.74296F;
+            this.Dni.HeaderText = "DNI";
+            this.Dni.Name = "Dni";
+            this.Dni.ReadOnly = true;
+            this.Dni.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            dataGridViewCellStyle3.NullValue = null;
+            this.Email.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Email.FillWeight = 112.0796F;
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // Host
+            // 
+            this.Host.DataPropertyName = "Host";
+            this.Host.FillWeight = 82.98463F;
+            this.Host.HeaderText = "Host";
+            this.Host.Name = "Host";
+            this.Host.ReadOnly = true;
+            this.Host.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // FechaAlta
+            // 
+            this.FechaAlta.DataPropertyName = "FechaAlta";
+            this.FechaAlta.FillWeight = 95.94059F;
+            this.FechaAlta.HeaderText = "Fecha de Alta";
+            this.FechaAlta.Name = "FechaAlta";
+            this.FechaAlta.ReadOnly = true;
+            this.FechaAlta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // frmVendClientesListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -310,13 +302,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmVendProductosListar";
+            this.Name = "frmVendClientesListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosListar";
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProveedores)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,19 +319,18 @@
         private FontAwesome.Sharp.IconButton btnVolver;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
-        private System.Windows.Forms.Label lblClientesTotales;
+        private System.Windows.Forms.DataGridView dgvProveedores;
+        private System.Windows.Forms.Label lblProveedoresTotales;
         private System.Windows.Forms.TextBox txtBoxFiltro;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.ComboBox cmbFiltros;
         private FontAwesome.Sharp.IconButton btnRefrescar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Dni;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Host;
         private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaBaja;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stock;
     }
 }

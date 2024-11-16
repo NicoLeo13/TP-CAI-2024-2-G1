@@ -91,6 +91,9 @@ namespace Presentacion
                 }
 
                 UsuarioService usuarioService = new UsuarioService();
+
+                // El newGuid de usuario no lo usamos, es solo para que la clase no moleste.
+
                 usuarioService.AgregarUsuario(
                     Guid.NewGuid(),
                     txtBoxNombre.Text,

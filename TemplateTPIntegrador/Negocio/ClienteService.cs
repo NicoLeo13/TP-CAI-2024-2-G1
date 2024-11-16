@@ -24,6 +24,20 @@ namespace Negocio
             }
         }
 
+        public static List<Cliente> BuscarClientesTotales()
+        {
+            try
+            {
+                ClienteWS clienteWS = new ClienteWS();
+                return clienteWS.TraerClientesTotales();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar usuarios: {ex.Message}");
+                throw;
+            }
+        }
+
         public void CrearCliente(Guid id, string nombre, int dni, string apellido, string direccion, string telefono, string email, DateTime fechaNacimiento, string host, DateTime? fechaAlta = null, DateTime? fechaBaja = null)
         {
             try

@@ -32,7 +32,7 @@
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.txtBoxDNICliente = new System.Windows.Forms.TextBox();
+            this.txtBoxIdClienteAReactivar = new System.Windows.Forms.TextBox();
             this.lblInfoDatosCliente = new System.Windows.Forms.Label();
             this.btnReactivarCliente = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
@@ -68,12 +68,12 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // txtBoxDNICliente
+            // txtBoxIdClienteAReactivar
             // 
-            this.txtBoxDNICliente.Location = new System.Drawing.Point(351, 78);
-            this.txtBoxDNICliente.Name = "txtBoxDNICliente";
-            this.txtBoxDNICliente.Size = new System.Drawing.Size(263, 25);
-            this.txtBoxDNICliente.TabIndex = 24;
+            this.txtBoxIdClienteAReactivar.Location = new System.Drawing.Point(351, 78);
+            this.txtBoxIdClienteAReactivar.Name = "txtBoxIdClienteAReactivar";
+            this.txtBoxIdClienteAReactivar.Size = new System.Drawing.Size(263, 25);
+            this.txtBoxIdClienteAReactivar.TabIndex = 24;
             // 
             // lblInfoDatosCliente
             // 
@@ -82,9 +82,9 @@
             this.lblInfoDatosCliente.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoDatosCliente.Location = new System.Drawing.Point(347, 30);
             this.lblInfoDatosCliente.Name = "lblInfoDatosCliente";
-            this.lblInfoDatosCliente.Size = new System.Drawing.Size(273, 21);
+            this.lblInfoDatosCliente.Size = new System.Drawing.Size(261, 21);
             this.lblInfoDatosCliente.TabIndex = 22;
-            this.lblInfoDatosCliente.Text = "Ingrese el DNI del cliente a reactivar";
+            this.lblInfoDatosCliente.Text = "Ingrese el ID del cliente a reactivar";
             this.lblInfoDatosCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnReactivarCliente
@@ -140,7 +140,7 @@
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Controls.Add(this.btnReactivarCliente);
             this.panelContenedor.Controls.Add(this.lblInfoDatosCliente);
-            this.panelContenedor.Controls.Add(this.txtBoxDNICliente);
+            this.panelContenedor.Controls.Add(this.txtBoxIdClienteAReactivar);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
             this.panelContenedor.Name = "panelContenedor";
@@ -175,7 +175,7 @@
         private System.Windows.Forms.Panel panelAdmUsersAlta;
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.TextBox txtBoxDNICliente;
+        private System.Windows.Forms.TextBox txtBoxIdClienteAReactivar;
         private System.Windows.Forms.Label lblInfoDatosCliente;
         private FontAwesome.Sharp.IconButton btnReactivarCliente;
         private FontAwesome.Sharp.IconButton btnVolver;

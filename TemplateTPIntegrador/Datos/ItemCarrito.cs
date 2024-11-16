@@ -11,12 +11,12 @@ namespace Datos
         public Guid IdProducto { get; set; }
         public string Descripcion { get; set; }
         public int Cantidad { get; set; }
-        public decimal PrecioUnitario { get; set; }
-        public decimal Subtotal { get; set; }
+        public double PrecioUnitario { get; set; }
+        public double Subtotal { get; set; }
         public Guid IdCliente { get; set; }
         public int Categoria { get; set; }
 
-        public ItemCarrito(Guid idProducto, string descripcion, int cantidad, decimal precioUnitario, Guid idCliente, int categoria)
+        public ItemCarrito(Guid idProducto, string descripcion, int cantidad, double precioUnitario, Guid idCliente, int categoria)
         {
             IdProducto = idProducto;
             Descripcion = descripcion;
@@ -27,7 +27,7 @@ namespace Datos
             Categoria = categoria;
         }
 
-        public decimal CalcularSubtotal()
+        public double CalcularSubtotal()
         {
             return Cantidad * PrecioUnitario;
         }

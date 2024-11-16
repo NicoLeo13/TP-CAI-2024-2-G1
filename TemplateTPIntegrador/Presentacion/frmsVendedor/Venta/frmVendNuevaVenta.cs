@@ -27,12 +27,14 @@ namespace Presentacion
         private BindingSource bindingSource;
         private bool sortAscending = true;
         private DataGridViewColumn sortedColumn = null;
+        private UsuarioWS usuario;
 
-        public frmVendNuevaVenta()
+        public frmVendNuevaVenta(UsuarioWS usuarioWs)
         {
             InitializeComponent();
             ConfigurarTabIndex();
             dataGridService = new DataGridService();
+            usuario = usuarioWs;
         }
 
         //Metodo para configurar el TabIndex de los controles (txtBox)
@@ -47,12 +49,6 @@ namespace Presentacion
                 carritoService = new CarritoService();
         }
 
-        //private void InstanciarDataGridCarrito()
-        //{
-        //    if (dataGridCarrito == null)
-        //        dataGridCarrito = new CarritoService();
-        //}
-
         private void btnBuscarProducto_Click(object sender, EventArgs e)
         {
             //Buscar producto por Nombre
@@ -61,12 +57,14 @@ namespace Presentacion
             if (clienteBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxDniCliente.Focus();
                 return;
             }
 
             if (txtBoxNombreProd.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxNombreProd.Focus();
                 return;
             }
 
@@ -179,11 +177,13 @@ namespace Presentacion
             if (clienteBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxDniCliente.Focus();
                 return;
             }
             else if (productoBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxNombreProd.Focus();
                 return;
             }
             else if (cmbCantidad.SelectedIndex <= -1)
@@ -228,11 +228,13 @@ namespace Presentacion
             if (clienteBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxDniCliente.Focus();
                 return;
             }
             else if (productoBusqueda == null)
             {
                 MessageBox.Show("Primero debe buscar un producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtBoxNombreProd.Focus();
                 return;
             }
             else if (carritoService == null || carritoService.CantidadProductosEnCarrito() == 0)
@@ -243,7 +245,7 @@ namespace Presentacion
 
             try
             {
-                const String userPrueba = "ff738cd6-cc08-42e9-b15f-1f258084b0f9";
+                const String userPrueba = "ff738cd6-cc08-42e9-b15f-1f258084b0f9"; // Flag-hardcode
                 Guid idUserPrueba = Guid.Parse(userPrueba);
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea guardar la venta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -254,8 +256,8 @@ namespace Presentacion
                 List<ItemCarrito> itemsCarrito = carritoService.ObtenerItemsCarrito();
                 foreach (ItemCarrito item in itemsCarrito)
                 {
-                    //Venta venta = new Venta(item.IdCliente, idVendedor, item.IdProducto, item.Cantidad);
-                    Venta venta = new Venta(item.IdCliente, idUserPrueba, item.IdProducto, item.Cantidad);
+                    Venta venta = new Venta(item.IdCliente, usuario.Id, item.IdProducto, item.Cantidad);
+                    //Venta venta = new Venta(item.IdCliente, idUserPrueba, item.IdProducto, item.Cantidad);
                     ventaService.AgregarVenta(venta);
                 }
 

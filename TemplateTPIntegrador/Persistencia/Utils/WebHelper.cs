@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Persistencia.Utils
 {
@@ -24,9 +25,11 @@ namespace Persistencia.Utils
             return response;
         }
 
-        public static HttpResponseMessage GetCustomId(string url)
+        public static HttpResponseMessage GetCustomId(string url, Guid id)
         {
-            var uri = rutaBase + url;
+            var uri = rutaBase + url + "?id=" + id;
+
+            Console.WriteLine("\n Veamos que tiene el URI de GetCustomId: " + uri);
 
             HttpResponseMessage response = httpClient.GetAsync(uri).Result;  
 
@@ -140,6 +143,25 @@ namespace Persistencia.Utils
                 Method = new HttpMethod("PATCH"),
                 RequestUri = new Uri(uri),
                 Content = data
+            };
+
+            HttpResponseMessage response = httpClient.SendAsync(request).Result;
+            string responseContent = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine("\n Contenido de la respuesta: " + responseContent);
+
+            return response;
+        }
+
+        public static HttpResponseMessage PatchNoAdminParametros(string url, Guid id)
+        {
+            var uri = $"{rutaBase}{url}?id={id}";
+
+            Console.WriteLine($"PatchNoAdminParametros - uri: {uri}");
+
+            HttpRequestMessage request = new HttpRequestMessage
+            {
+                Method = new HttpMethod("PATCH"),
+                RequestUri = new Uri(uri)
             };
 
             HttpResponseMessage response = httpClient.SendAsync(request).Result;

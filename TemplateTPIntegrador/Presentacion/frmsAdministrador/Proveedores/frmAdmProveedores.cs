@@ -52,5 +52,9 @@ namespace Presentacion
             PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmProveedoresBaja(), PresentacionUtils.PanelContenedor);
         }
 
+        private void btnListarProveedores_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmAdmProveedoresListar(), PresentacionUtils.PanelContenedor);
+        }
     }
 }

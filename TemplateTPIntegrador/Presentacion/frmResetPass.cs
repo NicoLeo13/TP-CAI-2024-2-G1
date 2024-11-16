@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using Negocio.Utils;
+using Persistencia;
 using Presentacion.Utils;
 using System;
 using System.Collections.Generic;
@@ -15,10 +16,11 @@ namespace Presentacion
 {
     public partial class frmResetPass : Form
     {
-
-        public frmResetPass()
+        private string user;
+        public frmResetPass(string nombreUser)
         {
             InitializeComponent();
+            user = nombreUser;
         }
 
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
@@ -37,12 +39,22 @@ namespace Presentacion
             
             // Traeme el usuario que está logueado.
 
-            string nombreUsuario = "johndoe1";
-
+            //string nombreUsuario = "johndoe1"; // Flag-hardcode
+            string nombreUsuario = user;
             NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
             string resultValidarPass = negocioValidaciones.ValidarPass(nombreUsuario, contraseñaActual, nuevaContraseña, reingresoNuevaContraseña);
 
             MessageBox.Show(resultValidarPass);
+
+            try
+            {
+                UserManager persistencia = new UserManager();
+                persistencia.CambiarContraseñaUsuario(nombreUsuario, nuevaContraseña, reingresoNuevaContraseña);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error al cambiar la contraseña: {ex.Message}");
+            }
 
 
             //if (negocioValidaciones.ValidarPass (contraseñaactual, contraseñanueva) == true)

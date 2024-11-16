@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMenuReportes));
             this.panelAdmvend = new System.Windows.Forms.Panel();
             this.lblTop = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblProdActivos = new System.Windows.Forms.Label();
+            this.pnlStockCritico = new System.Windows.Forms.Panel();
+            this.lblProdCriticos = new System.Windows.Forms.Label();
             this.lblTopStockCritico = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnReporteStockCritico = new FontAwesome.Sharp.IconButton();
@@ -47,7 +47,7 @@
             this.lblTopProdActivos = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelAdmvend.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.pnlStockCritico.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -73,28 +73,28 @@
             this.lblTop.TabIndex = 7;
             this.lblTop.Text = "Panel de Reportes - Seleccione un Reporte a Emitir";
             // 
-            // panel2
+            // pnlStockCritico
             // 
-            this.panel2.Controls.Add(this.lblProdActivos);
-            this.panel2.Controls.Add(this.lblTopStockCritico);
-            this.panel2.Controls.Add(this.guna2CirclePictureBox2);
-            this.panel2.Location = new System.Drawing.Point(318, 62);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(349, 119);
-            this.panel2.TabIndex = 8;
-            this.panel2.Visible = false;
+            this.pnlStockCritico.Controls.Add(this.lblProdCriticos);
+            this.pnlStockCritico.Controls.Add(this.lblTopStockCritico);
+            this.pnlStockCritico.Controls.Add(this.guna2CirclePictureBox2);
+            this.pnlStockCritico.Location = new System.Drawing.Point(318, 62);
+            this.pnlStockCritico.Name = "pnlStockCritico";
+            this.pnlStockCritico.Size = new System.Drawing.Size(349, 119);
+            this.pnlStockCritico.TabIndex = 8;
+            this.pnlStockCritico.Visible = false;
             // 
-            // lblProdActivos
+            // lblProdCriticos
             // 
-            this.lblProdActivos.AutoSize = true;
-            this.lblProdActivos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProdActivos.ForeColor = System.Drawing.Color.DarkRed;
-            this.lblProdActivos.Location = new System.Drawing.Point(172, 49);
-            this.lblProdActivos.Name = "lblProdActivos";
-            this.lblProdActivos.Size = new System.Drawing.Size(44, 20);
-            this.lblProdActivos.TabIndex = 14;
-            this.lblProdActivos.Text = "Total";
-            this.lblProdActivos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblProdCriticos.AutoSize = true;
+            this.lblProdCriticos.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProdCriticos.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblProdCriticos.Location = new System.Drawing.Point(172, 49);
+            this.lblProdCriticos.Name = "lblProdCriticos";
+            this.lblProdCriticos.Size = new System.Drawing.Size(44, 20);
+            this.lblProdCriticos.TabIndex = 14;
+            this.lblProdCriticos.Text = "Total";
+            this.lblProdCriticos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTopStockCritico
             // 
@@ -284,7 +284,7 @@
             this.Controls.Add(this.btnReporteProdTopVentas);
             this.Controls.Add(this.btnReporteVtasVendedor);
             this.Controls.Add(this.btnReporteStockCritico);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlStockCritico);
             this.Controls.Add(this.panelAdmvend);
             this.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -294,8 +294,8 @@
             this.Text = "Panel Reportes";
             this.Load += new System.EventHandler(this.frmReportes_Load);
             this.panelAdmvend.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnlStockCritico.ResumeLayout(false);
+            this.pnlStockCritico.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -310,8 +310,8 @@
         #endregion
         private System.Windows.Forms.Panel panelAdmvend;
         private System.Windows.Forms.Label lblTop;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblProdActivos;
+        private System.Windows.Forms.Panel pnlStockCritico;
+        private System.Windows.Forms.Label lblProdCriticos;
         private System.Windows.Forms.Label lblTopStockCritico;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
         private FontAwesome.Sharp.IconButton btnReporteStockCritico;

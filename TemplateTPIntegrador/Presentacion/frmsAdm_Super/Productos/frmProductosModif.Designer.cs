@@ -33,25 +33,15 @@
             this.lblTop = new System.Windows.Forms.Label();
             this.panelSide = new System.Windows.Forms.Panel();
             this.txtBoxProd = new System.Windows.Forms.TextBox();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.lblInfoDatosProd = new System.Windows.Forms.Label();
             this.btnModificarProd = new FontAwesome.Sharp.IconButton();
             this.btnVolver = new FontAwesome.Sharp.IconButton();
             this.btnBuscar = new FontAwesome.Sharp.IconButton();
             this.panelContenedor = new System.Windows.Forms.Panel();
             this.grpDatosProd = new System.Windows.Forms.GroupBox();
-            this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.txtBoxEstadoProd = new System.Windows.Forms.TextBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.txtBoxIdProv = new System.Windows.Forms.TextBox();
-            this.lblIdProv = new System.Windows.Forms.Label();
-            this.txtBoxProvProd = new System.Windows.Forms.TextBox();
-            this.lblProveedor = new System.Windows.Forms.Label();
             this.txtBoxStockProd = new System.Windows.Forms.TextBox();
             this.lblStock = new System.Windows.Forms.Label();
             this.txtBoxPrecioProd = new System.Windows.Forms.TextBox();
-            this.txtBoxNombreProd = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
@@ -91,28 +81,6 @@
             this.txtBoxProd.Name = "txtBoxProd";
             this.txtBoxProd.Size = new System.Drawing.Size(206, 25);
             this.txtBoxProd.TabIndex = 24;
-            // 
-            // lblCategoria
-            // 
-            this.lblCategoria.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblCategoria.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(7, 38);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(105, 25);
-            this.lblCategoria.TabIndex = 9;
-            this.lblCategoria.Text = "Categoria";
-            this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblNombre.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(7, 85);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(105, 25);
-            this.lblNombre.TabIndex = 12;
-            this.lblNombre.Text = "Nombre";
-            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblInfoDatosProd
             // 
@@ -213,107 +181,24 @@
             // 
             // grpDatosProd
             // 
-            this.grpDatosProd.Controls.Add(this.cmbCategoria);
-            this.grpDatosProd.Controls.Add(this.txtBoxEstadoProd);
-            this.grpDatosProd.Controls.Add(this.lblEstado);
-            this.grpDatosProd.Controls.Add(this.txtBoxIdProv);
-            this.grpDatosProd.Controls.Add(this.lblIdProv);
-            this.grpDatosProd.Controls.Add(this.txtBoxProvProd);
-            this.grpDatosProd.Controls.Add(this.lblProveedor);
             this.grpDatosProd.Controls.Add(this.txtBoxStockProd);
             this.grpDatosProd.Controls.Add(this.lblStock);
             this.grpDatosProd.Controls.Add(this.txtBoxPrecioProd);
-            this.grpDatosProd.Controls.Add(this.txtBoxNombreProd);
             this.grpDatosProd.Controls.Add(this.lblPrecio);
-            this.grpDatosProd.Controls.Add(this.lblCategoria);
-            this.grpDatosProd.Controls.Add(this.lblNombre);
             this.grpDatosProd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grpDatosProd.Location = new System.Drawing.Point(27, 131);
+            this.grpDatosProd.Location = new System.Drawing.Point(318, 131);
             this.grpDatosProd.Name = "grpDatosProd";
-            this.grpDatosProd.Size = new System.Drawing.Size(920, 251);
+            this.grpDatosProd.Size = new System.Drawing.Size(385, 195);
             this.grpDatosProd.TabIndex = 35;
             this.grpDatosProd.TabStop = false;
             this.grpDatosProd.Text = "Datos de Producto";
-            // 
-            // cmbCategoria
-            // 
-            this.cmbCategoria.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.cmbCategoria.Enabled = false;
-            this.cmbCategoria.FormattingEnabled = true;
-            this.cmbCategoria.Location = new System.Drawing.Point(131, 41);
-            this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(229, 29);
-            this.cmbCategoria.TabIndex = 55;
-            // 
-            // txtBoxEstadoProd
-            // 
-            this.txtBoxEstadoProd.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxEstadoProd.Enabled = false;
-            this.txtBoxEstadoProd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxEstadoProd.Location = new System.Drawing.Point(655, 133);
-            this.txtBoxEstadoProd.Name = "txtBoxEstadoProd";
-            this.txtBoxEstadoProd.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxEstadoProd.TabIndex = 54;
-            // 
-            // lblEstado
-            // 
-            this.lblEstado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblEstado.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(532, 134);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(105, 25);
-            this.lblEstado.TabIndex = 53;
-            this.lblEstado.Text = "Estado";
-            this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtBoxIdProv
-            // 
-            this.txtBoxIdProv.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxIdProv.Enabled = false;
-            this.txtBoxIdProv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxIdProv.Location = new System.Drawing.Point(655, 87);
-            this.txtBoxIdProv.Name = "txtBoxIdProv";
-            this.txtBoxIdProv.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxIdProv.TabIndex = 52;
-            // 
-            // lblIdProv
-            // 
-            this.lblIdProv.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblIdProv.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdProv.Location = new System.Drawing.Point(532, 86);
-            this.lblIdProv.Name = "lblIdProv";
-            this.lblIdProv.Size = new System.Drawing.Size(105, 25);
-            this.lblIdProv.TabIndex = 51;
-            this.lblIdProv.Text = "ID Proveedor";
-            this.lblIdProv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtBoxProvProd
-            // 
-            this.txtBoxProvProd.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxProvProd.Enabled = false;
-            this.txtBoxProvProd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxProvProd.Location = new System.Drawing.Point(655, 43);
-            this.txtBoxProvProd.Name = "txtBoxProvProd";
-            this.txtBoxProvProd.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxProvProd.TabIndex = 50;
-            // 
-            // lblProveedor
-            // 
-            this.lblProveedor.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.lblProveedor.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProveedor.Location = new System.Drawing.Point(532, 43);
-            this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(105, 25);
-            this.lblProveedor.TabIndex = 49;
-            this.lblProveedor.Text = "Proveedor";
-            this.lblProveedor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtBoxStockProd
             // 
             this.txtBoxStockProd.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtBoxStockProd.Enabled = false;
             this.txtBoxStockProd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxStockProd.Location = new System.Drawing.Point(130, 182);
+            this.txtBoxStockProd.Location = new System.Drawing.Point(140, 101);
             this.txtBoxStockProd.Name = "txtBoxStockProd";
             this.txtBoxStockProd.Size = new System.Drawing.Size(230, 25);
             this.txtBoxStockProd.TabIndex = 48;
@@ -322,7 +207,7 @@
             // 
             this.lblStock.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblStock.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStock.Location = new System.Drawing.Point(7, 182);
+            this.lblStock.Location = new System.Drawing.Point(17, 101);
             this.lblStock.Name = "lblStock";
             this.lblStock.Size = new System.Drawing.Size(105, 25);
             this.lblStock.TabIndex = 47;
@@ -334,26 +219,16 @@
             this.txtBoxPrecioProd.BackColor = System.Drawing.SystemColors.ControlDark;
             this.txtBoxPrecioProd.Enabled = false;
             this.txtBoxPrecioProd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxPrecioProd.Location = new System.Drawing.Point(130, 134);
+            this.txtBoxPrecioProd.Location = new System.Drawing.Point(140, 53);
             this.txtBoxPrecioProd.Name = "txtBoxPrecioProd";
             this.txtBoxPrecioProd.Size = new System.Drawing.Size(230, 25);
             this.txtBoxPrecioProd.TabIndex = 43;
-            // 
-            // txtBoxNombreProd
-            // 
-            this.txtBoxNombreProd.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.txtBoxNombreProd.Enabled = false;
-            this.txtBoxNombreProd.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBoxNombreProd.Location = new System.Drawing.Point(131, 86);
-            this.txtBoxNombreProd.Name = "txtBoxNombreProd";
-            this.txtBoxNombreProd.Size = new System.Drawing.Size(230, 25);
-            this.txtBoxNombreProd.TabIndex = 42;
             // 
             // lblPrecio
             // 
             this.lblPrecio.BackColor = System.Drawing.Color.WhiteSmoke;
             this.lblPrecio.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(7, 133);
+            this.lblPrecio.Location = new System.Drawing.Point(17, 52);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(105, 25);
             this.lblPrecio.TabIndex = 38;
@@ -391,8 +266,6 @@
         private System.Windows.Forms.Label lblTop;
         private System.Windows.Forms.Panel panelSide;
         private System.Windows.Forms.TextBox txtBoxProd;
-        private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblInfoDatosProd;
         private FontAwesome.Sharp.IconButton btnModificarProd;
         private FontAwesome.Sharp.IconButton btnVolver;
@@ -401,15 +274,7 @@
         private System.Windows.Forms.GroupBox grpDatosProd;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtBoxPrecioProd;
-        private System.Windows.Forms.TextBox txtBoxNombreProd;
-        private System.Windows.Forms.TextBox txtBoxProvProd;
-        private System.Windows.Forms.Label lblProveedor;
         private System.Windows.Forms.TextBox txtBoxStockProd;
         private System.Windows.Forms.Label lblStock;
-        private System.Windows.Forms.TextBox txtBoxIdProv;
-        private System.Windows.Forms.Label lblIdProv;
-        private System.Windows.Forms.TextBox txtBoxEstadoProd;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.ComboBox cmbCategoria;
     }
 }

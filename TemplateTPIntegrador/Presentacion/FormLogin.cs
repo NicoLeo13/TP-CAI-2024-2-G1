@@ -21,7 +21,7 @@ namespace Presentacion
         private const string TOOLTIP_OLVIDAR_CONTRASEÑA = "Haz clic aquí si olvidaste tu contraseña.";
         private const string ERROR_SHOW = "Error";
         private const string USER_NOT_FOUND = "Usuario no encontrado";
-        private const bool skipLogin = true;
+        private const bool skipLogin = false;
 
         public FormLogin()
         {
@@ -46,11 +46,11 @@ namespace Presentacion
                 //Validar si txtBoxUser es un int (entre 1 y 3) y si es asi, asignar a host. Si no, mostrar mensaje de error
                 if (host < 1 || host > 3)
                 {
-                    MessageBox.Show("El valor ingresado no es válido. Ingrese un número entre 1 y 3.\nAdmin: 3\nSupervisor: 2\nVendedor: 1", "Modo Prueba Activo - Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("El valor ingresado no es válido. Ingrese un número entre 1 y 3.\nAdmin: 3\nSupervisor: 2\nVendedor: 1", "Modo Prueba Activo - Error", MessageBoxButtons.OK, MessageBoxIcon.Error); // Flag-hardcode
                     return;
                 }
 
-                if (host == 3)
+                if (host == 3) // Flag-hardcode
                 {
                     UsuarioWS usuario = new UsuarioWS(id: Guid.NewGuid(), nombre: "adminTest", apellido: "Test", dni: 12345678, nombreUsuario: "PruebaCAI1", host: host);
                     Form pantallaInicial = PresentacionUtils.PantallaInicialUsuario(usuario);
@@ -92,7 +92,7 @@ namespace Presentacion
             //Saltea login para probar pantallas directamente
             if (skipLogin)
             {
-                SkipLogin(nombreUsuario);
+                SkipLogin(nombreUsuario); // Flag-hardcode
                 return;
             }
 
@@ -191,7 +191,12 @@ namespace Presentacion
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            frmResetPass formResetPass = new frmResetPass();
+            if(txtBoxUser.Text.Length == 0)
+            {
+                MessageBox.Show("Debe ingresar un nombre de usuario para recuperar la contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            frmResetPass formResetPass = new frmResetPass(txtBoxUser.Text);
             formResetPass.ShowDialog();
         }
         private void txtBoxUser_Focus(object sender, EventArgs e)

@@ -38,6 +38,7 @@
             this.btnAltaProveedor = new FontAwesome.Sharp.IconButton();
             this.btnModificarProveedor = new FontAwesome.Sharp.IconButton();
             this.btnEliminarProveedor = new FontAwesome.Sharp.IconButton();
+            this.btnListarProveedores = new FontAwesome.Sharp.IconButton();
             this.panelAdmvend.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
@@ -119,7 +120,7 @@
             this.btnAltaProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAltaProveedor.IconSize = 30;
             this.btnAltaProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAltaProveedor.Location = new System.Drawing.Point(387, 237);
+            this.btnAltaProveedor.Location = new System.Drawing.Point(387, 297);
             this.btnAltaProveedor.Name = "btnAltaProveedor";
             this.btnAltaProveedor.Size = new System.Drawing.Size(220, 56);
             this.btnAltaProveedor.TabIndex = 18;
@@ -141,7 +142,7 @@
             this.btnModificarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnModificarProveedor.IconSize = 30;
             this.btnModificarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarProveedor.Location = new System.Drawing.Point(387, 340);
+            this.btnModificarProveedor.Location = new System.Drawing.Point(387, 395);
             this.btnModificarProveedor.Name = "btnModificarProveedor";
             this.btnModificarProveedor.Size = new System.Drawing.Size(220, 56);
             this.btnModificarProveedor.TabIndex = 19;
@@ -163,7 +164,7 @@
             this.btnEliminarProveedor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminarProveedor.IconSize = 30;
             this.btnEliminarProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminarProveedor.Location = new System.Drawing.Point(387, 443);
+            this.btnEliminarProveedor.Location = new System.Drawing.Point(387, 493);
             this.btnEliminarProveedor.Name = "btnEliminarProveedor";
             this.btnEliminarProveedor.Size = new System.Drawing.Size(220, 56);
             this.btnEliminarProveedor.TabIndex = 20;
@@ -171,12 +172,35 @@
             this.btnEliminarProveedor.UseVisualStyleBackColor = false;
             this.btnEliminarProveedor.Click += new System.EventHandler(this.btnBajaProve_Click);
             // 
+            // btnListarProveedores
+            // 
+            this.btnListarProveedores.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnListarProveedores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListarProveedores.FlatAppearance.BorderSize = 0;
+            this.btnListarProveedores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
+            this.btnListarProveedores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnListarProveedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListarProveedores.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListarProveedores.IconChar = FontAwesome.Sharp.IconChar.ClipboardQuestion;
+            this.btnListarProveedores.IconColor = System.Drawing.Color.Black;
+            this.btnListarProveedores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnListarProveedores.IconSize = 30;
+            this.btnListarProveedores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListarProveedores.Location = new System.Drawing.Point(390, 199);
+            this.btnListarProveedores.Name = "btnListarProveedores";
+            this.btnListarProveedores.Size = new System.Drawing.Size(220, 56);
+            this.btnListarProveedores.TabIndex = 69;
+            this.btnListarProveedores.Text = "Listar Proveedores";
+            this.btnListarProveedores.UseVisualStyleBackColor = false;
+            this.btnListarProveedores.Click += new System.EventHandler(this.btnListarProveedores_Click);
+            // 
             // frmAdmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(994, 566);
+            this.Controls.Add(this.btnListarProveedores);
             this.Controls.Add(this.btnEliminarProveedor);
             this.Controls.Add(this.btnModificarProveedor);
             this.Controls.Add(this.btnAltaProveedor);
@@ -207,5 +231,6 @@
         private FontAwesome.Sharp.IconButton btnAltaProveedor;
         private FontAwesome.Sharp.IconButton btnModificarProveedor;
         private FontAwesome.Sharp.IconButton btnEliminarProveedor;
+        private FontAwesome.Sharp.IconButton btnListarProveedores;
     }
 }

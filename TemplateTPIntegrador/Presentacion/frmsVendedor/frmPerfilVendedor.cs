@@ -73,7 +73,7 @@ namespace Presentacion
 
         private void btnVendLogout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea Cerrar Sesión?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 PresentacionUtils.isFormClosing = true;
                 this.Close();
@@ -101,7 +101,7 @@ namespace Presentacion
             // Verificar si la instancia ya existe
             if (frmVendVentaInstance == null || frmVendVentaInstance.IsDisposed)
             {
-                frmVendVentaInstance = new frmVendNuevaVenta();
+                frmVendVentaInstance = new frmVendNuevaVenta(usuarioActual);
                 PresentacionUtils.AbrirForm((IconButton)sender, frmVendVentaInstance, panelContenedor);
             }
             else
@@ -137,7 +137,7 @@ namespace Presentacion
         {
             if (frmVendReportesInstance == null || frmVendReportesInstance.IsDisposed)
             {
-                frmVendReportesInstance = new frmVendReportes();
+                frmVendReportesInstance = new frmVendReportes(usuarioActual);
                 PresentacionUtils.AbrirForm((IconButton)sender, frmVendReportesInstance, panelContenedor);
             }
             else

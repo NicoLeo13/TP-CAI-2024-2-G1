@@ -13,6 +13,8 @@ namespace Persistencia
 {
     public class ProductoWS
     {
+        private const String adminId = "abc27a5f-7f7f-4f11-a244-475c8f0c0e89";
+
         public static void LoguearRequest(HttpResponseMessage response)
         {
             Console.WriteLine($"\nRequest efectuada: \n[\n {response.RequestMessage} \n\n {response.ReasonPhrase}  \n\n {response.StatusCode} \n]\n");
@@ -20,9 +22,6 @@ namespace Persistencia
 
         public string AgregarProducto(Producto producto)
         {
-            //string idUsuario = "";
-            //string responseBody = "";
-
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
             datos.Add("idCategoria", producto.IdCategoria);
@@ -77,7 +76,6 @@ namespace Persistencia
             }
         }
 
-
         public static Producto TraerProducto(string nombre)
         {
             ProductoWS productoWS = new ProductoWS();
@@ -117,16 +115,14 @@ namespace Persistencia
             }
 
             return null;
-
         }
-
-
 
         public void EliminarProducto(Producto producto)
         {
             Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("nombre", producto.Nombre);
+            datos.Add("id", producto.Id);
+            datos.Add("idUsuario", adminId);
 
             var jsonData = JsonConvert.SerializeObject(datos);
 
@@ -141,7 +137,28 @@ namespace Persistencia
                 throw new HttpRequestException($"Error al eliminar el producto:\n{errorContent}");
             }
         }
+
+        public void ModificarProducto(Producto producto)
+        {
+            Dictionary<String, object> datos = new Dictionary<String, object>();
+
+            datos.Add("id", producto.Id);
+            datos.Add("idUsuario", adminId);
+            datos.Add("precio", producto.Precio);
+            datos.Add("stock", producto.Stock);
+
+            var jsonData = JsonConvert.SerializeObject(datos);
+
+            HttpResponseMessage response = WebHelper.PatchNoAdmin("Producto/ModificarProducto", jsonData);
+
+            LoguearRequest(response);
+
+            if (!response.IsSuccessStatusCode)
+            {
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {errorContent}");
+                throw new HttpRequestException($"Error al modificar el producto:\n{errorContent}");
+            }
+        }
     }
-
-
 }

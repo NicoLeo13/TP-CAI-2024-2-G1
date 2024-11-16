@@ -17,8 +17,9 @@ namespace Presentacion
 {
     public partial class frmProductosModif : Form
     {
-        public UsuarioWS usuario;
-        public ProductoWS producto;
+        private UsuarioWS usuario;
+        private Producto producto;
+        private ProductoService productoService;
 
         public frmProductosModif()
         {
@@ -27,19 +28,7 @@ namespace Presentacion
 
         private void frmProductosModif_Load(object sender, EventArgs e)
         {
-            Dictionary<int, string> categorias = new Dictionary<int, string>
-            {
-                { 1, "1 - Audio" },
-                { 2, "2 - Celulares" },
-                { 3, "3 - Electro Hogar" },
-                { 4, "4 - Informatica" },
-                { 5, "5 - Smart TV" }
-            };
-
-            cmbCategoria.DataSource = new BindingSource(categorias, null);
-            cmbCategoria.DisplayMember = "Value";
-            cmbCategoria.ValueMember = "Key";
-            cmbCategoria.SelectedIndex = -1;
+            productoService = new ProductoService();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -47,23 +36,40 @@ namespace Presentacion
             PresentacionUtils.VolverFormPrevio((IconButton)sender, PresentacionUtils.FormPrevio, PresentacionUtils.PanelContenedor);
         }
 
-        public void LimpiarCamposBaja()
+        public void LimpiarCamposModif()
         {
-            //txtBoxUsuario.Text = "";
-            //lblContNombre.Text = "";
-            //lblContApellido.Text = "";
-            //lblContDni.Text = "";
-            //lblContHost.Text = "";
-            //lblContIdUser.Text = "";
-            //lblContEstado.Text = "";
+            txtBoxProd.Text = "";
+            txtBoxPrecioProd.Text = "";
+            txtBoxStockProd.Text = "";
         }
 
         private void btnBuscarProducto_click(object sender, EventArgs e)
         {
-            if (txtBoxNombreProd.Text == "")
+            if (txtBoxProd.Text == "")
             {
                 MessageBox.Show("Ingrese el nombre del producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            try
+            {
+                producto = ProductoService.BuscarProducto(txtBoxProd.Text);
+
+                if (producto == null)
+                {
+                    MessageBox.Show("El producto de nombre: " + txtBoxProd.Text + " no fue encontrado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                PresentacionUtils.HabilitarControles(grpDatosProd);
+
+                txtBoxPrecioProd.Text = producto.Precio.ToString();
+                txtBoxStockProd.Text = producto.Stock.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al buscar el producto de nombre: " + txtBoxProd.Text, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al buscar el producto de nombre: {txtBoxProd.Text} - {ex.Message}");
             }
         }
 
@@ -73,6 +79,43 @@ namespace Presentacion
             {
                 MessageBox.Show("No se ha seleccionado ningun producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
+            }
+
+            //Validar si el campo Precio es numerico
+            if (!double.TryParse(txtBoxPrecioProd.Text, out double precio))
+            {
+                MessageBox.Show("El campo Precio debe ser numerico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtBoxStockProd.Text, out int stock))
+            {
+                MessageBox.Show("El campo Precio debe ser numerico", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            if (producto.Precio == precio && producto.Stock == stock)
+            {
+                MessageBox.Show("No se han realizado cambios", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            producto.Precio = precio;
+            producto.Stock = stock;
+
+            try
+            {
+                productoService.ModificarProducto(producto);
+                
+                MessageBox.Show("Producto modificado con exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                PresentacionUtils.DeshabilitarControles(grpDatosProd);
+                LimpiarCamposModif();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al modificar el producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Console.WriteLine($"\nError al modificar el producto: {ex.Message}");
             }
         }
     }

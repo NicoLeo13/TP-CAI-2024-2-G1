@@ -23,6 +23,20 @@ namespace Negocio
             }
         }
 
+        public static List<Proveedor> BuscarProveedoresTotales()
+        {
+            try
+            {
+                ProveedorManager proveedorManager = new ProveedorManager();
+                return proveedorManager.TraerProveedores();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar los proveedores: {ex.Message}");
+                throw;
+            }
+        }
+
         public void EliminarProveedor(Proveedor proveedor)
         {
             try

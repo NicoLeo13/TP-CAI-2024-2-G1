@@ -37,6 +37,26 @@ namespace Persistencia
             }
         }
 
+        public List<Cliente> TraerClientesTotales()
+        {
+            List<Cliente> clientes = new List<Cliente>();
+
+            HttpResponseMessage response = WebHelper.GetSinAdminId("Cliente/GetClientes");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var contentStream = response.Content.ReadAsStringAsync().Result;
+                List<Cliente> listadoUsuariosActivos = JsonConvert.DeserializeObject<List<Cliente>>(contentStream);
+                return listadoUsuariosActivos;
+            }
+            else
+            {
+                var errorContent = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                throw new HttpRequestException($"Error al momento de buscar los clientes: {(int)response.StatusCode} - {response.ReasonPhrase}");
+            }
+        }
+
         public static Cliente TraerCliente(int dniCliente)
         {
             ClienteWS clienteWS = new ClienteWS();
@@ -172,16 +192,16 @@ namespace Persistencia
 
         public void ReactivarCliente(Guid idClienteReactivar)
         {
-            Dictionary<String, object> datos = new Dictionary<String, object>();
+            //Dictionary<String, object> datos = new Dictionary<String, object>();
 
-            datos.Add("id", idClienteReactivar);
+            //datos.Add("id", idClienteReactivar);
 
-            var jsonData = JsonConvert.SerializeObject(datos);
+            //var jsonData = JsonConvert.SerializeObject(datos);
 
 
-            Console.WriteLine("jsonData Cliente/ReactivarCliente: " + jsonData);
+            Console.WriteLine("jsonData Cliente/ReactivarCliente: " + idClienteReactivar);
 
-            HttpResponseMessage response = WebHelper.Patch("Cliente/ReactivarCliente", jsonData);
+            HttpResponseMessage response = WebHelper.PatchNoAdminParametros("Cliente/ReactivarCliente", idClienteReactivar);
 
             Console.WriteLine("response Cliente/ReactivarCliente: " + response);
 

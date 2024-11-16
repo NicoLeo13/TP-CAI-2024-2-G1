@@ -88,7 +88,7 @@ namespace Negocio
             decimal total = 0;
             foreach (ItemCarrito item in CarritoManager.carrito.Items)
             {
-                total += item.Subtotal;
+                total += (decimal)item.Subtotal;
             }
             return total;
         }

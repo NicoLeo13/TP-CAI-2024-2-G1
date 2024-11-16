@@ -72,7 +72,7 @@ namespace Presentacion
         {
             if (txtBoxProvCuit.Text == "")
             {
-                MessageBox.Show("Ingrese un CUIT de Proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ingrese un CUIT de proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -82,7 +82,7 @@ namespace Presentacion
 
                 if (proveedor == null)
                 {
-                    MessageBox.Show("No se encontro el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se encontró el proveedor", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -92,7 +92,7 @@ namespace Presentacion
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al buscar el proveedor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error al buscar al proveedor: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -107,8 +107,7 @@ namespace Presentacion
                 return;
             }
 
-            //Guid idusuario = usuarioActual.Id;
-            Guid idusuario = Guid.Parse("7a06c9f0-8887-4b4f-b635-1ef5fe4d116f");        //Hardcode para probar (borrar despues)
+            Guid idusuario = usuarioActual.Id;
             Guid idproveedor = proveedor.Id;
             int idcategoria = (int)cmbCategoria.SelectedValue;
             string nombre = txtBoxNombre.Text;

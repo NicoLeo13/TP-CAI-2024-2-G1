@@ -1,5 +1,4 @@
-﻿using Negocio;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,49 +7,77 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Datos;
+using FontAwesome.Sharp;
+using Presentacion.Utils;
+using Persistencia;
+using Negocio;
+using Persistencia.Utils;
 
-namespace Presentacion.frmsVendedor
+namespace Presentacion
 {
     public partial class frmVendReportes : Form
     {
-        public frmVendReportes()
+        private static UsuarioWS usuarioActual;
+        private readonly UsuarioService _usuarioService;
+        private static VentaService ventaService;
+        private static ReporteService reporteService;
+
+        public frmVendReportes(UsuarioWS objUsuario)
         {
             InitializeComponent();
+            usuarioActual = objUsuario;
+
+            _usuarioService = new UsuarioService();
+            ventaService = new VentaService();
+            reporteService = new ReporteService();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private async void frmReportes_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void lblFechaVenta_Click(object sender, EventArgs e)
+        private void ActualizarUI(List<UsuarioWS> usuariosActivos)
+        {
+
+        }
+        
+        private void btnAltaProducto_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmProductosAlta(usuarioActual), PresentacionUtils.PanelContenedor);
+        }
+
+        private void btnModProducto_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmProductosModif(), PresentacionUtils.PanelContenedor);
+        }
+
+        private void btnBajaProd_Click(object sender, EventArgs e)
+        {
+            PresentacionUtils.AbrirForm((IconButton)sender, new frmProductosBaja(), PresentacionUtils.PanelContenedor);
+        }
+
+        private void btnReporteStockCritico_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dtpFechaVenta_ValueChanged(object sender, EventArgs e)
+        private void btnReporteVtasVendedor_Click(object sender, EventArgs e)
         {
 
         }
 
-        private async void btnBuscarVenta_Click(object sender, EventArgs e)
+        private void btnReporteProdTopVentas_Click(object sender, EventArgs e)
         {
-            //Buscar ventas del Cliente y Mostrar en pantalla
-            int clienteId = Convert.ToInt32(txtCliente.Text);
-            string empresa = txtEmpresa.Text;
-            DateTime fechaCompra = dtpFechaVenta.Value;
 
-            var ventaService = new VentaService();
-            //var ventas = await ventaService.BuscarVentasCliente(clienteId, empresa, fechaCompra);
+            List<Venta> ventas = new List<Venta>();
+            ventas = VentaFactory.GenerarVentasRandom(28);
+        }
 
-            //if (ventas != null)
-            //{
-            //     dgvVentas.DataSource = ventas;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No se encontraron ventas para los criterios especificados.");
-            //}
+        private void frmVendReporte_Load(object sender, EventArgs e)
+        {
 
         }
     }

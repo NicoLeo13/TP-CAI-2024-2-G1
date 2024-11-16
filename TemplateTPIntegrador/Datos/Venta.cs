@@ -11,7 +11,7 @@ namespace Datos
 {
     public class Venta
     {
-        public int IdVenta { get; set; }
+        public Guid IdVenta { get; set; }
         public Guid IdCliente { get; set; }
         public Guid IdProducto { get; set; }
         public int Cantidad { get; set; }
@@ -21,7 +21,7 @@ namespace Datos
 
         public Venta(Guid idVenta, Guid idCliente, Guid idProducto, int cantidad, DateTime fechaAlta, int estado, Guid idUsuario)
         {
-            IdVenta = IdVenta;
+            IdVenta = idVenta;
             IdCliente = idCliente;
             IdProducto = idProducto;
             Cantidad = cantidad;
@@ -39,5 +39,13 @@ namespace Datos
             Cantidad = cantidad;
         }
 
+        //Constructor de sobrecarga para GetVentaByCliente
+        public Venta(Guid idVenta, int cantidad, DateTime fechaAlta, int estado)
+        {
+            IdVenta = idVenta;
+            Cantidad = cantidad;
+            FechaAlta = fechaAlta;
+            Estado = estado;
+        }
     }
 }
