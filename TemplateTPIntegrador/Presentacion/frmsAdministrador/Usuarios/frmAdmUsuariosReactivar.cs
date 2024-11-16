@@ -36,7 +36,7 @@ namespace Presentacion
 
         private void btnReactivarUsuario_Click(object sender, EventArgs e)
         {
-            if(txtBoxUsuarioAReactivar.Text == "")
+            if(txtBoxIDUsuarioAReactivar.Text == "")
             {
                 MessageBox.Show("Debe ingresar un ID de usuario", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -46,13 +46,13 @@ namespace Presentacion
             {
                 UsuarioService usuarioService = new UsuarioService();
 
-                string username = txtBoxUsuarioAReactivar.Text;
+                Guid idUsuarioAReactivar = Guid.Parse(txtBoxIDUsuarioAReactivar.Text);
 
-                usuario = UsuarioService.BuscarUsuario(username);
+                //usuario = UsuarioService.BuscarUsuario(username);
 
-                usuarioService.ReactivarUsuario(usuario.Id);
+                usuarioService.ReactivarUsuario(idUsuarioAReactivar);
 
-                MessageBox.Show($"Usuario reactivado con éxito:\nID: {txtBoxUsuarioAReactivar.Text}", "Usuario reactivado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Usuario reactivado con éxito:\nID: {txtBoxIDUsuarioAReactivar.Text}", "Usuario reactivado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (FormatException ex)
             {

@@ -36,23 +36,21 @@ namespace Presentacion
 
         private void btnReactivarCliente_Click(object sender, EventArgs e)
         {
-            if (txtBoxDNIClienteAReactivar.Text == "")
+            if (txtBoxIdClienteAReactivar.Text == "")
             {
-                MessageBox.Show("Debe ingresar un DNI de cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Debe ingresar un ID de cliente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             try
             {
-                int dni = int.Parse(txtBoxDNIClienteAReactivar.Text);
+                Guid idVenta = Guid.Parse(txtBoxIdClienteAReactivar.Text);
 
                 ClienteService clienteService = new ClienteService();
 
-                cliente = ClienteService.BuscarCliente(dni);
+                clienteService.ReactivarCliente(idVenta);
 
-                clienteService.ReactivarCliente(cliente.Id);
-
-                MessageBox.Show($"Cliente reactivado con éxito:\nDNI: {txtBoxDNIClienteAReactivar.Text}", "Cliente reactivado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Cliente reactivado con éxito:\n ID: {txtBoxIdClienteAReactivar.Text}", "Cliente reactivado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (FormatException ex)
             {
