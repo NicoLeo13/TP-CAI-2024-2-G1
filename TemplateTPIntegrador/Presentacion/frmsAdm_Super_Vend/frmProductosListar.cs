@@ -17,6 +17,8 @@ namespace Presentacion
 {
     public partial class frmProductosListar : Form
     {
+        private List<Producto> productos;
+        /*DataGrid*/
         private DataGridService dataGridService;
         private BindingSource bindingSource;
         private bool sortAscending = true;
@@ -26,10 +28,13 @@ namespace Presentacion
         {
             InitializeComponent();
             dataGridService = new DataGridService();
+            productos = new List<Producto>();
+            CargarProductos();
         }
 
-        private async void CargarProductos()
+        private void CargarProductos()
         {
+            productos = ProductoService.BuscarProductosTotales();
             ConfigurarDataGridView();
             LlenarDataGridView();
             LlenarComboBoxCamposFiltro();
@@ -42,29 +47,48 @@ namespace Presentacion
 
         private void ConfigurarDataGridView()
         {
+            lblProductosTotales.Text = $"Total: {productos.Count.ToString()}";
 
+            // Habilitar ordenamiento
+            foreach (DataGridViewColumn column in dgvProductos.Columns)
+            {
+                column.SortMode = DataGridViewColumnSortMode.Programmatic;
+            }
         }
 
         private void LlenarDataGridView()
         {
+            // Usar BindingSource para permitir filtrado
+            bindingSource = new BindingSource();
+            bindingSource.DataSource = productos.Select(u => new
+            {
+                u.Nombre,
+                u.IdCategoria,
+                u.Precio,
+                u.Stock,
+                u.FechaAlta,
+                u.FechaBaja,
+            }).ToList();
+
+            dgvProductos.DataSource = bindingSource;
         }
 
         private void LlenarComboBoxCamposFiltro()
         {
-            //Dictionary<string, string> datos = new Dictionary<string, string>
-            //{
-            //    { "NombreUsuario", "Usuario" },
-            //    { "Id", "ID" },
-            //    { "Nombre", "Nombre" },
-            //    { "Apellido", "Apellido" },
-            //    { "Dni", "DNI" },
-            //    { "Host", "Host" }
-            //};
+            Dictionary<string, string> datos = new Dictionary<string, string>
+            {
+                { "Nombre", "Nombre" },
+                { "IdCategoria", "ID Categoria" },
+                { "Precio", "Precio" },
+                { "Stock", "Stock" },
+                { "FechaAlta", "FechaAlta" },
+                { "FechaBaja", "FechaBaja" }
+            };
 
-            //cmbFiltros.DataSource = new BindingSource(datos, null);
-            //cmbFiltros.DisplayMember = "Value";
-            //cmbFiltros.ValueMember = "Key";
-            //cmbFiltros.SelectedIndex = 0;
+            cmbFiltros.DataSource = new BindingSource(datos, null);
+            cmbFiltros.DisplayMember = "Value";
+            cmbFiltros.ValueMember = "Key";
+            cmbFiltros.SelectedIndex = 0;
         }
         private void cmbFiltros_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -72,60 +96,57 @@ namespace Presentacion
                 txtBoxFiltro.Text = "";
         }
 
-        private async void btnRefrescar_Click(object sender, EventArgs e)
+        private void btnRefrescar_Click(object sender, EventArgs e)
         {
-            //if (txtBoxFiltro.Text != "")
-            //    txtBoxFiltro.Text = "";
+            if (txtBoxFiltro.Text != "")
+                txtBoxFiltro.Text = "";
 
-            //lblClientesTotales.Text = "Total: Cargando...";
-            //bindingSource.DataSource = new List<UsuarioWS>();
-            //dgvUsuarios.DataSource = bindingSource;
+            lblProductosTotales.Text = "Total: Cargando...";
+            bindingSource.DataSource = new List<UsuarioWS>();
+            dgvProductos.DataSource = bindingSource;
 
-            //var msg = "";
-            //(usuariosActivos, msg) = await _usuarioService.CargarUsuariosActivosAsync();
+            productos = ProductoService.BuscarProductosTotales();
 
-            //if (msg != null)
-            //    MessageBox.Show(msg, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            //else
-            //{
-            //    lblClientesTotales.Text = $"Total: {usuariosActivos.Count.ToString()}";
-            //    LlenarDataGridView();
-            //}
+            if (productos == null)
+                MessageBox.Show("Ha ocurrido un error al refrescar productos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            else
+            {
+                lblProductosTotales.Text = $"Total: {productos.Count.ToString()}";
+                LlenarDataGridView();
+            }
         }
 
-        private void dgvUsuarios_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvProductos_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //DataGridViewColumn newColumn = dgvUsuarios.Columns[e.ColumnIndex];
-            //if (newColumn != sortedColumn)
-            //    sortAscending = true;
+            DataGridViewColumn newColumn = dgvProductos.Columns[e.ColumnIndex];
+            if (newColumn != sortedColumn)
+                sortAscending = true;
 
-            
-            //var columna = dgvUsuarios.Columns[e.ColumnIndex].DataPropertyName;
-            //usuariosActivos = dataGridService.OrdenarUsuarios(usuariosActivos, columna, sortAscending);
-            
-            //sortAscending = !sortAscending;
-            //bindingSource.DataSource = usuariosActivos;
-            //dgvUsuarios.DataSource = bindingSource;
 
-            //// Actualizar el indicador visual
-            //sortedColumn = dgvUsuarios.Columns[e.ColumnIndex];
-            //foreach (DataGridViewColumn column in dgvUsuarios.Columns)
-            //{
-            //    if (column != sortedColumn)
-            //        column.HeaderCell.SortGlyphDirection = SortOrder.None;
-            //}
-            //sortedColumn.HeaderCell.SortGlyphDirection = sortAscending ? SortOrder.Ascending : SortOrder.Descending;
+            var columna = dgvProductos.Columns[e.ColumnIndex].DataPropertyName;
+            productos = dataGridService.OrdenarProductos(productos, columna, sortAscending);
+
+            sortAscending = !sortAscending;
+            LlenarDataGridView();
+
+            // Actualizar el indicador visual
+            sortedColumn = dgvProductos.Columns[e.ColumnIndex];
+            foreach (DataGridViewColumn column in dgvProductos.Columns)
+            {
+                if (column != sortedColumn)
+                    column.HeaderCell.SortGlyphDirection = SortOrder.None;
+            }
+            sortedColumn.HeaderCell.SortGlyphDirection = sortAscending ? SortOrder.Ascending : SortOrder.Descending;
         }
 
         private void txtBoxFiltro_TextChanged(object sender, EventArgs e)
         {
-            //string campo = cmbFiltros.SelectedValue.ToString();
-            //string valor = txtBoxFiltro.Text.ToLower();
-            //var usuariosFiltrados = dataGridService.FiltrarUsuarios(usuariosActivos, campo, valor);
+            string campo = cmbFiltros.SelectedValue.ToString();
+            string valor = txtBoxFiltro.Text.ToLower();
+            var productosFiltrados = dataGridService.FiltrarProductos(productos, campo, valor);
 
-            //bindingSource.DataSource = usuariosFiltrados;
-            //dgvUsuarios.DataSource = bindingSource;
+            bindingSource.DataSource = productosFiltrados;
+            dgvProductos.DataSource = bindingSource;
         }
-
     }
 }

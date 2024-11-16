@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductosListar));
             this.panelAdmUsersAlta = new System.Windows.Forms.Panel();
@@ -41,19 +42,18 @@
             this.lblFiltro = new System.Windows.Forms.Label();
             this.cmbFiltros = new System.Windows.Forms.ComboBox();
             this.txtBoxFiltro = new System.Windows.Forms.TextBox();
-            this.lblClientesTotales = new System.Windows.Forms.Label();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblProductosTotales = new System.Windows.Forms.Label();
+            this.dgvProductos = new System.Windows.Forms.DataGridView();
+            this.panelSide = new System.Windows.Forms.Panel();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panelSide = new System.Windows.Forms.Panel();
+            this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
             this.SuspendLayout();
             // 
             // panelAdmUsersAlta
@@ -106,8 +106,8 @@
             this.panelContenedor.Controls.Add(this.lblFiltro);
             this.panelContenedor.Controls.Add(this.cmbFiltros);
             this.panelContenedor.Controls.Add(this.txtBoxFiltro);
-            this.panelContenedor.Controls.Add(this.lblClientesTotales);
-            this.panelContenedor.Controls.Add(this.dgvUsuarios);
+            this.panelContenedor.Controls.Add(this.lblProductosTotales);
+            this.panelContenedor.Controls.Add(this.dgvProductos);
             this.panelContenedor.Controls.Add(this.btnVolver);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelContenedor.Location = new System.Drawing.Point(18, 56);
@@ -174,24 +174,24 @@
             this.txtBoxFiltro.TabIndex = 34;
             this.txtBoxFiltro.TextChanged += new System.EventHandler(this.txtBoxFiltro_TextChanged);
             // 
-            // lblClientesTotales
+            // lblProductosTotales
             // 
-            this.lblClientesTotales.AutoSize = true;
-            this.lblClientesTotales.BackColor = System.Drawing.Color.LightGray;
-            this.lblClientesTotales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientesTotales.Location = new System.Drawing.Point(810, 455);
-            this.lblClientesTotales.Name = "lblClientesTotales";
-            this.lblClientesTotales.Size = new System.Drawing.Size(52, 21);
-            this.lblClientesTotales.TabIndex = 33;
-            this.lblClientesTotales.Text = "Total:";
+            this.lblProductosTotales.AutoSize = true;
+            this.lblProductosTotales.BackColor = System.Drawing.Color.LightGray;
+            this.lblProductosTotales.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProductosTotales.Location = new System.Drawing.Point(810, 455);
+            this.lblProductosTotales.Name = "lblProductosTotales";
+            this.lblProductosTotales.Size = new System.Drawing.Size(52, 21);
+            this.lblProductosTotales.TabIndex = 33;
+            this.lblProductosTotales.Text = "Total:";
             // 
-            // dgvUsuarios
+            // dgvProductos
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(239)))), ((int)(((byte)(249)))));
-            this.dgvUsuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUsuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvUsuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvProductos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProductos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProductos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvProductos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(25)))), ((int)(((byte)(70)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -199,94 +199,30 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsuarios.ColumnHeadersHeight = 25;
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.idCategoria,
+            this.dgvProductos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvProductos.ColumnHeadersHeight = 25;
+            this.dgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nombre,
-            this.FechaAlta,
-            this.fechaBaja,
+            this.idCategoria,
             this.precio,
-            this.stock});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.ForestGreen;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsuarios.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvUsuarios.EnableHeadersVisualStyles = false;
-            this.dgvUsuarios.Location = new System.Drawing.Point(4, 46);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(966, 389);
-            this.dgvUsuarios.TabIndex = 32;
-            this.dgvUsuarios.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvUsuarios_ColumnHeaderMouseClick);
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "Id";
-            this.ID.FillWeight = 117.2541F;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // idCategoria
-            // 
-            this.idCategoria.DataPropertyName = "idCategoria";
-            this.idCategoria.FillWeight = 117.2541F;
-            this.idCategoria.HeaderText = "ID Categoria";
-            this.idCategoria.Name = "idCategoria";
-            this.idCategoria.ReadOnly = true;
-            this.idCategoria.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // nombre
-            // 
-            this.nombre.DataPropertyName = "nombre";
-            this.nombre.FillWeight = 117.2541F;
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // FechaAlta
-            // 
-            this.FechaAlta.DataPropertyName = "fechaAlta";
-            this.FechaAlta.FillWeight = 117.2541F;
-            this.FechaAlta.HeaderText = "Fecha de Alta";
-            this.FechaAlta.Name = "FechaAlta";
-            this.FechaAlta.ReadOnly = true;
-            this.FechaAlta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // fechaBaja
-            // 
-            this.fechaBaja.DataPropertyName = "fechaBaja";
-            this.fechaBaja.FillWeight = 117.2541F;
-            this.fechaBaja.HeaderText = "Fecha de Baja";
-            this.fechaBaja.Name = "fechaBaja";
-            this.fechaBaja.ReadOnly = true;
-            this.fechaBaja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // precio
-            // 
-            this.precio.DataPropertyName = "precio";
-            this.precio.FillWeight = 78.19613F;
-            this.precio.HeaderText = "Precio";
-            this.precio.Name = "precio";
-            this.precio.ReadOnly = true;
-            this.precio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // stock
-            // 
-            this.stock.DataPropertyName = "stock";
-            this.stock.FillWeight = 35.53299F;
-            this.stock.HeaderText = "Stock";
-            this.stock.Name = "stock";
-            this.stock.ReadOnly = true;
-            this.stock.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            this.stock,
+            this.FechaAlta,
+            this.fechaBaja});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.ForestGreen;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProductos.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvProductos.EnableHeadersVisualStyles = false;
+            this.dgvProductos.Location = new System.Drawing.Point(4, 46);
+            this.dgvProductos.Name = "dgvProductos";
+            this.dgvProductos.Size = new System.Drawing.Size(966, 389);
+            this.dgvProductos.TabIndex = 32;
+            this.dgvProductos.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProductos_ColumnHeaderMouseClick);
             // 
             // panelSide
             // 
@@ -297,7 +233,64 @@
             this.panelSide.Size = new System.Drawing.Size(18, 566);
             this.panelSide.TabIndex = 34;
             // 
-            // frmVendProductosListar
+            // nombre
+            // 
+            this.nombre.DataPropertyName = "Nombre";
+            this.nombre.FillWeight = 139.3383F;
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // idCategoria
+            // 
+            this.idCategoria.DataPropertyName = "IdCategoria";
+            this.idCategoria.FillWeight = 29.58099F;
+            this.idCategoria.HeaderText = "ID Categoria";
+            this.idCategoria.Name = "idCategoria";
+            this.idCategoria.ReadOnly = true;
+            this.idCategoria.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // precio
+            // 
+            this.precio.DataPropertyName = "Precio";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            this.precio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.precio.FillWeight = 92.924F;
+            this.precio.HeaderText = "Precio";
+            this.precio.Name = "precio";
+            this.precio.ReadOnly = true;
+            this.precio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // stock
+            // 
+            this.stock.DataPropertyName = "Stock";
+            this.stock.FillWeight = 42.22546F;
+            this.stock.HeaderText = "Stock";
+            this.stock.Name = "stock";
+            this.stock.ReadOnly = true;
+            this.stock.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // FechaAlta
+            // 
+            this.FechaAlta.DataPropertyName = "FechaAlta";
+            this.FechaAlta.FillWeight = 139.3383F;
+            this.FechaAlta.HeaderText = "Fecha de Alta";
+            this.FechaAlta.Name = "FechaAlta";
+            this.FechaAlta.ReadOnly = true;
+            this.FechaAlta.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // fechaBaja
+            // 
+            this.fechaBaja.DataPropertyName = "FechaBaja";
+            this.fechaBaja.FillWeight = 139.3383F;
+            this.fechaBaja.HeaderText = "Fecha de Baja";
+            this.fechaBaja.Name = "fechaBaja";
+            this.fechaBaja.ReadOnly = true;
+            this.fechaBaja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // frmProductosListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -310,13 +303,13 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmVendProductosListar";
+            this.Name = "frmProductosListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdmUsuariosListar";
             this.panelAdmUsersAlta.ResumeLayout(false);
             this.panelContenedor.ResumeLayout(false);
             this.panelContenedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,19 +320,18 @@
         private FontAwesome.Sharp.IconButton btnVolver;
         private System.Windows.Forms.Panel panelContenedor;
         private System.Windows.Forms.Panel panelSide;
-        private System.Windows.Forms.DataGridView dgvUsuarios;
-        private System.Windows.Forms.Label lblClientesTotales;
+        private System.Windows.Forms.DataGridView dgvProductos;
+        private System.Windows.Forms.Label lblProductosTotales;
         private System.Windows.Forms.TextBox txtBoxFiltro;
         private System.Windows.Forms.Label lblFiltro;
         private System.Windows.Forms.ComboBox cmbFiltros;
         private FontAwesome.Sharp.IconButton btnRefrescar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaBaja;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idCategoria;
         private System.Windows.Forms.DataGridViewTextBoxColumn precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaAlta;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaBaja;
     }
 }

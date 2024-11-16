@@ -32,6 +32,20 @@ namespace Negocio
             }
         }
 
+        public static List<Producto> BuscarProductosTotales()
+        {
+            try
+            {
+                ProductoWS persistencia = new ProductoWS();
+                return persistencia.TraerProductos();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\nError al buscar el producto: {ex.Message}");
+                throw;
+            }
+        }
+
         public void EliminarProducto(Producto producto)
         {
             try
