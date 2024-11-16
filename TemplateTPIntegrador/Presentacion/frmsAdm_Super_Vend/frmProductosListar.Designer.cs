@@ -44,13 +44,13 @@
             this.txtBoxFiltro = new System.Windows.Forms.TextBox();
             this.lblProductosTotales = new System.Windows.Forms.Label();
             this.dgvProductos = new System.Windows.Forms.DataGridView();
-            this.panelSide = new System.Windows.Forms.Panel();
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idCategoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaAlta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaBaja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panelSide = new System.Windows.Forms.Panel();
             this.panelAdmUsersAlta.SuspendLayout();
             this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductos)).BeginInit();
@@ -224,15 +224,6 @@
             this.dgvProductos.TabIndex = 32;
             this.dgvProductos.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProductos_ColumnHeaderMouseClick);
             // 
-            // panelSide
-            // 
-            this.panelSide.BackColor = System.Drawing.Color.Teal;
-            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelSide.Location = new System.Drawing.Point(0, 0);
-            this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(18, 566);
-            this.panelSide.TabIndex = 34;
-            // 
             // nombre
             // 
             this.nombre.DataPropertyName = "Nombre";
@@ -289,6 +280,15 @@
             this.fechaBaja.Name = "fechaBaja";
             this.fechaBaja.ReadOnly = true;
             this.fechaBaja.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // panelSide
+            // 
+            this.panelSide.BackColor = System.Drawing.Color.Teal;
+            this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSide.Location = new System.Drawing.Point(0, 0);
+            this.panelSide.Name = "panelSide";
+            this.panelSide.Size = new System.Drawing.Size(18, 566);
+            this.panelSide.TabIndex = 34;
             // 
             // frmProductosListar
             // 

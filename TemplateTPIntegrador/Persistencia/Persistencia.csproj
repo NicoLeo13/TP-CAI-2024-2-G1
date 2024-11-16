@@ -98,6 +98,8 @@
     <Compile Include="ProveedorManager.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="Utils\DBHelper.cs" />
+    <Compile Include="Utils\ProductoFactory.cs" />
+    <Compile Include="Utils\VentaFactory.cs" />
     <Compile Include="Utils\WebHelper.cs" />
     <Compile Include="VentaWS.cs" />
   </ItemGroup>
