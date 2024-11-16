@@ -108,7 +108,7 @@ namespace Presentacion
             }
 
             //Guid idusuario = usuarioActual.Id;
-            Guid idusuario = Guid.Parse("7a06c9f0-8887-4b4f-b635-1ef5fe4d116f");        //Hardcode para probar (borrar despues)
+            Guid idusuario = Guid.Parse("7a06c9f0-8887-4b4f-b635-1ef5fe4d116f");        //Hardcode para probar (borrar despues) // Flag-hardcode
             Guid idproveedor = proveedor.Id;
             int idcategoria = (int)cmbCategoria.SelectedValue;
             string nombre = txtBoxNombre.Text;

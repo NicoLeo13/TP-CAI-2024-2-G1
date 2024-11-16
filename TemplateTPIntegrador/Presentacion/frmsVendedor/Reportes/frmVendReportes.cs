@@ -72,7 +72,7 @@ namespace Presentacion
         {
             List<Venta> ventas = new List<Venta>();
 
-            Venta ventaTest = new Venta(Guid.Parse("c952fa11-9ef6-45d8-8ea1-0182edd8d739"), 10, DateTime.Parse("2024-11-14T16:17:42.5167468"), 1);
+            Venta ventaTest = new Venta(Guid.Parse("c952fa11-9ef6-45d8-8ea1-0182edd8d739"), 10, DateTime.Parse("2024-11-14T16:17:42.5167468"), 1); // Flag-hardcode
             ventas.Add(ventaTest);
 
             reporteService.GenerarReporteExcelVentas(ventas);

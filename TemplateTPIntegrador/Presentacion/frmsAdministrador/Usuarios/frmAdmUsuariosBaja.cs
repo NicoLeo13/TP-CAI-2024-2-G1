@@ -57,7 +57,7 @@ namespace Presentacion
                 lblContDni.Text = usuario.Dni.ToString();
                 lblContHost.Text = PresentacionUtils.HostToString(usuario.Host);
                 lblContIdUser.Text = usuario.Id.ToString();
-                lblContEstado.Text = "Activo";       //  Revisar ya que del web service de algun lado deberiamos recibir si esta activo o no (CONSULTAR!!)
+                lblContEstado.Text = "Activo";       //  Revisar ya que del web service de algun lado deberiamos recibir si esta activo o no (CONSULTAR!!) // Flag-hardcode
             }
             catch (Exception ex)
             {

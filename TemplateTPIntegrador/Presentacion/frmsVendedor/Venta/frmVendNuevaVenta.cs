@@ -243,7 +243,7 @@ namespace Presentacion
 
             try
             {
-                const String userPrueba = "ff738cd6-cc08-42e9-b15f-1f258084b0f9";
+                const String userPrueba = "ff738cd6-cc08-42e9-b15f-1f258084b0f9"; // Flag-hardcode
                 Guid idUserPrueba = Guid.Parse(userPrueba);
 
                 DialogResult dialogResult = MessageBox.Show("¿Está seguro que desea guardar la venta?", "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

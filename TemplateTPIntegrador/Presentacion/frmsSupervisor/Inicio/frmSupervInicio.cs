@@ -25,7 +25,7 @@ namespace Presentacion
 
         private async void frmSupervInicio_Load(object sender, EventArgs e)
         {
-
+            // Flag-hardcode... mostramos "total" y no la cantidad de productos activos
         }
 
         private void ActualizarUI(List<Producto> productos)

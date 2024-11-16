@@ -73,7 +73,7 @@ namespace Presentacion
 
         private void btnVendLogout_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Está seguro que desea Cerrar Sesión?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("¿Está seguro que desea cerrar sesión?", "Confirmar salida", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 PresentacionUtils.isFormClosing = true;
                 this.Close();

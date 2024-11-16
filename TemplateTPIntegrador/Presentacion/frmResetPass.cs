@@ -37,7 +37,7 @@ namespace Presentacion
             
             // Traeme el usuario que está logueado.
 
-            string nombreUsuario = "johndoe1";
+            string nombreUsuario = "johndoe1"; // Flag-hardcode
 
             NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
             string resultValidarPass = negocioValidaciones.ValidarPass(nombreUsuario, contraseñaActual, nuevaContraseña, reingresoNuevaContraseña);
