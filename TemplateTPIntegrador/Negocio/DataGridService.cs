@@ -134,5 +134,105 @@ namespace Negocio
             }
         }
 
+        public List<Proveedor> OrdenarProveedores(List<Proveedor> proveedores, string column, bool ascending)
+        {
+            try
+            {
+                if (column != sortedColumn)
+                    sortAscending = true;
+
+                List<Proveedor> proveedoresOrdenados = ascending ? proveedores.OrderBy(p => p.GetType().GetProperty(column).GetValue(p, null)).ToList() : proveedores.OrderByDescending(p => p.GetType().GetProperty(column).GetValue(p, null)).ToList();
+
+                sortAscending = !sortAscending;
+                sortedColumn = column;
+
+                return proveedoresOrdenados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al ordenar proveedores: {ex.Message}");
+                return proveedores;
+            }
+        }
+
+        public List<Proveedor> FiltrarProveedores(List<Proveedor> proveedores, string campo, string valor)
+        {
+            try
+            {
+                switch (campo)
+                {
+                    case "Nombre":
+                        return proveedores.Where(p => p.Nombre.ToLower().Contains(valor.ToLower())).ToList();
+                    case "Apellido":
+                        return proveedores.Where(p => p.Apellido.ToLower().Contains(valor.ToLower())).ToList();
+                    case "Email":
+                        return proveedores.Where(p => p.Email.ToLower().Contains(valor.ToLower())).ToList();
+                    case "CUIT":
+                        return proveedores.Where(p => p.CUIT.ToString().Contains(valor)).ToList();
+                    case "FechaAlta":
+                        return proveedores.Where(p => p.FechaAlta.ToString().Contains(valor)).ToList();
+                    case "FechaBaja":
+                        return proveedores.Where(p => p.FechaBaja.ToString().Contains(valor)).ToList();
+                    default:
+                        return proveedores;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al filtrar proveedores: {ex.Message}");
+                return proveedores;
+            }
+        }
+
+        public List<Cliente> OrdenarClientes(List<Cliente> clientes, string column, bool ascending)
+        {
+            try
+            {
+                if (column != sortedColumn)
+                    sortAscending = true;
+
+                List<Cliente> clientesOrdenados = ascending ? clientes.OrderBy(c => c.GetType().GetProperty(column).GetValue(c, null)).ToList() : clientes.OrderByDescending(c => c.GetType().GetProperty(column).GetValue(c, null)).ToList();
+
+                sortAscending = !sortAscending;
+                sortedColumn = column;
+
+                return clientesOrdenados;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al ordenar clientes: {ex.Message}");
+                return clientes;
+            }
+        }
+
+        public List<Cliente> FiltrarClientes(List<Cliente> clientes, string campo, string valor)
+        {
+            try
+            {
+                switch (campo)
+                {
+                    case "Nombre":
+                        return clientes.Where(c => c.Nombre.ToLower().Contains(valor.ToLower())).ToList();
+                    case "Apellido":
+                        return clientes.Where(c => c.Apellido.ToLower().Contains(valor.ToLower())).ToList();
+                    case "Dni":
+                        return clientes.Where(c => c.Dni.ToString().Contains(valor)).ToList();
+                    case "Email":
+                        return clientes.Where(c => c.Email.ToLower().Contains(valor.ToLower())).ToList();
+                    case "Host":
+                        return clientes.Where(c => c.Host.ToString().Contains(valor)).ToList();
+                    case "FechaAlta":
+                        return clientes.Where(c => c.FechaAlta.ToString().Contains(valor)).ToList();
+                    default:
+                        return clientes;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al filtrar clientes: {ex.Message}");
+                return clientes;
+            }
+        }
+
     }
 }
