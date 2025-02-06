@@ -39,15 +39,15 @@ namespace Presentacion
             
             // Traeme el usuario que está logueado.
 
-            //string nombreUsuario = "johndoe1"; // Flag-hardcode
-            string nombreUsuario = user;
-            NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
-            string resultValidarPass = negocioValidaciones.ValidarPass(nombreUsuario, contraseñaActual, nuevaContraseña, reingresoNuevaContraseña);
-
-            MessageBox.Show(resultValidarPass);
-
             try
             {
+                //string nombreUsuario = "johndoe1"; // Flag-hardcode
+                string nombreUsuario = user;
+                NegocioValidaciones negocioValidaciones = new NegocioValidaciones();
+                string resultValidarPass = negocioValidaciones.ValidarPass(nombreUsuario, contraseñaActual, nuevaContraseña, reingresoNuevaContraseña);
+
+                MessageBox.Show(resultValidarPass);
+
                 UserManager persistencia = new UserManager();
                 persistencia.CambiarContraseñaUsuario(nombreUsuario, nuevaContraseña, reingresoNuevaContraseña);
             }
